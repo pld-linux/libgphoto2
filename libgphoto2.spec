@@ -1,3 +1,8 @@
+# Conditional build:
+%bcond_without  doc             # without documentation which needed gtk-doc and TeX
+#
+# TODO: check resmgr linking (temporarly disabled)
+#
 Summary:	Libraries for digital cameras
 Summary(es):	Foto GNU (gphoto) Release 2
 Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
@@ -16,7 +21,9 @@ URL:		http://www.gphoto.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
+%if %{with doc}
 BuildRequires:	gtk-doc >= 0.10
+%endif
 BuildRequires:	libexif-devel
 BuildRequires:	libtool >= 1:1.4.2-9
 BuildRequires:	libusb-devel
@@ -109,8 +116,9 @@ cd ..
 
 %configure \
 	ac_cv_file__proc_meminfo=yes \
-	--enable-docs \
-	--with-html-dir=%{_gtkdocdir}
+	--without-resmgr \
+	%{?with_doc:--enable-docs} \
+	%{?with_doc:--with-html-dir=%{_gtkdocdir}}
 
 %{__make}
 
@@ -120,7 +128,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir} \
-	apidocdir=%{_gtkdocdir}
+	%{?with_doc:apidocdir=%{_gtkdocdir}}
 
 %find_lang %{name} --all-name
 
@@ -199,7 +207,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/gphoto2
 %{_pkgconfigdir}/*.pc
 %{_mandir}/man3/*
-%{_gtkdocdir}/*
+%{?with_doc:%{_gtkdocdir}/*}
 
 %files static
 %defattr(644,root,root,755)
