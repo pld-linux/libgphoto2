@@ -44,6 +44,7 @@ Summary(pl):	Pliki nag³ówkowe dla libgphoto2
 Summary(pt_BR):	Arquivos de desenvolvimento do libgphoto2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	gtk-doc-common
 Requires:	libexif-devel
 Obsoletes:	gphoto2-lib-devel
 Obsoletes:	gphoto2-devel
@@ -88,13 +89,11 @@ Arquivos de desenvolvimento do libgphoto2.
 
 %build
 # supplied libtool is broken (relink)
-rm -f missing
 %{__libtoolize}
 %{__aclocal} -I libgphoto2_port/m4
 %{__autoconf}
 %{__automake}
 cd libgphoto2_port
-rm -f missing
 %{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
@@ -148,6 +147,9 @@ cp --parents \
 	camlibs/sx330z/ChangeLog \
 	docs
 
+# ltdl is disabled by default - *.la not needed
+rm -f $RPM_BUILD_ROOT%{_libdir}/{gphoto2,gphoto2_port}/*/*.{la,a}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -157,18 +159,17 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS CHANGES ChangeLog NEWS README TESTERS docs/*
-
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 
+# camera plugins
 %dir %{_libdir}/gphoto2
 %dir %{_libdir}/gphoto2/*
 %attr(755,root,root) %{_libdir}/gphoto2/*/libgphoto2_*.so
-%{_libdir}/gphoto2/*/libgphoto2_*.la
 
+# port plugins
 %dir %{_libdir}/gphoto2_port
 %dir %{_libdir}/gphoto2_port/*
 %attr(755,root,root) %{_libdir}/gphoto2_port/*/libgphoto2_port_*.so
-%{_libdir}/gphoto2_port/*/libgphoto2_port_*.la
 
 %dir %{_libdir}/libgphoto2
 %attr(755,root,root) %{_libdir}/libgphoto2/print-usb-usermap
