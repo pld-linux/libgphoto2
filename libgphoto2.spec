@@ -4,12 +4,13 @@ Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.1.4
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
 # Source0-md5:	a201650482bbc2edbd948449cf4d3f5a
 Patch0:		%{name}-pmake.patch
+Patch1:		%{name}-locale-names.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -20,10 +21,10 @@ BuildRequires:	libtool >= 1:1.4.2-9
 BuildRequires:	libusb-devel
 BuildRequires:	lockdev-devel
 BuildRequires:	pkgconfig
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides:	gphoto2-lib
 Obsoletes:	gphoto2-lib
 Conflicts:	gphoto2 < 2.1.1
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Libraries for digital cameras.
@@ -89,6 +90,11 @@ Arquivos de desenvolvimento do libgphoto2.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+
+mv -f po/{no,nb}.po
+mv -f libgphoto2_port/po/{no,nb}.po
+rm -f po/stamp-po libgphoto2_port/po/stamp-po
 
 %build
 # supplied libtool is broken (relink)
