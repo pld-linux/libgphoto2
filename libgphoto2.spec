@@ -3,12 +3,12 @@ Summary(es):	Foto GNU (gphoto) Release 2
 Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.1.1
-Release:	2
+Version:	2.1.2
+Release:	1
 License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5: ec69ffba3dc3d6a6a604fd63b3e1159e
+# Source0-md5:	ded0d8262d02e4c215ffc0d73d5acbbb
 Patch0:		%{name}-pmake.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf
@@ -125,7 +125,7 @@ cp --parents \
 	camlibs/casio/ChangeLog camlibs/digita/ChangeLog \
 	camlibs/dimera/{CREDITS,ChangeLog,Protocol.txt,TODO} \
 	camlibs/directory/ChangeLog camlibs/fuji/ChangeLog \
-	camlibs/gsmart/{ChangeLog,README} camlibs/jamcam/{ChangeLog,README} \
+	camlibs/gsmart300/{ChangeLog,README} camlibs/jamcam/{ChangeLog,README} \
 	camlibs/jd11/{ChangeLog,jd11.html} camlibs/kodak/CAMERAS \
 	camlibs/kodak/dc120/ChangeLog camlibs/kodak/dc210/{ChangeLog,TODO} \
 	camlibs/kodak/dc240/ChangeLog camlibs/kodak/dc3200/ChangeLog \
@@ -136,13 +136,13 @@ cp --parents \
 	camlibs/panasonic/coolshot/{ChangeLog,README} \
 	camlibs/panasonic/l859/{ChangeLog,README,TODO} \
 	camlibs/pccam600/{ChangeLog,README} camlibs/polaroid/ChangeLog \
-	camlibs/ptp/{ChangeLog,README,TODO} camlibs/ricoh/ChangeLog \
+	camlibs/ptp2/{ChangeLog,README,TODO} camlibs/ricoh/ChangeLog \
 	camlibs/samsung/ChangeLog camlibs/sierra/{ChangeLog,PROTOCOL} \
-	camlibs/sipix/{ChangeLog,web2.html} camlibs/sipixblink/ChangeLog \
+	camlibs/sipix/{ChangeLog,web2.html} \
 	camlibs/sonydscf1/{ChangeLog,README,readme,todo} \
 	camlibs/sonydscf55/{ChangeLog,TODO} \
 	camlibs/soundvision/{ChangeLog,README} \
-	camlibs/spca504_flash/{ChangeLog,README} \
+	camlibs/spca50x/{ChangeLog,README} \
 	camlibs/stv0680/{680_comm*,CREDITS,ChangeLog,README.pdf} \
 	camlibs/sx330z/ChangeLog \
 	docs
