@@ -22,6 +22,8 @@ Provides:	gphoto2-lib
 Obsoletes:	gphoto2-lib
 Conflicts:	gphoto2 < 2.1.1
 
+%define		_gtkdocdir	%{_defaultdocdir}/gtk-doc/html
+
 %description
 Libraries for digital cameras.
 
