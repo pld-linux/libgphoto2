@@ -114,12 +114,10 @@ rm -rf $RPM_BUILD_ROOT
 	pkgconfigdir=%{_pkgconfigdir} \
 	apidocdir=%{_gtkdocdir}
 
-%find_lang %{name}-2
-%find_lang libgphoto2_port-0
-cat libgphoto2_port-0.lang >> %{name}-2.lang
+%find_lang %{name} --all-name
 
 # prepare docs
-mkdir docs
+install -d docs
 cp --parents \
 	libgphoto2_port/{AUTHORS,ChangeLog} \
 	camlibs/canon/{ChangeLog,Protocol,README,TODO} \
@@ -154,20 +152,25 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%files -f %{name}-2.lang
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS CHANGES ChangeLog NEWS README TESTERS docs/*
+
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+
 %dir %{_libdir}/gphoto2
 %dir %{_libdir}/gphoto2/*
 %attr(755,root,root) %{_libdir}/gphoto2/*/libgphoto2_*.so
 %{_libdir}/gphoto2/*/libgphoto2_*.la
+
 %dir %{_libdir}/gphoto2_port
 %dir %{_libdir}/gphoto2_port/*
 %attr(755,root,root) %{_libdir}/gphoto2_port/*/libgphoto2_port_*.so
 %{_libdir}/gphoto2_port/*/libgphoto2_port_*.la
+
 %dir %{_libdir}/libgphoto2
 %attr(755,root,root) %{_libdir}/libgphoto2/print-usb-usermap
+
 %dir %{_datadir}/libgphoto2
 %dir %{_datadir}/libgphoto2/*
 %dir %{_datadir}/libgphoto2/*/konica
