@@ -16,8 +16,9 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gtk-doc >= 0.10
 BuildRequires:	libexif-devel
-BuildRequires:	libusb-devel
 BuildRequires:	libtool >= 1:1.4.2-9
+BuildRequires:	libusb-devel
+BuildRequires:	lockdev-devel
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides:	gphoto2-lib
