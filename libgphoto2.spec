@@ -8,6 +8,7 @@ Release:	1
 License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
+# Source0-md5: ec69ffba3dc3d6a6a604fd63b3e1159e
 Patch0:		%{name}-pmake.patch
 URL:		http://www.gphoto.net/
 BuildRequires:	autoconf
