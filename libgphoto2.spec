@@ -4,10 +4,11 @@ Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.1.1
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Applications
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/gphoto/%{name}-%{version}.tar.bz2
+# Source0-md5:	ec69ffba3dc3d6a6a604fd63b3e1159e
 URL:		http://www.gphoto.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
