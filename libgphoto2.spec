@@ -8,6 +8,7 @@ Release:	1
 License:	LGPL
 Group:		Applications
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/gphoto/%{name}-%{version}.tar.bz2
+Patch0:		%{name}-pmake.patch
 URL:		http://www.gphoto.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -82,6 +83,7 @@ Arquivos de desenvolvimento do libgphoto2.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 # supplied libtool is broken (relink)
