@@ -43,7 +43,7 @@ Summary(es):	Archivos de deserrolo de libgphoto2
 Summary(pl):	Pliki nag³ówkowe dla libgphoto2
 Summary(pt_BR):	Arquivos de desenvolvimento do libgphoto2
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	gtk-doc-common
 Requires:	libexif-devel
 Obsoletes:	gphoto2-lib-devel
@@ -67,7 +67,7 @@ Summary(es):	Archivos de deserrolo de libgphoto2
 Summary(pl):	Statyczna wersja libgphoto2
 Summary(pt_BR):	Arquivos de desenvolvimento do libgphoto2
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	gphoto2-lib-static
 Obsoletes:	gphoto2-static
 
