@@ -102,6 +102,7 @@ rm -f missing
 cd ..
 
 %configure \
+	ac_cv_file__proc_meminfo=yes \
 	--enable-docs \
 	--with-html-dir=%{_gtkdocdir}
 
