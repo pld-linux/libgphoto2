@@ -9,7 +9,7 @@ Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.1.5
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.gz
@@ -17,6 +17,7 @@ Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.gz
 Patch0:		%{name}-pmake.patch
 Patch1:		%{name}-locale-names.patch
 Patch2:		%{name}-canon-filesizelimit.patch
+Patch3:		%{name}-canon_A80_fix.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -98,6 +99,7 @@ Arquivos de desenvolvimento do libgphoto2.
 %patch0 -p1
 #%patch1 -p1
 #%patch2 -p2
+%patch3 -p1
 
 %build
 # supplied libtool is broken (relink)
