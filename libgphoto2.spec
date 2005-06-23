@@ -15,9 +15,7 @@ Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.gz
 # Source0-md5:	1938cbd9718595fd419907bf2f7c3195
 Patch0:		%{name}-pmake.patch
-Patch1:		%{name}-locale-names.patch
-Patch2:		%{name}-canon-filesizelimit.patch
-Patch3:		%{name}-canon_A80_fix.patch
+Patch1:		%{name}-canon_A80_fix.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -97,9 +95,7 @@ Arquivos de desenvolvimento do libgphoto2.
 %prep
 %setup -q
 %patch0 -p1
-#%patch1 -p1
-#%patch2 -p2
-%patch3 -p1
+%patch1 -p1
 
 %build
 # supplied libtool is broken (relink)
