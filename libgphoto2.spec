@@ -15,7 +15,6 @@ Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.gz
 # Source0-md5:	1938cbd9718595fd419907bf2f7c3195
 Patch0:		%{name}-pmake.patch
-Patch1:		%{name}-canon_A80_fix.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -95,7 +94,6 @@ Arquivos de desenvolvimento do libgphoto2.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 # supplied libtool is broken (relink)
@@ -160,6 +158,8 @@ cp --parents \
 
 # ltdl is disabled by default - *.la not needed
 rm -f $RPM_BUILD_ROOT%{_libdir}/{gphoto2,gphoto2_port}/*/*.{la,a}
+# kill unpackaged files
+rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/libgphoto{2,2_port}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
