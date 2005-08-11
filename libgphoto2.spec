@@ -1,5 +1,5 @@
 # Conditional build:
-%bcond_without  doc             # without documentation which needed gtk-doc and TeX
+%bcond_without	doc             # without documentation which needed gtk-doc and TeX
 #
 # TODO: check resmgr linking (temporarly disabled)
 #
