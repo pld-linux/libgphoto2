@@ -1,5 +1,5 @@
 # Conditional build:
-%bcond_without	doc             # without documentation which needed gtk-doc and TeX
+%bcond_without	apidocs             # without documentation which needed gtk-doc and TeX
 #
 # TODO: check resmgr linking (temporarly disabled)
 #
@@ -19,7 +19,7 @@ URL:		http://www.gphoto.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-%{?with_doc:BuildRequires:	gtk-doc >= 0.10}
+%{?with_apidocs:BuildRequires:	gtk-doc >= 0.10}
 BuildRequires:	libexif-devel
 BuildRequires:	libtool >= 1:1.4.2-9
 BuildRequires:	libusb-devel
@@ -50,7 +50,7 @@ Summary(pl):	Pliki nag³ówkowe dla libgphoto2
 Summary(pt_BR):	Arquivos de desenvolvimento do libgphoto2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk-doc-common
+%{?with_apidocs:Requires:	gtk-doc-common}
 Requires:	libexif-devel
 Requires:	libusb-devel
 Requires:	lockdev-devel
@@ -111,8 +111,8 @@ cd ..
 %configure \
 	ac_cv_file__proc_meminfo=yes \
 	--without-resmgr \
-	%{?with_doc:--enable-docs} \
-	%{?with_doc:--with-html-dir=%{_gtkdocdir}}
+	%{?with_apidocs:--enable-docs} \
+	%{?with_apidocs:--with-html-dir=%{_gtkdocdir}}
 
 %{__make}
 
@@ -122,7 +122,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir} \
-	%{?with_doc:apidocdir=%{_gtkdocdir}}
+	%{?with_apidocs:apidocdir=%{_gtkdocdir}}
 
 %find_lang %{name} --all-name
 
@@ -203,7 +203,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/gphoto2
 %{_pkgconfigdir}/*.pc
 %{_mandir}/man3/*
-%{?with_doc:%{_gtkdocdir}/*}
+%{?with_apidocs:%{_gtkdocdir}/*}
 
 %files static
 %defattr(644,root,root,755)
