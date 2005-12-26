@@ -1,5 +1,7 @@
+#
 # Conditional build:
-%bcond_without	apidocs             # without documentation which needed gtk-doc and TeX
+%bcond_without	apidocs		# without documentation which needed gtk-doc and TeX
+%bcond_without	baudboy		# use lockdev library instead of baudboy
 #
 # TODO: check resmgr linking (temporarly disabled)
 #
@@ -23,11 +25,13 @@ BuildRequires:	gettext-devel
 BuildRequires:	libexif-devel
 BuildRequires:	libtool >= 1:1.4.2-9
 BuildRequires:	libusb-devel
-BuildRequires:	lockdev-devel >= 1.0.2
+%{?with_baudboy:BuildRequires:	lockdev-baudboy-devel}
+%{!?with_baudboy:BuildRequires:	lockdev-devel >= 1.0.2}
 BuildRequires:	pkgconfig
 Provides:	gphoto2-lib
 Obsoletes:	gphoto2-lib
 Conflicts:	gphoto2 < 2.1.1
+#%{?with_baudboy:Suggests:	lockdev-baudboy}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -53,7 +57,7 @@ Requires:	%{name} = %{version}-%{release}
 %{?with_apidocs:Requires:	gtk-doc-common}
 Requires:	libexif-devel
 Requires:	libusb-devel
-Requires:	lockdev-devel
+%{!?with_baudboy:Requires:	lockdev-devel}
 Obsoletes:	gphoto2-lib-devel
 Obsoletes:	gphoto2-devel
 
@@ -110,7 +114,9 @@ cd ..
 
 %configure \
 	ac_cv_file__proc_meminfo=yes \
+	%{!?with_baudboy:--without-baudboy} \
 	--without-resmgr \
+	--without-ttylock \
 	%{?with_apidocs:--enable-docs} \
 	%{?with_apidocs:--with-html-dir=%{_gtkdocdir}}
 
