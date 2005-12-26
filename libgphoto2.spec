@@ -3,8 +3,6 @@
 %bcond_without	apidocs		# without documentation which needed gtk-doc and TeX
 %bcond_without	baudboy		# use lockdev library instead of baudboy
 #
-# TODO: check resmgr linking (temporarly disabled)
-#
 Summary:	Libraries for digital cameras
 Summary(es):	Foto GNU (gphoto) Release 2
 Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
@@ -16,6 +14,7 @@ License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.gz
 # Source0-md5:	1938cbd9718595fd419907bf2f7c3195
+Source1:	%{name}_port.pl.po
 Patch0:		%{name}-pmake.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf
@@ -28,6 +27,7 @@ BuildRequires:	libusb-devel
 %{?with_baudboy:BuildRequires:	lockdev-baudboy-devel}
 %{!?with_baudboy:BuildRequires:	lockdev-devel >= 1.0.2}
 BuildRequires:	pkgconfig
+BuildRequires:	sed >= 4.0
 Provides:	gphoto2-lib
 Obsoletes:	gphoto2-lib
 Conflicts:	gphoto2 < 2.1.1
@@ -98,6 +98,10 @@ Arquivos de desenvolvimento do libgphoto2.
 %prep
 %setup -q
 %patch0 -p1
+
+cp %{SOURCE1} libgphoto2_port/po/pl.po
+sed -i -e 's/\(ALL_LINGUAS=.*\)"$/\1 pl"/' libgphoto2_port/configure.in
+rm -f libgphoto2_port/po/stamp-po
 
 %build
 # supplied libtool is broken (relink)
