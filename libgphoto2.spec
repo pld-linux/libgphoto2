@@ -19,9 +19,9 @@ Source2:	%{name}-pl.po
 Patch0:		%{name}-pmake.patch
 Patch1:		%{name}-print_dev_rules.patch
 URL:		http://www.gphoto.org/
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	autoconf >= 2.59
+BuildRequires:	automake >= 1:1.8
+BuildRequires:	gettext-devel >= 0.14.1
 %{?with_apidocs:BuildRequires:	gtk-doc >= 0.10}
 BuildRequires:	libexif-devel
 BuildRequires:	libtool >= 1:1.4.2-9
