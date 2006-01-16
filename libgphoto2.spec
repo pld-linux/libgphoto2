@@ -123,9 +123,9 @@ cd libgphoto2_port
 cd ..
 
 %configure \
-	%{!?with_baudboy:--without-baudboy} \
-	--without-resmgr \
-	--without-ttylock \
+	%{!?with_baudboy:--disable-baudboy} \
+	--disable-resmgr \
+	--disable-ttylock \
 	%{?with_apidocs:--enable-docs} \
 	%{?with_apidocs:--with-html-dir=%{_gtkdocdir}}
 
