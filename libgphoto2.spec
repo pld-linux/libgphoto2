@@ -9,7 +9,7 @@ Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.1.6
-Release:	3
+Release:	4
 License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.gz
@@ -33,7 +33,6 @@ BuildRequires:	sed >= 4.0
 Provides:	gphoto2-lib
 Obsoletes:	gphoto2-lib
 Conflicts:	gphoto2 < 2.1.1
-#%{?with_baudboy:Suggests:	lockdev-baudboy}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -96,6 +95,21 @@ Statyczna wersja libgphoto2.
 
 %description static -l pt_BR
 Arquivos de desenvolvimento do libgphoto2.
+
+%package port-serial
+Summary:	Serial port plugin for libgphoto2
+Summary(pl):	Wtyczka obs³ugi portu szeregowego dla libgphoto2
+Group:		Libraries
+Requires:	%{name} = %{version}-%{release}
+%{?with_baudboy:Requires:	lockdev-baudboy}
+
+%description port-serial
+Serial port plugin for libgphoto2, needed to access cameras connected
+through serial port.
+
+%description port-serial -l pl
+Wtyczka obs³ugi portu szeregowego dla libgphoto2, potrzebna do
+wspó³pracy z aparatami pod³±czonymi przez port szeregowy.
 
 %prep
 %setup -q
@@ -196,7 +210,7 @@ rm -rf $RPM_BUILD_ROOT
 # port plugins
 %dir %{_libdir}/gphoto2_port
 %dir %{_libdir}/gphoto2_port/*
-%attr(755,root,root) %{_libdir}/gphoto2_port/*/libgphoto2_port_*.so
+%attr(755,root,root) %{_libdir}/gphoto2_port/*/libgphoto2_port_usb.so
 
 %dir %{_libdir}/libgphoto2
 %attr(755,root,root) %{_libdir}/libgphoto2/print-udev-rules
@@ -225,3 +239,7 @@ rm -rf $RPM_BUILD_ROOT
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+
+%files port-serial
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/gphoto2_port/*/libgphoto2_port_serial.so
