@@ -116,6 +116,9 @@ wspó³pracy z aparatami pod³±czonymi przez port szeregowy.
 %patch0 -p1
 %patch1 -p1
 
+# Look for libexif/exif-ifd.h
+sed -i 's/exif-ifd.h/libexif\/exif-ifd.h/' configure.in
+
 cp %{SOURCE1} libgphoto2_port/po/pl.po
 sed -i -e 's/\(ALL_LINGUAS=.*\)"$/\1 pl"/' libgphoto2_port/configure.in
 rm -f libgphoto2_port/po/stamp-po
