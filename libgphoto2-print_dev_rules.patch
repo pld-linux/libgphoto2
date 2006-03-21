@@ -1,7 +1,6 @@
-diff -aurN libgphoto2-2.1.6.orig/packaging/linux-hotplug/Makefile.am libgphoto2-2.1.6/packaging/linux-hotplug/Makefile.am
---- libgphoto2-2.1.6.orig/packaging/linux-hotplug/Makefile.am	2005-06-23 10:39:06.000000000 +0200
-+++ libgphoto2-2.1.6/packaging/linux-hotplug/Makefile.am	2006-01-07 22:29:34.000000000 +0100
-@@ -13,10 +13,14 @@
+--- libgphoto2-2.1.99/packaging/linux-hotplug/Makefile.am.orig	2005-05-02 21:39:50.000000000 +0200
++++ libgphoto2-2.1.99/packaging/linux-hotplug/Makefile.am	2006-01-09 19:49:13.112262856 +0100
+@@ -13,7 +13,7 @@
  # FIXME: utilsdir be modifiable by a ./configure option to adapt to local
  #       policies
  utilsdir = $(libdir)/$(PACKAGE)
@@ -9,8 +8,10 @@ diff -aurN libgphoto2-2.1.6.orig/packaging/linux-hotplug/Makefile.am libgphoto2-
 +utils_PROGRAMS = print-usb-usermap print-udev-rules
  
  print_usb_usermap_SOURCE = print-usb-usermap.c
- print_usb_usermap_LDADD = $(top_builddir)/libgphoto2/libgphoto2.la \
- 	$(top_builddir)/libgphoto2_port/libgphoto2_port/libgphoto2_port.la
+ print_usb_usermap_LDADD = \
+@@ -21,4 +21,8 @@
+ 	$(top_builddir)/libgphoto2_port/libgphoto2_port/libgphoto2_port.la \
+ 	$(LIBEXIF_LIBS)
  
 +print_udev_rules_SOURCE = print-udev-rules.c
 +print_udev_rules_LDADD = $(top_builddir)/libgphoto2/libgphoto2.la \

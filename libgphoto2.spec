@@ -8,20 +8,20 @@ Summary(es):	Foto GNU (gphoto) Release 2
 Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.1.6
-Release:	4
+Version:	2.1.99
+Release:	1
 License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.gz
-# Source0-md5:	1938cbd9718595fd419907bf2f7c3195
+# Source0-md5:	6e0e3073e1669ec80332c527e9c17855
 Source1:	%{name}_port.pl.po
 Source2:	%{name}-pl.po
 Patch0:		%{name}-pmake.patch
 Patch1:		%{name}-print_dev_rules.patch
 URL:		http://www.gphoto.org/
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	autoconf >= 2.59
+BuildRequires:	automake >= 1:1.8
+BuildRequires:	gettext-devel >= 0.14.1
 %{?with_apidocs:BuildRequires:	gtk-doc >= 0.10}
 BuildRequires:	libexif-devel
 BuildRequires:	libtool >= 1:1.4.2-9
@@ -140,10 +140,9 @@ cd libgphoto2_port
 cd ..
 
 %configure \
-	ac_cv_file__proc_meminfo=yes \
-	%{!?with_baudboy:--without-baudboy} \
-	--without-resmgr \
-	--without-ttylock \
+	%{!?with_baudboy:--disable-baudboy} \
+	--disable-resmgr \
+	--disable-ttylock \
 	%{?with_apidocs:--enable-docs} \
 	%{?with_apidocs:--with-html-dir=%{_gtkdocdir}}
 
@@ -162,35 +161,63 @@ rm -rf $RPM_BUILD_ROOT
 # prepare docs
 install -d docs
 cp --parents \
-	libgphoto2_port/{AUTHORS,ChangeLog} \
+	camlibs/adc65/{Changelog,README,TODO} \
+	camlibs/agfa-cl20/{ChangeLog,RANDOM,README,STATUS} \
+	camlibs/aox/{ChangeLog,README} \
 	camlibs/canon/{ChangeLog,README,TODO} \
-	camlibs/casio/ChangeLog camlibs/digita/ChangeLog \
+	camlibs/casio/{ChangeLog,PROTOCOL.txt} \
+	camlibs/digigr8/{ChangeLog,README} \
+	camlibs/digita/ChangeLog \
 	camlibs/dimera/{CREDITS,ChangeLog,Protocol.txt,TODO} \
-	camlibs/directory/ChangeLog camlibs/fuji/ChangeLog \
-	camlibs/gsmart300/{ChangeLog,README} camlibs/jamcam/{ChangeLog,README} \
-	camlibs/jd11/{ChangeLog,jd11.html} camlibs/kodak/CAMERAS \
-	camlibs/kodak/dc120/ChangeLog camlibs/kodak/dc210/{ChangeLog,TODO} \
-	camlibs/kodak/dc240/ChangeLog camlibs/kodak/dc3200/ChangeLog \
+	camlibs/directory/ChangeLog \
+	camlibs/enigma13/{ChangeLog,README,STATUS,protocol.txt} \
+	camlibs/fuji/{ChangeLog,PROTOCOL} \
+	camlibs/gsmart300/{ChangeLog,README} \
+	camlibs/hp215/ChangeLog \
+	camlibs/iclick/{ChangeLog,README} \
+	camlibs/jamcam/{ChangeLog,README} \
+	camlibs/jd11/{ChangeLog,jd11.html} \
+	camlibs/kodak/CAMERAS \
+	camlibs/kodak/dc120/ChangeLog \
+	camlibs/kodak/dc210/{ChangeLog,TODO} \
+	camlibs/kodak/dc240/ChangeLog \
+	camlibs/kodak/dc3200/ChangeLog \
+	camlibs/kodak/ez200/Protocol.txt \
 	camlibs/konica/{ChangeLog,EXPERTS,README,TODO} \
 	camlibs/largan/lmini/{ChangeLog,README} \
-	camlibs/minolta/NEWER_MINOLTAS camlibs/minolta/dimagev/README \
-	camlibs/mustek/{ChangeLog,README} camlibs/panasonic/{ChangeLog,README} \
+	camlibs/lg_gsm/{ChangeLog,README} \
+	camlibs/mars/{ChangeLog,README,protocol.txt} \
+	camlibs/minolta/NEWER_MINOLTAS \
+	camlibs/minolta/dimagev/README \
+	camlibs/mustek/{AUTHOR,ChangeLog,README} \
+	camlibs/panasonic/{ChangeLog,README} \
 	camlibs/panasonic/coolshot/{ChangeLog,README} \
 	camlibs/panasonic/l859/{ChangeLog,README,TODO} \
-	camlibs/pccam600/{ChangeLog,README} camlibs/polaroid/ChangeLog \
-	camlibs/ptp2/{ChangeLog,README,TODO} camlibs/ricoh/ChangeLog \
-	camlibs/samsung/ChangeLog camlibs/sierra/{ChangeLog,PROTOCOL} \
-	camlibs/sipix/{ChangeLog,web2.html} \
+	camlibs/pccam300/{ChangeLog,README} \
+	camlibs/pccam600/{ChangeLog,README} \
+	camlibs/polaroid/{ChangeLog,*.html} \
+	camlibs/ptp2/{ChangeLog,README,TODO} \
+	camlibs/ricoh/{ChangeLog,g3.txt} \
+	camlibs/samsung/ChangeLog \
+	camlibs/sierra/{ChangeLog,PROTOCOL} \
+	camlibs/sipix/{ChangeLog,*.txt,web2.html} \
+	camlibs/smal/{ChangeLog,README} \
+	camlibs/sonix/README \
 	camlibs/sonydscf1/{ChangeLog,README,readme,todo} \
 	camlibs/sonydscf55/{ChangeLog,TODO} \
 	camlibs/soundvision/{ChangeLog,README} \
-	camlibs/spca50x/{ChangeLog,README} \
+	camlibs/spca50x/{ChangeLog*,README} \
+	camlibs/sq905/{ChangeLog,README,TODO} \
+	camlibs/stv0674/{Changelog,Protocol} \
 	camlibs/stv0680/{680_comm*,CREDITS,ChangeLog,README.pdf} \
 	camlibs/sx330z/ChangeLog \
+	camlibs/toshiba/pdrm11/README \
+	libgphoto2_port/{AUTHORS,ChangeLog} \
+	libgphoto2_port/disk/ChangeLog \
 	docs
 
 # ltdl is disabled by default - *.la not needed
-rm -f $RPM_BUILD_ROOT%{_libdir}/{gphoto2,gphoto2_port}/*/*.{la,a}
+rm -f $RPM_BUILD_ROOT%{_libdir}/{libgphoto2,libgphoto2_port}/*/*.{la,a}
 # kill unpackaged files
 rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/libgphoto{2,2_port}
 
@@ -206,28 +233,28 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 
 # camera plugins
-%dir %{_libdir}/gphoto2
-%dir %{_libdir}/gphoto2/*
-%attr(755,root,root) %{_libdir}/gphoto2/*/libgphoto2_*.so
+%dir %{_libdir}/libgphoto2
+%dir %{_libdir}/libgphoto2/%{version}
+%attr(755,root,root) %{_libdir}/libgphoto2/%{version}/*.so
 
 # port plugins
-%dir %{_libdir}/gphoto2_port
-%dir %{_libdir}/gphoto2_port/*
-%attr(755,root,root) %{_libdir}/gphoto2_port/*/libgphoto2_port_usb.so
+%dir %{_libdir}/libgphoto2_port
+%dir %{_libdir}/libgphoto2_port/*
+%attr(755,root,root) %{_libdir}/libgphoto2_port/*/disk.so
+%attr(755,root,root) %{_libdir}/libgphoto2_port/*/usb.so
 
-%dir %{_libdir}/libgphoto2
 %attr(755,root,root) %{_libdir}/libgphoto2/print-udev-rules
 %attr(755,root,root) %{_libdir}/libgphoto2/print-usb-usermap
 
 %dir %{_datadir}/libgphoto2
-%dir %{_datadir}/libgphoto2/*
-%dir %{_datadir}/libgphoto2/*/konica
-%{_datadir}/libgphoto2/*/konica/english
-%lang(fr) %{_datadir}/libgphoto2/*/konica/french
-%lang(de) %{_datadir}/libgphoto2/*/konica/german
-%lang(ja) %{_datadir}/libgphoto2/*/konica/japanese
-%lang(ko) %{_datadir}/libgphoto2/*/konica/korean
-%lang(es) %{_datadir}/libgphoto2/*/konica/spanish
+%dir %{_datadir}/libgphoto2/%{version}
+%dir %{_datadir}/libgphoto2/%{version}/konica
+%{_datadir}/libgphoto2/%{version}/konica/english
+%lang(fr) %{_datadir}/libgphoto2/%{version}/konica/french
+%lang(de) %{_datadir}/libgphoto2/%{version}/konica/german
+%lang(ja) %{_datadir}/libgphoto2/%{version}/konica/japanese
+%lang(ko) %{_datadir}/libgphoto2/%{version}/konica/korean
+%lang(es) %{_datadir}/libgphoto2/%{version}/konica/spanish
 
 %files devel
 %defattr(644,root,root,755)
@@ -245,4 +272,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files port-serial
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/gphoto2_port/*/libgphoto2_port_serial.so
+%attr(755,root,root) %{_libdir}/libgphoto2_port/*/serial.so
