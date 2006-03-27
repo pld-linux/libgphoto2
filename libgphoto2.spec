@@ -18,6 +18,7 @@ Source1:	%{name}_port.pl.po
 Source2:	%{name}-pl.po
 Patch0:		%{name}-pmake.patch
 Patch1:		%{name}-print_dev_rules.patch
+Patch2:		%{name}-canona610.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.8
@@ -115,6 +116,7 @@ wspó³pracy z aparatami pod³±czonymi przez port szeregowy.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 # Look for libexif/exif-ifd.h
 sed -i 's/exif-ifd.h/libexif\/exif-ifd.h/' configure.in
