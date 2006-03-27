@@ -1,15 +1,14 @@
 diff -aurN libgphoto2-2.1.99.orig/camlibs/canon/canon.c libgphoto2-2.1.99/camlibs/canon/canon.c
 --- libgphoto2-2.1.99.orig/camlibs/canon/canon.c	2005-11-23 14:47:36.000000000 +0100
-+++ libgphoto2-2.1.99/camlibs/canon/canon.c	2006-03-27 21:16:46.147609168 +0200
-@@ -314,9 +314,10 @@
++++ libgphoto2-2.1.99/camlibs/canon/canon.c	2006-03-27 21:46:36.666408936 +0200
+@@ -314,8 +314,9 @@
          {"Canon:IXY Digital 600 (normal mode)",  CANON_CLASS_5,  0x04A9, 0x30f2, CAP_NON, SL_MOVIE_LARGE, SL_THUMB, SL_PICTURE, NULL},
  
  	/* I was not able to make A620 work with CLASS 5, 1 and 6. -Marcus */
 -
 +#if 0
          {"Canon:PowerShot A610 (normal mode)",   CANON_CLASS_5,  0x04A9, 0x30fd, CAP_SUP, SL_MOVIE_LARGE, SL_THUMB, SL_PICTURE, NULL},
-         {NULL}
 +#endif
+         {NULL}
          /* *INDENT-ON* */
  };
- 
