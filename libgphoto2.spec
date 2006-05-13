@@ -9,7 +9,7 @@ Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.1.99
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.gz
@@ -218,8 +218,8 @@ cp --parents \
 	libgphoto2_port/disk/ChangeLog \
 	docs
 
-# ltdl is disabled by default - *.la not needed
-rm -f $RPM_BUILD_ROOT%{_libdir}/{libgphoto2,libgphoto2_port}/*/*.{la,a}
+rm -f $RPM_BUILD_ROOT%{_libdir}/libgphoto2/*/*.a
+rm -f $RPM_BUILD_ROOT%{_libdir}/libgphoto2_port/*/*.a
 # kill unpackaged files
 rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/libgphoto{2,2_port}
 
@@ -238,12 +238,15 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/libgphoto2
 %dir %{_libdir}/libgphoto2/%{version}
 %attr(755,root,root) %{_libdir}/libgphoto2/%{version}/*.so
+%{_libdir}/libgphoto2/%{version}/*.la
 
 # port plugins
 %dir %{_libdir}/libgphoto2_port
 %dir %{_libdir}/libgphoto2_port/*
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/disk.so
+%{_libdir}/libgphoto2_port/*/disk.la
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/usb.so
+%{_libdir}/libgphoto2_port/*/usb.la
 
 %attr(755,root,root) %{_libdir}/libgphoto2/print-udev-rules
 %attr(755,root,root) %{_libdir}/libgphoto2/print-usb-usermap
@@ -275,3 +278,4 @@ rm -rf $RPM_BUILD_ROOT
 %files port-serial
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/serial.so
+%{_libdir}/libgphoto2_port/*/serial.la
