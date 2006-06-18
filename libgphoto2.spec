@@ -8,17 +8,16 @@ Summary(es):	Foto GNU (gphoto) Release 2
 Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.1.99
-Release:	3
+Version:	2.2.0
+Release:	1
 License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.gz
-# Source0-md5:	6e0e3073e1669ec80332c527e9c17855
+# Source0-md5:	33aca2d04917287472424fe73694cd3d
 Source1:	%{name}_port.pl.po
 Source2:	%{name}-pl.po
 Patch0:		%{name}-pmake.patch
 Patch1:		%{name}-print_dev_rules.patch
-Patch2:		%{name}-canona610.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.8
@@ -116,10 +115,9 @@ wspó³pracy z aparatami pod³±czonymi przez port szeregowy.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 # Look for libexif/exif-ifd.h
-sed -i 's/exif-ifd.h/libexif\/exif-ifd.h/' configure.in
+#sed -i 's/exif-ifd.h/libexif\/exif-ifd.h/' configure.in
 
 cp %{SOURCE1} libgphoto2_port/po/pl.po
 sed -i -e 's/\(ALL_LINGUAS=.*\)"$/\1 pl"/' libgphoto2_port/configure.in
@@ -244,12 +242,16 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/libgphoto2_port
 %dir %{_libdir}/libgphoto2_port/*
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/disk.so
-%{_libdir}/libgphoto2_port/*/disk.la
+%attr(755,root,root) %{_libdir}/libgphoto2_port/*/ptpip.so
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/usb.so
+%{_libdir}/libgphoto2_port/*/disk.la
+%{_libdir}/libgphoto2_port/*/ptpip.la
 %{_libdir}/libgphoto2_port/*/usb.la
 
+# utilities
 %attr(755,root,root) %{_libdir}/libgphoto2/print-udev-rules
 %attr(755,root,root) %{_libdir}/libgphoto2/print-usb-usermap
+%attr(755,root,root) %{_libdir}/libgphoto2/print-camera-list
 
 %dir %{_datadir}/libgphoto2
 %dir %{_datadir}/libgphoto2/%{version}
