@@ -2,6 +2,7 @@
 # Conditional build:
 %bcond_with	apidocs		# without documentation which needed gtk-doc and TeX
 %bcond_without	baudboy		# use lockdev library instead of baudboy
+%bcond_with	20d		# canon EOS 20D experimental code 
 #
 Summary:	Libraries for digital cameras
 Summary(es):	Foto GNU (gphoto) Release 2
@@ -9,7 +10,7 @@ Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.2.1
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.gz
@@ -135,6 +136,7 @@ cd libgphoto2_port
 %{__automake}
 cd ..
 
+%{?with_20d:CFLAGS="%rpmcflags -DCANON_EXPERIMENTAL_20D"}
 %configure \
 	%{!?with_baudboy:--disable-baudboy} \
 	--disable-resmgr \
