@@ -60,6 +60,7 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 %{?with_apidocs:Requires:	gtk-doc-common}
 Requires:	libexif-devel
+Requires:	libltdl-devel
 Requires:	libusb-devel
 %{!?with_baudboy:Requires:	lockdev-devel}
 Obsoletes:	gphoto2-lib-devel
