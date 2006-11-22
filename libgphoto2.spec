@@ -38,6 +38,9 @@ Obsoletes:	gphoto2-lib
 Conflicts:	gphoto2 < 2.1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# PKGCONFIG changed during configures
+%undefine	configure_cache
+
 %description
 Libraries for digital cameras.
 
