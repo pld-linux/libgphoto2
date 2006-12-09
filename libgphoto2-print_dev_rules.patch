@@ -1,21 +1,25 @@
---- libgphoto2-2.1.99/packaging/linux-hotplug/Makefile.am.orig	2005-05-02 21:39:50.000000000 +0200
-+++ libgphoto2-2.1.99/packaging/linux-hotplug/Makefile.am	2006-01-09 19:49:13.112262856 +0100
-@@ -13,7 +13,7 @@
- # FIXME: utilsdir be modifiable by a ./configure option to adapt to local
- #       policies
- utilsdir = $(libdir)/$(PACKAGE)
+--- libgphoto2-2.3.0/packaging/linux-hotplug/Makefile.am.orig	2006-11-25 15:47:18.000000000 +0100
++++ libgphoto2-2.3.0/packaging/linux-hotplug/Makefile.am	2006-12-08 23:08:47.525068826 +0100
+@@ -8,7 +8,7 @@
+ hotplugdoc_DATA = usbcam.console usbcam.group usbcam.user usbcam.x11-app
+ 
+ 
 -utils_PROGRAMS = print-usb-usermap
 +utils_PROGRAMS = print-usb-usermap print-udev-rules
  
  print_usb_usermap_SOURCE = print-usb-usermap.c
  print_usb_usermap_LDADD = \
-@@ -21,4 +21,8 @@
- 	$(top_builddir)/libgphoto2_port/libgphoto2_port/libgphoto2_port.la \
- 	$(LIBEXIF_LIBS)
+@@ -20,4 +20,12 @@
+ 	-I$(top_srcdir)/libgphoto2 \
+ 	-I$(top_srcdir)/libgphoto2_port/libgphoto2_port
  
 +print_udev_rules_SOURCE = print-udev-rules.c
 +print_udev_rules_LDADD = $(top_builddir)/libgphoto2/libgphoto2.la \
 +	$(top_builddir)/libgphoto2_port/libgphoto2_port/libgphoto2_port.la
++print_udev_rules_CPPFLAGS = \
++	$(AM_CPPFLAGS) $(CPPFLAGS) \
++	-I$(top_srcdir)/gphoto2 \
++	-I$(top_srcdir)/libgphoto2_port/gphoto2
 +
  endif
 diff -aurN libgphoto2-2.1.6.orig/packaging/linux-hotplug/print-udev-rules.c libgphoto2-2.1.6/packaging/linux-hotplug/print-udev-rules.c
