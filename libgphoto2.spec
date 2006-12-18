@@ -11,7 +11,7 @@ Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.3.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.gz
@@ -24,7 +24,7 @@ BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-devel >= 0.14.1
 %{?with_apidocs:BuildRequires:	gtk-doc >= 0.10}
-BuildRequires:	libexif-devel
+BuildRequires:	libexif-devel >= 1:0.6.13
 BuildRequires:	libltdl-devel
 BuildRequires:	libtool >= 1:1.4.2-9
 BuildRequires:	libusb-devel
@@ -32,6 +32,7 @@ BuildRequires:	libusb-devel
 %{!?with_baudboy:BuildRequires:	lockdev-devel >= 1.0.2}
 BuildRequires:	pkgconfig
 BuildRequires:	sed >= 4.0
+Requires:	libexif >= 1:0.6.13
 Provides:	gphoto2-lib
 Obsoletes:	gphoto2-lib
 Conflicts:	gphoto2 < 2.1.1
@@ -61,7 +62,7 @@ Summary(pt_BR):	Arquivos de desenvolvimento do libgphoto2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 %{?with_apidocs:Requires:	gtk-doc-common}
-Requires:	libexif-devel
+Requires:	libexif-devel >= 1:0.6.13
 Requires:	libltdl-devel
 Requires:	libusb-devel
 %{!?with_baudboy:Requires:	lockdev-devel}
