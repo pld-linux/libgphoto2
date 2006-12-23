@@ -22,12 +22,15 @@ Patch2:		%{name}-pl.po-update.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
+BuildRequires:	avahi-compat-libdns_sd-devel
+BuildRequires:	dbus-devel >= 0.31
 BuildRequires:	gettext-devel >= 0.14.1
 %{?with_apidocs:BuildRequires:	gtk-doc >= 0.10}
+BuildRequires:	hal-devel >= 0.5.0
 BuildRequires:	libexif-devel >= 1:0.6.13
 BuildRequires:	libltdl-devel
 BuildRequires:	libtool >= 1:1.4.2-9
-BuildRequires:	libusb-devel
+BuildRequires:	libusb-devel >= 0.1.5
 %{?with_baudboy:BuildRequires:	lockdev-baudboy-devel}
 %{!?with_baudboy:BuildRequires:	lockdev-devel >= 1.0.2}
 BuildRequires:	pkgconfig
