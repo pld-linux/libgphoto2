@@ -237,7 +237,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/libgphoto2
 %dir %{_libdir}/libgphoto2/%{version}
 %attr(755,root,root) %{_libdir}/libgphoto2/%{version}/*.so
-%{_libdir}/libgphoto2/%{version}/*.la
 
 # port plugins
 %dir %{_libdir}/libgphoto2_port
@@ -245,9 +244,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/disk.so
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/ptpip.so
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/usb.so
-%{_libdir}/libgphoto2_port/*/disk.la
-%{_libdir}/libgphoto2_port/*/ptpip.la
-%{_libdir}/libgphoto2_port/*/usb.la
 
 # utilities
 %attr(755,root,root) %{_libdir}/libgphoto2/check-ptp-camera
@@ -280,4 +276,3 @@ rm -rf $RPM_BUILD_ROOT
 %files port-serial
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/serial.so
-%{_libdir}/libgphoto2_port/*/serial.la
