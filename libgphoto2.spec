@@ -11,7 +11,7 @@ Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.3.1
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
@@ -38,6 +38,8 @@ Provides:	gphoto2-lib
 Obsoletes:	gphoto2-lib
 Conflicts:	gphoto2 < 2.1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define         _noautoreq      libtool(%{_libdir}/%{name}/.*)
 
 # PKGCONFIG changed during configures
 %undefine	configure_cache
@@ -237,6 +239,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/libgphoto2
 %dir %{_libdir}/libgphoto2/%{version}
 %attr(755,root,root) %{_libdir}/libgphoto2/%{version}/*.so
+%{_libdir}/libgphoto2/%{version}/*.la
 
 # port plugins
 %dir %{_libdir}/libgphoto2_port
@@ -244,6 +247,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/disk.so
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/ptpip.so
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/usb.so
+%{_libdir}/libgphoto2_port/*/disk.la
+%{_libdir}/libgphoto2_port/*/ptpip.la
+%{_libdir}/libgphoto2_port/*/usb.la
 
 # utilities
 %attr(755,root,root) %{_libdir}/libgphoto2/check-ptp-camera
@@ -276,3 +282,4 @@ rm -rf $RPM_BUILD_ROOT
 %files port-serial
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/serial.so
+%{_libdir}/libgphoto2_port/*/serial.la
