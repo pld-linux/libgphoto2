@@ -11,7 +11,7 @@ Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.3.1
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
@@ -39,7 +39,7 @@ Obsoletes:	gphoto2-lib
 Conflicts:	gphoto2 < 2.1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _noautoreq      libtool(%{_libdir}/%{name}/.*)
+%define         _noautoreq      libtool(.*)
 
 # PKGCONFIG changed during configures
 %undefine	configure_cache
