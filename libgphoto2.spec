@@ -10,24 +10,25 @@ Summary(es):	Foto GNU (gphoto) Release 2
 Summary(pl):	Biblioteki obs³ugi kamer cyfrowych
 Summary(pt_BR):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.3.0
-Release:	2
+Version:	2.3.1
+Release:	3
 License:	LGPL
 Group:		Applications
-Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.gz
-# Source0-md5:	93c0369020fa4c8fe904cd195e74b319
+Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
+# Source0-md5:	37f85e34e5b6031ddf6cac8b8782ac4f
 Patch0:		%{name}-pmake.patch
-Patch1:		%{name}-print_dev_rules.patch
-Patch2:		%{name}-pl.po-update.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
+BuildRequires:	mDNSResponder-devel
+BuildRequires:	dbus-devel >= 0.31
 BuildRequires:	gettext-devel >= 0.14.1
 %{?with_apidocs:BuildRequires:	gtk-doc >= 0.10}
+BuildRequires:	hal-devel >= 0.5.0
 BuildRequires:	libexif-devel >= 1:0.6.13
 BuildRequires:	libltdl-devel
 BuildRequires:	libtool >= 1:1.4.2-9
-BuildRequires:	libusb-devel
+BuildRequires:	libusb-devel >= 0.1.5
 %{?with_baudboy:BuildRequires:	lockdev-baudboy-devel}
 %{!?with_baudboy:BuildRequires:	lockdev-devel >= 1.0.2}
 BuildRequires:	pkgconfig
@@ -121,11 +122,6 @@ wspó³pracy z aparatami pod³±czonymi przez port szeregowy.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
-
-rm -f libgphoto2_port/po/stamp-po
-rm -f po/stamp-po
 
 %build
 # supplied libtool is broken (relink)
@@ -156,6 +152,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir} \
+	udevscriptdir=%{_libdir}/libgphoto2 \
 	%{?with_apidocs:apidocdir=%{_gtkdocdir}}
 
 %find_lang %{name} --all-name
@@ -253,8 +250,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libgphoto2_port/*/usb.la
 
 # utilities
-%attr(755,root,root) %{_libdir}/libgphoto2/print-udev-rules
-%attr(755,root,root) %{_libdir}/libgphoto2/print-usb-usermap
+%attr(755,root,root) %{_libdir}/libgphoto2/check-ptp-camera
 %attr(755,root,root) %{_libdir}/libgphoto2/print-camera-list
 
 %dir %{_datadir}/libgphoto2
