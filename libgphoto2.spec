@@ -6,9 +6,9 @@
 %bcond_with	canonupload	# Canon upload experimental code 
 #
 Summary:	Libraries for digital cameras
-Summary(es):	Foto GNU (gphoto) Release 2
-Summary(pl):	Biblioteki obs≥ugi kamer cyfrowych
-Summary(pt_BR):	GNU Photo - programa GNU para c‚meras digitais
+Summary(es.UTF-8):   Foto GNU (gphoto) Release 2
+Summary(pl.UTF-8):   Biblioteki obs≈Çugi kamer cyfrowych
+Summary(pt_BR.UTF-8):   GNU Photo - programa GNU para c√¢meras digitais
 Name:		libgphoto2
 Version:	2.3.1
 Release:	3
@@ -47,21 +47,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Libraries for digital cameras.
 
-%description -l es
+%description -l es.UTF-8
 Foto GNU (gphoto).
 
-%description -l pl
-Biblioteki obs≥ugi kamer cyfrowych.
+%description -l pl.UTF-8
+Biblioteki obs≈Çugi kamer cyfrowych.
 
-%description -l pt_BR
-O programa gphoto faz parte do projeto GNOME e È uma interface para
-uma grande variedade de c‚meras fotogr·ficas digitais.
+%description -l pt_BR.UTF-8
+O programa gphoto faz parte do projeto GNOME e √© uma interface para
+uma grande variedade de c√¢meras fotogr√°ficas digitais.
 
 %package devel
 Summary:	Header files for libgphoto2
-Summary(es):	Archivos de deserrolo de libgphoto2
-Summary(pl):	Pliki nag≥Ûwkowe dla libgphoto2
-Summary(pt_BR):	Arquivos de desenvolvimento do libgphoto2
+Summary(es.UTF-8):   Archivos de deserrolo de libgphoto2
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe dla libgphoto2
+Summary(pt_BR.UTF-8):   Arquivos de desenvolvimento do libgphoto2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 %{?with_apidocs:Requires:	gtk-doc-common}
@@ -75,20 +75,20 @@ Obsoletes:	gphoto2-devel
 %description devel
 Header files for libgphoto2.
 
-%description devel -l es
+%description devel -l es.UTF-8
 Archivos de desarrolo de libgphoto2.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe dla libgphoto2.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe dla libgphoto2.
 
-%description devel -l pt_BR
+%description devel -l pt_BR.UTF-8
 Arquivos de desenvolvimento do libgphoto2.
 
 %package static
 Summary:	Static version of libgphoto2
-Summary(es):	Archivos de deserrolo de libgphoto2
-Summary(pl):	Statyczna wersja libgphoto2
-Summary(pt_BR):	Arquivos de desenvolvimento do libgphoto2
+Summary(es.UTF-8):   Archivos de deserrolo de libgphoto2
+Summary(pl.UTF-8):   Statyczna wersja libgphoto2
+Summary(pt_BR.UTF-8):   Arquivos de desenvolvimento do libgphoto2
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	gphoto2-lib-static
@@ -97,18 +97,18 @@ Obsoletes:	gphoto2-static
 %description static
 Static version of libgphoto2.
 
-%description static -l es
+%description static -l es.UTF-8
 Archivos de desarrolo de libgphoto2.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna wersja libgphoto2.
 
-%description static -l pt_BR
+%description static -l pt_BR.UTF-8
 Arquivos de desenvolvimento do libgphoto2.
 
 %package port-serial
 Summary:	Serial port plugin for libgphoto2
-Summary(pl):	Wtyczka obs≥ugi portu szeregowego dla libgphoto2
+Summary(pl.UTF-8):   Wtyczka obs≈Çugi portu szeregowego dla libgphoto2
 Group:		Libraries
 Requires:	%{name} = %{version}-%{release}
 %{?with_baudboy:Requires:	lockdev-baudboy}
@@ -117,9 +117,9 @@ Requires:	%{name} = %{version}-%{release}
 Serial port plugin for libgphoto2, needed to access cameras connected
 through serial port.
 
-%description port-serial -l pl
-Wtyczka obs≥ugi portu szeregowego dla libgphoto2, potrzebna do
-wspÛ≥pracy z aparatami pod≥±czonymi przez port szeregowy.
+%description port-serial -l pl.UTF-8
+Wtyczka obs≈Çugi portu szeregowego dla libgphoto2, potrzebna do
+wsp√≥≈Çpracy z aparatami pod≈ÇƒÖczonymi przez port szeregowy.
 
 %prep
 %setup -q
