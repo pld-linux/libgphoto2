@@ -6,9 +6,9 @@
 %bcond_with	canonupload	# Canon upload experimental code 
 #
 Summary:	Libraries for digital cameras
-Summary(es.UTF-8):   Foto GNU (gphoto) Release 2
-Summary(pl.UTF-8):   Biblioteki obsługi kamer cyfrowych
-Summary(pt_BR.UTF-8):   GNU Photo - programa GNU para câmeras digitais
+Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
+Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
+Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.3.1
 Release:	3
@@ -59,9 +59,9 @@ uma grande variedade de câmeras fotográficas digitais.
 
 %package devel
 Summary:	Header files for libgphoto2
-Summary(es.UTF-8):   Archivos de deserrolo de libgphoto2
-Summary(pl.UTF-8):   Pliki nagłówkowe dla libgphoto2
-Summary(pt_BR.UTF-8):   Arquivos de desenvolvimento do libgphoto2
+Summary(es.UTF-8):	Archivos de deserrolo de libgphoto2
+Summary(pl.UTF-8):	Pliki nagłówkowe dla libgphoto2
+Summary(pt_BR.UTF-8):	Arquivos de desenvolvimento do libgphoto2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 %{?with_apidocs:Requires:	gtk-doc-common}
@@ -86,9 +86,9 @@ Arquivos de desenvolvimento do libgphoto2.
 
 %package static
 Summary:	Static version of libgphoto2
-Summary(es.UTF-8):   Archivos de deserrolo de libgphoto2
-Summary(pl.UTF-8):   Statyczna wersja libgphoto2
-Summary(pt_BR.UTF-8):   Arquivos de desenvolvimento do libgphoto2
+Summary(es.UTF-8):	Archivos de deserrolo de libgphoto2
+Summary(pl.UTF-8):	Statyczna wersja libgphoto2
+Summary(pt_BR.UTF-8):	Arquivos de desenvolvimento do libgphoto2
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	gphoto2-lib-static
@@ -108,7 +108,7 @@ Arquivos de desenvolvimento do libgphoto2.
 
 %package port-serial
 Summary:	Serial port plugin for libgphoto2
-Summary(pl.UTF-8):   Wtyczka obsługi portu szeregowego dla libgphoto2
+Summary(pl.UTF-8):	Wtyczka obsługi portu szeregowego dla libgphoto2
 Group:		Libraries
 Requires:	%{name} = %{version}-%{release}
 %{?with_baudboy:Requires:	lockdev-baudboy}
