@@ -1,3 +1,6 @@
+# TODO
+# - save and package udev,hal rules from %{_libdir}/libgphoto2/print-camera-list (probably subpackage)
+#   move or symlink also /lib/udev/check-ptp-camera
 #
 # Conditional build:
 %bcond_with	apidocs		# API documentation (currently broken)
