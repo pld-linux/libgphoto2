@@ -1,0 +1,44 @@
+--- libgphoto2-2.4.0/m4m/gp-libltdl.m4.orig	2007-07-27 02:36:39.000000000 +0200
++++ libgphoto2-2.4.0/m4m/gp-libltdl.m4	2007-08-11 13:24:49.497715037 +0200
+@@ -34,9 +34,9 @@ dnl Make sure we can actually compile an
+ AC_LANG_PUSH([C])
+ AC_MSG_CHECKING([that we can compile and link with libltdl])
+ saved_CPPFLAGS="$CPPFLAGS"
+-saved_LDFLAGS="$LDFLAGS"
++saved_LIBS="$LIBS"
+ CPPFLAGS="$CPPFLAGS $LTDLINCL"
+-LDFLAGS="$LDFLAGS $LIBLTDL"
++LIBS="$LIBS $LIBLTDL"
+ AC_LINK_IFELSE([AC_LANG_PROGRAM([dnl
+ #include <stdlib.h> /* for NULL */
+ #include <ltdl.h>   /* for lt_* */
+@@ -51,6 +51,6 @@ Aborting.
+ ])
+ ])
+ CPPFLAGS="$saved_CPPFLAGS"
+-LDFLAGS="$saved_LDFLAGS"
++LIBS="$saved_LIBS"
+ AC_LANG_POP
+ ])dnl
+--- libgphoto2-2.4.0/libgphoto2_port/m4/gp-libltdl.m4.orig	2007-07-27 02:36:28.000000000 +0200
++++ libgphoto2-2.4.0/libgphoto2_port/m4/gp-libltdl.m4	2007-08-11 13:25:14.747153921 +0200
+@@ -34,9 +34,9 @@ dnl Make sure we can actually compile an
+ AC_LANG_PUSH([C])
+ AC_MSG_CHECKING([that we can compile and link with libltdl])
+ saved_CPPFLAGS="$CPPFLAGS"
+-saved_LDFLAGS="$LDFLAGS"
++saved_LIBS="$LIBS"
+ CPPFLAGS="$CPPFLAGS $LTDLINCL"
+-LDFLAGS="$LDFLAGS $LIBLTDL"
++LIBS="$LIBS $LIBLTDL"
+ AC_LINK_IFELSE([AC_LANG_PROGRAM([dnl
+ #include <stdlib.h> /* for NULL */
+ #include <ltdl.h>   /* for lt_* */
+@@ -51,6 +51,6 @@ Aborting.
+ ])
+ ])
+ CPPFLAGS="$saved_CPPFLAGS"
+-LDFLAGS="$saved_LDFLAGS"
++LIBS="$saved_LIBS"
+ AC_LANG_POP
+ ])dnl
