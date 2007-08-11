@@ -5,21 +5,22 @@
 # Conditional build:
 %bcond_with	apidocs		# API documentation (currently broken)
 %bcond_without	baudboy		# use lockdev library instead of baudboy
-%bcond_with	canon20d	# Canon EOS 20D experimental code 
-%bcond_with	canonupload	# Canon upload experimental code 
+%bcond_with	canonupload	# Canon upload experimental code
+%bcond_without	static_libs	# static libraries
 #
 Summary:	Libraries for digital cameras
 Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.3.1
-Release:	4
-License:	LGPL
-Group:		Applications
+Version:	2.4.0
+Release:	1
+License:	LGPL v2+
+Group:		Libraries
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	37f85e34e5b6031ddf6cac8b8782ac4f
-Patch0:		%{name}-pmake.patch
+# Source0-md5:	a60154772635b693ff08b4f34dea7f61
+Patch0:		%{name}-link.patch
+Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
@@ -127,26 +128,31 @@ współpracy z aparatami podłączonymi przez port szeregowy.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+
+rm -f po/stamp-po libgphoto2_port/po/stamp-po
 
 %build
 # supplied libtool is broken (relink)
 %{__libtoolize}
-%{__aclocal} -I libgphoto2_port/m4
+%{__aclocal} -I auto-m4 -I m4m
+# -I libgphoto2_port/m4
 %{__autoconf}
 %{__automake}
 cd libgphoto2_port
 %{__libtoolize}
-%{__aclocal} -I m4
+%{__aclocal} -I auto-m4 -I m4
 %{__autoconf}
 %{__automake}
 cd ..
 
-CFLAGS="%{rpmcflags}%{?with_canon20d: -DCANON_EXPERIMENTAL_20D}%{?with_canonupload: -DCANON_EXPERIMENTAL_UPLOAD}"
+CFLAGS="%{rpmcflags}%{?with_canonupload: -DCANON_EXPERIMENTAL_UPLOAD}"
 %configure \
 	%{!?with_baudboy:--disable-baudboy} \
 	--disable-resmgr \
 	--disable-ttylock \
 	%{?with_apidocs:--enable-docs} \
+	%{?with_static_libs:--enable-static} \
 	%{?with_apidocs:--with-html-dir=%{_gtkdocdir}}
 
 %{__make}
@@ -167,63 +173,55 @@ install -d docs
 cp --parents \
 	camlibs/adc65/{Changelog,README.adc65,TODO} \
 	camlibs/agfa-cl20/{ChangeLog,RANDOM,README.agfa-cl20,STATUS} \
-	camlibs/aox/{ChangeLog,README.aox} \
-	camlibs/barbie/README.barbie \
-	camlibs/canon/{ChangeLog,README.canon,TODO} \
-	camlibs/casio/{ChangeLog,PROTOCOL.txt} \
+	camlibs/aox/README.aox \
+	camlibs/barbie/Protocol.txt \
+	camlibs/canon/{ChangeLog,README.canon} \
+	camlibs/casio/PROTOCOL.txt \
 	camlibs/clicksmart310/README.clicksmart310 \
-	camlibs/digigr8/{ChangeLog,README.digigr8} \
-	camlibs/digita/ChangeLog \
-	camlibs/dimera/{CREDITS,ChangeLog,Protocol.txt,TODO} \
-	camlibs/directory/ChangeLog \
-	camlibs/enigma13/{ChangeLog,README.enigma13,STATUS,protocol.txt} \
-	camlibs/fuji/{ChangeLog,PROTOCOL} \
-	camlibs/gsmart300/{ChangeLog,README.gsmart300} \
-	camlibs/hp215/ChangeLog \
-	camlibs/iclick/{ChangeLog,README.iclick} \
-	camlibs/jamcam/{ChangeLog,README.jamcam} \
-	camlibs/jd11/{ChangeLog,jd11.html} \
+	camlibs/digigr8/README.digigr8 \
+	camlibs/dimera/{CREDITS,Protocol.txt} \
+	camlibs/enigma13/{README.enigma13,STATUS,protocol.txt} \
+	camlibs/fuji/PROTOCOL \
+	camlibs/gsmart300/README.gsmart300 \
+	camlibs/iclick/README.iclick \
+	camlibs/jamcam/README.jamcam \
+	camlibs/jd11/jd11.html \
 	camlibs/kodak/CAMERAS \
-	camlibs/kodak/dc120/ChangeLog \
-	camlibs/kodak/dc210/{ChangeLog,TODO} \
-	camlibs/kodak/dc240/ChangeLog \
-	camlibs/kodak/dc3200/ChangeLog \
 	camlibs/kodak/ez200/Protocol.txt \
-	camlibs/konica/{ChangeLog,EXPERTS,README.konica,TODO} \
-	camlibs/largan/lmini/{ChangeLog,README.largan-lmini} \
-	camlibs/lg_gsm/{ChangeLog,README.lg_gsm} \
-	camlibs/mars/{ChangeLog,README.mars,protocol.txt} \
+	camlibs/konica/{EXPERTS,README.konica,qm150.txt} \
+	camlibs/largan/lmini/README.largan-lmini \
+	camlibs/lg_gsm/README.lg_gsm \
+	camlibs/mars/{README.mars,protocol.txt} \
 	camlibs/minolta/NEWER_MINOLTAS \
 	camlibs/minolta/dimagev/README.minolta-dimagev \
-	camlibs/mustek/{AUTHOR,ChangeLog,README.mustek} \
-	camlibs/panasonic/{ChangeLog,README.panasonic} \
-	camlibs/panasonic/coolshot/{ChangeLog,README.panasonic-coolshot} \
-	camlibs/panasonic/l859/{ChangeLog,README.panasonic-l859,TODO} \
-	camlibs/pccam300/{ChangeLog,README.pccam300} \
-	camlibs/pccam600/{ChangeLog,README.pccam600} \
-	camlibs/polaroid/{ChangeLog,*.html} \
+	camlibs/mustek/{AUTHOR,README.mustek} \
+	camlibs/panasonic/README.panasonic \
+	camlibs/panasonic/coolshot/README.panasonic-coolshot \
+	camlibs/panasonic/l859/README.panasonic-l859 \
+	camlibs/pccam300/README.pccam300 \
+	camlibs/pccam600/README.pccam600 \
+	camlibs/polaroid/*.html \
 	camlibs/ptp2/{ChangeLog,PTPIP.TXT,README.ptp2,TODO,ptpip.html} \
-	camlibs/ricoh/{ChangeLog,g3.txt} \
-	camlibs/samsung/ChangeLog \
-	camlibs/sierra/{ChangeLog,PROTOCOL} \
-	camlibs/sipix/{ChangeLog,*.txt,web2.html} \
-	camlibs/smal/{ChangeLog,README.smal} \
-	camlibs/sonix/{ChangeLog,README.sonix} \
-	camlibs/sonydscf1/{ChangeLog,README.sonydscf1,todo} \
-	camlibs/sonydscf55/{ChangeLog,TODO} \
-	camlibs/soundvision/{ChangeLog,README.soundvision} \
+	camlibs/ricoh/g3.txt \
+	camlibs/sierra/PROTOCOL \
+	camlibs/sipix/{*.txt,web2.html} \
+	camlibs/smal/README.smal \
+	camlibs/sonix/README.sonix \
+	camlibs/sonydscf1/{README.sonydscf1,todo} \
+	camlibs/soundvision/README.soundvision \
 	camlibs/spca50x/{ChangeLog*,README.spca50x} \
-	camlibs/sq905/{ChangeLog,README.913C,README.sq905,TODO} \
+	camlibs/sq905/{README.913C,README.sq905} \
 	camlibs/stv0674/{Changelog,Protocol} \
-	camlibs/stv0680/{680_comm*,CREDITS,ChangeLog,README.pdf} \
-	camlibs/sx330z/ChangeLog \
+	camlibs/stv0680/{680_comm*,CREDITS,README.pdf} \
 	camlibs/toshiba/pdrm11/README.toshiba-pdrm11 \
 	libgphoto2_port/{AUTHORS,ChangeLog} \
 	libgphoto2_port/disk/ChangeLog \
 	docs
 
+%if %{with static_libs}
 rm -f $RPM_BUILD_ROOT%{_libdir}/libgphoto2/*/*.a
 rm -f $RPM_BUILD_ROOT%{_libdir}/libgphoto2_port/*/*.a
+%endif
 # kill unpackaged files
 rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/libgphoto{2,2_port}
 
@@ -236,7 +234,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog MAINTAINERS NEWS README TESTERS docs/*
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libgphoto2.so.*.*.*
+%attr(755,root,root) %{_libdir}/libgphoto2_port.so.*.*.*
 
 # camera plugins
 %dir %{_libdir}/libgphoto2
@@ -255,6 +254,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libgphoto2_port/*/usb.la
 
 # utilities
+%attr(755,root,root) %{_libdir}/libgphoto2/check-mtp-device
 %attr(755,root,root) %{_libdir}/libgphoto2/check-ptp-camera
 %attr(755,root,root) %{_libdir}/libgphoto2/print-camera-list
 
@@ -270,17 +270,25 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/gphoto2*-config
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/*.la
+%attr(755,root,root) %{_bindir}/gphoto2-config
+%attr(755,root,root) %{_bindir}/gphoto2-port-config
+%attr(755,root,root) %{_libdir}/libgphoto2.so
+%attr(755,root,root) %{_libdir}/libgphoto2_port.so
+%{_libdir}/libgphoto2.la
+%{_libdir}/libgphoto2_port.la
 %{_includedir}/gphoto2
-%{_pkgconfigdir}/*.pc
-%{_mandir}/man3/*
+%{_pkgconfigdir}/libgphoto2.pc
+%{_pkgconfigdir}/libgphoto2_port.pc
+%{_mandir}/man3/libgphoto2.3*
+%{_mandir}/man3/libgphoto2_port.3*
 %{?with_apidocs:%{_gtkdocdir}/*}
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libgphoto2.a
+%{_libdir}/libgphoto2_port.a
+%endif
 
 %files port-serial
 %defattr(644,root,root,755)
