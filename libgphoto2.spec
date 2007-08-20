@@ -1,6 +1,3 @@
-# TODO
-# - subpackage for hal?
-#   move or symlink also /lib/udev/check-ptp-camera
 #
 # Conditional build:
 %bcond_with	apidocs		# API documentation (currently broken)
@@ -14,7 +11,7 @@ Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.4.0
-Release:	3
+Release:	4
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
@@ -125,6 +122,26 @@ through serial port.
 Wtyczka obsługi portu szeregowego dla libgphoto2, potrzebna do
 współpracy z aparatami podłączonymi przez port szeregowy.
 
+%package -n hal-libgphoto2
+Summary:	Userspace support for digital cameras
+Summary(pl.UTF-8):	Wsparcie dla kamer cyfrowych w przestrzeni użytkownika
+Group:		Applications/System
+Requires:	hal >= 0.5.9-2
+Requires:       libusb >= 0.1.10a
+Requires:       udev >= 1:089
+Provides:       udev-digicam
+Obsoletes:      hotplug-digicam
+Obsoletes:      udev-digicam
+Obsoletes:	hal-gphoto
+
+%description -n hal-libgphoto2
+Set of Udev rules and HAL device information file to handle digital
+cameras in userspace.
+
+%description -n hal-libgphoto2 -l pl.UTF-8
+Zestaw reguł Udev i plik z informacjami o urządzeniach HAL-a do
+obsługi kamer cyfrowych w przestrzeni użytkownika.
+
 %prep
 %setup -q
 %patch0 -p1
@@ -159,6 +176,7 @@ CFLAGS="%{rpmcflags}%{?with_canonupload: -DCANON_EXPERIMENTAL_UPLOAD}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_sysconfdir}/udev/rules.d/
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
@@ -229,6 +247,9 @@ export LD_LIBRARY_PATH=$RPM_BUILD_ROOT%{_libdir}
 $RPM_BUILD_ROOT%{_libdir}/%{name}/print-camera-list hal-fdi | \
 	grep -v "<!-- This file was generated" > $RPM_BUILD_ROOT/%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
 
+$RPM_BUILD_ROOT%{_libdir}/%{name}/print-camera-list \
+	udev-rules version 0.98 group usb mode 0660 > $RPM_BUILD_ROOT%{_sysconfdir}/udev/rules.d/52-udev-gphoto.rules
+
 %if %{with static_libs}
 rm -f $RPM_BUILD_ROOT%{_libdir}/libgphoto2/*/*.a
 rm -f $RPM_BUILD_ROOT%{_libdir}/libgphoto2_port/*/*.a
@@ -241,6 +262,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
+
+%post -n hal-libgphoto2
+%service -q haldaemon restart
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
@@ -265,8 +289,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libgphoto2_port/*/usb.la
 
 # utilities
-%attr(755,root,root) /%{_lib}/udev/check-mtp-device
-%attr(755,root,root) /%{_lib}/udev/check-ptp-camera
 %attr(755,root,root) %{_libdir}/libgphoto2/print-camera-list
 
 %dir %{_datadir}/libgphoto2
@@ -278,8 +300,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ja) %{_datadir}/libgphoto2/%{version}/konica/japanese
 %lang(ko) %{_datadir}/libgphoto2/%{version}/konica/korean
 %lang(es) %{_datadir}/libgphoto2/%{version}/konica/spanish
-
-%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
 
 %files devel
 %defattr(644,root,root,755)
@@ -307,3 +327,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/serial.so
 %{_libdir}/libgphoto2_port/*/serial.la
+
+%files -n hal-libgphoto2
+%defattr(644,root,root,755)
+%{_sysconfdir}/udev/rules.d/52-udev-gphoto.rules
+%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
+%attr(755,root,root) /%{_lib}/udev/check-mtp-device
+%attr(755,root,root) /%{_lib}/udev/check-ptp-camera
