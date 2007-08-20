@@ -14,7 +14,7 @@ Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.4.0
-Release:	2
+Release:	3
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
@@ -163,7 +163,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir} \
-	udevscriptdir=%{_libdir}/libgphoto2 \
+	udevscriptdir=/%{_lib}/udev \
 	%{?with_apidocs:apidocdir=%{_gtkdocdir}}
 
 %find_lang %{name} --all-name
@@ -265,8 +265,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libgphoto2_port/*/usb.la
 
 # utilities
-%attr(755,root,root) %{_libdir}/libgphoto2/check-mtp-device
-%attr(755,root,root) %{_libdir}/libgphoto2/check-ptp-camera
+%attr(755,root,root) /%{_lib}/udev/check-mtp-device
+%attr(755,root,root) /%{_lib}/udev/check-ptp-camera
 %attr(755,root,root) %{_libdir}/libgphoto2/print-camera-list
 
 %dir %{_datadir}/libgphoto2
