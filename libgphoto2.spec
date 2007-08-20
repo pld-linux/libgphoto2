@@ -221,7 +221,7 @@ cp --parents \
 # hal
 export LIBRARY_PATH=$RPM_BUILD_ROOT%{_libdir}
 cd packaging/linux-hotplug
-install -d $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty/
+install -d $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty
 export LIBDIR=$RPM_BUILD_ROOT%{_libdir}
 export CAMLIBS=$RPM_BUILD_ROOT%{_libdir}/%{name}/%{version}
 export LD_LIBRARY_PATH=$RPM_BUILD_ROOT%{_libdir}
