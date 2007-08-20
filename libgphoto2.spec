@@ -1,5 +1,5 @@
 # TODO
-# - save and package udev,hal rules from %{_libdir}/libgphoto2/print-camera-list (probably subpackage)
+# - subpackage for hal?
 #   move or symlink also /lib/udev/check-ptp-camera
 #
 # Conditional build:
@@ -14,7 +14,7 @@ Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.4.0
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
@@ -218,6 +218,17 @@ cp --parents \
 	libgphoto2_port/disk/ChangeLog \
 	docs
 
+# hal
+export LIBRARY_PATH=$RPM_BUILD_ROOT%{_libdir}
+cd packaging/linux-hotplug
+install -d $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty/
+export LIBDIR=$RPM_BUILD_ROOT%{_libdir}
+export CAMLIBS=$RPM_BUILD_ROOT%{_libdir}/%{name}/%{version}
+export LD_LIBRARY_PATH=$RPM_BUILD_ROOT%{_libdir}
+
+$RPM_BUILD_ROOT%{_libdir}/%{name}/print-camera-list hal-fdi | \
+	grep -v "<!-- This file was generated" > $RPM_BUILD_ROOT/%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
+
 %if %{with static_libs}
 rm -f $RPM_BUILD_ROOT%{_libdir}/libgphoto2/*/*.a
 rm -f $RPM_BUILD_ROOT%{_libdir}/libgphoto2_port/*/*.a
@@ -267,6 +278,8 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ja) %{_datadir}/libgphoto2/%{version}/konica/japanese
 %lang(ko) %{_datadir}/libgphoto2/%{version}/konica/korean
 %lang(es) %{_datadir}/libgphoto2/%{version}/konica/spanish
+
+%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
 
 %files devel
 %defattr(644,root,root,755)
