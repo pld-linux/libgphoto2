@@ -40,7 +40,7 @@ Obsoletes:	gphoto2-lib
 Conflicts:	gphoto2 < 2.1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _noautoreq      libtool(.*)
+%define		_noautoreqfiles		%{_libdir}/libgphoto2/.*\\.la %{_libdir}/libgphoto2_port/.*\\.la
 
 # PKGCONFIG changed during configures
 %undefine	configure_cache
