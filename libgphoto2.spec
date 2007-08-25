@@ -245,7 +245,7 @@ export CAMLIBS=$RPM_BUILD_ROOT%{_libdir}/%{name}/%{version}
 export LD_LIBRARY_PATH=$RPM_BUILD_ROOT%{_libdir}
 
 $RPM_BUILD_ROOT%{_libdir}/%{name}/print-camera-list hal-fdi | \
-	grep -v "<!-- This file was generated" > $RPM_BUILD_ROOT/%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
+	grep -v "<!-- This file was generated" > $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
 
 $RPM_BUILD_ROOT%{_libdir}/%{name}/print-camera-list \
 	udev-rules version 0.98 group usb mode 0660 > $RPM_BUILD_ROOT%{_sysconfdir}/udev/rules.d/52-udev-gphoto.rules
