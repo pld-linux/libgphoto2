@@ -176,7 +176,6 @@ CFLAGS="%{rpmcflags}%{?with_canonupload: -DCANON_EXPERIMENTAL_UPLOAD}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/udev/rules.d/
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
@@ -237,18 +236,16 @@ cp --parents \
 	docs
 
 # hal
-export LIBRARY_PATH=$RPM_BUILD_ROOT%{_libdir}
 cd packaging/linux-hotplug
+install -d $RPM_BUILD_ROOT%{_sysconfdir}/udev/rules.d
 install -d $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty
-export LIBDIR=$RPM_BUILD_ROOT%{_libdir}
 export CAMLIBS=$RPM_BUILD_ROOT%{_libdir}/%{name}/%{version}
-export LD_LIBRARY_PATH=$RPM_BUILD_ROOT%{_libdir}
 
-$RPM_BUILD_ROOT%{_libdir}/%{name}/print-camera-list hal-fdi | \
+../generic/print-camera-list hal-fdi | \
 	grep -v "<!-- This file was generated" > $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
 
-$RPM_BUILD_ROOT%{_libdir}/%{name}/print-camera-list \
-	udev-rules version 0.98 group usb mode 0660 > $RPM_BUILD_ROOT%{_sysconfdir}/udev/rules.d/52-udev-gphoto.rules
+../generic/print-camera-list udev-rules version 0.98 group usb mode 0660 \
+	> $RPM_BUILD_ROOT%{_sysconfdir}/udev/rules.d/52-udev-gphoto.rules
 
 %if %{with static_libs}
 rm -f $RPM_BUILD_ROOT%{_libdir}/libgphoto2/*/*.a
