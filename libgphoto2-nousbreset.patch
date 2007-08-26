@@ -1,0 +1,18 @@
+--- libgphoto2_port/usb/libusb.c.org	2007-08-26 10:59:24.999655304 +0200
++++ libgphoto2_port/usb/libusb.c	2007-08-26 10:59:38.104488357 +0200
+@@ -290,6 +290,7 @@
+ 		return (GP_ERROR_IO);
+ 	}
+ 
++#if 0
+ 	/* This is only for our very special Canon cameras which need a good
+ 	 * whack after close, otherwise they get timeouts on reconnect.
+ 	 */
+@@ -299,6 +300,7 @@
+ 			return (GP_ERROR_IO);
+ 		}
+ 	}
++#endif
+ 
+ 	if (usb_close (port->pl->dh) < 0) {
+ 		gp_port_set_error (port, _("Could not close USB port (%m)."));
