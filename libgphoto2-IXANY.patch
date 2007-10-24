@@ -1,5 +1,5 @@
---- /home/users/glen/rpm/BUILD/libgphoto2-2.4.0/libgphoto2_port/serial/unix.c~	2007-07-27 02:36:13.000000000 +0200
-+++ /home/users/glen/rpm/BUILD/libgphoto2-2.4.0/libgphoto2_port/serial/unix.c	2007-10-24 14:32:37.000000000 +0200
+--- libgphoto2-2.4.0/libgphoto2_port/serial/unix.c~	2007-07-27 02:36:13.000000000 +0200
++++ libgphoto2-2.4.0/libgphoto2_port/serial/unix.c	2007-10-24 14:32:37.000000000 +0200
 @@ -53,6 +53,7 @@
  #endif
  
