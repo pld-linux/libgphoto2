@@ -188,7 +188,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir} \
-	udevscriptdir=/%{_lib}/udev \
+	udevscriptdir=/lib/udev \
 	%{?with_apidocs:apidocdir=%{_gtkdocdir}}
 
 %find_lang %{name} --all-name
@@ -337,5 +337,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_sysconfdir}/udev/rules.d/52-udev-gphoto.rules
 %{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
-%attr(755,root,root) /%{_lib}/udev/check-mtp-device
-%attr(755,root,root) /%{_lib}/udev/check-ptp-camera
+%attr(755,root,root) /lib/udev/check-mtp-device
+%attr(755,root,root) /lib/udev/check-ptp-camera
