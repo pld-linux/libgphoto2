@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.4.0
-Release:	7
+Release:	8
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
@@ -129,9 +129,9 @@ współpracy z aparatami podłączonymi przez port szeregowy.
 Summary:	Userspace support for digital cameras
 Summary(pl.UTF-8):	Wsparcie dla kamer cyfrowych w przestrzeni użytkownika
 Group:		Applications/System
-Requires:	hal >= 0.5.9-2
+Requires:	hal >= 0.5.7.1
 Requires:	libusb >= 0.1.10a
-Requires:	udev >= 1:089
+Requires:	udev >= 1:079
 Provides:	udev-digicam
 Obsoletes:	hal-gphoto
 Obsoletes:	hotplug-digicam
@@ -188,7 +188,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir} \
-	udevscriptdir=/%{_lib}/udev \
+	udevscriptdir=/lib/udev \
 	%{?with_apidocs:apidocdir=%{_gtkdocdir}}
 
 %find_lang %{name} --all-name
@@ -337,5 +337,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_sysconfdir}/udev/rules.d/52-udev-gphoto.rules
 %{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
-%attr(755,root,root) /%{_lib}/udev/check-mtp-device
-%attr(755,root,root) /%{_lib}/udev/check-ptp-camera
+%attr(755,root,root) /lib/udev/check-mtp-device
+%attr(755,root,root) /lib/udev/check-ptp-camera
