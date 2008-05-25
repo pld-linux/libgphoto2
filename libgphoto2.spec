@@ -10,17 +10,16 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.4.0
-Release:	10
+Version:	2.4.1
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	a60154772635b693ff08b4f34dea7f61
-Patch0:		%{name}-link.patch
+# Source0-md5:	70c7d2c3e84997f29b4e988e56bd02aa
+Patch0:		%{name}-libtool.patch
 Patch1:		%{name}-pl.po-update.patch
-Patch2:		%{name}-nousbreset.patch
-Patch3:		%{name}-mode-owner-group.patch
-Patch4:		%{name}-IXANY.patch
+Patch2:		%{name}-mode-owner-group.patch
+Patch3:		%{name}-IXANY.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
@@ -148,11 +147,10 @@ obsługi kamer cyfrowych w przestrzeni użytkownika.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p0
-%patch3 -p1
+#%patch1 -p1 # fails
+#%patch2 -p1 # fails
 %ifarch alpha
-%patch4 -p1
+%patch3 -p1
 %endif
 
 rm -f po/stamp-po libgphoto2_port/po/stamp-po
@@ -203,7 +201,7 @@ cp --parents \
 	camlibs/canon/{ChangeLog,README.canon} \
 	camlibs/casio/PROTOCOL.txt \
 	camlibs/clicksmart310/README.clicksmart310 \
-	camlibs/digigr8/README.digigr8 \
+	camlibs/digigr8/README.* \
 	camlibs/dimera/{CREDITS,Protocol.txt} \
 	camlibs/enigma13/{README.enigma13,STATUS,protocol.txt} \
 	camlibs/fuji/PROTOCOL \
