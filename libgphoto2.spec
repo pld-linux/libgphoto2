@@ -148,8 +148,8 @@ obsługi kamer cyfrowych w przestrzeni użytkownika.
 %prep
 %setup -q
 %patch0 -p1
-#%patch1 -p1 # fails
-#%patch2 -p1 # fails
+%patch1 -p1
+%patch2 -p1
 %ifarch alpha
 %patch3 -p1
 %endif
@@ -275,7 +275,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog MAINTAINERS NEWS README TESTERS docs/*
 %attr(755,root,root) %{_libdir}/libgphoto2.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgphoto2.so.2
 %attr(755,root,root) %{_libdir}/libgphoto2_port.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgphoto2_port.so.2
 
 # camera plugins
 %dir %{_libdir}/libgphoto2
