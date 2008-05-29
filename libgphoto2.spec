@@ -277,7 +277,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libgphoto2.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libgphoto2.so.2
 %attr(755,root,root) %{_libdir}/libgphoto2_port.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgphoto2_port.so.2
+%attr(755,root,root) %ghost %{_libdir}/libgphoto2_port.so.0
 
 # camera plugins
 %dir %{_libdir}/libgphoto2
