@@ -1,0 +1,391 @@
+--- libgphoto2-2.4.1/po/pl.po.orig	2008-03-28 20:23:06.000000000 +0100
++++ libgphoto2-2.4.1/po/pl.po	2008-05-29 18:43:57.596170517 +0200
+@@ -1,14 +1,14 @@
+ # Polish translation for libgphoto2.
+-# Copyright (C) 2006, 2007 Free Software Foundation, Inc.
++# Copyright (C) 2006, 2007, 2008 Free Software Foundation, Inc.
+ # This file is distributed under the same license as the libgphoto2 package.
+-# Jakub Bogusz <qboosh@pld-linux.org>, 2006, 2007.
++# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2008.
+ #
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: libgphoto2 2.4.0\n"
++"Project-Id-Version: libgphoto2 2.4.1\n"
+ "Report-Msgid-Bugs-To: gphoto-devel@lists.sourceforge.net\n"
+ "POT-Creation-Date: 2008-03-28 20:10+0100\n"
+-"PO-Revision-Date: 2007-08-11 12:40+0200\n"
++"PO-Revision-Date: 2008-04-15 18:02+0200\n"
+ "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
+ "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+ "MIME-Version: 1.0\n"
+@@ -192,7 +192,7 @@
+ msgstr "Parametr NULL \"%s\" w %s w linii %i"
+ 
+ #: camlibs/canon/canon.h:576
+-#, fuzzy, c-format
++#, c-format
+ msgid ""
+ "Don't know how to handle camera->port->type value %i aka 0x%x in %s line %i."
+ msgstr ""
+@@ -1265,7 +1265,6 @@
+ "Ca³kowita liczba zdjêæ w nim wynosi %i\n"
+ 
+ #: camlibs/digigr8/library.c:142
+-#, fuzzy
+ msgid ""
+ "For cameras with insides from S&Q Technologies, which have the \n"
+ "USB Vendor ID 0x2770 and Product ID 0x905C, 0x9050, or 0x913D\n"
+@@ -1281,14 +1280,19 @@
+ "software command are not supported by the hardware in these\n"
+ "cameras.\n"
+ msgstr ""
+-"Dla aparatów z uk³adem technologii SQ905C:\n"
+-"zdjêcia zostan± zapisane w formacie PPM.\n"
++"Dla aparatów na elektronice S&Q Technologies, maj±cych USB Vendor ID\n"
++"0x2770 i Product ID 0x905C, 0x9050 lub 0x913D zdjêcia s± zapisywane\n"
++"w formacie PPM.\n"
++"\n"
++"Niektóre z tych aparatów pozwalaj± na programowe usuniêcie wszystkich\n"
++"zdjêæ. Inne nie. ¯aden z obs³ugiwanych aparatów nie pozwala na\n"
++"wykonanie capture-image. Ka¿dy pozwala na capture-preview (zrobienie\n"
++"zdjêcia i przes³anie do komputera). Je¶li usuwanie dzia³a na danym\n"
++"aparacie, capture-preview bêdzie mia³o efekt uboczny usuniêcia\n"
++"zawarto¶ci aparatu.\n"
+ "\n"
+-"Niektóre z aparatów pozwalaj± na programowe usuniêcie wszystkich\n"
+-"zdjêæ. Inne nie obsluguj±, w zale¿no¶ci od wersji uk³adu.\n"
+-"Je¶li usuwanie dzia³a, gphoto2 --capture zdjêcie bêdzie mia³o\n"
+-"efekt uboczny w postaci usuniêcia wszystkich zdjêæ z aparatu.\n"
+-"Przesy³anie danych do aparatu nie jest obs³ugiwane przez sprzêt.\n"
++"Przesy³anie zdjêæ do aparatu i programowe usuwanie pojedynczych zdjêæ\n"
++"nie s± obs³ugiwane przez sprzêt w tych aparatach.\n"
+ 
+ #: camlibs/digigr8/library.c:161
+ msgid ""
+@@ -3171,7 +3175,7 @@
+ "Guillaume Bedot <littletux@zarb.org>\n"
+ 
+ #: camlibs/mars/library.c:123
+-#, fuzzy, c-format
++#, c-format
+ msgid ""
+ "Mars MR97310 camera.\n"
+ "There is %i photo in it.\n"
+@@ -3180,16 +3184,15 @@
+ "There are %i photos in it.\n"
+ msgstr[0] ""
+ "Aparat Mars MR97310.\n"
+-"Zawiera %i zdjêcie. \n"
++"Zawiera %i zdjêcie.\n"
+ msgstr[1] ""
+ "Aparat Mars MR97310.\n"
+-"Zawiera %i zdjêcie. \n"
++"Zawiera %i zdjêcia.\n"
+ msgstr[2] ""
+ "Aparat Mars MR97310.\n"
+-"Zawiera %i zdjêcie. \n"
++"Zawiera %i zdjêæ.\n"
+ 
+ #: camlibs/mars/library.c:134
+-#, fuzzy
+ msgid ""
+ "This driver supports cameras with Mars MR97310 chip (and direct\n"
+ "equivalents ??Pixart PACx07??).\n"
+@@ -3205,7 +3208,7 @@
+ "Ten sterownik obs³uguje aparaty z uk³adem Mars MR97310 (i bezpo¶rednie\n"
+ "odpowiedniki ??Pixart PACx07??).\n"
+ "Aparaty te nie obs³uguj± usuwania zdjêæ ani przesy³ania danych do\n"
+-"aparatu. \n"
++"aparatu.\n"
+ "Dekodowanie skompresowanych zdjêæ mo¿e nie dzia³aæ dobrze i nie\n"
+ "dzia³a tak samo dobrze dla wszystkich obs³ugiwanych aparatów.\n"
+ "Przetwarzanie danych zdjêæ z aparatu Argus QuickClix NIE JEST\n"
+@@ -3987,7 +3990,7 @@
+ 
+ #: camlibs/ptp2/config.c:1091
+ msgid "fill in"
+-msgstr ""
++msgstr "wype³niaj±cy"
+ 
+ #: camlibs/ptp2/config.c:1092
+ msgid "auto red eye"
+@@ -4608,9 +4611,8 @@
+ msgstr "Czas aparatu"
+ 
+ #: camlibs/ptp2/config.c:2610 camlibs/ptp2/config.c:2612
+-#, fuzzy
+ msgid "Set camera time to PC time"
+-msgstr "Ustawienie daty aparatu na datê PC"
++msgstr "Ustawienie czasu aparatu na czas PC"
+ 
+ #: camlibs/ptp2/config.c:2614 camlibs/ptp2/ptp.c:3125 camlibs/ptp2/ptp.c:3136
+ msgid "Beep Mode"
+@@ -7378,7 +7380,6 @@
+ msgstr "Szeroki"
+ 
+ #: camlibs/sierra/nikon-desc.c:558
+-#, fuzzy
+ msgid "Misc exposure/lens settings"
+ msgstr "Ró¿ne ustawienia ekspozycji/obiektywu"
+ 
+@@ -7455,17 +7456,14 @@
+ msgstr "Wype³nienie przeciwko czerwonym oczom"
+ 
+ #: camlibs/sierra/olympus-desc.c:596
+-#, fuzzy
+ msgid "Fluorescent-1-home-6700K"
+ msgstr "Fluorescencyjne-1-dom-6700K"
+ 
+ #: camlibs/sierra/olympus-desc.c:597
+-#, fuzzy
+ msgid "Fluorescent-2-desk-5000K"
+ msgstr "Fluorescencyjne-2-biurko-5000K"
+ 
+ #: camlibs/sierra/olympus-desc.c:598
+-#, fuzzy
+ msgid "Fluorescent-3-office-4200K"
+ msgstr "Fluorescencyjne-3-biuro-4200K"
+ 
+@@ -7510,7 +7508,6 @@
+ msgstr "Format czasu"
+ 
+ #: camlibs/sierra/olympus-desc.c:1147
+-#, fuzzy
+ msgid ""
+ "Some notes about Olympus cameras:\n"
+ "(1) Camera Configuration:\n"
+@@ -7528,27 +7525,24 @@
+ "    state, you should reconnect the camera to the\n"
+ "    PC, then switch LCD to 'Off'."
+ msgstr ""
+-"Trochê uwag o aparatach Olympus:\n"
++"Kilka uwag o aparatach Olympus:\n"
+ "(1) Konfiguracja aparatu:\n"
+ "    Warto¶æ 0 oznacza domy¶ln± (auto).\n"
+ "(2) Olympus C-3040Z (mo¿e tak¿e C-2040Z i inne) ma\n"
+-"    tryb USB PC Control. Aby u¿yæ tego trybu, aparat\n"
+-"    musi byæ prze³±czony w tryb 'USB PC control mode'.\n"
+-"    Aby uzyskaæ menu do prze³±czania trybów, nale¿y\n"
+-"    w³±czyæ aparat, otworzyæ drzwiczki dostêpu do karty\n"
+-"    pamiêci, a nastêpnie przycisn±æ i przytrzymaæ oba\n"
+-"    przyciski menu i LCD a¿ pojawi siê menu sterowania\n"
+-"    aparatem - po czym ustawiæ opcjê na ON.\n"
++"    tryb USB PC Control. Aby prze³±czyæ aparat w ten\n"
++"    tryb, nale¿y w³±czyæ aparat, otworzyæ drzwiczki\n"
++"    dostêpu do karty pamiêci, a nastêpnie przycisn±æ\n"
++"    i przytrzymaæ oba przyciski menu i LCD a¿ pojawi siê\n"
++"    menu sterowania aparatem - nale¿y ustawiæ opcjê na ON.\n"
+ "(3) Po prze³±czeniu trybu LCD na 'Monitor' lub\n"
+ "    'Normalny' nie nale¿y zapomnieæ o prze³±czeniu\n"
+-"    z powrotem na 'Wy³±czony' przed roz³±czeniem.\n"
+-"    W przeciwnym wypadku nie mo¿na u¿ywaæ przycisków\n"
+-"    aparatu. W przypadku zakoñczenia pracy w tym stanie\n"
+-"    nale¿y ponownie pod³±czyæ aparat do komputera\n"
+-"    i prze³±czyæ LCD na 'Wy³±czony'."
++"    z powrotem na 'Off' przed roz³±czeniem. W przeciwnym\n"
++"    wypadku nie mo¿na u¿ywaæ przycisków aparatu.\n"
++"    W przypadku zakoñczenia pracy w tym stanie nale¿y\n"
++"    ponownie pod³±czyæ aparat do komputera i prze³±czyæ\n"
++"    LCD na 'Off'."
+ 
+ #: camlibs/sierra/olympus-desc.c:1166
+-#, fuzzy
+ msgid ""
+ "Olympus 750 Ultra Zoom:\n"
+ "(1) Olympus 750UZ has a USB PC Control mode. To switch\n"
+@@ -7564,21 +7558,19 @@
+ "    PC, then switch LCD to 'Off'."
+ msgstr ""
+ "Olympus 750 Ultra Zoom:\n"
+-"(1) Olympus 750UZ ma tryb USB PC Control. Aby u¿yæ tego\n"
+-"    trybu, aparat nale¿y prze³±czyæ w tryb 'USB PC control\n"
+-"    mode'. Aby uzyskaæ menu do prze³±czania trybów. nale¿y\n"
+-"    w³±czyæ aparat, otworzyæ drzwiczki dostêpu do karty\n"
+-"    pamiêci, a nastêpnie przycisn±æ i przytrzymaæ oba\n"
+-"    przyciski 'OK' i 'quickview' a¿ do pojawienia siê menu\n"
+-"    sterowania aparatem. Nale¿y prze³±czyæ je na tryb\n"
+-"    sterowania.\n"
++"(1) Olympus 750UZ ma tryb USB PC Control. Aby prze³±czyæ\n"
++"    aparat w ten tryb, nale¿y w³±czyæ aparat, otworzyæ\n"
++"    drzwiczki dostêpu do karty pamiêci, a nastêpnie\n"
++"    przycisn±æ i przytrzymaæ oba przyciski 'OK'\n"
++"    i 'quickview' do momentu pojawienia siê menu sterowania\n"
++"    aparatem. Nale¿y prze³±czyæ je na tryb sterowania.\n"
+ "(2) Po prze³±czeniu trybu LCD na 'Monitor' lub\n"
+ "    'Normalny' nie nale¿y zapomnieæ o prze³±czeniu\n"
+-"    z powrotem na 'Wy³±czony' przed roz³±czeniem.\n"
+-"    W przeciwnym wypadku nie mo¿na u¿ywaæ przycisków\n"
+-"    aparatu. W przypadku zakoñczenia pracy w tym stanie\n"
+-"    nale¿y ponownie pod³±czyæ aparat do komputera\n"
+-"    i prze³±czyæ LCD na 'Wy³±czony'."
++"    z powrotem na 'Off' przed roz³±czeniem. W przeciwnym\n"
++"    wypadku nie mo¿na u¿ywaæ przycisków aparatu.\n"
++"    W przypadku zakoñczenia pracy w tym stanie nale¿y\n"
++"    ponownie pod³±czyæ aparat do komputera i prze³±czyæ\n"
++"    LCD na 'Off'."
+ 
+ #: camlibs/sierra/olympus-desc.c:1182
+ msgid ""
+@@ -7767,9 +7759,8 @@
+ 
+ #: camlibs/sierra/sierra.c:1593 camlibs/sierra/sierra.c:1599
+ #: camlibs/sierra/sierra.c:1804
+-#, fuzzy
+ msgid "standard"
+-msgstr "Normalna"
++msgstr "normalna"
+ 
+ #: camlibs/sierra/sierra.c:1596 camlibs/sierra/sierra.c:1605
+ #: camlibs/sierra/sierra.c:1810
+@@ -7791,49 +7782,49 @@
+ msgstr "Uwaga: brak karty pamiêci, niektóre warto¶ci mog± byæ nieprawid³owe\n"
+ 
+ #: camlibs/sierra/sierra.c:1934
+-#, fuzzy, c-format
++#, c-format
+ msgid "Camera Model: %s\n"
+-msgstr "%sModel aparatu: %s\n"
++msgstr "Model aparatu: %s\n"
+ 
+ #: camlibs/sierra/sierra.c:1936
+-#, fuzzy, c-format
++#, c-format
+ msgid "Manufacturer: %s\n"
+-msgstr "%sProducent: %s\n"
++msgstr "Producent: %s\n"
+ 
+ #: camlibs/sierra/sierra.c:1940
+-#, fuzzy, c-format
++#, c-format
+ msgid "Serial Number: %s\n"
+-msgstr "%sNumer seryjny: %s\n"
++msgstr "Numer seryjny: %s\n"
+ 
+ #: camlibs/sierra/sierra.c:1942
+-#, fuzzy, c-format
++#, c-format
+ msgid "Software Rev.: %s\n"
+-msgstr "%sWersja oprogramowania: %s\n"
++msgstr "Wersja oprogramowania: %s\n"
+ 
+ #: camlibs/sierra/sierra.c:1947 camlibs/sierra/sierra.c:1950
+-#, fuzzy, c-format
++#, c-format
+ msgid "Frames Taken: %i\n"
+-msgstr "%sWykonanych zdjêæ: %i\n"
++msgstr "Wykonanych zdjêæ: %i\n"
+ 
+ #: camlibs/sierra/sierra.c:1953
+-#, fuzzy, c-format
++#, c-format
+ msgid "Frames Left: %i\n"
+-msgstr "%sPozosta³o zdjêæ: %i\n"
++msgstr "Pozosta³o zdjêæ: %i\n"
+ 
+ #: camlibs/sierra/sierra.c:1955
+-#, fuzzy, c-format
++#, c-format
+ msgid "Battery Life: %i\n"
+-msgstr "%sCzas ¿ycia baterii: %i\n"
++msgstr "Czas ¿ycia baterii: %i\n"
+ 
+ #: camlibs/sierra/sierra.c:1957
+-#, fuzzy, c-format
++#, c-format
+ msgid "Memory Left: %i bytes\n"
+-msgstr "%sPozosta³o pamiêci: %i bajtów\n"
++msgstr "Pozosta³o pamiêci: %i bajtów\n"
+ 
+ #: camlibs/sierra/sierra.c:1962
+-#, fuzzy, c-format
++#, c-format
+ msgid "Date: %s"
+-msgstr "%sData: %s"
++msgstr "Data: %s"
+ 
+ #: camlibs/sierra/sierra.c:1976
+ msgid "No camera manual available.\n"
+@@ -7861,7 +7852,6 @@
+ "  wys³aæ list na adres %s (po angielsku)\n"
+ 
+ #: camlibs/sierra/sierra.c:1995
+-#, fuzzy
+ msgid ""
+ "Some notes about Olympus cameras (and others?):\n"
+ "(1) Camera Configuration:\n"
+@@ -7879,27 +7869,25 @@
+ "    state, you should reconnect the camera to the\n"
+ "    PC and switch LCD to 'Off'."
+ msgstr ""
+-"Trochê uwag o aparatach Olympus (i innych?):\n"
++"Kilka uwag o aparatach Olympus (i innych?):\n"
+ "(1) Konfiguracja aparatu:\n"
+ "    Warto¶æ 0 oznacza domy¶ln± (auto).\n"
+ "(2) Olympus C-3040Z (mo¿e tak¿e C-2040Z i inne) ma\n"
+-"    tryb USB PC Control. Aby u¿yæ tego trybu, aparat\n"
+-"    musi byæ prze³±czony w tryb 'USB PC control mode'.\n"
+-"    Aby uzyskaæ menu do prze³±czania trybów, nale¿y\n"
+-"    w³±czyæ aparat, otworzyæ drzwiczki dostêpu do karty\n"
+-"    pamiêci, a nastêpnie przycisn±æ i przytrzymaæ oba\n"
+-"    przyciski menu i LCD a¿ pojawi siê menu sterowania\n"
+-"    aparatem - po czym ustawiæ opcjê na ON.\n"
++"    tryb USB PC Control. Aby prze³±czyæ aparat w ten\n"
++"    tryb, nale¿y w³±czyæ aparat, otworzyæ drzwiczki\n"
++"    dostêpu do karty pamiêci, a nastêpnie przycisn±æ\n"
++"    i przytrzymaæ oba przyciski menu i LCD a¿ pojawi\n"
++"    siê menu sterowania aparatem, po czym ustawiæ opcjê\n"
++"    na ON.\n"
+ "(3) Po prze³±czeniu trybu LCD na 'Monitor' lub\n"
+ "    'Normalny' nie nale¿y zapomnieæ o prze³±czeniu\n"
+-"    z powrotem na 'Wy³±czony' przed roz³±czeniem.\n"
+-"    W przeciwnym wypadku nie mo¿na u¿ywaæ przycisków\n"
+-"    aparatu. W przypadku zakoñczenia pracy w tym stanie\n"
+-"    nale¿y ponownie pod³±czyæ aparat do komputera\n"
+-"    i prze³±czyæ LCD na 'Wy³±czony'."
++"    z powrotem na 'Off' przed roz³±czeniem. W przeciwnym\n"
++"    wypadku nie mo¿na u¿ywaæ przycisków aparatu.\n"
++"    W przypadku zakoñczenia pracy w tym stanie nale¿y\n"
++"    ponownie pod³±czyæ aparat do komputera i prze³±czyæ\n"
++"    LCD na 'Off'."
+ 
+ #: camlibs/sierra/sierra.c:2022
+-#, fuzzy
+ msgid ""
+ "sierra SPARClite library\n"
+ "Scott Fritzinger <scottf@unr.edu>\n"
+@@ -7977,7 +7965,6 @@
+ "Zawiera %i zdjêæ. \n"
+ 
+ #: camlibs/sonix/library.c:132
+-#, fuzzy
+ msgid ""
+ "This driver supports some cameras that use the Sonix sn9c2028 chip.\n"
+ "The following operations are supported:\n"
+@@ -8000,7 +7987,8 @@
+ "   - robienie zdjêæ do aparatu (\t\tjw.\t\t)\n"
+ "Je¶li zostan± znalezione w aparacie klatki filmów, s± ¶ci±gane jako\n"
+ "kolejne nieruchome zdjêcia lub pliki AVI, zale¿nie od modelu.\n"
+-"Miniaturki dla plików AVI to nieruchome zdjêcia zrobione z pierwszej klatki\n"
++"Miniaturki dla plików AVI to nieruchome zdjêcia zrobione z pierwszej "
++"klatki.\n"
+ "Nie mo¿na usuwaæ pojedynczych zdjêæ z wyj±tkiem ostatniego.\n"
+ 
+ #: camlibs/sonix/library.c:150
+@@ -8591,16 +8579,3 @@
+ #: libgphoto2/gphoto2-result.c:88
+ msgid "Unknown error"
+ msgstr "Nieznany b³±d"
+-
+-#~ msgid ""
+-#~ "Mars MR97310 camera.\n"
+-#~ "There are %i photos in it. \n"
+-#~ msgstr ""
+-#~ "Aparat Mars MR97310.\n"
+-#~ "Zawiera %i zdjêæ. \n"
+-
+-#~ msgid "SuperFine"
+-#~ msgstr "Bardzo dobra"
+-
+-#~ msgid "%sCamera ID: %s\n"
+-#~ msgstr "%sID aparatu: %s\n"
