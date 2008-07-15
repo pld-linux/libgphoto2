@@ -1,25 +1,25 @@
---- libgphoto2-2.4.1-x/packaging/generic/print-camera-list.c	2007-07-27 02:35:28.000000000 +0200
-+++ libgphoto2-2.4.1/packaging/generic/print-camera-list.c	2007-08-26 12:40:32.673202319 +0200
-@@ -573,19 +575,19 @@
- 		printf("RUN+=\"%s\"\n", pdata->script);
- 	} else if (pdata->mode != NULL || pdata->owner != NULL || pdata->group != NULL) {
- 		if (pdata->mode != NULL) {
--			printf("MODE=\"%s\"", pdata->mode);
-+			printf("MODE=\"%s\", RUN=\"/bin/chmod %s $env{DEVICE}\"", pdata->mode, pdata->mode);
- 			if (pdata->owner != NULL || pdata->group != NULL) {
- 				printf(", ");
+--- libgphoto2-2.4.2/packaging/generic/print-camera-list.c.orig	2008-06-23 07:35:41.000000000 +0200
++++ libgphoto2-2.4.2/packaging/generic/print-camera-list.c	2008-07-15 21:34:06.378042250 +0200
+@@ -573,19 +573,19 @@
+ 			printf("RUN+=\"%s\"\n", pdata->script);
+ 		} else if (pdata->mode != NULL || pdata->owner != NULL || pdata->group != NULL) {
+ 			if (pdata->mode != NULL) {
+-				printf("MODE=\"%s\"", pdata->mode);
++				printf("MODE=\"%s\", RUN=\"/bin/chmod %s $env{DEVICE}\"", pdata->mode, pdata->mode);
+ 				if (pdata->owner != NULL || pdata->group != NULL) {
+ 					printf(", ");
+ 				}
  			}
- 		}
- 		if (pdata->owner != NULL) {
--			printf("OWNER=\"%s\"", pdata->owner);
-+			printf("OWNER=\"%s\", RUN=\"/bin/chown %s $env{DEVICE}\"", pdata->owner, pdata->owner);
+ 			if (pdata->owner != NULL) {
+-				printf("OWNER=\"%s\"", pdata->owner);
++				printf("OWNER=\"%s\", RUN=\"/bin/chown %s $env{DEVICE}\"", pdata->owner, pdata->owner);
+ 				if (pdata->group != NULL) {
+ 					printf(", ");
+ 				}
+ 			}
  			if (pdata->group != NULL) {
- 				printf(", ");
+-				printf("GROUP=\"%s\"", pdata->group);
++				printf("GROUP=\"%s\", RUN=\"/bin/chgrp %s $env{DEVICE}\"", pdata->group, pdata->group);
  			}
- 		}
- 		if (pdata->group != NULL) {
--			printf("GROUP=\"%s\"", pdata->group);
-+			printf("GROUP=\"%s\", RUN=\"/bin/chgrp %s $env{DEVICE}\"", pdata->group, pdata->group);
- 		}
- 		printf("\n");
- 	} else {
+ 			printf("\n");
+ 		} else {

@@ -1,15 +1,3 @@
-diff -Nur libgphoto2-2.4.1.orig/libgphoto2_port/configure.ac libgphoto2-2.4.1/libgphoto2_port/configure.ac
---- libgphoto2-2.4.1.orig/libgphoto2_port/configure.ac	2007-07-30 06:39:20.000000000 +0100
-+++ libgphoto2-2.4.1/libgphoto2_port/configure.ac	2008-05-25 04:22:26.000000000 +0100
-@@ -337,7 +337,7 @@
- dnl ---------------------------------------------------------------------------
- GP_CONFIG_MSG([USB ports])
- GP_CHECK_LIBRARY([LIBUSB],[libusb],[>= 0.1.5],
--		[usb.h],[usb_busses],[
-+		[usb.h],[usb_open],[
- 	IOLIB_SUBDIRS="$IOLIB_SUBDIRS usb"
- ],[],
- 		[disable-explicitly],
 diff -Nur libgphoto2-2.4.1.orig/libgphoto2_port/m4/gp-libltdl.m4 libgphoto2-2.4.1/libgphoto2_port/m4/gp-libltdl.m4
 --- libgphoto2-2.4.1.orig/libgphoto2_port/m4/gp-libltdl.m4	2008-03-24 11:47:19.000000000 +0000
 +++ libgphoto2-2.4.1/libgphoto2_port/m4/gp-libltdl.m4	2008-05-25 04:21:44.000000000 +0100

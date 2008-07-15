@@ -1,391 +1,959 @@
---- libgphoto2-2.4.1/po/pl.po.orig	2008-03-28 20:23:06.000000000 +0100
-+++ libgphoto2-2.4.1/po/pl.po	2008-05-29 18:43:57.596170517 +0200
-@@ -1,14 +1,14 @@
- # Polish translation for libgphoto2.
--# Copyright (C) 2006, 2007 Free Software Foundation, Inc.
-+# Copyright (C) 2006, 2007, 2008 Free Software Foundation, Inc.
- # This file is distributed under the same license as the libgphoto2 package.
--# Jakub Bogusz <qboosh@pld-linux.org>, 2006, 2007.
-+# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2008.
+--- libgphoto2-2.4.2/po/pl.po.orig	2008-07-13 22:25:54.000000000 +0200
++++ libgphoto2-2.4.2/po/pl.po	2008-07-15 21:07:04.318036383 +0200
+@@ -5,10 +5,10 @@
  #
  msgid ""
  msgstr ""
--"Project-Id-Version: libgphoto2 2.4.0\n"
-+"Project-Id-Version: libgphoto2 2.4.1\n"
+-"Project-Id-Version: libgphoto2 2.4.1\n"
++"Project-Id-Version: libgphoto2 2.4.2\n"
  "Report-Msgid-Bugs-To: gphoto-devel@lists.sourceforge.net\n"
- "POT-Creation-Date: 2008-03-28 20:10+0100\n"
--"PO-Revision-Date: 2007-08-11 12:40+0200\n"
-+"PO-Revision-Date: 2008-04-15 18:02+0200\n"
+ "POT-Creation-Date: 2008-07-13 22:25+0200\n"
+-"PO-Revision-Date: 2008-04-15 18:02+0200\n"
++"PO-Revision-Date: 2008-07-15 18:22+0200\n"
  "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
  "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
  "MIME-Version: 1.0\n"
-@@ -192,7 +192,7 @@
- msgstr "Parametr NULL \"%s\" w %s w linii %i"
+@@ -232,17 +232,15 @@
  
- #: camlibs/canon/canon.h:576
--#, fuzzy, c-format
-+#, c-format
- msgid ""
- "Don't know how to handle camera->port->type value %i aka 0x%x in %s line %i."
- msgstr ""
-@@ -1265,7 +1265,6 @@
- "Ca³kowita liczba zdjêæ w nim wynosi %i\n"
- 
- #: camlibs/digigr8/library.c:142
--#, fuzzy
- msgid ""
- "For cameras with insides from S&Q Technologies, which have the \n"
- "USB Vendor ID 0x2770 and Product ID 0x905C, 0x9050, or 0x913D\n"
-@@ -1281,14 +1280,19 @@
- "software command are not supported by the hardware in these\n"
- "cameras.\n"
- msgstr ""
--"Dla aparatów z uk³adem technologii SQ905C:\n"
--"zdjêcia zostan± zapisane w formacie PPM.\n"
-+"Dla aparatów na elektronice S&Q Technologies, maj±cych USB Vendor ID\n"
-+"0x2770 i Product ID 0x905C, 0x9050 lub 0x913D zdjêcia s± zapisywane\n"
-+"w formacie PPM.\n"
-+"\n"
-+"Niektóre z tych aparatów pozwalaj± na programowe usuniêcie wszystkich\n"
-+"zdjêæ. Inne nie. ¯aden z obs³ugiwanych aparatów nie pozwala na\n"
-+"wykonanie capture-image. Ka¿dy pozwala na capture-preview (zrobienie\n"
-+"zdjêcia i przes³anie do komputera). Je¶li usuwanie dzia³a na danym\n"
-+"aparacie, capture-preview bêdzie mia³o efekt uboczny usuniêcia\n"
-+"zawarto¶ci aparatu.\n"
- "\n"
--"Niektóre z aparatów pozwalaj± na programowe usuniêcie wszystkich\n"
--"zdjêæ. Inne nie obsluguj±, w zale¿no¶ci od wersji uk³adu.\n"
--"Je¶li usuwanie dzia³a, gphoto2 --capture zdjêcie bêdzie mia³o\n"
--"efekt uboczny w postaci usuniêcia wszystkich zdjêæ z aparatu.\n"
--"Przesy³anie danych do aparatu nie jest obs³ugiwane przez sprzêt.\n"
-+"Przesy³anie zdjêæ do aparatu i programowe usuwanie pojedynczych zdjêæ\n"
-+"nie s± obs³ugiwane przez sprzêt w tych aparatach.\n"
- 
- #: camlibs/digigr8/library.c:161
- msgid ""
-@@ -3171,7 +3175,7 @@
- "Guillaume Bedot <littletux@zarb.org>\n"
- 
- #: camlibs/mars/library.c:123
--#, fuzzy, c-format
-+#, c-format
- msgid ""
- "Mars MR97310 camera.\n"
- "There is %i photo in it.\n"
-@@ -3180,16 +3184,15 @@
- "There are %i photos in it.\n"
- msgstr[0] ""
- "Aparat Mars MR97310.\n"
--"Zawiera %i zdjêcie. \n"
-+"Zawiera %i zdjêcie.\n"
- msgstr[1] ""
- "Aparat Mars MR97310.\n"
--"Zawiera %i zdjêcie. \n"
-+"Zawiera %i zdjêcia.\n"
- msgstr[2] ""
- "Aparat Mars MR97310.\n"
--"Zawiera %i zdjêcie. \n"
-+"Zawiera %i zdjêæ.\n"
- 
- #: camlibs/mars/library.c:134
--#, fuzzy
- msgid ""
- "This driver supports cameras with Mars MR97310 chip (and direct\n"
- "equivalents ??Pixart PACx07??).\n"
-@@ -3205,7 +3208,7 @@
- "Ten sterownik obs³uguje aparaty z uk³adem Mars MR97310 (i bezpo¶rednie\n"
- "odpowiedniki ??Pixart PACx07??).\n"
- "Aparaty te nie obs³uguj± usuwania zdjêæ ani przesy³ania danych do\n"
--"aparatu. \n"
-+"aparatu.\n"
- "Dekodowanie skompresowanych zdjêæ mo¿e nie dzia³aæ dobrze i nie\n"
- "dzia³a tak samo dobrze dla wszystkich obs³ugiwanych aparatów.\n"
- "Przetwarzanie danych zdjêæ z aparatu Argus QuickClix NIE JEST\n"
-@@ -3987,7 +3990,7 @@
- 
- #: camlibs/ptp2/config.c:1091
- msgid "fill in"
+ #: camlibs/canon/library.c:121
+ msgid "Bulb"
 -msgstr ""
-+msgstr "wype³niaj±cy"
++msgstr "¯arówka"
  
- #: camlibs/ptp2/config.c:1092
- msgid "auto red eye"
-@@ -4608,9 +4611,8 @@
- msgstr "Czas aparatu"
- 
- #: camlibs/ptp2/config.c:2610 camlibs/ptp2/config.c:2612
+ #: camlibs/canon/library.c:122
 -#, fuzzy
- msgid "Set camera time to PC time"
--msgstr "Ustawienie daty aparatu na datê PC"
-+msgstr "Ustawienie czasu aparatu na czas PC"
+ msgid "30 seconds"
+-msgstr "10 sekund"
++msgstr "30 sekund"
  
- #: camlibs/ptp2/config.c:2614 camlibs/ptp2/ptp.c:3125 camlibs/ptp2/ptp.c:3136
- msgid "Beep Mode"
-@@ -7378,7 +7380,6 @@
- msgstr "Szeroki"
- 
- #: camlibs/sierra/nikon-desc.c:558
+ #: camlibs/canon/library.c:123
 -#, fuzzy
- msgid "Misc exposure/lens settings"
- msgstr "Ró¿ne ustawienia ekspozycji/obiektywu"
+ msgid "25 seconds"
+-msgstr "2 sekundy"
++msgstr "25 sekund"
  
-@@ -7455,17 +7456,14 @@
- msgstr "Wype³nienie przeciwko czerwonym oczom"
+ #: camlibs/canon/library.c:124 camlibs/ptp2/config.c:1569
+ #: camlibs/ptp2/config.c:1589
+@@ -250,14 +248,12 @@
+ msgstr "20 sekund"
  
- #: camlibs/sierra/olympus-desc.c:596
+ #: camlibs/canon/library.c:125
 -#, fuzzy
- msgid "Fluorescent-1-home-6700K"
- msgstr "Fluorescencyjne-1-dom-6700K"
+ msgid "15 seconds"
+-msgstr "5 sekund"
++msgstr "15 sekund"
  
- #: camlibs/sierra/olympus-desc.c:597
+ #: camlibs/canon/library.c:126
 -#, fuzzy
- msgid "Fluorescent-2-desk-5000K"
- msgstr "Fluorescencyjne-2-biurko-5000K"
+ msgid "13 seconds"
+-msgstr "10 sekund"
++msgstr "13 sekund"
  
- #: camlibs/sierra/olympus-desc.c:598
+ #: camlibs/canon/library.c:127 camlibs/ptp2/config.c:1568
+ #: camlibs/ptp2/config.c:1588
+@@ -281,213 +277,172 @@
+ msgstr "4 sekundy"
+ 
+ #: camlibs/canon/library.c:132
 -#, fuzzy
- msgid "Fluorescent-3-office-4200K"
- msgstr "Fluorescencyjne-3-biuro-4200K"
+ msgid "3.2 second"
+-msgstr "2 sekundy"
++msgstr "3.2 sekundy"
  
-@@ -7510,7 +7508,6 @@
- msgstr "Format czasu"
- 
- #: camlibs/sierra/olympus-desc.c:1147
+ #: camlibs/canon/library.c:133
 -#, fuzzy
+ msgid "2.5 second"
+-msgstr "2 sekundy"
++msgstr "2.5 sekundy"
+ 
+ #: camlibs/canon/library.c:134 camlibs/ptp2/config.c:1586
+ msgid "2 seconds"
+ msgstr "2 sekundy"
+ 
+ #: camlibs/canon/library.c:135
+-#, fuzzy
+ msgid "1.6 second"
+-msgstr "16 sekund"
++msgstr "1.6 sekundy"
+ 
+ #: camlibs/canon/library.c:136
+-#, fuzzy
+ msgid "1.3 second"
+-msgstr "10 sekund"
++msgstr "1.3 sekundy"
+ 
+ #: camlibs/canon/library.c:137
+-#, fuzzy
+ msgid "1 second"
+-msgstr "10 sekund"
++msgstr "1 sekunda"
+ 
+ #: camlibs/canon/library.c:138
+-#, fuzzy
+ msgid "8/10 second"
+-msgstr "10 sekund"
++msgstr "8/10 sekundy"
+ 
+ #: camlibs/canon/library.c:139
+-#, fuzzy
+ msgid "6/10 second"
+-msgstr "10 sekund"
++msgstr "6/10 sekundy"
+ 
+ #: camlibs/canon/library.c:140
+-#, fuzzy
+ msgid "1/2 second"
+-msgstr "2 sekundy"
++msgstr "1/2 sekundy"
+ 
+ #: camlibs/canon/library.c:141
+-#, fuzzy
+ msgid "4/10 second"
+-msgstr "10 sekund"
++msgstr "4/10 sekundy"
+ 
+ #: camlibs/canon/library.c:142
+-#, fuzzy
+ msgid "3/10 second"
+-msgstr "10 sekund"
++msgstr "3/10 sekundy"
+ 
+ #: camlibs/canon/library.c:143
+-#, fuzzy
+ msgid "1/4 second"
+-msgstr "4 sekundy"
++msgstr "1/4 sekundy"
+ 
+ #: camlibs/canon/library.c:144
+-#, fuzzy
+ msgid "1/5 second"
+-msgstr "5 sekund"
++msgstr "1/5 sekundy"
+ 
+ #: camlibs/canon/library.c:145
+-#, fuzzy
+ msgid "1/6 second"
+-msgstr "16 sekund"
++msgstr "1/6 sekundy"
+ 
+ #: camlibs/canon/library.c:146
+-#, fuzzy
+ msgid "1/8 second"
+-msgstr "8 sekund"
++msgstr "1/8 sekundy"
+ 
+ #: camlibs/canon/library.c:147
+-#, fuzzy
+ msgid "1/10 second"
+-msgstr "10 sekund"
++msgstr "1/10 sekundy"
+ 
+ #: camlibs/canon/library.c:148
+-#, fuzzy
+ msgid "1/13 second"
+-msgstr "10 sekund"
++msgstr "1/13 sekundy"
+ 
+ #: camlibs/canon/library.c:149
+-#, fuzzy
+ msgid "1/15 second"
+-msgstr "5 sekund"
++msgstr "1/15 sekundy"
+ 
+ #: camlibs/canon/library.c:150
+-#, fuzzy
+ msgid "1/20 second"
+-msgstr "10 sekund"
++msgstr "1/20 sekundy"
+ 
+ #: camlibs/canon/library.c:151
+-#, fuzzy
+ msgid "1/25 second"
+-msgstr "2 sekundy"
++msgstr "1/25 sekundy"
+ 
+ #: camlibs/canon/library.c:152
+-#, fuzzy
+ msgid "1/30 second"
+-msgstr "10 sekund"
++msgstr "1/30 sekundy"
+ 
+ #: camlibs/canon/library.c:153
+-#, fuzzy
+ msgid "1/40 second"
+-msgstr "10 sekund"
++msgstr "1/40 sekundy"
+ 
+ #: camlibs/canon/library.c:154
+-#, fuzzy
+ msgid "1/50 second"
+-msgstr "10 sekund"
++msgstr "1/50 sekundy"
+ 
+ #: camlibs/canon/library.c:155
+-#, fuzzy
+ msgid "1/60 second"
+-msgstr "10 sekund"
++msgstr "1/60 sekundy"
+ 
+ #: camlibs/canon/library.c:156
+-#, fuzzy
+ msgid "1/80 second"
+-msgstr "10 sekund"
++msgstr "1/80 sekundy"
+ 
+ #: camlibs/canon/library.c:157
+-#, fuzzy
+ msgid "1/100 second"
+-msgstr "10 sekund"
++msgstr "1/100 sekundy"
+ 
+ #: camlibs/canon/library.c:158
+-#, fuzzy
+ msgid "1/125 second"
+-msgstr "2 sekundy"
++msgstr "1/125 sekundy"
+ 
+ #: camlibs/canon/library.c:159
+-#, fuzzy
+ msgid "1/160 second"
+-msgstr "10 sekund"
++msgstr "1/160 sekundy"
+ 
+ #: camlibs/canon/library.c:160
+-#, fuzzy
+ msgid "1/200 second"
+-msgstr "10 sekund"
++msgstr "1/200 sekundy"
+ 
+ #: camlibs/canon/library.c:161
+-#, fuzzy
+ msgid "1/250 second"
+-msgstr "10 sekund"
++msgstr "1/250 sekundy"
+ 
+ #: camlibs/canon/library.c:162
+-#, fuzzy
+ msgid "1/320 second"
+-msgstr "10 sekund"
++msgstr "1/320 sekundy"
+ 
+ #: camlibs/canon/library.c:163
+-#, fuzzy
+ msgid "1/400 second"
+-msgstr "10 sekund"
++msgstr "1/400 sekundy"
+ 
+ #: camlibs/canon/library.c:164
+-#, fuzzy
+ msgid "1/500 second"
+-msgstr "10 sekund"
++msgstr "1/500 sekundy"
+ 
+ #: camlibs/canon/library.c:165
+-#, fuzzy
+ msgid "1/640 second"
+-msgstr "10 sekund"
++msgstr "1/640 sekundy"
+ 
+ #: camlibs/canon/library.c:166
+-#, fuzzy
+ msgid "1/800 second"
+-msgstr "10 sekund"
++msgstr "1/800 sekundy"
+ 
+ #: camlibs/canon/library.c:167
+-#, fuzzy
+ msgid "1/1000 second"
+-msgstr "10 sekund"
++msgstr "1/1000 sekundy"
+ 
+ #: camlibs/canon/library.c:168
+-#, fuzzy
+ msgid "1/1250 second"
+-msgstr "10 sekund"
++msgstr "1/1250 sekundy"
+ 
+ #: camlibs/canon/library.c:169
+-#, fuzzy
+ msgid "1/1600 second"
+-msgstr "10 sekund"
++msgstr "1/1600 sekundy"
+ 
+ #: camlibs/canon/library.c:170
+-#, fuzzy
+ msgid "1/2000 second"
+-msgstr "10 sekund"
++msgstr "1/2000 sekundy"
+ 
+ #: camlibs/canon/library.c:171
+-#, fuzzy
+ msgid "1/2500 second"
+-msgstr "10 sekund"
++msgstr "1/2500 sekundy"
+ 
+ #: camlibs/canon/library.c:172
+-#, fuzzy
+ msgid "1/3200 second"
+-msgstr "10 sekund"
++msgstr "1/3200 sekundy"
+ 
+ #: camlibs/canon/library.c:173
+-#, fuzzy
+ msgid "1/4000 second"
+-msgstr "10 sekund"
++msgstr "1/4000 sekundy"
+ 
+ #: camlibs/canon/library.c:210
+ msgid "Auto focus: one-shot"
+@@ -506,77 +461,64 @@
+ msgstr "Rêczna ogniskowa"
+ 
+ #: camlibs/canon/library.c:218
+-#, fuzzy
+ msgid "Beep off"
+-msgstr "Tryb piszczyka"
++msgstr "Piszczyk wy³±czony"
+ 
+ #: camlibs/canon/library.c:219
+-#, fuzzy
+ msgid "Beep on"
+-msgstr "Tryb piszczyka"
++msgstr "Piszczyk w³±czony"
+ 
+ #: camlibs/canon/library.c:224 camlibs/ptp2/config.c:1429
+ msgid "Flash off"
+ msgstr "Flesz wy³±czony"
+ 
+ #: camlibs/canon/library.c:225
+-#, fuzzy
+ msgid "Flash on"
+-msgstr "Tylko flesz"
++msgstr "Flesz w³±czony"
+ 
+ #: camlibs/canon/library.c:226
+-#, fuzzy
+ msgid "Flash auto"
+-msgstr "Flesz wy³±czony"
++msgstr "Flesz automatyczny"
+ 
+ #: camlibs/canon/library.c:231
+ msgid "No zoom"
+-msgstr ""
++msgstr "Brak powiêkszenia"
+ 
+ #: camlibs/canon/library.c:232
+-#, fuzzy
+ msgid "Zoom 1"
+-msgstr "Powiêkszenie"
++msgstr "Powiêkszenie 1"
+ 
+ #: camlibs/canon/library.c:233
+-#, fuzzy
+ msgid "Zoom 2"
+-msgstr "Powiêkszenie"
++msgstr "Powiêkszenie 2"
+ 
+ #: camlibs/canon/library.c:234
+-#, fuzzy
+ msgid "Zoom 3"
+-msgstr "Powiêkszenie"
++msgstr "Powiêkszenie 3"
+ 
+ #: camlibs/canon/library.c:235
+-#, fuzzy
+ msgid "Zoom 4"
+-msgstr "Powiêkszenie"
++msgstr "Powiêkszenie 4"
+ 
+ #: camlibs/canon/library.c:236
+-#, fuzzy
+ msgid "Zoom 5"
+-msgstr "Powiêkszenie"
++msgstr "Powiêkszenie 5"
+ 
+ #: camlibs/canon/library.c:237
+-#, fuzzy
+ msgid "Zoom 6"
+-msgstr "Powiêkszenie"
++msgstr "Powiêkszenie 6"
+ 
+ #: camlibs/canon/library.c:238
+-#, fuzzy
+ msgid "Zoom 7"
+-msgstr "Powiêkszenie"
++msgstr "Powiêkszenie 7"
+ 
+ #: camlibs/canon/library.c:239
+-#, fuzzy
+ msgid "Zoom 8"
+-msgstr "Powiêkszenie"
++msgstr "Powiêkszenie 8"
+ 
+ #: camlibs/canon/library.c:240
+-#, fuzzy
+ msgid "Zoom 9"
+-msgstr "Powiêkszenie"
++msgstr "Powiêkszenie 9"
+ 
+ #: camlibs/canon/library.c:245 camlibs/ptp2/ptp.c:3588
+ msgid "RAW"
+@@ -897,7 +839,6 @@
+ msgstr "Tryb ogniskowania"
+ 
+ #: camlibs/canon/library.c:1767 camlibs/canon/library.c:2186
+-#, fuzzy
+ msgid "Flash mode"
+ msgstr "Tryb flesza"
+ 
+@@ -1029,48 +970,40 @@
+ msgstr "Nie uda³o siê zmieniæ trybu ogniskowania"
+ 
+ #: camlibs/canon/library.c:2116
+-#, fuzzy
+ msgid "Invalid beep mode setting"
+-msgstr "B³êdne ustawienie trybu ogniskowania"
++msgstr "B³êdne ustawienie trybu piszczyka"
+ 
+ #: camlibs/canon/library.c:2119
+-#, fuzzy
+ msgid "Beep mode changed"
+-msgstr "Zmieniono tryb ogniskowania"
++msgstr "Zmieniono tryb piszczyka"
+ 
+ #: camlibs/canon/library.c:2121
+-#, fuzzy
+ msgid "Could not change beep mode"
+-msgstr "Nie uda³o siê zmieniæ trybu ogniskowania"
++msgstr "Nie uda³o siê zmieniæ trybu piszczyka"
+ 
+ #: camlibs/canon/library.c:2146
+ msgid "Invalid zoom level"
+-msgstr ""
++msgstr "B³êdny stopieñ powiêkszenia"
+ 
+ #: camlibs/canon/library.c:2149
+-#, fuzzy
+ msgid "Zoom level changed"
+-msgstr "Zmieniono prêdko¶æ ISO"
++msgstr "Zmieniono stopieñ powiêkszenia"
+ 
+ #: camlibs/canon/library.c:2151
+-#, fuzzy
+ msgid "Could not change zoom level"
+-msgstr "nie uda³o siê zmieniæ prêdko¶ci ISO"
++msgstr "Nie uda³o siê zmieniæ stopnia powiêkszenia"
+ 
+ #: camlibs/canon/library.c:2204
+-#, fuzzy
+ msgid "Invalid flash mode setting"
+-msgstr "B³êdne ustawienie trybu ogniskowania"
++msgstr "B³êdne ustawienie trybu flesza"
+ 
+ #: camlibs/canon/library.c:2207
+-#, fuzzy
+ msgid "Flash mode changed"
+-msgstr "Zmieniono tryb ogniskowania"
++msgstr "Zmieniono tryb flesza"
+ 
+ #: camlibs/canon/library.c:2209
+-#, fuzzy
+ msgid "Could not change flash mode"
+-msgstr "Nie uda³o siê zmieniæ trybu ogniskowania"
++msgstr "Nie uda³o siê zmieniæ trybu flesza"
+ 
+ #: camlibs/canon/library.c:2222
+ msgid "time set"
+@@ -1227,9 +1160,8 @@
+ msgstr "B³±d podczas zmiany prêdko¶ci"
+ 
+ #: camlibs/canon/serial.c:1465
+-#, fuzzy
+ msgid "Error waiting for ACK during initialization, retrying"
+-msgstr "B³±d podczas oczekiwania na ACK przy ponawianiu inicjalizacji"
++msgstr "B³±d podczas oczekiwania na ACK przy inicjalizacji, ponowna próba"
+ 
+ #: camlibs/canon/serial.c:1471
+ msgid "Error waiting ACK during initialization"
+@@ -1278,7 +1210,7 @@
+ msgstr "Nierozpoznana pocz±tkowa odpowied¼ aparatu '%c'"
+ 
+ #: camlibs/canon/usb.c:266
+-#, fuzzy, c-format
++#, c-format
  msgid ""
- "Some notes about Olympus cameras:\n"
- "(1) Camera Configuration:\n"
-@@ -7528,27 +7525,24 @@
- "    state, you should reconnect the camera to the\n"
- "    PC, then switch LCD to 'Off'."
+ "Step #2 of initialization failed: (\"%s\" on read of %i). Camera not "
+ "operational"
+@@ -1287,7 +1219,7 @@
+ "niefunkcjonalny"
+ 
+ #: camlibs/canon/usb.c:272
+-#, fuzzy, c-format
++#, c-format
+ msgid ""
+ "Step #2 of initialization failed! (returned %i bytes, expected %i). Camera "
+ "not operational"
+@@ -1296,7 +1228,7 @@
+ "Aparat niefunkcjonalny"
+ 
+ #: camlibs/canon/usb.c:291
+-#, fuzzy, c-format
++#, c-format
+ msgid ""
+ "Step #3 of initialization failed: \"%s\" on read of %i. Camera not "
+ "operational"
+@@ -1305,16 +1237,16 @@
+ "niefunkcjonalny"
+ 
+ #: camlibs/canon/usb.c:298 camlibs/canon/usb.c:325
+-#, fuzzy, c-format
++#, c-format
+ msgid ""
+ "Step #3 of initialization failed! (returned %i, expected %i). Camera not "
+ "operational"
  msgstr ""
--"Trochê uwag o aparatach Olympus:\n"
-+"Kilka uwag o aparatach Olympus:\n"
- "(1) Konfiguracja aparatu:\n"
- "    Warto¶æ 0 oznacza domy¶ln± (auto).\n"
- "(2) Olympus C-3040Z (mo¿e tak¿e C-2040Z i inne) ma\n"
--"    tryb USB PC Control. Aby u¿yæ tego trybu, aparat\n"
--"    musi byæ prze³±czony w tryb 'USB PC control mode'.\n"
--"    Aby uzyskaæ menu do prze³±czania trybów, nale¿y\n"
--"    w³±czyæ aparat, otworzyæ drzwiczki dostêpu do karty\n"
--"    pamiêci, a nastêpnie przycisn±æ i przytrzymaæ oba\n"
--"    przyciski menu i LCD a¿ pojawi siê menu sterowania\n"
--"    aparatem - po czym ustawiæ opcjê na ON.\n"
-+"    tryb USB PC Control. Aby prze³±czyæ aparat w ten\n"
-+"    tryb, nale¿y w³±czyæ aparat, otworzyæ drzwiczki\n"
-+"    dostêpu do karty pamiêci, a nastêpnie przycisn±æ\n"
-+"    i przytrzymaæ oba przyciski menu i LCD a¿ pojawi siê\n"
-+"    menu sterowania aparatem - nale¿y ustawiæ opcjê na ON.\n"
- "(3) Po prze³±czeniu trybu LCD na 'Monitor' lub\n"
- "    'Normalny' nie nale¿y zapomnieæ o prze³±czeniu\n"
--"    z powrotem na 'Wy³±czony' przed roz³±czeniem.\n"
--"    W przeciwnym wypadku nie mo¿na u¿ywaæ przycisków\n"
--"    aparatu. W przypadku zakoñczenia pracy w tym stanie\n"
--"    nale¿y ponownie pod³±czyæ aparat do komputera\n"
--"    i prze³±czyæ LCD na 'Wy³±czony'."
-+"    z powrotem na 'Off' przed roz³±czeniem. W przeciwnym\n"
-+"    wypadku nie mo¿na u¿ywaæ przycisków aparatu.\n"
-+"    W przypadku zakoñczenia pracy w tym stanie nale¿y\n"
-+"    ponownie pod³±czyæ aparat do komputera i prze³±czyæ\n"
-+"    LCD na 'Off'."
+-"Krok #3 inicjalizacji nie powiód³ siê! (zwrócono %i bajtów, oczekiwano %i). "
+-"Aparat niefunkcjonalny"
++"Krok #3 inicjalizacji nie powiód³ siê! (zwrócono %i, oczekiwano %i). Aparat "
++"niefunkcjonalny"
  
- #: camlibs/sierra/olympus-desc.c:1166
--#, fuzzy
+ #: camlibs/canon/usb.c:318
+-#, fuzzy, c-format
++#, c-format
  msgid ""
- "Olympus 750 Ultra Zoom:\n"
- "(1) Olympus 750UZ has a USB PC Control mode. To switch\n"
-@@ -7564,21 +7558,19 @@
- "    PC, then switch LCD to 'Off'."
+ "Step #3 of initialization failed: \"%s\" on write of %i. Camera not "
+ "operational"
+@@ -1329,7 +1261,7 @@
+ "Krok #4 nie powiód³ siê: \"%s\" przy odczycie %i. Aparat niefunkcjonalny"
+ 
+ #: camlibs/canon/usb.c:363 camlibs/canon/usb.c:404
+-#, fuzzy, c-format
++#, c-format
+ msgid "Step #4 failed (returned %i, expected %i). Camera not operational"
  msgstr ""
- "Olympus 750 Ultra Zoom:\n"
--"(1) Olympus 750UZ ma tryb USB PC Control. Aby u¿yæ tego\n"
--"    trybu, aparat nale¿y prze³±czyæ w tryb 'USB PC control\n"
--"    mode'. Aby uzyskaæ menu do prze³±czania trybów. nale¿y\n"
--"    w³±czyæ aparat, otworzyæ drzwiczki dostêpu do karty\n"
--"    pamiêci, a nastêpnie przycisn±æ i przytrzymaæ oba\n"
--"    przyciski 'OK' i 'quickview' a¿ do pojawienia siê menu\n"
--"    sterowania aparatem. Nale¿y prze³±czyæ je na tryb\n"
--"    sterowania.\n"
-+"(1) Olympus 750UZ ma tryb USB PC Control. Aby prze³±czyæ\n"
-+"    aparat w ten tryb, nale¿y w³±czyæ aparat, otworzyæ\n"
-+"    drzwiczki dostêpu do karty pamiêci, a nastêpnie\n"
-+"    przycisn±æ i przytrzymaæ oba przyciski 'OK'\n"
-+"    i 'quickview' do momentu pojawienia siê menu sterowania\n"
-+"    aparatem. Nale¿y prze³±czyæ je na tryb sterowania.\n"
- "(2) Po prze³±czeniu trybu LCD na 'Monitor' lub\n"
- "    'Normalny' nie nale¿y zapomnieæ o prze³±czeniu\n"
--"    z powrotem na 'Wy³±czony' przed roz³±czeniem.\n"
--"    W przeciwnym wypadku nie mo¿na u¿ywaæ przycisków\n"
--"    aparatu. W przypadku zakoñczenia pracy w tym stanie\n"
--"    nale¿y ponownie pod³±czyæ aparat do komputera\n"
--"    i prze³±czyæ LCD na 'Wy³±czony'."
-+"    z powrotem na 'Off' przed roz³±czeniem. W przeciwnym\n"
-+"    wypadku nie mo¿na u¿ywaæ przycisków aparatu.\n"
-+"    W przypadku zakoñczenia pracy w tym stanie nale¿y\n"
-+"    ponownie pod³±czyæ aparat do komputera i prze³±czyæ\n"
-+"    LCD na 'Off'."
+ "Krok #4 nie powiód³ siê (zwrócono %i, oczekiwano %i). Aparat niefunkcjonalny"
+@@ -1413,9 +1345,8 @@
+ "pe³nego obrazu"
  
- #: camlibs/sierra/olympus-desc.c:1182
- msgid ""
-@@ -7767,9 +7759,8 @@
- 
- #: camlibs/sierra/sierra.c:1593 camlibs/sierra/sierra.c:1599
- #: camlibs/sierra/sierra.c:1804
+ #: camlibs/canon/usb.c:1150
 -#, fuzzy
- msgid "standard"
--msgstr "Normalna"
-+msgstr "normalna"
+ msgid "canon_usb_capture_dialogue: secondary image descriptor received"
+-msgstr "canon_usb_capture_dialogue: odebrano drugi deskryptor zdjêcia"
++msgstr "canon_usb_capture_dialogue: odebrano deskryptor zdjêcia dodatkowego"
  
- #: camlibs/sierra/sierra.c:1596 camlibs/sierra/sierra.c:1605
- #: camlibs/sierra/sierra.c:1810
-@@ -7791,49 +7782,49 @@
- msgstr "Uwaga: brak karty pamiêci, niektóre warto¶ci mog± byæ nieprawid³owe\n"
+ #: camlibs/canon/usb.c:1177
+ msgid "canon_usb_capture_dialogue: first interrupt read out of sequence"
+@@ -4373,11 +4304,11 @@
  
- #: camlibs/sierra/sierra.c:1934
--#, fuzzy, c-format
-+#, c-format
- msgid "Camera Model: %s\n"
--msgstr "%sModel aparatu: %s\n"
-+msgstr "Model aparatu: %s\n"
+ #: camlibs/ptp2/config.c:1079
+ msgid "TV"
+-msgstr ""
++msgstr "TV"
  
- #: camlibs/sierra/sierra.c:1936
--#, fuzzy, c-format
-+#, c-format
- msgid "Manufacturer: %s\n"
--msgstr "%sProducent: %s\n"
-+msgstr "Producent: %s\n"
+ #: camlibs/ptp2/config.c:1080
+ msgid "AV"
+-msgstr ""
++msgstr "AV"
  
- #: camlibs/sierra/sierra.c:1940
--#, fuzzy, c-format
-+#, c-format
- msgid "Serial Number: %s\n"
--msgstr "%sNumer seryjny: %s\n"
-+msgstr "Numer seryjny: %s\n"
+ #: camlibs/ptp2/config.c:1089
+ msgid "fill in"
+@@ -4787,7 +4718,6 @@
+ msgstr "Kontrast"
  
- #: camlibs/sierra/sierra.c:1942
--#, fuzzy, c-format
-+#, c-format
- msgid "Software Rev.: %s\n"
--msgstr "%sWersja oprogramowania: %s\n"
-+msgstr "Wersja oprogramowania: %s\n"
+ #: camlibs/ptp2/config.c:1653 camlibs/ptp2/ptp.c:3698
+-#, fuzzy
+ msgid "Medium High"
+ msgstr "¦rednio wysoki"
  
- #: camlibs/sierra/sierra.c:1947 camlibs/sierra/sierra.c:1950
--#, fuzzy, c-format
-+#, c-format
- msgid "Frames Taken: %i\n"
--msgstr "%sWykonanych zdjêæ: %i\n"
-+msgstr "Wykonanych zdjêæ: %i\n"
+@@ -4910,9 +4840,8 @@
+ msgstr "Nazwa profilu"
  
- #: camlibs/sierra/sierra.c:1953
--#, fuzzy, c-format
-+#, c-format
- msgid "Frames Left: %i\n"
--msgstr "%sPozosta³o zdjêæ: %i\n"
-+msgstr "Pozosta³o zdjêæ: %i\n"
+ #: camlibs/ptp2/config.c:2500
+-#, fuzzy
+ msgid "WIFI ESSID"
+-msgstr "ESSID"
++msgstr "WIFI ESSID"
  
- #: camlibs/sierra/sierra.c:1955
--#, fuzzy, c-format
-+#, c-format
- msgid "Battery Life: %i\n"
--msgstr "%sCzas ¿ycia baterii: %i\n"
-+msgstr "Czas ¿ycia baterii: %i\n"
+ #: camlibs/ptp2/config.c:2501
+ msgid "IP address (empty for DHCP)"
+@@ -4931,9 +4860,8 @@
+ msgstr "Tryb dostêpu"
  
- #: camlibs/sierra/sierra.c:1957
--#, fuzzy, c-format
-+#, c-format
- msgid "Memory Left: %i bytes\n"
--msgstr "%sPozosta³o pamiêci: %i bajtów\n"
-+msgstr "Pozosta³o pamiêci: %i bajtów\n"
+ #: camlibs/ptp2/config.c:2505
+-#, fuzzy
+ msgid "WIFI channel"
+-msgstr "Kana³ Wifi"
++msgstr "Kana³ WIFI"
  
- #: camlibs/sierra/sierra.c:1962
--#, fuzzy, c-format
-+#, c-format
- msgid "Date: %s"
--msgstr "%sData: %s"
-+msgstr "Data: %s"
+ #: camlibs/ptp2/config.c:2506
+ msgid "Encryption"
+@@ -5009,14 +4937,12 @@
+ msgstr "Obiekt zdjêcia"
  
- #: camlibs/sierra/sierra.c:1976
- msgid "No camera manual available.\n"
-@@ -7861,7 +7852,6 @@
- "  wys³aæ list na adres %s (po angielsku)\n"
+ #: camlibs/ptp2/config.c:2630
+-#, fuzzy
+ msgid "Canon Image Quality"
+-msgstr "Jako¶æ obrazu"
++msgstr "Jako¶æ obrazu Canona"
  
- #: camlibs/sierra/sierra.c:1995
+ #: camlibs/ptp2/config.c:2632
+-#, fuzzy
+ msgid "Canon Image Size"
+-msgstr "Rozmiar obrazu"
++msgstr "Rozmiar obrazu Canona"
+ 
+ #: camlibs/ptp2/config.c:2633 camlibs/ptp2/config.c:2660
+ #: camlibs/ptp2/ptp.c:3194 camlibs/sierra/olympus-desc.c:881
+@@ -5313,9 +5239,8 @@
+ msgstr "Ustawienia zdjêcia"
+ 
+ #: camlibs/ptp2/config.c:2719
+-#, fuzzy
+ msgid "WIFI profiles"
+-msgstr "Profile Wifi"
++msgstr "Profile WIFI"
+ 
+ #: camlibs/ptp2/library.c:118
+ msgid "You need to specify a folder starting with /store_xxxxxxxxx/"
+@@ -5471,7 +5396,7 @@
+ 
+ #: camlibs/ptp2/library.c:200
+ msgid "PTP Cancel request"
+-msgstr ""
++msgstr "¯±danie anulowania PTP"
+ 
+ #: camlibs/ptp2/library.c:201
+ msgid "PTP Error: bad parameter"
+@@ -5486,7 +5411,6 @@
+ msgstr "PTP: B³±d protoko³u, oczekiwano odpowiedzi"
+ 
+ #: camlibs/ptp2/library.c:1140
 -#, fuzzy
  msgid ""
- "Some notes about Olympus cameras (and others?):\n"
- "(1) Camera Configuration:\n"
-@@ -7879,27 +7869,25 @@
- "    state, you should reconnect the camera to the\n"
- "    PC and switch LCD to 'Off'."
+ "PTP2 driver\n"
+ "(c) 2001-2005 by Mariusz Woloszyn <emsi@ipartners.pl>.\n"
+@@ -5500,8 +5424,8 @@
+ "Enjoy!"
  msgstr ""
--"Trochê uwag o aparatach Olympus (i innych?):\n"
-+"Kilka uwag o aparatach Olympus (i innych?):\n"
- "(1) Konfiguracja aparatu:\n"
- "    Warto¶æ 0 oznacza domy¶ln± (auto).\n"
- "(2) Olympus C-3040Z (mo¿e tak¿e C-2040Z i inne) ma\n"
--"    tryb USB PC Control. Aby u¿yæ tego trybu, aparat\n"
--"    musi byæ prze³±czony w tryb 'USB PC control mode'.\n"
--"    Aby uzyskaæ menu do prze³±czania trybów, nale¿y\n"
--"    w³±czyæ aparat, otworzyæ drzwiczki dostêpu do karty\n"
--"    pamiêci, a nastêpnie przycisn±æ i przytrzymaæ oba\n"
--"    przyciski menu i LCD a¿ pojawi siê menu sterowania\n"
--"    aparatem - po czym ustawiæ opcjê na ON.\n"
-+"    tryb USB PC Control. Aby prze³±czyæ aparat w ten\n"
-+"    tryb, nale¿y w³±czyæ aparat, otworzyæ drzwiczki\n"
-+"    dostêpu do karty pamiêci, a nastêpnie przycisn±æ\n"
-+"    i przytrzymaæ oba przyciski menu i LCD a¿ pojawi\n"
-+"    siê menu sterowania aparatem, po czym ustawiæ opcjê\n"
-+"    na ON.\n"
- "(3) Po prze³±czeniu trybu LCD na 'Monitor' lub\n"
- "    'Normalny' nie nale¿y zapomnieæ o prze³±czeniu\n"
--"    z powrotem na 'Wy³±czony' przed roz³±czeniem.\n"
--"    W przeciwnym wypadku nie mo¿na u¿ywaæ przycisków\n"
--"    aparatu. W przypadku zakoñczenia pracy w tym stanie\n"
--"    nale¿y ponownie pod³±czyæ aparat do komputera\n"
--"    i prze³±czyæ LCD na 'Wy³±czony'."
-+"    z powrotem na 'Off' przed roz³±czeniem. W przeciwnym\n"
-+"    wypadku nie mo¿na u¿ywaæ przycisków aparatu.\n"
-+"    W przypadku zakoñczenia pracy w tym stanie nale¿y\n"
-+"    ponownie pod³±czyæ aparat do komputera i prze³±czyæ\n"
-+"    LCD na 'Off'."
+ "Sterownik PTP2\n"
+-"(c)2001-2005 Mariusz Wo³oszyn <emsi@ipartners.pl>.\n"
+-"(c)2003-2006 Marcus Meissner <marcus@jet.franken.de>.\n"
++"(c) 2001-2005 Mariusz Wo³oszyn <emsi@ipartners.pl>.\n"
++"(c) 2003-2007 Marcus Meissner <marcus@jet.franken.de>.\n"
+ "Ten sterownik obs³uguje aparaty obs³uguj±ce PTP lub PictBridge(tm)\n"
+ "i odtwarzacze obs³uguj±ce protokó³ Media Transfer Protocol (MTP).\n"
+ "\n"
+@@ -5538,14 +5462,14 @@
+ msgstr "Niestety ten aparat Canon nie obs³uguje funkcji Canon EOS capture"
  
- #: camlibs/sierra/sierra.c:2022
--#, fuzzy
+ #: camlibs/ptp2/library.c:1448
+-#, fuzzy, c-format
++#, c-format
+ msgid "Canon EOS Capture failed: %x"
+-msgstr "Canon EOS Capture nie powiod³o siê: %d"
++msgstr "Canon EOS Capture nie powiod³o siê: %x"
+ 
+ #: camlibs/ptp2/library.c:1456
+-#, fuzzy, c-format
++#, c-format
+ msgid "Canon EOS Get Changes failed: %x"
+-msgstr "Canon EOS Get Changes nie powiod³o siê: %d"
++msgstr "Canon EOS Get Changes nie powiod³o siê: %x"
+ 
+ #: camlibs/ptp2/library.c:1539
+ msgid "Sorry, your Canon camera does not support Canon Capture initiation"
+@@ -5556,9 +5480,9 @@
+ msgstr "Niestety inicjalizacja aparatu nie zadzia³a³a. Proszê to zg³osiæ."
+ 
+ #: camlibs/ptp2/library.c:1572
+-#, fuzzy, c-format
++#, c-format
+ msgid "Canon Capture failed: %x"
+-msgstr "Canon Capture nie powiod³o siê: %d"
++msgstr "Canon Capture nie powiod³o siê: %x"
+ 
+ #: camlibs/ptp2/library.c:1688
+ msgid "Sorry, your camera does not support generic capture"
+@@ -5676,9 +5600,9 @@
+ msgstr "Pobieranie obrazu w trybie Canon\n"
+ 
+ #: camlibs/ptp2/library.c:2191
+-#, fuzzy, c-format
++#, c-format
+ msgid "Canon EOS Capture\n"
+-msgstr "Pobieranie obrazu w trybie Canon\n"
++msgstr "Pobieranie obrazu w trybie Canon EOS\n"
+ 
+ #: camlibs/ptp2/library.c:2195
+ #, c-format
+@@ -5823,12 +5747,13 @@
+ msgstr "Inicjalizacja aparatu"
+ 
+ #: camlibs/ptp2/library.c:4170
+-#, fuzzy, c-format
++#, c-format
  msgid ""
- "sierra SPARClite library\n"
- "Scott Fritzinger <scottf@unr.edu>\n"
-@@ -7977,7 +7965,6 @@
- "Zawiera %i zdjêæ. \n"
+ "Currently, PTP is only implemented for USB and PTP/IP cameras currently, "
+ "port type %x"
+ msgstr ""
+-"PTP jest zaimplementowane tylko dla aparatów USB i PTP/IP, rodzaj portu %x"
++"PTP jest obecnie zaimplementowane tylko dla aparatów USB i PTP/IP, rodzaj "
++"portu %x"
  
- #: camlibs/sonix/library.c:132
+ #: camlibs/ptp2/ptp.c:3052
+ msgid "PTP: Undefined Error"
+@@ -6081,9 +6006,8 @@
+ msgstr "Jêzyk interfejsu u¿ytkownika"
+ 
+ #: camlibs/ptp2/ptp.c:3168
 -#, fuzzy
- msgid ""
- "This driver supports some cameras that use the Sonix sn9c2028 chip.\n"
- "The following operations are supported:\n"
-@@ -8000,7 +7987,8 @@
- "   - robienie zdjêæ do aparatu (\t\tjw.\t\t)\n"
- "Je¶li zostan± znalezione w aparacie klatki filmów, s± ¶ci±gane jako\n"
- "kolejne nieruchome zdjêcia lub pliki AVI, zale¿nie od modelu.\n"
--"Miniaturki dla plików AVI to nieruchome zdjêcia zrobione z pierwszej klatki\n"
-+"Miniaturki dla plików AVI to nieruchome zdjêcia zrobione z pierwszej "
-+"klatki.\n"
- "Nie mo¿na usuwaæ pojedynczych zdjêæ z wyj±tkiem ostatniego.\n"
+ msgid "Battery Type"
+-msgstr "Tryb baterii"
++msgstr "Rodzaj baterii"
  
- #: camlibs/sonix/library.c:150
-@@ -8591,16 +8579,3 @@
+ #: camlibs/ptp2/ptp.c:3169
+ msgid "Battery Mode"
+@@ -6498,7 +6422,6 @@
+ msgstr "Partner synchronizacji"
+ 
+ #: camlibs/ptp2/ptp.c:3460
+-#, fuzzy
+ msgid "Friendly Device Name"
+ msgstr "Przyjazna nazwa urz±dzenia"
+ 
+@@ -6527,12 +6450,10 @@
+ msgstr "Pozycja odtwarznia"
+ 
+ #: camlibs/ptp2/ptp.c:3468
+-#, fuzzy
+ msgid "Revocation Info"
+ msgstr "Informacja o uniewa¿nieniu"
+ 
+ #: camlibs/ptp2/ptp.c:3469
+-#, fuzzy
+ msgid "PlaysForSure ID"
+ msgstr "ID PlaysForSure"
+ 
+@@ -6609,23 +6530,20 @@
+ msgstr "15 min"
+ 
+ #: camlibs/ptp2/ptp.c:3814
+-#, fuzzy
+ msgid "Media Card"
+-msgstr "MediaCard"
++msgstr "Media Card"
+ 
+ #: camlibs/ptp2/ptp.c:3815
+-#, fuzzy
+ msgid "Media Card Group"
+-msgstr "MediaCardGroup"
++msgstr "Media Card Group"
+ 
+ #: camlibs/ptp2/ptp.c:3816
+ msgid "Encounter"
+ msgstr "Encounter"
+ 
+ #: camlibs/ptp2/ptp.c:3817
+-#, fuzzy
+ msgid "Encounter Box"
+-msgstr "EncounterBox"
++msgstr "Encounter Box"
+ 
+ #: camlibs/ptp2/ptp.c:3818
+ msgid "M4A"
+@@ -6636,9 +6554,8 @@
+ msgstr "Firmware"
+ 
+ #: camlibs/ptp2/ptp.c:3820
+-#, fuzzy
+ msgid "Windows Image Format"
+-msgstr "WindowsImageFormat"
++msgstr "Windows Image Format"
+ 
+ #: camlibs/ptp2/ptp.c:3821
+ msgid "Undefined Audio"
+@@ -6721,12 +6638,10 @@
+ msgstr "Playlista PLS"
+ 
+ #: camlibs/ptp2/ptp.c:3849
+-#, fuzzy
+ msgid "Undefined Document"
+ msgstr "Niezdefiniowany dokument"
+ 
+ #: camlibs/ptp2/ptp.c:3850
+-#, fuzzy
+ msgid "Abstract Document"
+ msgstr "Abstrakcyjny dokument"
+ 
+@@ -6751,22 +6666,18 @@
+ msgstr "Prezentacja Microsoft Powerpointa (.ppt)"
+ 
+ #: camlibs/ptp2/ptp.c:3856
+-#, fuzzy
+ msgid "Undefined Message"
+ msgstr "Niezdefiniowana wiadomo¶æ"
+ 
+ #: camlibs/ptp2/ptp.c:3857
+-#, fuzzy
+ msgid "Abstract Message"
+ msgstr "Abstrakcyjna wiadomo¶æ"
+ 
+ #: camlibs/ptp2/ptp.c:3858
+-#, fuzzy
+ msgid "Undefined Contact"
+ msgstr "Niezdefiniowany kontakt"
+ 
+ #: camlibs/ptp2/ptp.c:3859
+-#, fuzzy
+ msgid "Abstract Contact"
+ msgstr "Abstrakcyjny kontakt"
+ 
+@@ -6779,12 +6690,10 @@
+ msgstr "vCard3"
+ 
+ #: camlibs/ptp2/ptp.c:3862
+-#, fuzzy
+ msgid "Undefined Calendar Item"
+ msgstr "Niezdefiniowany element kalendarza"
+ 
+ #: camlibs/ptp2/ptp.c:3863
+-#, fuzzy
+ msgid "Abstract Calendar Item"
+ msgstr "Abstrakcyjny element kalendarza"
+ 
+@@ -6801,14 +6710,12 @@
+ msgstr "Niezdefiniowany plik wykonywalny Windows"
+ 
+ #: camlibs/ptp2/ptp.c:3867
+-#, fuzzy
+ msgid "Media Cast"
+-msgstr "MediaCard"
++msgstr "Media Cast"
+ 
+ #: camlibs/ptp2/ptp.c:3868
+-#, fuzzy
+ msgid "Section"
+-msgstr "Akcja"
++msgstr "Sekcja"
+ 
+ #: camlibs/ptp2/ptp.c:3906
+ #, c-format
+@@ -7029,7 +6936,7 @@
+ 
+ #: camlibs/ptp2/ptp.c:3977
+ msgid "Get transferable playlist types"
+-msgstr ""
++msgstr "Pobranie mo¿liwych rodzajów list odtwarzania"
+ 
+ #: camlibs/ptp2/ptp.c:3980
+ msgid "Send WMDRM-PD Application Request"
+@@ -7096,9 +7003,9 @@
+ msgstr "Przetworzenie obiektu WFC"
+ 
+ #: camlibs/ptp2/ptp.c:4023
+-#, fuzzy, c-format
++#, c-format
+ msgid "Unknown (%04x)"
+-msgstr "Nieznany(%04x)"
++msgstr "Nieznany (%04x)"
+ 
+ #: camlibs/ricoh/g3.c:352
+ msgid "Downloading movie..."
+@@ -8897,97 +8804,3 @@
  #: libgphoto2/gphoto2-result.c:88
  msgid "Unknown error"
  msgstr "Nieznany b³±d"
 -
+-#~ msgid "super fine"
+-#~ msgstr "bardzo dobra"
+-
+-#~ msgid "Tv"
+-#~ msgstr "Tv"
+-
+-#~ msgid "Av"
+-#~ msgstr "Av"
+-
+-#~ msgid "Medium low"
+-#~ msgstr "¦rednio niski"
+-
+-#~ msgid "Wifi essid"
+-#~ msgstr "ESSID Wifi"
+-
+-#~ msgid "F Number"
+-#~ msgstr "Liczba F"
+-
+-#~ msgid "Auto Whitebalance Bias"
+-#~ msgstr "Automatyczne przesuniêcie balansu bieli"
+-
+-#~ msgid "Tungsten Whitebalance Bias"
+-#~ msgstr "Przesuniêcie balansu bieli dla ¶wiat³a ¿arówki wolframowej"
+-
+-#~ msgid "Fluorescent Whitebalance Bias"
+-#~ msgstr "Przesuniêcie balansu bieli dla ¶wiat³a fluorescencyjnego"
+-
+-#~ msgid "Daylight Whitebalance Bias"
+-#~ msgstr "Przesuniêcie balansu bieli dla ¶wiat³a dziennego"
+-
+-#~ msgid "Flash Whitebalance Bias"
+-#~ msgstr "Przesuniêcie balansu bieli dla flesza"
+-
+-#~ msgid "Cloudy Whitebalance Bias"
+-#~ msgstr "Przesuniêcie balansu bieli dla pogody pochmurnej"
+-
+-#~ msgid "Shade Whitebalance Bias"
+-#~ msgstr "Przesuniêcie balansu bieli dla cienia"
+-
+-#~ msgid "Date Time"
+-#~ msgstr "Data i czas"
+-
+-#~ msgid "Battery Kind"
+-#~ msgstr "Rodzaj baterii"
+-
+-#~ msgid "ShutterSpeed"
+-#~ msgstr "Prêdko¶æ migawki"
+-
+-#~ msgid "Focal Length of Tele"
+-#~ msgstr "Ogniskowa teleobiektywu"
+-
+-#~ msgid "Max. Shots"
+-#~ msgstr "Maksymalna liczba zdjêæ"
+-
+-#~ msgid "Get type of playlists that are allowed to be transfered"
+-#~ msgstr "Pobranie rodzajów playlist, które mo¿na przes³aæ"
+-
+-#~ msgid "Sorry, this function not implemented..."
+-#~ msgstr "Niestety ta funkcja nie jest zaimplementowana..."
+-
+-#~ msgid "Sorry, nothing to configure..."
+-#~ msgstr "Niestety nie ma nic do konfigurowania..."
+-
+-#~ msgid "Sorry, taking pictures is not implemented..."
+-#~ msgstr "Niestety robienie zdjêæ nie jest zaimplementowane..."
+-
+-#~ msgid "Couldn't open camera.\n"
+-#~ msgstr "Nie uda³o siê otworzyæ aparatu.\n"
+-
+-#~ msgid "Error opening camera\n"
+-#~ msgstr "B³±d podczas otwierania aparatu\n"
+-
+-#~ msgid "Picture number is too large.\n"
+-#~ msgstr "Numer zdjêcia zbyt du¿y.\n"
+-
 -#~ msgid ""
--#~ "Mars MR97310 camera.\n"
--#~ "There are %i photos in it. \n"
+-#~ "Sony DSC-F1 Digital Camera Support\n"
+-#~ "M. Adam Kendall <joker@penguinpub.com>\n"
+-#~ "\n"
+-#~ "Based on the chotplay CLI interface from\n"
+-#~ "Ken-ichi Hayashi\n"
+-#~ "\n"
+-#~ "This lib may not work. YMMV\n"
 -#~ msgstr ""
--#~ "Aparat Mars MR97310.\n"
--#~ "Zawiera %i zdjêæ. \n"
+-#~ "Obs³uga aparatów cyfrowych Sony SDC-F1 Digital Camera\n"
+-#~ "M. Adam Kendall <joker@penguinpub.com>\n"
+-#~ "\n"
+-#~ "Oparto na interfejsie linii poleceñ chotplay,\n"
+-#~ "który napisa³ Ken-ichi Hayashi\n"
+-#~ "Ta biblioteka mo¿e nie dzia³aæ. YMMV\n"
 -
--#~ msgid "SuperFine"
--#~ msgstr "Bardzo dobra"
--
--#~ msgid "%sCamera ID: %s\n"
--#~ msgstr "%sID aparatu: %s\n"
+-#~ msgid "Error opening camera.\n"
+-#~ msgstr "B³±d podczas otwierania aparatu.\n"
