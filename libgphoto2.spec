@@ -10,18 +10,16 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.4.1
-Release:	5
+Version:	2.4.2
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	70c7d2c3e84997f29b4e988e56bd02aa
+# Source0-md5:	714859617c0b616855f6906280010c5d
 Patch0:		%{name}-libtool.patch
 Patch1:		%{name}-pl.po-update.patch
 Patch2:		%{name}-mode-owner-group.patch
 Patch3:		%{name}-IXANY.patch
-Patch4:		%{name}-m4_syntax.patch
-Patch5:		%{name}-increase_max_entries.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
@@ -154,7 +152,6 @@ obsługi kamer cyfrowych w przestrzeni użytkownika.
 %ifarch alpha
 %patch3 -p1
 %endif
-%patch4 -p1
 
 rm -f po/stamp-po libgphoto2_port/po/stamp-po
 
@@ -233,7 +230,7 @@ cp --parents \
 	camlibs/sipix/{*.txt,web2.html} \
 	camlibs/smal/README.smal \
 	camlibs/sonix/README.sonix \
-	camlibs/sonydscf1/{README.sonydscf1,todo} \
+	camlibs/sonydscf1/README.sonydscf1 \
 	camlibs/soundvision/README.soundvision \
 	camlibs/spca50x/{ChangeLog*,README.spca50x} \
 	camlibs/sq905/{README.913C,README.sq905} \
