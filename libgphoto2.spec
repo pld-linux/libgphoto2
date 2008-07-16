@@ -20,6 +20,7 @@ Patch0:		%{name}-libtool.patch
 Patch1:		%{name}-pl.po-update.patch
 Patch2:		%{name}-mode-owner-group.patch
 Patch3:		%{name}-IXANY.patch
+Patch4:		%{name}-increase_max_entries.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
@@ -152,6 +153,7 @@ obsługi kamer cyfrowych w przestrzeni użytkownika.
 %ifarch alpha
 %patch3 -p1
 %endif
+%patch4 -p1
 
 rm -f po/stamp-po libgphoto2_port/po/stamp-po
 
