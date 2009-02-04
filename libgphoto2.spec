@@ -10,12 +10,12 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.4.2
-Release:	3
+Version:	2.4.4
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	714859617c0b616855f6906280010c5d
+# Source0-md5:	8aff5ac4ca72cba17de633078cf1612e
 Patch0:		%{name}-libtool.patch
 Patch1:		%{name}-pl.po-update.patch
 Patch2:		%{name}-mode-owner-group.patch
@@ -32,7 +32,7 @@ BuildRequires:	hal-devel >= 0.5.0
 BuildRequires:	libexif-devel >= 1:0.6.13
 BuildRequires:	libltdl-devel
 BuildRequires:	libtool >= 1:1.4.2-9
-BuildRequires:	libusb-devel >= 0.1.5
+BuildRequires:	libusb-compat-devel
 %{?with_baudboy:BuildRequires:	lockdev-baudboy-devel}
 %{!?with_baudboy:BuildRequires:	lockdev-devel >= 1.0.2}
 BuildRequires:	pkgconfig
@@ -71,7 +71,7 @@ Requires:	%{name} = %{version}-%{release}
 %{?with_apidocs:Requires:	gtk-doc-common}
 Requires:	libexif-devel >= 1:0.6.13
 Requires:	libltdl-devel
-Requires:	libusb-devel
+Requires:	libusb-compat-devel
 %{!?with_baudboy:Requires:	lockdev-devel}
 Obsoletes:	gphoto2-devel
 Obsoletes:	gphoto2-lib-devel
@@ -130,7 +130,7 @@ Summary:	Userspace support for digital cameras
 Summary(pl.UTF-8):	Wsparcie dla kamer cyfrowych w przestrzeni użytkownika
 Group:		Applications/System
 Requires:	hal >= 0.5.9-2
-Requires:	libusb >= 0.1.10a
+Requires:	libusb-compat
 Requires:	udev-core >= 1:089
 Provides:	udev-digicam
 Obsoletes:	hal-gphoto
@@ -147,7 +147,7 @@ obsługi kamer cyfrowych w przestrzeni użytkownika.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 %patch1 -p1
 %patch2 -p1
 %ifarch alpha
