@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.4.4
-Release:	2
+Release:	3
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
@@ -131,7 +131,11 @@ Summary(pl.UTF-8):	Wsparcie dla kamer cyfrowych w przestrzeni użytkownika
 Group:		Applications/System
 Requires:	hal >= 0.5.9-2
 Requires:	libusb-compat
+%if "%{pld_release}" == "ti"
+Requires:	udev-core >= 1:124-3
+%else
 Requires:	udev-core >= 1:127
+%endif
 Provides:	udev-digicam
 Obsoletes:	hal-gphoto
 Obsoletes:	hotplug-digicam
