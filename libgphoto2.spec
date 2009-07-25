@@ -10,12 +10,12 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.4.4
-Release:	4
+Version:	2.4.6
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	8aff5ac4ca72cba17de633078cf1612e
+# Source0-md5:	f55c95b676023368317e1e867397e62c
 Patch0:		%{name}-libtool.patch
 Patch1:		%{name}-pl.po-update.patch
 Patch2:		%{name}-mode-owner-group.patch
@@ -152,7 +152,7 @@ obsługi kamer cyfrowych w przestrzeni użytkownika.
 %prep
 %setup -q
 #%patch0 -p1
-%patch1 -p1
+#%patch1 -p1
 %patch2 -p1
 %ifarch alpha
 %patch3 -p1
@@ -203,47 +203,57 @@ cp --parents \
 	camlibs/adc65/{Changelog,README.adc65,TODO} \
 	camlibs/agfa-cl20/{ChangeLog,RANDOM,README.agfa-cl20,STATUS} \
 	camlibs/aox/README.aox \
-	camlibs/barbie/Protocol.txt \
-	camlibs/canon/{ChangeLog,README.canon} \
-	camlibs/casio/PROTOCOL.txt \
+	camlibs/barbie/{ChangeLog,Protocol.txt} \
+	camlibs/canon/{ChangeLog,README.canon,TODO} \
+	camlibs/casio/{ChangeLog,PROTOCOL.txt} \
 	camlibs/clicksmart310/README.clicksmart310 \
-	camlibs/digigr8/README.* \
-	camlibs/dimera/{CREDITS,Protocol.txt} \
-	camlibs/enigma13/{README.enigma13,STATUS,protocol.txt} \
-	camlibs/fuji/PROTOCOL \
-	camlibs/gsmart300/README.gsmart300 \
-	camlibs/iclick/README.iclick \
-	camlibs/jamcam/README.jamcam \
-	camlibs/jd11/jd11.html \
+	camlibs/digigr8/{ChangeLog,README.*} \
+	camlibs/digita/ChangeLog \
+	camlibs/dimera/{CREDITS,Protocol.txt,TODO} \
+	camlibs/directory/ChangeLog \
+	camlibs/enigma13/{ChangeLog,README.enigma13,STATUS,protocol.txt} \
+	camlibs/fuji/{ChangeLog,PROTOCOL} \
+	camlibs/gsmart300/{ChangeLog,README.gsmart300} \
+	camlibs/hp215/{ChangeLog,PROTOCOL} \
+	camlibs/iclick/{ChangeLog,README.iclick} \
+	camlibs/jamcam/{ChangeLog,README.jamcam} \
+	camlibs/jd11/{ChangeLog,jd11.html} \
+	camlibs/jl2005a/README.jl2005a \
+	camlibs/jl2005c/README.jl2005c \
 	camlibs/kodak/CAMERAS \
-	camlibs/kodak/ez200/Protocol.txt \
-	camlibs/konica/{EXPERTS,README.konica,qm150.txt} \
-	camlibs/largan/lmini/README.largan-lmini \
-	camlibs/lg_gsm/README.lg_gsm \
-	camlibs/mars/{README.mars,protocol.txt} \
+	camlibs/kodak/d*/ChangeLog \
+	camlibs/kodak/ez200/{ChangeLog,Protocol.txt} \
+	camlibs/konica/{ChangeLog,EXPERTS,README.konica,TODO,qm150.txt} \
+	camlibs/largan/lmini/{ChangeLog,README.largan-lmini} \
+	camlibs/lg_gsm/{ChangeLog,README.lg_gsm} \
+	camlibs/mars/{ChangeLog,README.mars,protocol.txt} \
 	camlibs/minolta/NEWER_MINOLTAS \
 	camlibs/minolta/dimagev/README.minolta-dimagev \
-	camlibs/mustek/{AUTHOR,README.mustek} \
-	camlibs/panasonic/README.panasonic \
-	camlibs/panasonic/coolshot/README.panasonic-coolshot \
-	camlibs/panasonic/l859/README.panasonic-l859 \
-	camlibs/pccam300/README.pccam300 \
-	camlibs/pccam600/README.pccam600 \
-	camlibs/polaroid/*.html \
+	camlibs/mustek/{AUTHOR,ChangeLog,README.mustek,STATUS} \
+	camlibs/panasonic/{ChangeLog,README.panasonic} \
+	camlibs/panasonic/coolshot/{ChangeLog,README.panasonic-coolshot} \
+	camlibs/panasonic/l859/{ChangeLog,README.panasonic-l859,TODO} \
+	camlibs/pccam300/{ChangeLog,README.pccam300} \
+	camlibs/pccam600/{ChangeLog,README.pccam600} \
+	camlibs/polaroid/{ChangeLog,*.html} \
 	camlibs/ptp2/{ChangeLog,PTPIP.TXT,README.ptp2,TODO,ptpip.html} \
-	camlibs/ricoh/g3.txt \
-	camlibs/sierra/PROTOCOL \
-	camlibs/sipix/{*.txt,web2.html} \
-	camlibs/smal/README.smal \
-	camlibs/sonix/README.sonix \
-	camlibs/sonydscf1/README.sonydscf1 \
-	camlibs/soundvision/README.soundvision \
+	camlibs/ricoh/{ChangeLog,g3.txt} \
+	camlibs/samsung/ChangeLog \
+	camlibs/sierra/{ChangeLog,MC-EU1-Protocol.txt,PROTOCOL} \
+	camlibs/sipix/{ChangeLog,*.txt,web2.html} \
+	camlibs/smal/{ChangeLog,README.smal} \
+	camlibs/sonix/{ChangeLog,README.sonix} \
+	camlibs/sonydscf1/{ChangeLog,README.sonydscf1} \
+	camlibs/sonydscf55/{ChangeLog,TODO} \
+	camlibs/soundvision/{BUGS,ChangeLog,README.soundvision} \
 	camlibs/spca50x/{ChangeLog*,README.spca50x} \
-	camlibs/sq905/{README.913C,README.sq905} \
+	camlibs/sq905/{ChangeLog,README.913C,README.sq905,TODO} \
 	camlibs/stv0674/{Changelog,Protocol} \
-	camlibs/stv0680/{680_comm*,CREDITS,README.pdf} \
+	camlibs/stv0680/{680_comm*,CREDITS,ChangeLog,README.pdf} \
+	camlibs/sx330z/ChangeLog \
+	camlibs/topfield/ChangeLog \
 	camlibs/toshiba/pdrm11/README.toshiba-pdrm11 \
-	libgphoto2_port/{AUTHORS,ChangeLog} \
+	libgphoto2_port/{AUTHORS,ChangeLog,NEWS,README} \
 	libgphoto2_port/disk/ChangeLog \
 	docs
 
