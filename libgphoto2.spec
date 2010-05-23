@@ -310,6 +310,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libgphoto2_port/*/disk.la
 %{_libdir}/libgphoto2_port/*/ptpip.la
 %{_libdir}/libgphoto2_port/*/usb.la
+%{_libdir}/libgphoto2_port/*/usbdiskdirect.la
+%{_libdir}/libgphoto2_port/*/usbscsi.la
 
 # utilities
 %attr(755,root,root) %{_libdir}/libgphoto2/print-camera-list
