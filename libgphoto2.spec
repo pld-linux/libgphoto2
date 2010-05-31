@@ -30,6 +30,7 @@ BuildRequires:	gettext-devel >= 0.14.1
 %{?with_apidocs:BuildRequires:	gtk-doc >= 0.10}
 BuildRequires:	hal-devel >= 0.5.0
 BuildRequires:	libexif-devel >= 1:0.6.13
+BuildRequires:	libjpeg-devel
 BuildRequires:	libltdl-devel
 BuildRequires:	libtool >= 1:1.4.2-9
 BuildRequires:	libusb-compat-devel
