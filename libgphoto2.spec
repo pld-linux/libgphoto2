@@ -14,18 +14,17 @@ Version:	2.4.10.1
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
 # Source0-md5:	362cd914c64b2363f4d0bd5ad07c7209
-Patch0:		%{name}-libtool.patch
-Patch1:		%{name}-pl.po-update.patch
-Patch2:		%{name}-mode-owner-group.patch
-Patch3:		%{name}-IXANY.patch
-Patch4:		%{name}-increase_max_entries.patch
+Patch0:		%{name}-mode-owner-group.patch
+Patch1:		%{name}-IXANY.patch
+Patch2:		%{name}-increase_max_entries.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	avahi-compat-libdns_sd-devel
 BuildRequires:	dbus-devel >= 0.31
+BuildRequires:	gd-devel
 BuildRequires:	gettext-devel >= 0.14.1
 %{?with_apidocs:BuildRequires:	gtk-doc >= 0.10}
 BuildRequires:	hal-devel >= 0.5.0
@@ -33,7 +32,7 @@ BuildRequires:	libexif-devel >= 1:0.6.13
 BuildRequires:	libjpeg-devel
 BuildRequires:	libltdl-devel
 BuildRequires:	libtool >= 1:1.4.2-9
-BuildRequires:	libusb-compat-devel
+BuildRequires:	libusb-compat-devel >= 0.1
 %{?with_baudboy:BuildRequires:	lockdev-baudboy-devel}
 %{!?with_baudboy:BuildRequires:	lockdev-devel >= 1.0.2}
 BuildRequires:	pkgconfig
@@ -72,7 +71,7 @@ Requires:	%{name} = %{version}-%{release}
 %{?with_apidocs:Requires:	gtk-doc-common}
 Requires:	libexif-devel >= 1:0.6.13
 Requires:	libltdl-devel
-Requires:	libusb-compat-devel
+Requires:	libusb-compat-devel >= 0.1
 %{!?with_baudboy:Requires:	lockdev-devel}
 Obsoletes:	gphoto2-devel
 Obsoletes:	gphoto2-lib-devel
@@ -131,7 +130,7 @@ Summary:	Userspace support for digital cameras
 Summary(pl.UTF-8):	Wsparcie dla kamer cyfrowych w przestrzeni użytkownika
 Group:		Applications/System
 Requires:	hal >= 0.5.9-2
-Requires:	libusb-compat
+Requires:	libusb-compat >= 0.1
 %if "%{pld_release}" == "ti"
 Requires:	udev-core >= 1:124-3
 %else
@@ -152,21 +151,18 @@ obsługi kamer cyfrowych w przestrzeni użytkownika.
 
 %prep
 %setup -q
-#%patch0 -p1
-#%patch1 -p1
-%patch2 -p1
+%patch0 -p1
 %ifarch alpha
-%patch3 -p1
+%patch1 -p1
 %endif
-%patch4 -p1
+%patch2 -p1
 
-rm -f po/stamp-po libgphoto2_port/po/stamp-po
+%{__rm} po/stamp-po libgphoto2_port/po/stamp-po
 
 %build
 # supplied libtool is broken (relink)
 %{__libtoolize}
 %{__aclocal} -I auto-m4 -I m4m
-# -I libgphoto2_port/m4
 %{__autoconf}
 %{__automake}
 cd libgphoto2_port
