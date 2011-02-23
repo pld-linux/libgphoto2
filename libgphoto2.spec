@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.4.10.1
-Release:	2
+Release:	3
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
@@ -125,29 +125,41 @@ through serial port.
 Wtyczka obsługi portu szeregowego dla libgphoto2, potrzebna do
 współpracy z aparatami podłączonymi przez port szeregowy.
 
-%package -n hal-libgphoto2
+%package -n udev-libgphoto2
 Summary:	Userspace support for digital cameras
 Summary(pl.UTF-8):	Wsparcie dla kamer cyfrowych w przestrzeni użytkownika
 Group:		Applications/System
-Requires:	hal >= 0.5.9-2
 Requires:	libusb-compat >= 0.1
 %if "%{pld_release}" == "ti"
 Requires:	udev-core >= 1:124-3
 %else
-Requires:	udev-core >= 1:127
+Requires:	udev-core >= 1:136
 %endif
 Provides:	udev-digicam
 Obsoletes:	hal-gphoto
 Obsoletes:	hotplug-digicam
 Obsoletes:	udev-digicam
 
+%description -n udev-libgphoto2
+Set of Udev rules to handle digital cameras in userspace.
+
+%description -n udev-libgphoto2 -l pl.UTF-8
+Zestaw reguł Udev do obsługi kamer cyfrowych w przestrzeni
+użytkownika.
+
+%package -n hal-libgphoto2
+Summary:	Userspace support for digital cameras
+Summary(pl.UTF-8):	Wsparcie dla kamer cyfrowych w przestrzeni użytkownika
+Group:		Applications/System
+Requires:	hal >= 0.5.9-2
+Requires:	udev-libgphoto2
+
 %description -n hal-libgphoto2
-Set of Udev rules and HAL device information file to handle digital
-cameras in userspace.
+HAL device information file to handle digital cameras in userspace.
 
 %description -n hal-libgphoto2 -l pl.UTF-8
-Zestaw reguł Udev i plik z informacjami o urządzeniach HAL-a do
-obsługi kamer cyfrowych w przestrzeni użytkownika.
+Plik z informacjami o urządzeniach HAL-a do obsługi kamer cyfrowych
+w przestrzeni użytkownika.
 
 %prep
 %setup -q
@@ -254,17 +266,18 @@ cp --parents \
 	libgphoto2_port/disk/ChangeLog \
 	docs
 
-# hal
+# udev
 cd packaging/linux-hotplug
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/udev/rules.d
-install -d $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty
 export CAMLIBS=$RPM_BUILD_ROOT%{_libdir}/%{name}/%{version}
+
+../generic/print-camera-list udev-rules version 136 group usb mode 0660 \
+	> $RPM_BUILD_ROOT/lib/udev/rules.d/40-libgphoto2.rules
+
+# hal
+install -d $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty
 
 ../generic/print-camera-list hal-fdi | \
 	grep -v "<!-- This file was generated" > $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
-
-../generic/print-camera-list udev-rules version 0.98 group usb mode 0660 \
-	> $RPM_BUILD_ROOT%{_sysconfdir}/udev/rules.d/52-udev-gphoto.rules
 
 %if %{with static_libs}
 rm -f $RPM_BUILD_ROOT%{_libdir}/libgphoto2/*/*.a
@@ -350,9 +363,12 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/serial.so
 %{_libdir}/libgphoto2_port/*/serial.la
 
-%files -n hal-libgphoto2
+%files -n udev-libgphoto2
 %defattr(644,root,root,755)
-%{_sysconfdir}/udev/rules.d/52-udev-gphoto.rules
-%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
+/lib/udev/rules.d/40-libgphoto2.rules
 %attr(755,root,root) /lib/udev/check-mtp-device
 %attr(755,root,root) /lib/udev/check-ptp-camera
+
+%files -n hal-libgphoto2
+%defattr(644,root,root,755)
+%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
