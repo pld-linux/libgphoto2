@@ -268,6 +268,7 @@ cp --parents \
 
 # udev
 cd packaging/linux-hotplug
+install -d $RPM_BUILD_ROOT/lib/udev/rules.d
 export CAMLIBS=$RPM_BUILD_ROOT%{_libdir}/%{name}/%{version}
 
 ../generic/print-camera-list udev-rules version 136 group usb mode 0660 \
