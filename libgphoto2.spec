@@ -10,15 +10,16 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.4.10.1
-Release:	3
+Version:	2.4.11
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	362cd914c64b2363f4d0bd5ad07c7209
+# Source0-md5:	16a22b9739e45a95980ed62705fe7333
 Patch0:		%{name}-mode-owner-group.patch
 Patch1:		%{name}-IXANY.patch
 Patch2:		%{name}-increase_max_entries.patch
+Patch3:		%{name}-pl.po-update.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
@@ -168,6 +169,7 @@ w przestrzeni użytkownika.
 %patch1 -p1
 %endif
 %patch2 -p1
+%patch3 -p1
 
 %{__rm} po/stamp-po libgphoto2_port/po/stamp-po
 
@@ -281,11 +283,11 @@ install -d $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty
 	grep -v "<!-- This file was generated" > $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
 
 %if %{with static_libs}
-rm -f $RPM_BUILD_ROOT%{_libdir}/libgphoto2/*/*.a
-rm -f $RPM_BUILD_ROOT%{_libdir}/libgphoto2_port/*/*.a
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libgphoto2/*/*.a
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libgphoto2_port/*/*.a
 %endif
 # kill unpackaged files
-rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/libgphoto{2,2_port}
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/doc/libgphoto{2,2_port}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -367,7 +369,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -n udev-libgphoto2
 %defattr(644,root,root,755)
 /lib/udev/rules.d/40-libgphoto2.rules
-%attr(755,root,root) /lib/udev/check-mtp-device
 %attr(755,root,root) /lib/udev/check-ptp-camera
 
 %files -n hal-libgphoto2

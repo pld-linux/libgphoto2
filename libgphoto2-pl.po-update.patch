@@ -1,0 +1,434 @@
+--- libgphoto2-2.4.11/po/pl.po.orig	2011-04-17 18:12:47.000000000 +0200
++++ libgphoto2-2.4.11/po/pl.po	2011-04-20 18:37:02.133062958 +0200
+@@ -1,14 +1,14 @@
+ # Polish translation for libgphoto2.
+-# Copyright (C) 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
++# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.
+ # This file is distributed under the same license as the libgphoto2 package.
+-# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2010.
++# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2011.
+ #
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: libgphoto2 2.4.10\n"
++"Project-Id-Version: libgphoto2 2.4.11\n"
+ "Report-Msgid-Bugs-To: gphoto-devel@lists.sourceforge.net\n"
+ "POT-Creation-Date: 2011-04-17 18:12+0200\n"
+-"PO-Revision-Date: 2010-08-18 08:21+0200\n"
++"PO-Revision-Date: 2011-04-19 19:29+0200\n"
+ "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
+ "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+ "Language: pl\n"
+@@ -425,7 +425,7 @@
+ 
+ #: camlibs/canon/library.c:283
+ msgid "Foliage"
+-msgstr ""
++msgstr "Ro¶linno¶æ"
+ 
+ #: camlibs/canon/library.c:284
+ msgid "Indoor"
+@@ -1610,7 +1610,6 @@
+ "Theodore Kilgore <kilgota@auburn.edu>\n"
+ 
+ #: camlibs/digigr8/library.c:143
+-#, fuzzy
+ msgid ""
+ "For cameras with insides from S&Q Technologies, which have the \n"
+ "USB Vendor ID 0x2770 and Product ID 0x905C, 0x9050, 0x9051,\n"
+@@ -1627,18 +1626,19 @@
+ "software command.\n"
+ msgstr ""
+ "Dla aparatów na elektronice S&Q Technologies, maj±cych USB Vendor ID\n"
+-"0x2770 i Product ID 0x905C, 0x9050 lub 0x9052, 0x913D zdjêcia s±\n"
+-"zapisywane w formacie PPM.\n"
++"0x2770 i Product ID 0x905C, 0x9050, 0x9051, 0x9052 lub 0x913D zdjêcia\n"
++"s± zapisywane w formacie PPM.\n"
+ "\n"
+ "Niektóre z tych aparatów pozwalaj± na programowe usuniêcie wszystkich\n"
+ "zdjêæ. Inne nie. ¯aden z obs³ugiwanych aparatów nie pozwala na\n"
+ "wykonanie capture-image. Ka¿dy pozwala na capture-preview (zrobienie\n"
+-"zdjêcia i przes³anie do komputera). Je¶li usuwanie dzia³a na danym\n"
+-"aparacie, capture-preview bêdzie mia³o efekt uboczny usuniêcia\n"
+-"zawarto¶ci aparatu.\n"
+-"\n"
+-"Przesy³anie zdjêæ do aparatu i programowe usuwanie pojedynczych zdjêæ\n"
+-"nie s± obs³ugiwane przez sprzêt w tych aparatach.\n"
++"zdjêcia i przes³anie do komputera). Je¶li delete-all (usuwanie\n"
++"wszystkich zdjêæ) dzia³a na danym aparacie, capture-preview bêdzie\n"
++"mia³o efekt uboczny usuniêcia wszystkiego, co jest zapisane w aparacie.\n"
++"\n"
++"Przesy³anie zdjêæ do aparatu nie jest obs³ugiwane. Ponadto ¿aden\n"
++"z obs³ugiwanych aparatów nie pozwala na programowe usuwanie pojedynczych\n"
++"zdjêæ.\n"
+ 
+ #: camlibs/digigr8/library.c:162
+ msgid ""
+@@ -5595,25 +5595,23 @@
+ 
+ #: camlibs/ptp2/config.c:3342
+ msgid "Hi 1"
+-msgstr ""
++msgstr "Hi 1"
+ 
+ #: camlibs/ptp2/config.c:3347
+-#, fuzzy
+ msgid "Flash/speed"
+-msgstr "Flesz otwarty"
++msgstr "Flesz/szybko¶æ"
+ 
+ #: camlibs/ptp2/config.c:3348
+ msgid "Flash/speed/aperture"
+-msgstr ""
++msgstr "Flesz/szybko¶æ/przys³ona"
+ 
+ #: camlibs/ptp2/config.c:3349
+-#, fuzzy
+ msgid "Flash/aperture"
+-msgstr "Przys³ona"
++msgstr "Flesz/przys³ona"
+ 
+ #: camlibs/ptp2/config.c:3458
+ msgid "Extra high"
+-msgstr ""
++msgstr "Bardzo du¿a"
+ 
+ #: camlibs/ptp2/config.c:3468 camlibs/ptp2/config.c:3479
+ #: camlibs/ptp2/config.c:3491 camlibs/ptp2/ptp.c:4114
+@@ -5661,142 +5659,132 @@
+ msgstr "30 minut"
+ 
+ #: camlibs/ptp2/config.c:3524
+-#, fuzzy
+ msgid "Size Priority"
+-msgstr "Kolejno¶æ rodzaju baterii"
++msgstr "Priorytet rozmiaru"
+ 
+ #: camlibs/ptp2/config.c:3525
+-#, fuzzy
+ msgid "Optimal quality"
+-msgstr "Jako¶æ obrazu"
++msgstr "Optymalna jako¶æ"
+ 
+ #: camlibs/ptp2/config.c:3530
+-#, fuzzy
+ msgid "1/250s (Auto FP)"
+-msgstr "Auto FP"
++msgstr "1/250s (Auto FP)"
+ 
+ #: camlibs/ptp2/config.c:3542 camlibs/ptp2/config.c:3549
+-#, fuzzy
+ msgid "Release"
+-msgstr "Tryb zwalniania"
++msgstr "Zwolnienie"
+ 
+ #: camlibs/ptp2/config.c:3543
+-#, fuzzy
+ msgid "Release + Focus"
+-msgstr "Tryb zwalniania"
++msgstr "Zwolnienie + ogniskowanie"
+ 
+ #: camlibs/ptp2/config.c:3555
+ msgid "9 points"
+-msgstr ""
++msgstr "9 punktów"
+ 
+ #: camlibs/ptp2/config.c:3556
+ msgid "21 points"
+-msgstr ""
++msgstr "21 punktów"
+ 
+ #: camlibs/ptp2/config.c:3557
+ msgid "51 points"
+-msgstr ""
++msgstr "51 punktów"
+ 
+ #: camlibs/ptp2/config.c:3558
+ msgid "51 points (3D)"
+-msgstr ""
++msgstr "51 punktów (3D)"
+ 
+ #: camlibs/ptp2/config.c:3563
+ msgid "5 (Long)"
+-msgstr ""
++msgstr "5 (d³uga)"
+ 
+ #: camlibs/ptp2/config.c:3565
+-#, fuzzy
+ msgid "3 (Normal)"
+-msgstr "Zwyk³y"
++msgstr "3 (zwyk³a)"
+ 
+ #: camlibs/ptp2/config.c:3567
+ msgid "1 (Short)"
+-msgstr ""
++msgstr "1 (krótka)"
+ 
+ #: camlibs/ptp2/config.c:3573
+ msgid "Shutter/AF-ON"
+-msgstr ""
++msgstr "Migawka/AF-ON"
+ 
+ #: camlibs/ptp2/config.c:3574 camlibs/ptp2/config.c:3585
+ msgid "AF-ON"
+-msgstr ""
++msgstr "AF-ON"
+ 
+ #: camlibs/ptp2/config.c:3579
+ msgid "AF51"
+-msgstr ""
++msgstr "AF51"
+ 
+ #: camlibs/ptp2/config.c:3580
+ msgid "AF11"
+-msgstr ""
++msgstr "AF11"
+ 
+ #: camlibs/ptp2/config.c:3586
+-#, fuzzy
+ msgid "AE/AF lock"
+ msgstr "Blokada AE/AF"
+ 
+ #: camlibs/ptp2/config.c:3587
+-#, fuzzy
+ msgid "AE lock only"
+-msgstr "Blokada AE"
++msgstr "Blokada tylko AE"
+ 
+ #: camlibs/ptp2/config.c:3588
+ msgid "AE lock (Reset on release)"
+-msgstr ""
++msgstr "Blokada AE (wy³±czenie przy zwolnieniu)"
+ 
+ #: camlibs/ptp2/config.c:3589
+-#, fuzzy
+ msgid "AE lock (Hold)"
+-msgstr "Utrzymanie blokady AF"
++msgstr "Blokada AE (utrzymanie)"
+ 
+ #: camlibs/ptp2/config.c:3590
+-#, fuzzy
+ msgid "AF lock only"
+-msgstr "Blokada AF"
++msgstr "Blokada tylko AF"
+ 
+ #: camlibs/ptp2/config.c:3611 camlibs/ptp2/config.c:3624
+ msgid "4 fps"
+-msgstr ""
++msgstr "4 fps"
+ 
+ #: camlibs/ptp2/config.c:3612 camlibs/ptp2/config.c:3625
+ msgid "3 fps"
+-msgstr ""
++msgstr "3 fps"
+ 
+ #: camlibs/ptp2/config.c:3613 camlibs/ptp2/config.c:3626
+ msgid "2 fps"
+-msgstr ""
++msgstr "2 fps"
+ 
+ #: camlibs/ptp2/config.c:3614 camlibs/ptp2/config.c:3627
+ msgid "1 fps"
+-msgstr ""
++msgstr "1 fps"
+ 
+ #: camlibs/ptp2/config.c:3619 camlibs/ptp2/config.c:3634
+ msgid "9 fps"
+-msgstr ""
++msgstr "9 fps"
+ 
+ #: camlibs/ptp2/config.c:3620
+ msgid "8 fps"
+-msgstr ""
++msgstr "8 fps"
+ 
+ #: camlibs/ptp2/config.c:3621
+ msgid "7 fps"
+-msgstr ""
++msgstr "7 fps"
+ 
+ #: camlibs/ptp2/config.c:3622
+ msgid "6 fps"
+-msgstr ""
++msgstr "6 fps"
+ 
+ #: camlibs/ptp2/config.c:3623
+ msgid "5 fps"
+-msgstr ""
++msgstr "5 fps"
+ 
+ #: camlibs/ptp2/config.c:3632
+ msgid "11 fps"
+-msgstr ""
++msgstr "11 fps"
+ 
+ #: camlibs/ptp2/config.c:3633
+ msgid "10 fps"
+-msgstr ""
++msgstr "10 fps"
+ 
+ #: camlibs/ptp2/config.c:3697
+ msgid "50%"
+@@ -5820,11 +5808,11 @@
+ 
+ #: camlibs/ptp2/config.c:3839 camlibs/ptp2/config.c:3858
+ msgid "On 1"
+-msgstr ""
++msgstr "W³±czone 1"
+ 
+ #: camlibs/ptp2/config.c:3840 camlibs/ptp2/config.c:3861
+ msgid "On 2"
+-msgstr ""
++msgstr "W³±czone 2"
+ 
+ #: camlibs/ptp2/config.c:3892
+ msgid "Near 1"
+@@ -5986,9 +5974,8 @@
+ msgstr "Prowadzenie rêczne ostro¶ci Canon DSLR"
+ 
+ #: camlibs/ptp2/config.c:4888
+-#, fuzzy
+ msgid "Canon EOS Zoom"
+-msgstr "Powiêkszenie Canon EOS "
++msgstr "Powiêkszenie Canon EOS"
+ 
+ #: camlibs/ptp2/config.c:4889
+ msgid "Canon EOS Zoom Position"
+@@ -5999,17 +5986,16 @@
+ msgstr "Canon EOS Viewfinder"
+ 
+ #: camlibs/ptp2/config.c:4891
+-#, fuzzy
+ msgid "Canon EOS Remote Release"
+-msgstr "Powiêkszenie Canon EOS "
++msgstr "Zdalne zwalnianie Canon EOS"
+ 
+ #: camlibs/ptp2/config.c:4892
+ msgid "CHDK Reboot"
+-msgstr ""
++msgstr "Reboot CHDK"
+ 
+ #: camlibs/ptp2/config.c:4893
+ msgid "CHDK Script"
+-msgstr ""
++msgstr "Skrypt CHDK"
+ 
+ #: camlibs/ptp2/config.c:4901
+ msgid "PTP Version"
+@@ -6405,7 +6391,6 @@
+ msgstr "Znak flesza"
+ 
+ #: camlibs/ptp2/config.c:5060
+-#, fuzzy
+ msgid "Modelling Flash"
+ msgstr "Flesz modeluj±cy"
+ 
+@@ -6566,19 +6551,16 @@
+ msgstr "Automatyczny bracketing ekspozycji"
+ 
+ #: camlibs/ptp2/config.c:5111
+-#, fuzzy
+ msgid "Movie Quality"
+-msgstr "Jako¶æ"
++msgstr "Jako¶æ filmu"
+ 
+ #: camlibs/ptp2/config.c:5112
+-#, fuzzy
+ msgid "Movie Sound"
+-msgstr "G³os filmu"
++msgstr "D¼wiêk filmu"
+ 
+ #: camlibs/ptp2/config.c:5113
+-#, fuzzy
+ msgid "Reverse Indicators"
+-msgstr "Odwrotna tarcza poleceñ"
++msgstr "Odwrotne identyfikatory"
+ 
+ #: camlibs/ptp2/config.c:5123
+ msgid "Meter Off Time"
+@@ -6591,31 +6573,27 @@
+ 
+ #: camlibs/ptp2/config.c:5129 camlibs/ptp2/config.c:5140
+ #: camlibs/ptp2/config.c:5165
+-#, fuzzy
+ msgid "ISO Auto Hi Limit"
+ msgstr "Górne ograniczenie Auto ISO"
+ 
+ #: camlibs/ptp2/config.c:5130 camlibs/ptp2/config.c:5157
+ #: camlibs/ptp2/config.c:5166
+ msgid "Active D-Lighting"
+-msgstr ""
++msgstr "Aktywne D-Lighting"
+ 
+ #: camlibs/ptp2/config.c:5131 camlibs/ptp2/config.c:5156
+ #: camlibs/ptp2/config.c:5167
+-#, fuzzy
+ msgid "High ISO Noise Reduction"
+ msgstr "Redukcja szumów przy du¿ym ISO"
+ 
+ #: camlibs/ptp2/config.c:5133 camlibs/ptp2/config.c:5141
+ #: camlibs/ptp2/config.c:5168
+-#, fuzzy
+ msgid "Continuous Shooting Speed Slow"
+-msgstr "Ci±g³e zdjêcia"
++msgstr "Szybko¶æ wolnego trybu ci±g³ych zdjêæ"
+ 
+ #: camlibs/ptp2/config.c:5142 camlibs/ptp2/config.c:5172
+-#, fuzzy
+ msgid "Continuous Shooting Speed High"
+-msgstr "Ci±g³a du¿a prêdno¶æ"
++msgstr "Szybko¶æ szybkiego trybu ci±g³ych zdjêæ"
+ 
+ #: camlibs/ptp2/config.c:5143 camlibs/ptp2/config.c:5173
+ #: camlibs/ptp2/ptp.c:3669
+@@ -6627,19 +6605,16 @@
+ msgstr "Tryb kompresji JPEG"
+ 
+ #: camlibs/ptp2/config.c:5147
+-#, fuzzy
+ msgid "AF-C Mode Priority"
+-msgstr "Kolejno¶æ rodzaju baterii"
++msgstr "Priorytet trybu AF-C"
+ 
+ #: camlibs/ptp2/config.c:5148
+-#, fuzzy
+ msgid "AF-S Mode Priority"
+-msgstr "Kolejno¶æ rodzaju baterii"
++msgstr "Priorytet trybu AF-S"
+ 
+ #: camlibs/ptp2/config.c:5149
+-#, fuzzy
+ msgid "AF Activation"
+-msgstr "Akcja"
++msgstr "W³±czenie AF"
+ 
+ #: camlibs/ptp2/config.c:5150 camlibs/ptp2/ptp.c:3887
+ msgid "Dynamic AF Area"
+@@ -6654,13 +6629,12 @@
+ msgstr "Punkt obszaru AF"
+ 
+ #: camlibs/ptp2/config.c:5153
+-#, fuzzy
+ msgid "AF On Button"
+-msgstr "Przycisk blokady AEAF 2"
++msgstr "Przycisk AF On"
+ 
+ #: camlibs/ptp2/config.c:5169
+ msgid "Maximum continuous release"
+-msgstr ""
++msgstr "Maksymalne ci±g³e zwolnienie"
+ 
+ #: camlibs/ptp2/config.c:5187
+ msgid "Image Settings"
+@@ -7023,9 +6997,9 @@
+ msgstr "Canon EOS Capture nie powiod³o siê: nienznay b³±d %d, proszê zg³osiæ."
+ 
+ #: camlibs/ptp2/library.c:2095 camlibs/ptp2/library.c:2645
+-#, fuzzy, c-format
++#, c-format
+ msgid "Canon EOS Get Changes failed: 0x%04x"
+-msgstr "Canon EOS Get Changes nie powiod³o siê: %x"
++msgstr "Canon EOS Get Changes nie powiod³o siê: 0x%04x"
+ 
+ #: camlibs/ptp2/library.c:2221
+ msgid "Sorry, your Canon camera does not support Canon Capture initiation"
