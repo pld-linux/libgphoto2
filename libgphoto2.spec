@@ -3,6 +3,7 @@
 %bcond_with	apidocs		# API documentation (currently broken)
 %bcond_without	baudboy		# use lockdev library instead of baudboy
 %bcond_with	canonupload	# Canon upload experimental code
+%bcond_with	hal		# build HAL support
 %bcond_without	static_libs	# static libraries
 #
 Summary:	Libraries for digital cameras
@@ -11,7 +12,7 @@ Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.4.11
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
@@ -28,7 +29,7 @@ BuildRequires:	dbus-devel >= 0.31
 BuildRequires:	gd-devel
 BuildRequires:	gettext-devel >= 0.14.1
 %{?with_apidocs:BuildRequires:	gtk-doc >= 0.10}
-BuildRequires:	hal-devel >= 0.5.0
+%{?with_hal:BuildRequires:	hal-devel >= 0.5.0}
 BuildRequires:	libexif-devel >= 1:0.6.13
 BuildRequires:	libjpeg-devel
 BuildRequires:	libltdl-devel
@@ -276,11 +277,13 @@ export CAMLIBS=$RPM_BUILD_ROOT%{_libdir}/%{name}/%{version}
 ../generic/print-camera-list udev-rules version 136 group usb mode 0660 \
 	> $RPM_BUILD_ROOT/lib/udev/rules.d/40-libgphoto2.rules
 
+%if %{with hal}
 # hal
 install -d $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty
 
 ../generic/print-camera-list hal-fdi | \
 	grep -v "<!-- This file was generated" > $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
+%endif
 
 %if %{with static_libs}
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/libgphoto2/*/*.a
@@ -371,6 +374,8 @@ rm -rf $RPM_BUILD_ROOT
 /lib/udev/rules.d/40-libgphoto2.rules
 %attr(755,root,root) /lib/udev/check-ptp-camera
 
+%if %{with hal}
 %files -n hal-libgphoto2
 %defattr(644,root,root,755)
 %{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
+%endif
