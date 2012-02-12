@@ -1,0 +1,4 @@
+- updated to 2.4.12
+- updated pl.po-update patch
+- build usb1 driver (libusb 1.0-based) instead of obsolete usb
+- udev-libgphoto2 Obsoletes: hal-libgphoto2 if built without hal
