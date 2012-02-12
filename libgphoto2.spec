@@ -11,12 +11,12 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.4.11
-Release:	3
+Version:	2.4.12
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	16a22b9739e45a95980ed62705fe7333
+# Source0-md5:	735c50ebb15cb8be61bac400ee4afb1e
 Patch0:		%{name}-mode-owner-group.patch
 Patch1:		%{name}-IXANY.patch
 Patch2:		%{name}-increase_max_entries.patch
@@ -34,7 +34,7 @@ BuildRequires:	libexif-devel >= 1:0.6.13
 BuildRequires:	libjpeg-devel
 BuildRequires:	libltdl-devel
 BuildRequires:	libtool >= 1:1.4.2-9
-BuildRequires:	libusb-compat-devel >= 0.1
+BuildRequires:	libusb-devel >= 1.0.0
 %{?with_baudboy:BuildRequires:	lockdev-baudboy-devel}
 %{!?with_baudboy:BuildRequires:	lockdev-devel >= 1.0.2}
 BuildRequires:	pkgconfig
@@ -139,6 +139,7 @@ Requires:	udev-core >= 1:136
 %endif
 Provides:	udev-digicam
 Obsoletes:	hal-gphoto
+%{!?with_hal:Obsoletes:	hal-libgphoto2}
 Obsoletes:	hotplug-digicam
 Obsoletes:	udev-digicam
 
@@ -190,12 +191,13 @@ cd ..
 CFLAGS="%{rpmcflags}%{?with_canonupload: -DCANON_EXPERIMENTAL_UPLOAD}"
 %configure \
 	%{!?with_baudboy:--disable-baudboy} \
-	--with%{!?with_hal:out}-hal \
 	--disable-resmgr \
 	--disable-ttylock \
 	%{?with_apidocs:--enable-docs} \
 	%{?with_static_libs:--enable-static} \
-	%{?with_apidocs:--with-html-dir=%{_gtkdocdir}}
+	--with%{!?with_hal:out}-hal \
+	%{?with_apidocs:--with-html-dir=%{_gtkdocdir}} \
+	--without-libusb
 
 %{__make}
 
@@ -321,12 +323,12 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/libgphoto2_port/*
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/disk.so
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/ptpip.so
-%attr(755,root,root) %{_libdir}/libgphoto2_port/*/usb.so
+%attr(755,root,root) %{_libdir}/libgphoto2_port/*/usb1.so
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/usbdiskdirect.so
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/usbscsi.so
 %{_libdir}/libgphoto2_port/*/disk.la
 %{_libdir}/libgphoto2_port/*/ptpip.la
-%{_libdir}/libgphoto2_port/*/usb.la
+%{_libdir}/libgphoto2_port/*/usb1.la
 %{_libdir}/libgphoto2_port/*/usbdiskdirect.la
 %{_libdir}/libgphoto2_port/*/usbscsi.la
 
