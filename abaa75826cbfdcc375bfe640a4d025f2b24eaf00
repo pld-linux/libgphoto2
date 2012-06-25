@@ -1,0 +1,2 @@
+- Release 0.3.
+- lib-devel subpackage Requires: libexif-devel.
