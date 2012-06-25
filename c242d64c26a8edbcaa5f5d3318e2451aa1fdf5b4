@@ -1,0 +1,1 @@
+- remove ncurses patch (instead use CPPFLAGS), fix cdk detection, disable am/ac regeneration
