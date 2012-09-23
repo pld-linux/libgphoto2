@@ -11,15 +11,19 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.4.14
-Release:	2
+%define	base_version	2.4.14
+%define	snap		14116
+Version:	2.4.14.1
+Release:	0.svn%{snap}
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{base_version}.tar.bz2
 # Source0-md5:	c7fc6cafa6343f2457976dbe9f2d9d68
 Patch0:		%{name}-mode-owner-group.patch
 Patch1:		%{name}-IXANY.patch
 Patch2:		%{name}-increase_max_entries.patch
+# svn diff -r 14002:%{snap}
+Patch3:		%{name}-svn.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
@@ -164,12 +168,13 @@ Plik z informacjami o urządzeniach HAL-a do obsługi kamer cyfrowych
 w przestrzeni użytkownika.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{base_version}
 %patch0 -p1
 %ifarch alpha
 %patch1 -p1
 %endif
 %patch2 -p1
+%patch3 -p0
 
 %{__rm} po/stamp-po libgphoto2_port/po/stamp-po
 
