@@ -1,0 +1,319 @@
+--- libgphoto2-2.5.1/libgphoto2_port/po/pl.po.orig	2013-01-27 19:44:50.000000000 +0100
++++ libgphoto2-2.5.1/libgphoto2_port/po/pl.po	2013-02-04 19:25:21.838731179 +0100
+@@ -1,14 +1,14 @@
+ # Polish translation for libgphoto2_port.
+-# Copyright (C) 2005, 2006, 2007, 2010, 2012 Free Software Foundation, Inc.
++# Copyright (C) 2005, 2006, 2007, 2010, 2012, 2013 Free Software Foundation, Inc.
+ # This file is distributed under the same license as the libgphoto2 package.
+-# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2012.
++# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2013.
+ #
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: libgphoto2_port 2.5.0\n"
++"Project-Id-Version: libgphoto2_port 2.5.1\n"
+ "Report-Msgid-Bugs-To: gphoto-devel@lists.sourceforge.net\n"
+ "POT-Creation-Date: 2012-12-13 23:26+0100\n"
+-"PO-Revision-Date: 2012-07-28 20:03+0200\n"
++"PO-Revision-Date: 2013-02-03 21:49+0100\n"
+ "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
+ "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+ "Language: pl\n"
+@@ -599,19 +599,19 @@
+ msgstr "Nie udało się ponownie podłączyć sterownika jądra do aparatu."
+ 
+ #: usbscsi/linux.c:91
+-#, fuzzy, c-format
++#, c-format
+ msgid "Device '%s' is locked by another app."
+-msgstr "Urządzenie '%s' jest zablokowane przez pid %d"
++msgstr "Urządzenie '%s' jest zablokowane przez inną aplikację."
+ 
+ #: usbscsi/linux.c:96
+-#, fuzzy, c-format
++#, c-format
+ msgid "Failed to lock '%s' (%m)."
+-msgstr "Nie udało się otworzyć '%s' (%m)."
++msgstr "Nie udało się zablokować '%s' (%m)."
+ 
+ #: usbscsi/linux.c:109
+-#, fuzzy, c-format
++#, c-format
+ msgid "Failed to unlock '%s' (%m)."
+-msgstr "Nie udało się otworzyć '%s' (%m)."
++msgstr "Nie udało się odblokować '%s' (%m)."
+ 
+ #: usbscsi/linux.c:208
+ msgid "USB Mass Storage raw SCSI"
+--- libgphoto2-2.5.1/po/pl.po.orig	2013-01-27 20:58:17.000000000 +0100
++++ libgphoto2-2.5.1/po/pl.po	2013-02-04 19:26:50.252062670 +0100
+@@ -1,14 +1,14 @@
+ # Polish translation for libgphoto2.
+-# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.
++# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 Free Software Foundation, Inc.
+ # This file is distributed under the same license as the libgphoto2 package.
+-# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2012.
++# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2013.
+ #
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: libgphoto2 2.5.0\n"
++"Project-Id-Version: libgphoto2 2.5.1\n"
+ "Report-Msgid-Bugs-To: gphoto-devel@lists.sourceforge.net\n"
+ "POT-Creation-Date: 2013-01-27 20:58+0100\n"
+-"PO-Revision-Date: 2012-11-30 15:30+0100\n"
++"PO-Revision-Date: 2013-02-04 18:28+0100\n"
+ "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
+ "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+ "Language: pl\n"
+@@ -5642,21 +5642,19 @@
+ 
+ #: camlibs/ptp2/config.c:3519
+ msgid "50 Hz"
+-msgstr ""
++msgstr "50 Hz"
+ 
+ #: camlibs/ptp2/config.c:3520
+ msgid "60 Hz"
+-msgstr ""
++msgstr "60 Hz"
+ 
+ #: camlibs/ptp2/config.c:3526 camlibs/ptp2/ptp.c:4616
+-#, fuzzy
+ msgid "Quick Response"
+-msgstr "Pilot z szybką reakcją"
++msgstr "Szybka reakcja"
+ 
+ #: camlibs/ptp2/config.c:3527 camlibs/ptp2/ptp.c:4617
+-#, fuzzy
+ msgid "Remote Mirror Up"
+-msgstr "Lustro podniesione"
++msgstr "Lustro podniesione zdalnie"
+ 
+ #: camlibs/ptp2/config.c:3533 camlibs/ptp2/ptp.c:4515
+ msgid "Moderate"
+@@ -5768,9 +5766,8 @@
+ msgstr "Bezstratna"
+ 
+ #: camlibs/ptp2/config.c:3779 camlibs/ptp2/ptp.c:4470
+-#, fuzzy
+ msgid "Lossy"
+-msgstr "Bezstratna"
++msgstr "Stratna"
+ 
+ #: camlibs/ptp2/config.c:3784
+ msgid "Size Priority"
+@@ -5922,22 +5919,19 @@
+ 
+ #: camlibs/ptp2/config.c:4099 camlibs/ptp2/config.c:4119
+ msgid "Press Half"
+-msgstr ""
++msgstr "Wciśnięcie do połowy"
+ 
+ #: camlibs/ptp2/config.c:4100 camlibs/ptp2/config.c:4123
+-#, fuzzy
+ msgid "Press Full"
+-msgstr "PTP: Brak miejsca"
++msgstr "Wciśnięcie do końca"
+ 
+ #: camlibs/ptp2/config.c:4101 camlibs/ptp2/config.c:4135
+-#, fuzzy
+ msgid "Release Half"
+-msgstr "Zwolnienie"
++msgstr "Zwolnienie do połowy"
+ 
+ #: camlibs/ptp2/config.c:4102 camlibs/ptp2/config.c:4139
+-#, fuzzy
+ msgid "Release Full"
+-msgstr "Zwolnienie + ogniskowanie"
++msgstr "Zwolnienie do końca"
+ 
+ #: camlibs/ptp2/config.c:4127
+ msgid "Immediate"
+@@ -6140,19 +6134,16 @@
+ msgstr "Numer seryjny"
+ 
+ #: camlibs/ptp2/config.c:5288
+-#, fuzzy
+ msgid "Camera Manufacturer"
+-msgstr "Producent: %s\n"
++msgstr "Producent aparatu"
+ 
+ #: camlibs/ptp2/config.c:5290
+-#, fuzzy
+ msgid "Device Version"
+-msgstr "Ikona urządzenia"
++msgstr "Wersja urządzenia"
+ 
+ #: camlibs/ptp2/config.c:5291
+-#, fuzzy
+ msgid "Vendor Extension"
+-msgstr "Opis rozszerzenia producenta: %s\n"
++msgstr "Rozszerzenie producenta"
+ 
+ #: camlibs/ptp2/config.c:5296
+ msgid "PTP Version"
+@@ -6292,9 +6283,8 @@
+ msgstr "Autor"
+ 
+ #: camlibs/ptp2/config.c:5345
+-#, fuzzy
+ msgid "CCD Number"
+-msgstr "Numer seryjny CCD"
++msgstr "Numer CCD"
+ 
+ #: camlibs/ptp2/config.c:5346 camlibs/ptp2/config.c:5347
+ #: camlibs/ricoh/library.c:436
+@@ -6306,9 +6296,8 @@
+ msgstr "Czyszczenie sensora"
+ 
+ #: camlibs/ptp2/config.c:5349 camlibs/ptp2/ptp.c:3695
+-#, fuzzy
+ msgid "Flicker Reduction"
+-msgstr "Redukcja czerwonych oczu"
++msgstr "Redukcja migotania"
+ 
+ #: camlibs/ptp2/config.c:5350
+ msgid "Custom Functions Ex"
+@@ -6737,9 +6726,8 @@
+ msgstr "Zdalny limit czasu"
+ 
+ #: camlibs/ptp2/config.c:5518 camlibs/ptp2/ptp.c:3697
+-#, fuzzy
+ msgid "Remote Mode"
+-msgstr "Tryb nagrywania"
++msgstr "Tryb zdalnego sterowania"
+ 
+ #: camlibs/ptp2/config.c:5519 camlibs/ptp2/ptp.c:3969
+ msgid "Optimize Image"
+@@ -6770,9 +6758,8 @@
+ msgstr "Dźwięk filmu"
+ 
+ #: camlibs/ptp2/config.c:5526 camlibs/ptp2/ptp.c:3866
+-#, fuzzy
+ msgid "Manual Movie Setting"
+-msgstr "Bracketing w trybie ręcznym"
++msgstr "Ręczne ustawienia filmu"
+ 
+ #: camlibs/ptp2/config.c:5527
+ msgid "Microphone"
+@@ -8281,9 +8268,8 @@
+ msgstr "Nornalny AF włączony"
+ 
+ #: camlibs/ptp2/ptp.c:3848
+-#, fuzzy
+ msgid "Clean Image Sensor"
+-msgstr "Czyszczenie sensora"
++msgstr "Czyszczenie matrycy"
+ 
+ #: camlibs/ptp2/ptp.c:3850
+ msgid "Image Comment String"
+@@ -8310,18 +8296,16 @@
+ msgstr "Głos filmu"
+ 
+ #: camlibs/ptp2/ptp.c:3862
+-#, fuzzy
+ msgid "Movie Microphone"
+-msgstr "Mikrofon"
++msgstr "Mikrofon do filmów"
+ 
+ #: camlibs/ptp2/ptp.c:3864
+-#, fuzzy
+ msgid "Movie Card Slot"
+-msgstr "Jakość filmu"
++msgstr "Gniazdo kart do filmów"
+ 
+ #: camlibs/ptp2/ptp.c:3868
+ msgid "Monitor Off Delay"
+-msgstr ""
++msgstr "Opóźnienie wyłączania monitora"
+ 
+ #: camlibs/ptp2/ptp.c:3870
+ msgid "Bracketing Enable"
+@@ -8628,9 +8612,8 @@
+ msgstr "Stan wskaźnika ekspozycji"
+ 
+ #: camlibs/ptp2/ptp.c:4071
+-#, fuzzy
+ msgid "Info Display Error Status"
+-msgstr "Stan wyświetlania ekspozycji"
++msgstr "Stan błędów wyświetlania informacji"
+ 
+ #: camlibs/ptp2/ptp.c:4073
+ msgid "Exposure Indicate Lightup"
+@@ -11361,75 +11344,3 @@
+ #: libgphoto2/gphoto2-result.c:89
+ msgid "Unknown error"
+ msgstr "Nieznany błąd"
+-
+-#~ msgid "%s is a file type for which no thumbnail is provided"
+-#~ msgstr "%s to rodzaj pliku dla którego nie zapewniono miniaturki"
+-
+-#~ msgid "Unavailable"
+-#~ msgstr "Niedostępne"
+-
+-#~ msgid ""
+-#~ "canon_usb_poll_interrupt_pipe: interrupt read failed after %i tries, "
+-#~ "%6.3f sec \"%s\""
+-#~ msgstr ""
+-#~ "canon_usb_poll_interrupt_pipe: odczyt z przerwania nie powiódł się po %i "
+-#~ "próbach, %6.3f sek \"%s\""
+-
+-#~ msgid ""
+-#~ "canon_usb_poll_interrupt_multiple: interrupt read failed after %i tries, "
+-#~ "\"%s\""
+-#~ msgstr ""
+-#~ "canon_usb_poll_interrupt_multiple: odczyt z przerwania nie powiódł się po "
+-#~ "%i próbach, \"%s\""
+-
+-#~ msgid ""
+-#~ "canon_usb_capture_dialogue: bogus length 0x%04x for thumbnail size packet"
+-#~ msgstr ""
+-#~ "canon_usb_capture_dialogue: błędna długość 0x%04x dla pakietu rozmiaru "
+-#~ "miniaturki"
+-
+-#~ msgid ""
+-#~ "canon_usb_capture_dialogue: bogus length 0x%04x for full image size packet"
+-#~ msgstr ""
+-#~ "canon_usb_capture_dialogue: błędna długość 0x%04x dla pakietu rozmiaru "
+-#~ "pełnego obrazu"
+-
+-#~ msgid "canon_usb_capture_dialogue: secondary image descriptor received"
+-#~ msgstr "canon_usb_capture_dialogue: odebrano deskryptor zdjęcia dodatkowego"
+-
+-#~ msgid "canon_usb_capture_dialogue: first interrupt read out of sequence"
+-#~ msgstr ""
+-#~ "canon_usb_capture_dialogue: pierwszy odczyt z przerwania spoza kolejności"
+-
+-#~ msgid "canon_usb_capture_dialogue: second interrupt read out of sequence"
+-#~ msgstr ""
+-#~ "canon_usb_capture_dialogue: drugi odczyt z przerwania spoza kolejności"
+-
+-#~ msgid ""
+-#~ "canon_usb_capture_dialogue: photographic failure signaled, code = 0x%08x"
+-#~ msgstr ""
+-#~ "canon_usb_capture_dialogue: zgłoszono błąd fotograficzny, kod = 0x%08x"
+-
+-#~ msgid "canon_usb_capture_dialogue: third EOS interrupt read out of sequence"
+-#~ msgstr ""
+-#~ "canon_usb_capture_dialogue: trzeci odczyt z przerwania EOS spoza "
+-#~ "kolejności"
+-
+-#~ msgid ""
+-#~ "canon_usb_capture_dialogue: fourth EOS interrupt read out of sequence"
+-#~ msgstr ""
+-#~ "canon_usb_capture_dialogue: czwarty odczyt z przerwania EOS spoza "
+-#~ "kolejności"
+-
+-#~ msgid "canon_usb_dialogue: payload too big, won't fit into buffer (%i > %i)"
+-#~ msgstr ""
+-#~ "canon_usb_dialogue: dane zbyt duże, nie zmieszczą się do bufora (%i > %i)"
+-
+-#~ msgid "canon_usb_dialogue: expected 0x%x bytes, but camera reports 0x%x"
+-#~ msgstr "canon_usb_dialogue: oczekiwano 0x%x bajtów, ale aparat zgłasza 0x%x"
+-
+-#~ msgid "On 1"
+-#~ msgstr "Włączone 1"
+-
+-#~ msgid "On 2"
+-#~ msgstr "Włączone 2"
