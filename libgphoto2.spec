@@ -11,15 +11,13 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.5.2
-Release:	3
+Version:	2.5.3.1
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	28e0c0d449f80917fb3f79bdefbbe0ec
+# Source0-md5:	aad2607a84442769c14f6acce2ca1ddf
 Patch0:		%{name}-mode-owner-group.patch
-Patch1:		%{name}-IXANY.patch
-Patch2:		%{name}-pl.po-update.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
@@ -27,15 +25,15 @@ BuildRequires:	avahi-compat-libdns_sd-devel
 BuildRequires:	bison
 BuildRequires:	dbus-devel >= 0.31
 BuildRequires:	flex
-BuildRequires:	gd-devel
+BuildRequires:	gd-devel >= 2.0
 BuildRequires:	gettext-devel >= 0.14.1
 %{?with_apidocs:BuildRequires:	gtk-doc >= 0.10}
-%{?with_hal:BuildRequires:	hal-devel >= 0.5.0}
 BuildRequires:	libexif-devel >= 1:0.6.13
 BuildRequires:	libjpeg-devel
 BuildRequires:	libltdl-devel
 BuildRequires:	libtool >= 1:1.4.2-9
 BuildRequires:	libusb-devel >= 1.0.0
+BuildRequires:	libxml2-devel >= 2.0
 %{?with_baudboy:BuildRequires:	lockdev-baudboy-devel}
 %{!?with_baudboy:BuildRequires:	lockdev-devel >= 1.0.2}
 BuildRequires:	pkgconfig
@@ -74,7 +72,7 @@ Requires:	%{name} = %{version}-%{release}
 %{?with_apidocs:Requires:	gtk-doc-common}
 Requires:	libexif-devel >= 1:0.6.13
 Requires:	libltdl-devel
-Requires:	libusb-compat-devel >= 0.1
+Requires:	libusb-devel >= 1.0.0
 %{!?with_baudboy:Requires:	lockdev-devel}
 Obsoletes:	gphoto2-devel
 Obsoletes:	gphoto2-lib-devel
@@ -132,7 +130,7 @@ współpracy z aparatami podłączonymi przez port szeregowy.
 Summary:	Userspace support for digital cameras
 Summary(pl.UTF-8):	Wsparcie dla kamer cyfrowych w przestrzeni użytkownika
 Group:		Applications/System
-Requires:	libusb-compat >= 0.1
+Requires:	libusb >= 1.0.0
 %if "%{pld_release}" == "ti"
 Requires:	udev-core >= 1:124-3
 %else
@@ -168,10 +166,6 @@ w przestrzeni użytkownika.
 %prep
 %setup -q
 %patch0 -p1
-%ifarch alpha
-%patch1 -p1
-%endif
-%patch2 -p1
 
 %{__rm} po/stamp-po libgphoto2_port/po/stamp-po
 
@@ -195,7 +189,6 @@ CFLAGS="%{rpmcflags}%{?with_canonupload: -DCANON_EXPERIMENTAL_UPLOAD}"
 	--disable-ttylock \
 	%{?with_apidocs:--enable-docs} \
 	%{?with_static_libs:--enable-static} \
-	--with%{!?with_hal:out}-hal \
 	%{?with_apidocs:--with-html-dir=%{_gtkdocdir}} \
 	--without-libusb
 
@@ -273,11 +266,13 @@ cp --parents \
 
 # udev
 cd packaging/linux-hotplug
-install -d $RPM_BUILD_ROOT/lib/udev/rules.d
+install -d $RPM_BUILD_ROOT/lib/udev/{hwdb.d,rules.d}
 export CAMLIBS=$RPM_BUILD_ROOT%{_libdir}/%{name}/%{version}
 
 ../generic/print-camera-list udev-rules version 136 group usb mode 0660 \
 	> $RPM_BUILD_ROOT/lib/udev/rules.d/40-libgphoto2.rules
+../generic/print-camera-list hwdb \
+	> $RPM_BUILD_ROOT/lib/udev/hwdb.d/20-gphoto.hwdb
 
 %if %{with hal}
 # hal
@@ -357,7 +352,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_pkgconfigdir}/libgphoto2_port.pc
 %{_mandir}/man3/libgphoto2.3*
 %{_mandir}/man3/libgphoto2_port.3*
-%{?with_apidocs:%{_gtkdocdir}/*}
+%{?with_apidocs:%{_gtkdocdir}/gphoto2}
 
 %if %{with static_libs}
 %files static
@@ -373,6 +368,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n udev-libgphoto2
 %defattr(644,root,root,755)
+/lib/udev/hwdb.d/20-gphoto.hwdb
 /lib/udev/rules.d/40-libgphoto2.rules
 %attr(755,root,root) /lib/udev/check-ptp-camera
 
