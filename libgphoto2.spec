@@ -5,14 +5,14 @@
 %bcond_with	canonupload	# Canon upload experimental code
 %bcond_with	hal		# build HAL support
 %bcond_without	static_libs	# static libraries
-#
+
 Summary:	Libraries for digital cameras
 Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
 Version:	2.5.3.1
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
@@ -39,8 +39,8 @@ BuildRequires:	libxml2-devel >= 2.0
 BuildRequires:	pkgconfig
 BuildRequires:	sed >= 4.0
 Requires:	libexif >= 1:0.6.13
-Provides:	gphoto2-lib
-Obsoletes:	gphoto2-lib
+Provides:	gphoto2-lib = %{version}-%{release}
+Obsoletes:	gphoto2-lib < 2.1.1
 Conflicts:	gphoto2 < 2.1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
