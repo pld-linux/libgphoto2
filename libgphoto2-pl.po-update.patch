@@ -1,0 +1,415 @@
+--- libgphoto2-2.5.4/po/pl.po.orig	2014-03-23 18:46:46.000000000 +0100
++++ libgphoto2-2.5.4/po/pl.po	2014-03-27 17:26:59.466295340 +0100
+@@ -5,10 +5,10 @@
+ #
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: libgphoto2 2.5.3\n"
++"Project-Id-Version: libgphoto2 2.5.4\n"
+ "Report-Msgid-Bugs-To: gphoto-devel@lists.sourceforge.net\n"
+ "POT-Creation-Date: 2014-03-23 18:28+0100\n"
+-"PO-Revision-Date: 2014-01-11 14:18+0100\n"
++"PO-Revision-Date: 2014-03-27 03:18+0100\n"
+ "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
+ "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+ "Language: pl\n"
+@@ -4376,24 +4376,20 @@
+ msgstr "Własna predefiniowana 5"
+ 
+ #: camlibs/ptp2/config.c:1323
+-#, fuzzy
+ msgid "Fluorescent: Warm White"
+-msgstr "Światło fluorescencyjne 1"
++msgstr "Fluorescencyjne: ciepła biel"
+ 
+ #: camlibs/ptp2/config.c:1324
+-#, fuzzy
+ msgid "Fluorescent: Cold White"
+-msgstr "Światło fluorescencyjne H"
++msgstr "Fluorescencyjne: zimna biel"
+ 
+ #: camlibs/ptp2/config.c:1325
+-#, fuzzy
+ msgid "Fluorescent: Day White"
+-msgstr "Światło fluorescencyjne 1"
++msgstr "Fluorescencyjne: dzienna biel 1"
+ 
+ #: camlibs/ptp2/config.c:1326
+-#, fuzzy
+ msgid "Fluorescent: Daylight"
+-msgstr "Światło fluorescencyjne H"
++msgstr "Fluorescencyjne: światło dzienne"
+ 
+ #: camlibs/ptp2/config.c:1334 camlibs/ptp2/config.c:4061
+ #: camlibs/ptp2/config.c:4072 camlibs/ptp2/config.c:4084
+@@ -4682,11 +4678,11 @@
+ 
+ #: camlibs/ptp2/config.c:1968
+ msgid "16:9"
+-msgstr ""
++msgstr "16:9"
+ 
+ #: camlibs/ptp2/config.c:1969
+ msgid "3:2"
+-msgstr ""
++msgstr "3:2"
+ 
+ #: camlibs/ptp2/config.c:1976 camlibs/ptp2/config.c:3422
+ #: camlibs/ptp2/config.c:3440 camlibs/ptp2/ptp.c:5279 camlibs/ptp2/ptp.c:5282
+@@ -4712,24 +4708,20 @@
+ msgstr "TFT + PC"
+ 
+ #: camlibs/ptp2/config.c:1991
+-#, fuzzy
+ msgid "Setting 4"
+-msgstr "Rodzaj ustawienia BW"
++msgstr "Ustawienie 4"
+ 
+ #: camlibs/ptp2/config.c:1992
+-#, fuzzy
+ msgid "Setting 5"
+-msgstr "Rodzaj ustawienia BW"
++msgstr "Ustawienie 5"
+ 
+ #: camlibs/ptp2/config.c:1993
+-#, fuzzy
+ msgid "Setting 6"
+-msgstr "Rodzaj ustawienia BW"
++msgstr "Ustawienie 6"
+ 
+ #: camlibs/ptp2/config.c:1994
+-#, fuzzy
+ msgid "Setting 7"
+-msgstr "Rodzaj ustawienia BW"
++msgstr "Ustawienie 7"
+ 
+ #: camlibs/ptp2/config.c:2029 camlibs/ptp2/config.c:2031
+ #: camlibs/ptp2/config.c:2070 camlibs/ptp2/config.c:3432
+@@ -4746,7 +4738,7 @@
+ 
+ #: camlibs/ptp2/config.c:2052 camlibs/ptp2/config.c:2074
+ msgid "Disabled"
+-msgstr ""
++msgstr "Wyłączony"
+ 
+ #: camlibs/ptp2/config.c:2101 camlibs/ptp2/config.c:2127
+ #: camlibs/ptp2/config.c:2154 camlibs/ptp2/ptp.c:5702
+@@ -4766,24 +4758,20 @@
+ msgstr "sRAW"
+ 
+ #: camlibs/ptp2/config.c:2236
+-#, fuzzy
+ msgid "Small Fine JPEG  (S1 Fine)"
+-msgstr "Mały dobry JPEG"
++msgstr "Mały dobry JPEG  (S1 Fine)"
+ 
+ #: camlibs/ptp2/config.c:2237
+-#, fuzzy
+ msgid "Small Normal JPEG (S1 Normal)"
+-msgstr "Mały normalny JPEG"
++msgstr "Mały normalny JPEG (S1 Normal)"
+ 
+ #: camlibs/ptp2/config.c:2238
+-#, fuzzy
+ msgid "Smaller JPEG (S2)"
+-msgstr "Mniejszy JPEG"
++msgstr "Mniejszy JPEG (S2)"
+ 
+ #: camlibs/ptp2/config.c:2239
+-#, fuzzy
+ msgid "Tiny JPEG (S3)"
+-msgstr "Malutki JPEG"
++msgstr "Malutki JPEG (S3)"
+ 
+ #: camlibs/ptp2/config.c:2241
+ msgid "mRAW + Large Fine JPEG"
+@@ -4802,27 +4790,24 @@
+ msgstr "sRAW + średni dobry JPEG"
+ 
+ #: camlibs/ptp2/config.c:2247
+-#, fuzzy
+ msgid "RAW + Small Fine JPEG (S1 Fine)"
+-msgstr "RAW + mały dobry JPEG"
++msgstr "RAW + mały dobry JPEG (S1 Fine)"
+ 
+ #: camlibs/ptp2/config.c:2248
+ msgid "mRAW + Small Fine JPEG"
+ msgstr "mRAW + mały dobry JPEG"
+ 
+ #: camlibs/ptp2/config.c:2249
+-#, fuzzy
+ msgid "mRAW + Small Fine JPEG (S1 Fine)"
+-msgstr "mRAW + mały dobry JPEG"
++msgstr "mRAW + mały dobry JPEG (S1 Fine)"
+ 
+ #: camlibs/ptp2/config.c:2250
+ msgid "sRAW + Small Fine JPEG"
+ msgstr "sRAW + mały dobry JPEG"
+ 
+ #: camlibs/ptp2/config.c:2251
+-#, fuzzy
+ msgid "sRAW + Small Fine JPEG (S1 Fine)"
+-msgstr "sRAW + mały dobry JPEG"
++msgstr "sRAW + mały dobry JPEG (S1 Fine)"
+ 
+ #: camlibs/ptp2/config.c:2253
+ msgid "mRAW + Large Normal JPEG"
+@@ -4841,57 +4826,48 @@
+ msgstr "sRAW + średni normalny JPEG"
+ 
+ #: camlibs/ptp2/config.c:2259
+-#, fuzzy
+ msgid "RAW + Small Normal JPEG (S1 Normal)"
+-msgstr "RAW + mały normalny JPEG"
++msgstr "RAW + mały normalny JPEG (S1 Normal)"
+ 
+ #: camlibs/ptp2/config.c:2260
+ msgid "mRAW + Small Normal JPEG"
+ msgstr "mRAW + mały normalny JPEG"
+ 
+ #: camlibs/ptp2/config.c:2261
+-#, fuzzy
+ msgid "mRAW + Small Normal JPEG (S1 Normal)"
+-msgstr "mRAW + mały normalny JPEG"
++msgstr "mRAW + mały normalny JPEG (S1 Normal)"
+ 
+ #: camlibs/ptp2/config.c:2262
+ msgid "sRAW + Small Normal JPEG"
+ msgstr "sRAW + mały normalny JPEG"
+ 
+ #: camlibs/ptp2/config.c:2263
+-#, fuzzy
+ msgid "sRAW + Small Normal JPEG (S1 Normal)"
+-msgstr "sRAW + mały normalny JPEG"
++msgstr "sRAW + mały normalny JPEG (S1 Normal)"
+ 
+ #: camlibs/ptp2/config.c:2264
+-#, fuzzy
+ msgid "RAW + Smaller JPEG (S2)"
+-msgstr "RAW + mały dobry JPEG"
++msgstr "RAW + mały dobry JPEG (S2)"
+ 
+ #: camlibs/ptp2/config.c:2265
+-#, fuzzy
+ msgid "mRAW + Smaller JPEG (S2)"
+-msgstr "mRAW + mały dobry JPEG"
++msgstr "mRAW + mały dobry JPEG (S2)"
+ 
+ #: camlibs/ptp2/config.c:2266
+-#, fuzzy
+ msgid "sRAW + Smaller JPEG (S2)"
+-msgstr "sRAW + mały dobry JPEG"
++msgstr "sRAW + mały dobry JPEG (S2)"
+ 
+ #: camlibs/ptp2/config.c:2267
+-#, fuzzy
+ msgid "RAW + Tiny JPEG (S3)"
+-msgstr "RAW + mały dobry JPEG"
++msgstr "RAW + malutki JPEG (S3)"
+ 
+ #: camlibs/ptp2/config.c:2268
+-#, fuzzy
+ msgid "mRAW + Tiny JPEG (S3)"
+-msgstr "mRAW + duży dobry JPEG"
++msgstr "mRAW + malutki JPEG (S3)"
+ 
+ #: camlibs/ptp2/config.c:2269
+-#, fuzzy
+ msgid "sRAW + Tiny JPEG (S3)"
+-msgstr "sRAW + duży dobry JPEG"
++msgstr "sRAW + malutki JPEG (S3)"
+ 
+ #: camlibs/ptp2/config.c:2294 camlibs/ptp2/ptp.c:5647
+ msgid "Continuous"
+@@ -4920,19 +4896,18 @@
+ msgstr "Automatyczne ISO"
+ 
+ #: camlibs/ptp2/config.c:2361 camlibs/ptp2/config.c:2390
+-#, fuzzy, c-format
++#, c-format
+ msgid "Auto ISO Multi Frame Noise Reduction"
+-msgstr "Redukcja szumów przy dużym ISO"
++msgstr "Wieloklatkowa redukcja szumów przy auto ISO"
+ 
+ #: camlibs/ptp2/config.c:2364
+-#, fuzzy, c-format
++#, c-format
+ msgid "%d Multi Frame Noise Reduction"
+-msgstr "Redukcja szumów przy długiej ekspozycji"
++msgstr "Wieloklatkowa redukcja szumów %d"
+ 
+ #: camlibs/ptp2/config.c:2398
+-#, fuzzy
+ msgid "Multi Frame Noise Reduction"
+-msgstr "Redukcja szumów przy dużym ISO"
++msgstr "Wieloklatkowa redukcja szumów"
+ 
+ #: camlibs/ptp2/config.c:2616
+ #, c-format
+@@ -5073,74 +5048,60 @@
+ msgstr "Szybkie zwolnienie"
+ 
+ #: camlibs/ptp2/config.c:2888
+-#, fuzzy
+ msgid "Selftimer 2s"
+-msgstr "Samowyzwalacz"
++msgstr "Samowyzwalacz 2s"
+ 
+ #: camlibs/ptp2/config.c:2889
+-#, fuzzy
+ msgid "Selftimer 10s"
+-msgstr "Samowyzwalacz"
++msgstr "Samowyzwalacz 10s"
+ 
+ #: camlibs/ptp2/config.c:2890
+-#, fuzzy
+ msgid "Bracketing C 0.3 Steps"
+-msgstr "Klatki i kroki bracketingu"
++msgstr "Kroki bracketingu C 0.3"
+ 
+ #: camlibs/ptp2/config.c:2891
+-#, fuzzy
+ msgid "Bracketing C 0.7 Steps"
+-msgstr "Klatki i kroki bracketingu"
++msgstr "Kroki bracketingu C 0.7"
+ 
+ #: camlibs/ptp2/config.c:2892
+-#, fuzzy
+ msgid "Bracketing C 1.0 Steps"
+-msgstr "Klatki i kroki bracketingu"
++msgstr "Kroki bracketingu C 1.0"
+ 
+ #: camlibs/ptp2/config.c:2893
+-#, fuzzy
+ msgid "Bracketing C 2.0 Steps"
+-msgstr "Klatki i kroki bracketingu"
++msgstr "Kroki bracketingu C 2.0"
+ 
+ #: camlibs/ptp2/config.c:2894
+-#, fuzzy
+ msgid "Bracketing C 3.0 Steps"
+-msgstr "Klatki i kroki bracketingu"
++msgstr "Kroki bracketingu C 3.0"
+ 
+ #: camlibs/ptp2/config.c:2895
+-#, fuzzy
+ msgid "Bracketing S 0.3 Steps"
+-msgstr "Klatki i kroki bracketingu"
++msgstr "Kroki bracketingu S 0.3"
+ 
+ #: camlibs/ptp2/config.c:2896
+-#, fuzzy
+ msgid "Bracketing S 0.7 Steps"
+-msgstr "Klatki i kroki bracketingu"
++msgstr "Kroki bracketingu S 0.7"
+ 
+ #: camlibs/ptp2/config.c:2897
+-#, fuzzy
+ msgid "Bracketing S 1.0 Steps"
+-msgstr "Klatki i kroki bracketingu"
++msgstr "Kroki bracketingu S 1.0"
+ 
+ #: camlibs/ptp2/config.c:2898
+-#, fuzzy
+ msgid "Bracketing S 2.0 Steps"
+-msgstr "Klatki i kroki bracketingu"
++msgstr "Kroki bracketingu S 2.0"
+ 
+ #: camlibs/ptp2/config.c:2899
+-#, fuzzy
+ msgid "Bracketing S 3.0 Steps"
+-msgstr "Klatki i kroki bracketingu"
++msgstr "Kroki bracketingu S 3.0"
+ 
+ #: camlibs/ptp2/config.c:2900
+-#, fuzzy
+ msgid "Bracketing WB Lo"
+-msgstr "Bracketing"
++msgstr "Bracketing WB Lo"
+ 
+ #: camlibs/ptp2/config.c:2901
+-#, fuzzy
+ msgid "Bracketing WB Hi"
+-msgstr "Bracketing"
++msgstr "Bracketing WB Hi"
+ 
+ #: camlibs/ptp2/config.c:2910 camlibs/ptp2/ptp.c:5207
+ msgid "Centre-spot"
+@@ -5894,14 +5855,12 @@
+ msgstr "Lustro podniesione zdalnie"
+ 
+ #: camlibs/ptp2/config.c:3863
+-#, fuzzy
+ msgid "Application Mode 0"
+-msgstr "Tryb działania"
++msgstr "Tryb aplikacji 0"
+ 
+ #: camlibs/ptp2/config.c:3864
+-#, fuzzy
+ msgid "Application Mode 1"
+-msgstr "Tryb działania"
++msgstr "Tryb aplikacji 1"
+ 
+ #: camlibs/ptp2/config.c:3870 camlibs/ptp2/ptp.c:5397
+ msgid "Moderate"
+@@ -5993,9 +5952,8 @@
+ msgstr "TIFF (RGB)"
+ 
+ #: camlibs/ptp2/config.c:4093
+-#, fuzzy
+ msgid "RAW+JPEG"
+-msgstr "RAW + JPEG dobrej jakości"
++msgstr "RAW+JPEG"
+ 
+ #: camlibs/ptp2/config.c:4107 camlibs/ptp2/ptp.c:5271
+ msgid "6 seconds"
+@@ -6654,9 +6612,8 @@
+ msgstr "Wyjście aparatu"
+ 
+ #: camlibs/ptp2/config.c:6027
+-#, fuzzy
+ msgid "Recording Destination"
+-msgstr "Nośnik nagrywania"
++msgstr "Miejsce zapisu nagrywania"
+ 
+ #: camlibs/ptp2/config.c:6028
+ msgid "EVF Mode"
+@@ -6875,7 +6832,7 @@
+ 
+ #: camlibs/ptp2/config.c:6132
+ msgid "Aspect Ratio"
+-msgstr ""
++msgstr "Proporcje obrazu"
+ 
+ #: camlibs/ptp2/config.c:6134 camlibs/ptp2/ptp.c:4845
+ msgid "HDR Mode"
+@@ -7124,9 +7081,8 @@
+ msgstr "Tryb zdalnego sterowania"
+ 
+ #: camlibs/ptp2/config.c:6218
+-#, fuzzy
+ msgid "Application Mode"
+-msgstr "Tryb działania"
++msgstr "Tryb aplikacji"
+ 
+ #: camlibs/ptp2/config.c:6219 camlibs/ptp2/ptp.c:4851
+ msgid "Optimize Image"
+@@ -7837,9 +7793,9 @@
+ msgstr "%sZdjęcia w trybie Nikon 3"
+ 
+ #: camlibs/ptp2/library.c:4604
+-#, fuzzy, c-format
++#, c-format
+ msgid "Sony Capture"
+-msgstr "Zdjęcia w trybie Canon"
++msgstr "Zdjęcia w trybie Sony"
+ 
+ #: camlibs/ptp2/library.c:4611
+ #, c-format
+@@ -11800,6 +11756,3 @@
+ #: libgphoto2/gphoto2-result.c:89
+ msgid "Unknown error"
+ msgstr "Nieznany błąd"
+-
+-#~ msgid "Movie Recording"
+-#~ msgstr "Nagrywanie filmu"

@@ -11,13 +11,14 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.5.3.1
-Release:	3
+Version:	2.5.4
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	aad2607a84442769c14f6acce2ca1ddf
+# Source0-md5:	4f549a8600228a27f547d47ca1a97f09
 Patch0:		%{name}-mode-owner-group.patch
+Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
@@ -167,6 +168,7 @@ w przestrzeni użytkownika.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %{__rm} po/stamp-po libgphoto2_port/po/stamp-po
 
