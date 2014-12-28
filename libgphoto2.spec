@@ -27,7 +27,7 @@ BuildRequires:	bison
 BuildRequires:	dbus-devel >= 0.31
 BuildRequires:	flex
 BuildRequires:	gd-devel >= 2.0
-BuildRequires:	gettext-devel >= 0.14.1
+BuildRequires:	gettext-tools >= 0.14.1
 %{?with_apidocs:BuildRequires:	gtk-doc >= 0.10}
 BuildRequires:	libexif-devel >= 1:0.6.13
 BuildRequires:	libjpeg-devel
