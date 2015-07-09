@@ -1,0 +1,11 @@
+--- libgphoto2-2.5.8/camlibs/ptp2/chdk.c.orig	2015-06-17 23:20:45.000000000 +0200
++++ libgphoto2-2.5.8/camlibs/ptp2/chdk.c	2015-07-08 21:26:03.382704271 +0200
+@@ -1128,7 +1128,7 @@
+ 	if (ret != GP_OK) return ret;
+ 
+ 	lua = malloc(strlen(luascript)+1);
+-	sprintf(lua,luascript); /* This expands the %q inside the string too ... do not optimize away. */
++	sprintf(lua,luascript,""); /* This expands the %q inside the string too ... do not optimize away. */
+ 	ret = chdk_generic_script_run (params, lua, &table, &retint, context);
+ 	free (lua);
+ 	GP_LOG_D("rlib_shoot returned table %s, retint %d\n", table, retint);
