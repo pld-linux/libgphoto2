@@ -11,12 +11,12 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.5.9
+Version:	2.5.10
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	9b17521ac7fa9d13146d62917cd67a09
+# Source0-md5:	f1e53e684a3ea51cc7958d7e4eee7f37
 Patch0:		%{name}-mode-owner-group.patch
 Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.gphoto.org/
@@ -291,6 +291,7 @@ install -d $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty
 %endif
 # kill unpackaged files
 %{__rm} -r $RPM_BUILD_ROOT%{_datadir}/doc/libgphoto{2,2_port}
+%{__rm} $RPM_BUILD_ROOT%{_datadir}/libgphoto2_port/*/vcamera/README.txt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -329,11 +330,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/usb1.so
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/usbdiskdirect.so
 %attr(755,root,root) %{_libdir}/libgphoto2_port/*/usbscsi.so
+%attr(755,root,root) %{_libdir}/libgphoto2_port/*/vusb.so
 %{_libdir}/libgphoto2_port/*/disk.la
 %{_libdir}/libgphoto2_port/*/ptpip.la
 %{_libdir}/libgphoto2_port/*/usb1.la
 %{_libdir}/libgphoto2_port/*/usbdiskdirect.la
 %{_libdir}/libgphoto2_port/*/usbscsi.la
+%{_libdir}/libgphoto2_port/*/vusb.la
 
 # utilities
 %attr(755,root,root) %{_libdir}/libgphoto2/print-camera-list

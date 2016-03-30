@@ -1,295 +1,286 @@
---- libgphoto2-2.5.9/po/pl.po.orig	2015-11-20 15:42:19.513910630 +0100
-+++ libgphoto2-2.5.9/po/pl.po	2015-11-20 15:50:05.047234260 +0100
-@@ -5,10 +5,10 @@
+--- libgphoto2-2.5.10/po/pl.po.orig	2016-03-30 15:45:32.544678211 +0200
++++ libgphoto2-2.5.10/po/pl.po	2016-03-30 15:51:13.277997246 +0200
+@@ -1,14 +1,14 @@
+ # Polish translation for libgphoto2.
+-# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc.
++# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016 Free Software Foundation, Inc.
+ # This file is distributed under the same license as the libgphoto2 package.
+-# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2015.
++# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2016.
  #
  msgid ""
  msgstr ""
--"Project-Id-Version: libgphoto2 2.5.8\n"
-+"Project-Id-Version: libgphoto2 2.5.9\n"
+-"Project-Id-Version: libgphoto2 2.5.9\n"
++"Project-Id-Version: libgphoto2 2.5.10\n"
  "Report-Msgid-Bugs-To: gphoto-devel@lists.sourceforge.net\n"
- "POT-Creation-Date: 2015-11-18 21:16+0100\n"
--"PO-Revision-Date: 2015-07-22 17:04+0200\n"
-+"PO-Revision-Date: 2015-11-19 20:49+0100\n"
+ "POT-Creation-Date: 2016-03-21 20:21+0100\n"
+-"PO-Revision-Date: 2015-11-19 20:49+0100\n"
++"PO-Revision-Date: 2016-03-25 21:20+0100\n"
  "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
  "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
  "Language: pl\n"
-@@ -4777,14 +4777,12 @@
- msgstr "sRAW"
+@@ -4416,19 +4416,16 @@
+ msgstr "Fluorescencyjne: światło dzienne"
  
- #: camlibs/ptp2/config.c:2246
+ #: camlibs/ptp2/config.c:1442
 -#, fuzzy
- msgid "Smaller JPEG"
--msgstr "Mniejszy JPEG (S2)"
-+msgstr "Mniejszy JPEG"
+ msgid "Tungsten 2"
+-msgstr "Żarówka wolframowa"
++msgstr "Żarówka wolframowa 2"
  
- #: camlibs/ptp2/config.c:2247
+ #: camlibs/ptp2/config.c:1445
 -#, fuzzy
- msgid "Tiny JPEG"
--msgstr "Malutki JPEG (S3)"
-+msgstr "Malutki JPEG"
+ msgid "Fluorescent: White"
+-msgstr "Fluorescencyjne: dzienna biel 1"
++msgstr "Fluorescencyjne: biel"
  
- #: camlibs/ptp2/config.c:2249
- msgid "mRAW + Large Fine JPEG"
-@@ -4835,34 +4833,28 @@
- msgstr "sRAW + mały normalny JPEG"
- 
- #: camlibs/ptp2/config.c:2272
+ #: camlibs/ptp2/config.c:1446
 -#, fuzzy
- msgid "RAW + Smaller JPEG"
--msgstr "RAW + mały dobry JPEG (S2)"
-+msgstr "RAW + mniejszy JPEG"
+ msgid "Fluorescent: Tungsten"
+-msgstr "Fluorescencyjne: światło dzienne"
++msgstr "Fluorescencyjne: wolfram"
  
- #: camlibs/ptp2/config.c:2273
--#, fuzzy
- msgid "mRAW + Smaller JPEG"
--msgstr "mRAW + mały dobry JPEG (S2)"
-+msgstr "mRAW + mniejszy JPEG"
+ #: camlibs/ptp2/config.c:1452 camlibs/ptp2/config.c:4613
+ #: camlibs/ptp2/config.c:4624 camlibs/ptp2/config.c:4635
+@@ -6645,7 +6642,7 @@
  
- #: camlibs/ptp2/config.c:2274
--#, fuzzy
- msgid "sRAW + Smaller JPEG"
--msgstr "sRAW + mały dobry JPEG (S2)"
-+msgstr "sRAW + mniejszy JPEG"
+ #: camlibs/ptp2/config.c:6693
+ msgid "PTP Opcode"
+-msgstr ""
++msgstr "Kod operacji PTP"
  
- #: camlibs/ptp2/config.c:2275
--#, fuzzy
- msgid "RAW + Tiny JPEG"
--msgstr "RAW + malutki JPEG (S3)"
-+msgstr "RAW + malutki JPEG"
+ #: camlibs/ptp2/config.c:6698 camlibs/ptp2/config.c:6720
+ msgid "Serial Number"
+@@ -7475,9 +7472,9 @@
+ msgstr "Ustawienie PTP 0x%04x"
  
- #: camlibs/ptp2/config.c:2276
--#, fuzzy
- msgid "mRAW + Tiny JPEG"
--msgstr "mRAW + malutki JPEG (S3)"
-+msgstr "mRAW + malutki JPEG"
- 
- #: camlibs/ptp2/config.c:2277
--#, fuzzy
- msgid "sRAW + Tiny JPEG"
--msgstr "sRAW + malutki JPEG (S3)"
-+msgstr "sRAW + malutki JPEG"
- 
- #: camlibs/ptp2/config.c:2302 camlibs/ptp2/ptp.c:5435
- msgid "Continuous"
-@@ -4908,9 +4900,9 @@
- 
- #: camlibs/ptp2/config.c:2648 camlibs/ptp2/config.c:2676
- #: camlibs/ptp2/config.c:3465 camlibs/ptp2/config.c:3510
+ #: camlibs/ptp2/config.c:7500 camlibs/ptp2/config.c:7760
 -#, fuzzy, c-format
 +#, c-format
- msgid "Time"
--msgstr "Samowyzwalacz"
-+msgstr "Czas"
+ msgid "Property '%s' not found."
+-msgstr "Nie odnaleziono katalogu"
++msgstr "Nie odnaleziono własności '%s'."
  
- #: camlibs/ptp2/config.c:2652
+ #: camlibs/ptp2/config.c:7623 camlibs/ptp2/config.c:7708
  #, c-format
-@@ -5238,7 +5230,6 @@
- msgstr "AF dla dynamicznego obszaru"
+@@ -7634,7 +7631,7 @@
  
- #: camlibs/ptp2/config.c:3154
--#, fuzzy
- msgid "Group-dynamic AF"
- msgstr "AF dla dynamicznej grupy"
+ #: camlibs/ptp2/library.c:3871
+ msgid "Camera memorycard ran full during capture."
+-msgstr ""
++msgstr "Karta pamięci aparatu zapełniła się podczas robienia zdjęcia."
  
-@@ -5433,7 +5424,7 @@
- #: camlibs/ptp2/config.c:3461 camlibs/ptp2/config.c:3506
+ #: camlibs/ptp2/library.c:4095 camlibs/ptp2/library.c:4098
  #, c-format
- msgid "x 200"
--msgstr ""
-+msgstr "x 200"
+--- libgphoto2-2.5.10/libgphoto2_port/po/pl.po.orig	2016-03-21 20:20:56.000000000 +0100
++++ libgphoto2-2.5.10/libgphoto2_port/po/pl.po	2016-03-30 15:50:57.904664556 +0200
+@@ -1,14 +1,14 @@
+ # Polish translation for libgphoto2_port.
+-# Copyright (C) 2005, 2006, 2007, 2010, 2012, 2013, 2014 Free Software Foundation, Inc.
++# Copyright (C) 2005, 2006, 2007, 2010, 2012, 2013, 2014, 2016 Free Software Foundation, Inc.
+ # This file is distributed under the same license as the libgphoto2 package.
+-# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2014.
++# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2016.
+ #
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: libgphoto2_port 2.5.3\n"
++"Project-Id-Version: libgphoto2_port 2.5.10\n"
+ "Report-Msgid-Bugs-To: gphoto-devel@lists.sourceforge.net\n"
+ "POT-Creation-Date: 2016-02-22 21:02+0100\n"
+-"PO-Revision-Date: 2014-01-11 14:15+0100\n"
++"PO-Revision-Date: 2016-03-24 22:19+0100\n"
+ "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
+ "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+ "Language: pl\n"
+@@ -179,9 +179,8 @@
+ msgstr "Port szeregowy %i"
  
- #: camlibs/ptp2/config.c:3770
- msgid "Face-priority AF"
-@@ -8271,64 +8262,56 @@
- msgstr "Informacje o prawach autorskich"
- 
- #: camlibs/ptp2/ptp.c:4135
+ #: serial/unix.c:352
 -#, fuzzy
- msgid "Supported Streams"
--msgstr "Obsługiwane rozmiary miniaturek"
-+msgstr "Obsługiwane strumienie"
+ msgid "Serial Port Device"
+-msgstr "Port szeregowy %i"
++msgstr "Urządzenei portu szeregowego"
  
- #: camlibs/ptp2/ptp.c:4136
--#, fuzzy
- msgid "Enabled Streams"
--msgstr "Nieprawidłowy status"
-+msgstr "Strumienie włączone"
- 
- #: camlibs/ptp2/ptp.c:4137
--#, fuzzy
- msgid "Video Format"
--msgstr "Format daty"
-+msgstr "Format filmu"
- 
- #: camlibs/ptp2/ptp.c:4138
--#, fuzzy
- msgid "Video Resolution"
- msgstr "Rozdzielczość filmu"
- 
- #: camlibs/ptp2/ptp.c:4139
--#, fuzzy
- msgid "Video Quality"
- msgstr "Jakość filmu"
- 
- #: camlibs/ptp2/ptp.c:4140
- msgid "Video Framerate"
--msgstr ""
-+msgstr "Szybkość klatek filmu"
- 
- #: camlibs/ptp2/ptp.c:4141
--#, fuzzy
- msgid "Video Contrast"
--msgstr "Kontrast"
-+msgstr "Kontrast filmu"
- 
- #: camlibs/ptp2/ptp.c:4142
--#, fuzzy
- msgid "Video Brightness"
--msgstr "Jasność"
-+msgstr "Jasność filmu"
- 
- #: camlibs/ptp2/ptp.c:4143
--#, fuzzy
- msgid "Audio Format"
--msgstr "Format daty"
-+msgstr "Format dźwięku"
- 
- #: camlibs/ptp2/ptp.c:4144
- msgid "Audio Bitrate"
--msgstr ""
-+msgstr "Przepływność dźwięku"
- 
- #: camlibs/ptp2/ptp.c:4145
- msgid "Audio Samplingrate"
--msgstr ""
-+msgstr "Częstotliwość próbkowania dźwięku"
- 
- #: camlibs/ptp2/ptp.c:4146
- msgid "Audio Bits per sample"
--msgstr ""
-+msgstr "Liczba bitów na próbkę dźwięku"
- 
- #: camlibs/ptp2/ptp.c:4147
- msgid "Audio Volume"
--msgstr ""
-+msgstr "Głośność dźwięku"
- 
- #: camlibs/ptp2/ptp.c:4156
- msgid "Date Time Stamp Format"
-@@ -9761,7 +9744,6 @@
- msgstr "Nieznany(%04x)"
- 
- #: camlibs/ptp2/ptp.c:5702
--#, fuzzy
- msgid "Get device info"
- msgstr "Pobranie informacji o urządzeniu"
- 
-@@ -9875,43 +9857,39 @@
- 
- #: camlibs/ptp2/ptp.c:5731
- msgid "Start Enumerate Handles"
--msgstr ""
-+msgstr "Rozpoczęcie numerowania uchwytów"
- 
- #: camlibs/ptp2/ptp.c:5732
- msgid "Enumerate Handles"
--msgstr ""
-+msgstr "Numerowanie uchwytów"
- 
- #: camlibs/ptp2/ptp.c:5733
- msgid "Stop Enumerate Handles"
--msgstr ""
-+msgstr "Zakończenie numerowania uchwytów"
- 
- #: camlibs/ptp2/ptp.c:5734
--#, fuzzy
- msgid "Get Vendor Extension Maps"
--msgstr "Rozszerzenie producenta"
-+msgstr "Pobranie map rozszerzeń producenta"
- 
- #: camlibs/ptp2/ptp.c:5735
--#, fuzzy
- msgid "Get Vendor Device Info"
--msgstr "Pobranie informacji o urządzeniu"
-+msgstr "Pobranie informacji producenta o urządzeniu"
- 
- #: camlibs/ptp2/ptp.c:5736
- msgid "Get Resized Image Object"
--msgstr ""
-+msgstr "Pobranie obiektu obrazu po zmianie rozmiaru"
- 
- #: camlibs/ptp2/ptp.c:5737
--#, fuzzy
- msgid "Get Filesystem Manifest"
--msgstr "Szybki system plików"
-+msgstr "Pobranie manifestu systemu plików"
- 
- #: camlibs/ptp2/ptp.c:5738
--#, fuzzy
- msgid "Get Stream Info"
--msgstr "Pobranie informacji o nośniku"
-+msgstr "Pobranie informacji o strumieniu"
- 
- #: camlibs/ptp2/ptp.c:5739
- msgid "Get Stream"
--msgstr ""
-+msgstr "Pobranie strumienia"
- 
- #: camlibs/ptp2/ptp.c:5743
- msgid "Get object properties supported"
-@@ -10102,14 +10080,12 @@
- msgstr "Zakończenie edycji obiektu"
- 
- #: camlibs/ptp2/ptp.c:6012
--#, fuzzy
- msgid "Unknown PTP_OC"
--msgstr "Nieznany %d"
-+msgstr "Nieznany PTP_OC"
- 
- #: camlibs/ptp2/ptp.c:6029
--#, fuzzy
- msgid "Unknown VendorExtensionID"
--msgstr "Rozszerzenie producenta"
-+msgstr "Nieznane VendorExtensionID"
- 
- #: camlibs/ricoh/g3.c:357
- msgid "Downloading movie..."
-@@ -10509,7 +10485,6 @@
- 
- #: camlibs/sierra/epson-desc.c:240 camlibs/sierra/sierra.c:1689
- #: camlibs/sierra/sierra.c:1705 camlibs/sierra/sierra.c:1882
--#, fuzzy
- msgid "Portuguese"
- msgstr "Portugalski"
- 
-@@ -11932,30 +11907,3 @@
- #: libgphoto2/gphoto2-result.c:89
- msgid "Unknown error"
- msgstr "Nieznany błąd"
+ #: serial/unix.c:434
+ #, c-format
+@@ -379,179 +378,3 @@
+ #, c-format
+ msgid "Could not send scsi command to: '%s' (%m)."
+ msgstr "Nie udało się wysłać polecenia SCSI do '%s' (%m)."
 -
--#~ msgid "Small Fine JPEG  (S1 Fine)"
--#~ msgstr "Mały dobry JPEG  (S1 Fine)"
+-#~ msgid "Called for filename '%s'."
+-#~ msgstr "Wywołano dla nazwy pliku '%s'."
 -
--#~ msgid "Small Normal JPEG (S1 Normal)"
--#~ msgstr "Mały normalny JPEG (S1 Normal)"
+-#~ msgid "Could not load '%s': '%s'."
+-#~ msgstr "Nie udało się załadować '%s': '%s'."
 -
--#~ msgid "RAW + Small Fine JPEG (S1 Fine)"
--#~ msgstr "RAW + mały dobry JPEG (S1 Fine)"
+-#~ msgid "Could not find some functions in '%s': '%s'."
+-#~ msgstr "Nie udało się odnaleźć funkcji w '%s': '%s'."
 -
--#~ msgid "mRAW + Small Fine JPEG (S1 Fine)"
--#~ msgstr "mRAW + mały dobry JPEG (S1 Fine)"
+-#~ msgid "'%s' already loaded"
+-#~ msgstr "'%s' już załadowany"
 -
--#~ msgid "sRAW + Small Fine JPEG (S1 Fine)"
--#~ msgstr "sRAW + mały dobry JPEG (S1 Fine)"
+-#~ msgid "Could not load port driver list: '%s'."
+-#~ msgstr "Nie udało się załadować listy sterowników portów: '%s'."
 -
--#~ msgid "RAW + Small Normal JPEG (S1 Normal)"
--#~ msgstr "RAW + mały normalny JPEG (S1 Normal)"
+-#~ msgid "Loaded '%s' ('%s') from '%s'."
+-#~ msgstr "Załadowano '%s' ('%s') z '%s'."
 -
--#~ msgid "mRAW + Small Normal JPEG (S1 Normal)"
--#~ msgstr "mRAW + mały normalny JPEG (S1 Normal)"
+-#~ msgid "Using ltdl to load io-drivers from '%s'..."
+-#~ msgstr "Użycie ltdl do załadowania sterowników we/wy z '%s'..."
 -
--#~ msgid "sRAW + Small Normal JPEG (S1 Normal)"
--#~ msgstr "sRAW + mały normalny JPEG (S1 Normal)"
+-#~ msgid "Counting entries (%i available)..."
+-#~ msgid_plural "Counting entries (%i available)..."
+-#~ msgstr[0] "Liczenie wpisów (%i dostępny)..."
+-#~ msgstr[1] "Liczenie wpisów (%i dostępne)..."
+-#~ msgstr[2] "Liczenie wpisów (%i dostępnych)..."
 -
--#~ msgid "Unknown (%04x)"
--#~ msgstr "Nieznany (%04x)"
+-#~ msgid "%i regular entry available."
+-#~ msgid_plural "%i regular entries available."
+-#~ msgstr[0] "%i dostępny zwykły wpis."
+-#~ msgstr[1] "%i dostępne zwykłe wpisy."
+-#~ msgstr[2] "%i dostępnych zwykłych wpisów."
+-
+-#~ msgid "Looking for path '%s' (%i entry available)..."
+-#~ msgid_plural "Looking for path '%s' (%i entries available)..."
+-#~ msgstr[0] "Poszukiwanie ścieżki '%s' (%i dostępny wpis)..."
+-#~ msgstr[1] "Poszukiwanie ścieżki '%s' (%i dostępne wpisy)..."
+-#~ msgstr[2] "Poszukiwanie ścieżki '%s' (%i dostępnych wpisów)..."
+-
+-#~ msgid "Starting regex search for '%s'..."
+-#~ msgstr "Rozpoczęcie szukania wyrażenia regularnego dla '%s'..."
+-
+-#~ msgid "Trying '%s'..."
+-#~ msgstr "Próbowanie '%s'..."
+-
+-#~ msgid "regcomp failed"
+-#~ msgstr "regcomp nie powiodło się"
+-
+-#~ msgid "re_match failed (%i)"
+-#~ msgstr "re_match nie powiodło się (%i)"
+-
+-#~ msgid "regexec failed"
+-#~ msgstr "regexec nie powiodło się"
+-
+-#~ msgid "Looking up entry '%s'..."
+-#~ msgstr "Poszukiwanie wpisu '%s'..."
+-
+-#~ msgid "Getting info of entry %i (%i available)..."
+-#~ msgid_plural "Getting info of entry %i (%i available)..."
+-#~ msgstr[0] "Pobieranie informacji z wpisu %i (%i dostępny)..."
+-#~ msgstr[1] "Pobieranie informacji z wpisu %i (%i dostępne)..."
+-#~ msgstr[2] "Pobieranie informacji z wpisu %i (%i dostępnych)..."
+-
+-#~ msgid "Creating new device..."
+-#~ msgstr "Tworzenie nowego urządzenia..."
+-
+-#~ msgid "Could not load '%s' ('%s')."
+-#~ msgstr "Nie udało się załadować '%s' ('%s')."
+-
+-#~ msgid "Could not find 'gp_port_library_operations' in '%s' ('%s')"
+-#~ msgstr "Nie udało się odnaleźć 'gp_port_library_operations' w '%s' ('%s')"
+-
+-#~ msgid "Opening %s port..."
+-#~ msgstr "Otwieranie portu %s..."
+-
+-#~ msgid "Closing port..."
+-#~ msgstr "Zamykanie portu..."
+-
+-#~ msgid "Resetting port..."
+-#~ msgstr "Resetowanie portu..."
+-
+-#~ msgid "Freeing port..."
+-#~ msgstr "Zwalnianie portu..."
+-
+-#~ msgid "Writing %i=0x%x byte(s) to port..."
+-#~ msgstr "Zapis %i=0x%x bajtu(ów) do portu..."
+-
+-#~ msgid "Could only write %i out of %i byte"
+-#~ msgid_plural "Could only write %i out of %i bytes"
+-#~ msgstr[0] "Udało się zapisać tylko %i z %i bajtu"
+-#~ msgstr[1] "Udało się zapisać tylko %i z %i bajtów"
+-#~ msgstr[2] "Udało się zapisać tylko %i z %i bajtów"
+-
+-#~ msgid "Reading %i=0x%x byte from port..."
+-#~ msgid_plural "Reading %i=0x%x bytes from port..."
+-#~ msgstr[0] "Odczyt %i=0x%x bajtu z portu..."
+-#~ msgstr[1] "Odczyt %i=0x%x bajtów z portu..."
+-#~ msgstr[2] "Odczyt %i=0x%x bajtów z portu..."
+-
+-#~ msgid "Could only read %i out of %i byte"
+-#~ msgid_plural "Could only read %i out of %i byte(s)"
+-#~ msgstr[0] "Udało się odczytać tylko %i z %i bajtu"
+-#~ msgstr[1] "Udało się odczytać tylko %i z %i bajtów"
+-#~ msgstr[2] "Udało się odczytać tylko %i z %i bajtów"
+-
+-#~ msgid "Reading %i=0x%x byte from interrupt endpoint..."
+-#~ msgid_plural "Reading %i=0x%x bytes from interrupt endpoint..."
+-#~ msgstr[0] "Odczyt %i=0x%x bajtu z końcówki przerwania..."
+-#~ msgstr[1] "Odczyt %i=0x%x bajtów z końcówki przerwania..."
+-#~ msgstr[2] "Odczyt %i=0x%x bajtów z końcówki przerwania..."
+-
+-#~ msgid "Could only read %i out of %i byte(s)"
+-#~ msgstr "Udało się odczytać tylko %i z %i bajtu(ów)"
+-
+-#~ msgid "Reading %i=0x%x byte from interrupt endpoint (fast)..."
+-#~ msgid_plural "Reading %i=0x%x bytes from interrupt endpoint (fast)..."
+-#~ msgstr[0] "Odczyt %i=0x%x bajtu z końcówki przerwania (szybki)..."
+-#~ msgstr[1] "Odczyt %i=0x%x bajtów z końcówki przerwania (szybki)..."
+-#~ msgstr[2] "Odczyt %i=0x%x bajtów z końcówki przerwania (szybki)..."
+-
+-#~ msgid "Setting timeout to %i millisecond(s)..."
+-#~ msgstr "Ustawianie limitu czasu na %i ms..."
+-
+-#~ msgid "Getting timeout..."
+-#~ msgstr "Pobieranie limitu czasu..."
+-
+-#~ msgid "Current timeout: %i milliseconds"
+-#~ msgstr "Bieżący limit czasu: %i milisekund"
+-
+-#~ msgid "Setting settings..."
+-#~ msgstr "Ustawianie ustawień..."
+-
+-#~ msgid "Getting level of pin %i..."
+-#~ msgstr "Pobieranie poziomu pinu %i..."
+-
+-#~ msgid "Level of pin %i: %i"
+-#~ msgstr "Poziom pinu %i: %i"
+-
+-#~ msgid "Setting pin %i (%s: '%s') to '%s'..."
+-#~ msgstr "Ustawianie pinu %i (%s: '%s') na '%s'..."
+-
+-#~ msgid "Sending break (%i milliseconds)..."
+-#~ msgstr "Wysyłanie sygnału break (%i ms)..."
+-
+-#~ msgid "Flushing port..."
+-#~ msgstr "Przeczyszczanie portu..."
+-
+-#~ msgid "Clear halt..."
+-#~ msgstr "Zerowanie stopu..."
+-
+-#~ msgid "Writing message (request=0x%x value=0x%x index=0x%x size=%i=0x%x)..."
+-#~ msgstr ""
+-#~ "Zapis komunikatu (żądanie=0x%x wartość=0x%x indeks=0x%x rozmiar=%i=0x"
+-#~ "%x)..."
+-
+-#~ msgid "Reading message (request=0x%x value=0x%x index=0x%x size=%i=0x%x)..."
+-#~ msgstr ""
+-#~ "Odczyt komunikatu (żądanie=0x%x wartość=0x%x indeks=0x%x rozmiar=%i=0x"
+-#~ "%x)..."
+-
+-#~ msgid "Device has driver '%s' attached."
+-#~ msgstr "Urządzenie ma podłączony sterownik '%s'."
+-
+-#~ msgid "Device has driver '%s' attached, detaching it now."
+-#~ msgstr "Urządzenie ma podłączony sterownik '%s', odłączanie go."
+-
+-#~ msgid ""
+-#~ "USB device (vendor 0x%x, product 0x%x) is a mass storage device, and "
+-#~ "might not function with gphoto2. Reference: %s"
+-#~ msgstr ""
+-#~ "Urządzenie USB (producent 0x%x, produkt 0x%x) to urządzenie przechowujące "
+-#~ "dane i może nie działać z gphoto2. Odnośnik: %s"
+-
+-#~ msgid "Device has a kernel driver attached (%d), detaching it now."
+-#~ msgstr "Urządzenie ma podłączony sterownik jądra (%d), odłączanie go."
