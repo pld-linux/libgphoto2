@@ -1,19 +1,276 @@
---- libgphoto2-2.5.14/po/pl.po.orig	2017-07-19 05:33:30.584386675 +0200
-+++ libgphoto2-2.5.14/po/pl.po	2017-07-19 05:34:07.004386258 +0200
-@@ -7795,14 +7795,12 @@
+--- libgphoto2-2.5.19/po/pl.po.orig	2018-07-22 19:21:43.000000000 +0200
++++ libgphoto2-2.5.19/po/pl.po	2018-09-01 07:54:49.618064573 +0200
+@@ -1,14 +1,14 @@
+ # Polish translation for libgphoto2.
+-# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017 Free Software Foundation, Inc.
++# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018 Free Software Foundation, Inc.
+ # This file is distributed under the same license as the libgphoto2 package.
+-# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2017.
++# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2018.
+ #
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: libgphoto2 2.5.13\n"
++"Project-Id-Version: libgphoto2 2.5.19\n"
+ "Report-Msgid-Bugs-To: gphoto-devel@lists.sourceforge.net\n"
+ "POT-Creation-Date: 2018-07-22 19:21+0200\n"
+-"PO-Revision-Date: 2017-04-10 17:20+0200\n"
++"PO-Revision-Date: 2018-07-24 05:25+0200\n"
+ "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
+ "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+ "Language: pl\n"
+@@ -4484,9 +4484,8 @@
+ msgstr "Fluorescencyjne: wolfram"
+ 
+ #: camlibs/ptp2/config.c:1589 camlibs/ptp2/config.c:6955
+-#, fuzzy
+ msgid "Preset 4"
+-msgstr "Predefiniowany 1"
++msgstr "Predefiniowany 4"
+ 
+ #: camlibs/ptp2/config.c:1590 camlibs/ptp2/config.c:1994
+ #: camlibs/ptp2/config.c:4520 camlibs/ptp2/config.c:4542
+@@ -4518,24 +4517,20 @@
+ msgstr "RAW + JPEG normalnej jakości"
+ 
+ #: camlibs/ptp2/config.c:1609
+-#, fuzzy
+ msgid "Large Fine JPEG+RAW"
+-msgstr "Duży dobry JPEG"
++msgstr "Duży dobry JPEG+RAW"
+ 
+ #: camlibs/ptp2/config.c:1610
+-#, fuzzy
+ msgid "Large Normal JPEG+RAW"
+-msgstr "Duży normalny JPEG"
++msgstr "Duży normalny JPEG+RAW"
+ 
+ #: camlibs/ptp2/config.c:1611
+-#, fuzzy
+ msgid "Medium Normal JPEG+RAW"
+-msgstr "Średni normalny JPEG"
++msgstr "Średni normalny JPEG+RAW"
+ 
+ #: camlibs/ptp2/config.c:1612
+-#, fuzzy
+ msgid "Small Normal JPEG+RAW"
+-msgstr "Mały normalny JPEG"
++msgstr "Mały normalny JPEG+RAW"
+ 
+ #: camlibs/ptp2/config.c:1617
+ msgid "Single frame"
+@@ -5543,12 +5538,11 @@
+ 
+ #: camlibs/ptp2/config.c:3647
+ msgid "Spot+Highlights"
+-msgstr ""
++msgstr "Punkt+podświetlenia"
+ 
+ #: camlibs/ptp2/config.c:3648
+-#, fuzzy
+ msgid "Spot+Shadows"
+-msgstr "Cień"
++msgstr "Punkt+cienie"
+ 
+ #: camlibs/ptp2/config.c:3653
+ msgid "Automatic Flash"
+@@ -6132,11 +6126,11 @@
+ 
+ #: camlibs/ptp2/config.c:4575
+ msgid "C-AF"
+-msgstr ""
++msgstr "C-AF"
+ 
+ #: camlibs/ptp2/config.c:4576
+ msgid "S-AF+MF"
+-msgstr ""
++msgstr "S-AF+MF"
+ 
+ #: camlibs/ptp2/config.c:4580
+ msgid "DMF"
+@@ -6373,9 +6367,8 @@
+ msgstr "RAW+JPEG"
+ 
+ #: camlibs/ptp2/config.c:5258
+-#, fuzzy
+ msgid "Multi-Shot"
+-msgstr "Wielopunktowy"
++msgstr "Wielokrotne zdjęcie"
+ 
+ #: camlibs/ptp2/config.c:5279 camlibs/ptp2/ptp.c:5955
+ msgid "6 seconds"
+@@ -6737,35 +6730,30 @@
+ msgstr "Włączenie trybu Nikon LiveView nie powiodło się"
+ 
+ #: camlibs/ptp2/config.c:6957
+-#, fuzzy
+ msgid "Temperature 1"
+-msgstr "Temperatura koloru"
++msgstr "Temperatura 1"
+ 
+ #: camlibs/ptp2/config.c:6958
+-#, fuzzy
+ msgid "Temperature 2"
+-msgstr "Temperatura koloru"
++msgstr "Temperatura 2"
+ 
+ #: camlibs/ptp2/config.c:6959
+-#, fuzzy
+ msgid "Temperature 3"
+-msgstr "Temperatura koloru"
++msgstr "Temperatura 3"
+ 
+ #: camlibs/ptp2/config.c:6960
+-#, fuzzy
+ msgid "Temperature 4"
+-msgstr "Temperatura koloru"
++msgstr "Temperatura 4"
+ 
+ #: camlibs/ptp2/config.c:6961
+-#, fuzzy
+ msgid "Automatic C"
+-msgstr "Automatyczny"
++msgstr "Automatyczny C"
+ 
+ #: camlibs/ptp2/config.c:6979 camlibs/ptp2/config.c:7015
+ #: camlibs/ptp2/config.c:7031
+-#, fuzzy, c-format
++#, c-format
+ msgid "Unknown 0x%04x"
+-msgstr "Nieznany: 0x%04x\n"
++msgstr "Nieznany 0x%04x"
+ 
+ #: camlibs/ptp2/config.c:7217
+ msgid ""
+@@ -6869,7 +6857,6 @@
+ msgstr "Auto-Focus"
+ 
+ #: camlibs/ptp2/config.c:7926
+-#, fuzzy
+ msgid "Manual-Focus"
+ msgstr "Ręczna ogniskowa"
+ 
+@@ -6919,9 +6906,8 @@
+ msgstr "Anulowanie autofocusu Canon DSLR"
+ 
+ #: camlibs/ptp2/config.c:7941
+-#, fuzzy
+ msgid "Drive Olympus OMD Manual focus"
+-msgstr "Prowadzenie ręczne ostrości Nikon DSLR"
++msgstr "Prowadzenie ręczne ostrości Olympus OMD"
+ 
+ #: camlibs/ptp2/config.c:7942
+ msgid "Canon EOS Zoom"
+@@ -6936,9 +6922,8 @@
+ msgstr "Canon EOS Viewfinder"
+ 
+ #: camlibs/ptp2/config.c:7945
+-#, fuzzy
+ msgid "Panasonic Viewfinder"
+-msgstr "Canon EOS Viewfinder"
++msgstr "Panasonic Viewfinder"
+ 
+ #: camlibs/ptp2/config.c:7946
+ msgid "Nikon Viewfinder"
+@@ -7374,11 +7359,8 @@
+ msgstr "Proporcje obrazu"
+ 
+ #: camlibs/ptp2/config.c:8145
+-#, fuzzy
+ msgid "Storage Device"
+-msgstr ""
+-"\n"
+-"Wykaz urządzeń z danymi:\n"
++msgstr "Urzędzenie z danymi"
+ 
+ #: camlibs/ptp2/config.c:8146 camlibs/ptp2/config.c:8317
+ #: camlibs/ptp2/config.c:8342 camlibs/ptp2/config.c:8353
+@@ -7667,7 +7649,7 @@
+ 
+ #: camlibs/ptp2/config.c:8246
+ msgid "Auto Lighting Optimization"
+-msgstr ""
++msgstr "Automatyczna optymalizacja oświetlenia"
+ 
+ #: camlibs/ptp2/config.c:8248
+ msgid "Movie Sound"
+@@ -7896,11 +7878,11 @@
+ msgstr "Niestety ten aparat Sony nie zwraca obrazów JPEG w trybie LiveView"
+ 
+ #: camlibs/ptp2/library.c:3127 camlibs/ptp2/library.c:3143
+-#, fuzzy
+ msgid ""
+ "Sorry, your Panasonic camera does not seem to return a JPEG image in "
+ "LiveView mode"
+-msgstr "Niestety ten aparat Sony nie zwraca obrazów JPEG w trybie LiveView"
++msgstr ""
++"Niestety ten aparat Panasonic nie zwraca obrazów JPEG w trybie LiveView"
+ 
+ #: camlibs/ptp2/library.c:3330
+ msgid "Sorry, your camera does not support Nikon capture"
+@@ -7935,9 +7917,8 @@
+ msgstr "Canon Capture nie powiodło się"
+ 
+ #: camlibs/ptp2/library.c:4196
+-#, fuzzy
+ msgid "Fuji Capture failed: Perhaps no auto-focus?"
+-msgstr "Canon EOS Capture nie powiodło się: może brak ostrości?"
++msgstr "Fuji Capture nie powiodło się: może brak auto-focusu?"
+ 
+ #: camlibs/ptp2/library.c:4681 camlibs/ptp2/library.c:5329
+ msgid "Sorry, your camera does not support generic capture"
+@@ -7968,19 +7949,16 @@
  msgstr "Canon EOS Full-Release nie powiodło się"
  
- #: camlibs/ptp2/library.c:3385 camlibs/ptp2/library.c:4527
+ #: camlibs/ptp2/library.c:4949
 -#, fuzzy
  msgid "Canon EOS M Full-Press failed"
 -msgstr "Canon EOS Full-Press nie powiodło się"
 +msgstr "Canon EOS M Full-Press nie powiodło się"
  
- #: camlibs/ptp2/library.c:3387 camlibs/ptp2/library.c:4529
+ #: camlibs/ptp2/library.c:4976
+-#, fuzzy
+ msgid "Canon EOS M Capture failed: Perhaps no focus?"
+-msgstr "Canon EOS Capture nie powiodło się: może brak ostrości?"
++msgstr "Canon EOS M Capture nie powiodło się: może brak ostrości?"
+ 
+ #: camlibs/ptp2/library.c:4983
 -#, fuzzy
  msgid "Canon EOS M Full-Release failed"
 -msgstr "Canon EOS Full-Release nie powiodło się"
 +msgstr "Canon EOS M Full-Release nie powiodło się"
  
- #: camlibs/ptp2/library.c:3392
+ #: camlibs/ptp2/library.c:4992
  msgid "Canon EOS Capture failed"
+@@ -8541,9 +8519,8 @@
+ msgstr "Aparat niegotowy"
+ 
+ #: camlibs/ptp2/ptp.c:4928
+-#, fuzzy
+ msgid "PTP No Device"
+-msgstr "PTP: Urządzenie zajęte"
++msgstr "PTP: Brak urządzenia"
+ 
+ #: camlibs/ptp2/ptp.c:4929
+ msgid "PTP Timeout"
+@@ -10461,9 +10438,8 @@
+ msgstr "Nieznane VendorExtensionID"
+ 
+ #: camlibs/ptp2/ptp.c:7015
+-#, fuzzy
+ msgid "Unknown Event"
+-msgstr "Nieznana wartość"
++msgstr "Nieznane zdarzenie"
+ 
+ #: camlibs/ricoh/g3.c:356
+ msgid "Downloading movie..."
+@@ -12270,9 +12246,3 @@
+ #: libgphoto2/gphoto2-result.c:89
+ msgid "Unknown error"
+ msgstr "Nieznany błąd"
+-
+-#~ msgid "Canon EOS Trigger Capture failed: 0x%x"
+-#~ msgstr "Canon EOS Trigger Capture nie powiodło się: 0x%x"
+-
+-#~ msgid "Initializing Camera"
+-#~ msgstr "Inicjalizacja aparatu"
