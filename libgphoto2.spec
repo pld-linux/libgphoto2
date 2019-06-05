@@ -174,7 +174,7 @@ w przestrzeni użytkownika.
 %prep
 %setup -q
 %patch0 -p1
-#%patch1 -p1
+%patch1 -p1
 %patch2 -p1
 
 %{__rm} po/stamp-po libgphoto2_port/po/stamp-po
@@ -199,6 +199,7 @@ CFLAGS="%{rpmcflags}%{?with_canonupload: -DCANON_EXPERIMENTAL_UPLOAD}"
 	--disable-ttylock \
 	%{?with_apidocs:--enable-docs} \
 	%{?with_static_libs:--enable-static} \
+	--with-camlibs=all,outdated \
 	%{?with_apidocs:--with-html-dir=%{_gtkdocdir}} \
 	--without-libusb
 
