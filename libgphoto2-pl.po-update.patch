@@ -1,308 +1,98 @@
---- libgphoto2-2.5.23/po/pl.po.orig	2019-06-02 13:49:18.000000000 +0200
-+++ libgphoto2-2.5.23/po/pl.po	2019-06-05 19:14:58.958102548 +0200
-@@ -1,14 +1,14 @@
- # Polish translation for libgphoto2.
--# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018 Free Software Foundation, Inc.
-+# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019 Free Software Foundation, Inc.
- # This file is distributed under the same license as the libgphoto2 package.
--# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2018.
-+# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2019.
- #
- msgid ""
- msgstr ""
--"Project-Id-Version: libgphoto2 2.5.21\n"
-+"Project-Id-Version: libgphoto2 2.5.23\n"
- "Report-Msgid-Bugs-To: gphoto-devel@lists.sourceforge.net\n"
- "POT-Creation-Date: 2019-06-02 12:34+0200\n"
--"PO-Revision-Date: 2018-12-09 20:15+0100\n"
-+"PO-Revision-Date: 2019-06-05 16:02+0200\n"
- "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
- "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
- "Language: pl\n"
-@@ -4640,33 +4640,31 @@
+--- libgphoto2-2.5.24/po/pl.po.orig	2020-04-19 07:43:29.155511161 +0200
++++ libgphoto2-2.5.24/po/pl.po	2020-04-19 07:49:17.473624160 +0200
+@@ -5202,7 +5202,7 @@
  
- #: camlibs/ptp2/config.c:1817
- msgid "Standard (disabled in manual exposure)"
+ #: camlibs/ptp2/config.c:3148
+ msgid "S&Q"
 -msgstr ""
-+msgstr "Standardowa (wyłączona przy ręcznej ekspozycji)"
++msgstr "Wolny+szybki"
  
- #: camlibs/ptp2/config.c:1819
- msgid "Low (disabled in manual exposure)"
+ #: camlibs/ptp2/config.c:3153
+ msgid "Night landscape"
+@@ -5400,14 +5400,12 @@
+ msgstr "Samowyzwalacz 2s, 5 zdjęć"
+ 
+ #: camlibs/ptp2/config.c:3400
+-#, fuzzy
+ msgid "Continuous Hi+ Speed"
+-msgstr "Ciągła mała prędność"
++msgstr "Ciągła prędność duża+"
+ 
+ #: camlibs/ptp2/config.c:3401
+-#, fuzzy
+ msgid "Continuous Med Speed"
+-msgstr "Ciągła mała prędność"
++msgstr "Ciągła prędność średnia"
+ 
+ #: camlibs/ptp2/config.c:3403
+ msgid "Bracketing C 0.3 Steps 3 Pictures"
+@@ -5717,33 +5715,28 @@
+ msgstr "Punkt+cienie"
+ 
+ #: camlibs/ptp2/config.c:3590
+-#, fuzzy
+ msgid "Multi"
+-msgstr "Wielopunktowy"
++msgstr "Wiele"
+ 
+ #: camlibs/ptp2/config.c:3591
+-#, fuzzy
+ msgid "Center"
+ msgstr "Środek"
+ 
+ #: camlibs/ptp2/config.c:3592
+ msgid "Entire Screen Avg."
 -msgstr ""
-+msgstr "Niska (wyłączona przy ręcznej ekspozycji)"
++msgstr "Średnia całego ekranu"
  
- #: camlibs/ptp2/config.c:1821
- msgid "Off (disabled in manual exposure)"
--msgstr ""
-+msgstr "Wyłączona (wyłączona przy ręcznej ekspozycji)"
- 
- #: camlibs/ptp2/config.c:1823
- msgid "High (disabled in manual exposure)"
--msgstr ""
-+msgstr "Wysoka (wyłączona przy ręcznej ekspozycji)"
- 
- #: camlibs/ptp2/config.c:1824
+ #: camlibs/ptp2/config.c:3593
 -#, fuzzy
- msgid "x1"
--msgstr "1"
-+msgstr "x1"
+ msgid "Spot Standard"
+-msgstr "Normalna"
++msgstr "Punkt standardowy"
  
- #: camlibs/ptp2/config.c:1825
+ #: camlibs/ptp2/config.c:3594
 -#, fuzzy
- msgid "x2"
--msgstr "2"
-+msgstr "x2"
+ msgid "Spot Large"
+-msgstr "Duży"
++msgstr "Punkt duży"
  
- #: camlibs/ptp2/config.c:1826
- msgid "x3"
--msgstr ""
-+msgstr "x3"
- 
- #: camlibs/ptp2/config.c:1834
- msgid "red eye suppression"
-@@ -4773,7 +4771,7 @@
- 
- #: camlibs/ptp2/config.c:1993
- msgid "Fine detail"
--msgstr ""
-+msgstr "Dobre szczegóły"
- 
- #: camlibs/ptp2/config.c:1994
- msgid "User defined 1"
-@@ -4870,38 +4868,35 @@
- 
- #: camlibs/ptp2/config.c:2144
- msgid "MOBILE"
--msgstr ""
-+msgstr "mobilne"
- 
- #: camlibs/ptp2/config.c:2145
+ #: camlibs/ptp2/config.c:3595
 -#, fuzzy
- msgid "TFT + MOBILE"
--msgstr "TFT + PC"
-+msgstr "TFT + mobilne"
+ msgid "Highlight"
+-msgstr "Punkt+podświetlenia"
++msgstr "Podświetlenie"
  
- #: camlibs/ptp2/config.c:2146
- msgid "PC + MOBILE"
--msgstr ""
-+msgstr "PC + mobilne"
+ #: camlibs/ptp2/config.c:3600
+ msgid "Automatic Flash"
+@@ -6610,19 +6603,16 @@
+ msgstr "Bardzo dobra"
  
- #: camlibs/ptp2/config.c:2147
+ #: camlibs/ptp2/config.c:5334
 -#, fuzzy
- msgid "TFT + PC + MOBILE"
--msgstr "TFT + PC"
-+msgstr "TFT + PC + mobilne"
+ msgid "RAW+JPEG (Std)"
+-msgstr "RAW+JPEG"
++msgstr "RAW+JPEG (std.)"
  
- #: camlibs/ptp2/config.c:2148
- msgid "MOBILE2"
--msgstr ""
-+msgstr "mobilne 2"
- 
- #: camlibs/ptp2/config.c:2149
- msgid "TFT + MOBILE2"
--msgstr ""
-+msgstr "TFT + mobilne 2"
- 
- #: camlibs/ptp2/config.c:2150
- msgid "PC + MOBILE2"
--msgstr ""
-+msgstr "PC + mobilne 2"
- 
- #: camlibs/ptp2/config.c:2151
+ #: camlibs/ptp2/config.c:5335
 -#, fuzzy
- msgid "TFT + PC + MOBILE2"
--msgstr "TFT + PC"
-+msgstr "TFT + PC + mobilne 2"
+ msgid "RAW+JPEG (Fine)"
+-msgstr "RAW + JPEG dobrej jakości"
++msgstr "RAW+JPEG (dobry)"
  
- #: camlibs/ptp2/config.c:2157 camlibs/ptp2/config.c:4363
- msgid "SDRAM"
-@@ -4937,7 +4932,7 @@
- 
- #: camlibs/ptp2/config.c:2296
- msgid "cRAW"
--msgstr ""
-+msgstr "cRAW"
- 
- #: camlibs/ptp2/config.c:2305
- msgid "Smaller JPEG"
-@@ -4956,9 +4951,8 @@
- msgstr "sRAW + duży dobry JPEG"
- 
- #: camlibs/ptp2/config.c:2310
+ #: camlibs/ptp2/config.c:5336
 -#, fuzzy
- msgid "cRAW + Large Fine JPEG"
--msgstr "RAW + duży dobry JPEG"
-+msgstr "cRAW + duży dobry JPEG"
+ msgid "RAW+JPEG (X.Fine)"
+-msgstr "RAW + JPEG dobrej jakości"
++msgstr "RAW+JPEG (b.dobry)"
  
- #: camlibs/ptp2/config.c:2312
- msgid "mRAW + Medium Fine JPEG"
-@@ -4969,9 +4963,8 @@
- msgstr "sRAW + średni dobry JPEG"
+ #: camlibs/ptp2/config.c:5379
+ msgid "Multi-Shot"
+@@ -9844,7 +9834,6 @@
+ msgstr "Blokada AE"
  
- #: camlibs/ptp2/config.c:2314
+ #: camlibs/ptp2/ptp.c:5817
 -#, fuzzy
- msgid "cRAW + Medium Fine JPEG"
--msgstr "RAW + średni dobry JPEG"
-+msgstr "cRAW + średni dobry JPEG"
+ msgid "Focus Point"
+ msgstr "Punkt ogniskowania"
  
- #: camlibs/ptp2/config.c:2317 camlibs/ptp2/config.c:2318
- msgid "mRAW + Small Fine JPEG"
-@@ -4982,9 +4975,8 @@
- msgstr "sRAW + mały dobry JPEG"
- 
- #: camlibs/ptp2/config.c:2321
--#, fuzzy
- msgid "cRAW + Small Fine JPEG"
--msgstr "RAW + mały dobry JPEG"
-+msgstr "cRAW + mały dobry JPEG"
- 
- #: camlibs/ptp2/config.c:2323
- msgid "mRAW + Large Normal JPEG"
-@@ -4995,9 +4987,8 @@
- msgstr "sRAW + duży normalny JPEG"
- 
- #: camlibs/ptp2/config.c:2325
--#, fuzzy
- msgid "cRAW + Large Normal JPEG"
--msgstr "RAW + duży normalny JPEG"
-+msgstr "cRAW + duży normalny JPEG"
- 
- #: camlibs/ptp2/config.c:2327
- msgid "mRAW + Medium Normal JPEG"
-@@ -5008,9 +4999,8 @@
- msgstr "sRAW + średni normalny JPEG"
- 
- #: camlibs/ptp2/config.c:2329
--#, fuzzy
- msgid "cRAW + Medium Normal JPEG"
--msgstr "RAW + średni normalny JPEG"
-+msgstr "cRAW + średni normalny JPEG"
- 
- #: camlibs/ptp2/config.c:2332 camlibs/ptp2/config.c:2333
- msgid "mRAW + Small Normal JPEG"
-@@ -5021,9 +5011,8 @@
- msgstr "sRAW + mały normalny JPEG"
- 
- #: camlibs/ptp2/config.c:2336
--#, fuzzy
- msgid "cRAW + Small Normal JPEG"
--msgstr "RAW + mały normalny JPEG"
-+msgstr "cRAW + mały normalny JPEG"
- 
- #: camlibs/ptp2/config.c:2337
- msgid "RAW + Smaller JPEG"
-@@ -5038,9 +5027,8 @@
- msgstr "sRAW + mniejszy JPEG"
- 
- #: camlibs/ptp2/config.c:2340
--#, fuzzy
- msgid "cRAW + Smaller JPEG"
--msgstr "RAW + mniejszy JPEG"
-+msgstr "cRAW + mniejszy JPEG"
- 
- #: camlibs/ptp2/config.c:2341
- msgid "RAW + Tiny JPEG"
-@@ -5063,9 +5051,8 @@
- msgstr "Pojedyncze: ciche zdjęcie"
- 
- #: camlibs/ptp2/config.c:2372
--#, fuzzy
- msgid "Continuous timer"
--msgstr "Ciągłe ciche"
-+msgstr "Samowyzwalacz ciągły"
- 
- #: camlibs/ptp2/config.c:2373
- msgid "Timer 10 sec"
-@@ -5832,9 +5819,9 @@
- msgstr "x 200"
- 
- #: camlibs/ptp2/config.c:3810 camlibs/ptp2/config.c:3863
--#, fuzzy, c-format
-+#, c-format
- msgid "Composite"
--msgstr "Kompresja"
-+msgstr "Złożona"
- 
- #: camlibs/ptp2/config.c:4312 camlibs/ptp2/config.c:4319
- msgid "Face-priority AF"
-@@ -6380,9 +6367,8 @@
- msgstr "Własny WB 5"
- 
- #: camlibs/ptp2/config.c:4633
--#, fuzzy
- msgid "AWB White"
--msgstr "Czerń i biel"
-+msgstr "Biel AWB"
- 
- #: camlibs/ptp2/config.c:4720
- msgid "Low sharpening"
-@@ -7092,9 +7078,8 @@
- msgstr "Blokada UI"
- 
- #: camlibs/ptp2/config.c:8082
--#, fuzzy
- msgid "Popup Flash"
--msgstr "Bez flesza"
-+msgstr "Flesz wyskakujący"
- 
- #: camlibs/ptp2/config.c:8083
- msgid "Drive Nikon DSLR Autofocus"
-@@ -7129,9 +7114,8 @@
- msgstr "Prowadzenie ręczne ostrości Olympus OMD"
- 
- #: camlibs/ptp2/config.c:8091
--#, fuzzy
- msgid "Drive Panasonic Manual focus"
--msgstr "Prowadzenie ręczne ostrości Canon DSLR"
-+msgstr "Prowadzenie ręczne ostrości Parasonic"
- 
- #: camlibs/ptp2/config.c:8092
- msgid "Canon EOS Zoom"
-@@ -7454,9 +7438,8 @@
- msgstr "Tryb autofocus 2"
- 
- #: camlibs/ptp2/config.c:8243
--#, fuzzy
- msgid "Zoom Speed"
--msgstr "Prędkość robienia zdjęcia"
-+msgstr "Prędkość przybliżania"
- 
- #: camlibs/ptp2/config.c:8244 camlibs/ptp2/config.c:8247
- #: camlibs/ptp2/ptp.c:5260
-@@ -7913,7 +7896,7 @@
- 
- #: camlibs/ptp2/config.c:8408 camlibs/ptp2/ptp.c:5840
- msgid "Sensor Crop"
--msgstr ""
-+msgstr "Przycięcie matrycy"
- 
- #: camlibs/ptp2/config.c:8426
- msgid "Meter Off Time"
-@@ -8041,7 +8024,7 @@
- msgstr "Ustawienie PTP 0x%04x"
- 
- #: camlibs/ptp2/config.c:9090 camlibs/ptp2/config.c:9181
--#, fuzzy, c-format
-+#, c-format
- msgid "Sorry, the property '%s' / 0x%04x is currently read-only."
- msgstr "Niestety właściwość '%s' / 0x%04x jest aktualnie tylko do odczytu."
- 
-@@ -12488,18 +12471,3 @@
- #: libgphoto2/gphoto2-result.c:89
- msgid "Unknown error"
- msgstr "Nieznany błąd"
--
--#~ msgid "Now value is not in enumeration."
--#~ msgstr "Obecna wartość spoza zbioru."
--
--#~ msgid "Setting 4"
--#~ msgstr "Ustawienie 4"
--
--#~ msgid "Setting 5"
--#~ msgstr "Ustawienie 5"
--
--#~ msgid "Setting 6"
--#~ msgstr "Ustawienie 6"
--
--#~ msgid "Setting 7"
--#~ msgstr "Ustawienie 7"
