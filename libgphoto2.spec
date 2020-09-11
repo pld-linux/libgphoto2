@@ -11,12 +11,12 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.5.24
+Version:	2.5.25
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	063632d839b71698e99da0ccd19bc9f6
+# Source0-md5:	39999aa4bdd3bf849b5716153c659405
 Patch0:		%{name}-mode-owner-group.patch
 # if there are fuzzy/missing entries in file, check for updated version:
 # po/pl.po: https://translationproject.org/PO-files/pl/libgphoto2-%{version}.pl.po
@@ -26,10 +26,11 @@ Patch1:		%{name}-pl.po-update.patch
 # from FC
 Patch2:		gphoto2-device-return.patch
 URL:		http://www.gphoto.org/
-BuildRequires:	autoconf >= 2.59
+BuildRequires:	autoconf >= 2.62
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	avahi-compat-libdns_sd-devel
 BuildRequires:	bison
+BuildRequires:	curl-devel >= 7.1
 BuildRequires:	dbus-devel >= 0.31
 BuildRequires:	flex
 BuildRequires:	gd-devel >= 2.1
@@ -46,6 +47,7 @@ BuildRequires:	libxml2-devel >= 2.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.691
 BuildRequires:	sed >= 4.0
+Requires:	curl-libs >= 7.1
 Requires:	libexif >= 1:0.6.13
 Provides:	gphoto2-lib = %{version}-%{release}
 Obsoletes:	gphoto2-lib < 2.1.1
