@@ -25,6 +25,7 @@ Patch0:		%{name}-mode-owner-group.patch
 Patch1:		%{name}-pl.po-update.patch
 # from FC
 Patch2:		gphoto2-device-return.patch
+Patch3:		%{name}-configure-fix-symver-support-checks.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.62
 BuildRequires:	automake >= 1:1.9
@@ -178,6 +179,7 @@ w przestrzeni użytkownika.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %{__rm} po/stamp-po libgphoto2_port/po/stamp-po
 
