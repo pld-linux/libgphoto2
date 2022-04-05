@@ -11,12 +11,12 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.5.25
+Version:	2.5.29
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	39999aa4bdd3bf849b5716153c659405
+Source0:	https://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
+# Source0-md5:	bbab014d63669254b0ea4c9a088e2975
 Patch0:		%{name}-mode-owner-group.patch
 # if there are fuzzy/missing entries in file, check for updated version:
 # po/pl.po: https://translationproject.org/PO-files/pl/libgphoto2-%{version}.pl.po
@@ -25,7 +25,6 @@ Patch0:		%{name}-mode-owner-group.patch
 Patch1:		%{name}-pl.po-update.patch
 # from FC
 Patch2:		gphoto2-device-return.patch
-Patch3:		%{name}-configure-fix-symver-support-checks.patch
 URL:		http://www.gphoto.org/
 BuildRequires:	autoconf >= 2.62
 BuildRequires:	automake >= 1:1.9
@@ -85,8 +84,8 @@ Requires:	libexif-devel >= 1:0.6.13
 Requires:	libltdl-devel
 Requires:	libusb-devel >= 1.0.0
 %{!?with_baudboy:Requires:	lockdev-devel}
-Obsoletes:	gphoto2-devel
-Obsoletes:	gphoto2-lib-devel
+Obsoletes:	gphoto2-devel < 2.1.1
+Obsoletes:	gphoto2-lib-devel < 2.1.0-6
 
 %description devel
 Header files for libgphoto2.
@@ -107,8 +106,8 @@ Summary(pl.UTF-8):	Statyczna wersja libgphoto2
 Summary(pt_BR.UTF-8):	Arquivos de desenvolvimento do libgphoto2
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	gphoto2-lib-static
-Obsoletes:	gphoto2-static
+Obsoletes:	gphoto2-lib-static < 2.1.0-6
+Obsoletes:	gphoto2-static < 2.1.1
 
 %description static
 Static version of libgphoto2.
@@ -148,10 +147,10 @@ Requires:	udev-core >= 1:124-3
 Requires:	udev-core >= 1:136
 %endif
 Provides:	udev-digicam
-Obsoletes:	hal-gphoto
-%{!?with_hal:Obsoletes:	hal-libgphoto2}
-Obsoletes:	hotplug-digicam
-Obsoletes:	udev-digicam
+Obsoletes:	hal-gphoto < 0.5.9-2
+%{!?with_hal:Obsoletes:	hal-libgphoto2 < %{version}-%{release}}
+Obsoletes:	hotplug-digicam < 2004_09_24
+Obsoletes:	udev-digicam < 1:079-2
 
 %description -n udev-libgphoto2
 Set of Udev rules to handle digital cameras in userspace.
@@ -165,7 +164,7 @@ Summary:	Userspace support for digital cameras
 Summary(pl.UTF-8):	Wsparcie dla kamer cyfrowych w przestrzeni użytkownika
 Group:		Applications/System
 Requires:	hal >= 0.5.9-2
-Requires:	udev-libgphoto2
+Requires:	udev-libgphoto2 = %{version}-%{release}
 
 %description -n hal-libgphoto2
 HAL device information file to handle digital cameras in userspace.
@@ -179,14 +178,13 @@ w przestrzeni użytkownika.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
 
 %{__rm} po/stamp-po libgphoto2_port/po/stamp-po
 
 %build
 # supplied libtool is broken (relink)
 %{__libtoolize}
-%{__aclocal} -I auto-m4 -I gphoto-m4
+%{__aclocal} -I auto-m4 -I libgphoto2_port/gphoto-m4
 %{__autoconf}
 %{__automake}
 cd libgphoto2_port
@@ -280,20 +278,20 @@ cp --parents \
 	docs
 
 # udev
-cd packaging/linux-hotplug
+cd packaging/generic
 install -d $RPM_BUILD_ROOT/lib/udev/{hwdb.d,rules.d}
 export CAMLIBS=$RPM_BUILD_ROOT%{_libdir}/%{name}/%{version}
 
-../generic/print-camera-list udev-rules version 136 group usb mode 0660 \
+./print-camera-list udev-rules version 136 group usb mode 0660 \
 	> $RPM_BUILD_ROOT/lib/udev/rules.d/40-libgphoto2.rules
-../generic/print-camera-list hwdb \
+./print-camera-list hwdb \
 	> $RPM_BUILD_ROOT/lib/udev/hwdb.d/20-gphoto.hwdb
 
 %if %{with hal}
 # hal
 install -d $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty
 
-../generic/print-camera-list hal-fdi | \
+./print-camera-list hal-fdi | \
 	grep -v "<!-- This file was generated" > $RPM_BUILD_ROOT%{_datadir}/hal/fdi/information/20thirdparty/10-camera-libgphoto2.fdi
 %endif
 
