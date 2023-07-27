@@ -11,12 +11,12 @@ Summary(es.UTF-8):	Foto GNU (gphoto) Release 2
 Summary(pl.UTF-8):	Biblioteki obsługi kamer cyfrowych
 Summary(pt_BR.UTF-8):	GNU Photo - programa GNU para câmeras digitais
 Name:		libgphoto2
-Version:	2.5.29
+Version:	2.5.30
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	https://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.bz2
-# Source0-md5:	bbab014d63669254b0ea4c9a088e2975
+Source0:	https://downloads.sourceforge.net/gphoto/%{name}-%{version}.tar.xz
+# Source0-md5:	563d3b5011f19fd73c89e45a67233688
 Patch0:		%{name}-mode-owner-group.patch
 # if there are fuzzy/missing entries in file, check for updated version:
 # po/pl.po: https://translationproject.org/PO-files/pl/libgphoto2-%{version}.pl.po
@@ -26,20 +26,20 @@ Patch1:		%{name}-pl.po-update.patch
 # from FC
 Patch2:		gphoto2-device-return.patch
 URL:		http://www.gphoto.org/
-BuildRequires:	autoconf >= 2.62
-BuildRequires:	automake >= 1:1.9
+BuildRequires:	autoconf >= 2.69
+BuildRequires:	automake >= 1:1.14
 BuildRequires:	avahi-compat-libdns_sd-devel
 BuildRequires:	bison
 BuildRequires:	curl-devel >= 7.1
 BuildRequires:	dbus-devel >= 0.31
 BuildRequires:	flex
 BuildRequires:	gd-devel >= 2.1
-BuildRequires:	gettext-tools >= 0.14.1
+BuildRequires:	gettext-tools >= 0.19.1
 %{?with_apidocs:BuildRequires:	gtk-doc >= 0.10}
 BuildRequires:	libexif-devel >= 1:0.6.13
 BuildRequires:	libjpeg-devel
 BuildRequires:	libltdl-devel
-BuildRequires:	libtool >= 1:1.4.2-9
+BuildRequires:	libtool >= 2:2.4.2
 BuildRequires:	libusb-devel >= 1.0.0
 BuildRequires:	libxml2-devel >= 2.0
 %{?with_baudboy:BuildRequires:	lockdev-baudboy-devel}
@@ -47,6 +47,8 @@ BuildRequires:	libxml2-devel >= 2.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.691
 BuildRequires:	sed >= 4.0
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Requires:	curl-libs >= 7.1
 Requires:	libexif >= 1:0.6.13
 Provides:	gphoto2-lib = %{version}-%{release}
