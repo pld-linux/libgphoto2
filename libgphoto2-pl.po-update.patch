@@ -1,775 +1,2351 @@
---- libgphoto2-2.5.31/po/pl.po.orig	2023-09-03 14:09:15.275556755 +0200
-+++ libgphoto2-2.5.31/po/pl.po	2023-09-03 21:01:08.258341702 +0200
+--- libgphoto2-2.5.32/po/pl.po.orig	2025-07-06 11:33:30.000000000 +0200
++++ libgphoto2-2.5.32/po/pl.po	2025-07-22 20:01:25.743164538 +0200
 @@ -1,14 +1,14 @@
  # Polish translation for libgphoto2.
--# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 Free Software Foundation, Inc.
-+# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Free Software Foundation, Inc.
+-# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Free Software Foundation, Inc.
++# Copyright (C) 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Free Software Foundation, Inc.
  # This file is distributed under the same license as the libgphoto2 package.
--# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2022.
-+# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2023.
+-# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2023.
++# Jakub Bogusz <qboosh@pld-linux.org>, 2006-2025.
  #
  msgid ""
  msgstr ""
--"Project-Id-Version: libgphoto2 2.5.28\n"
-+"Project-Id-Version: libgphoto2 2.5.31\n"
+-"Project-Id-Version: libgphoto2 2.5.31\n"
++"Project-Id-Version: libgphoto2 2.5.32\n"
  "Report-Msgid-Bugs-To: gphoto-devel@lists.sourceforge.net\n"
- "POT-Creation-Date: 2023-09-02 11:22+0200\n"
--"PO-Revision-Date: 2022-01-04 21:15+0100\n"
-+"PO-Revision-Date: 2023-09-03 14:02+0200\n"
+ "POT-Creation-Date: 2025-07-03 16:25+0200\n"
+-"PO-Revision-Date: 2023-09-03 14:02+0200\n"
++"PO-Revision-Date: 2025-07-21 18:26+0200\n"
  "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
  "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
  "Language: pl\n"
-@@ -5511,11 +5511,11 @@ msgstr "16:9"
- 
- #: camlibs/ptp2/config.c:2500
- msgid "4:3"
--msgstr ""
-+msgstr "4:3"
- 
- #: camlibs/ptp2/config.c:2501
- msgid "1:1"
--msgstr ""
-+msgstr "1:1"
- 
- #: camlibs/ptp2/config.c:2518 camlibs/ptp2/config.c:5675
- #: camlibs/ptp2/config.c:5693 camlibs/ptp2/ptp.c:7960 camlibs/ptp2/ptp.c:7963
-@@ -5574,49 +5574,47 @@ msgstr "TFT + PC + mobilne 2"
- 
- #: camlibs/ptp2/config.c:2541
- msgid "Quick"
--msgstr ""
-+msgstr "Szybki"
- 
- #: camlibs/ptp2/config.c:2542
- msgid "Live"
--msgstr ""
-+msgstr "Live"
- 
- #: camlibs/ptp2/config.c:2543
- msgid "LiveFace"
--msgstr ""
-+msgstr "Live - z wykrywaniem twarzy"
- 
- #: camlibs/ptp2/config.c:2544
--#, fuzzy
- msgid "LiveMulti"
--msgstr "Wiele"
-+msgstr "Live - Multi"
- 
- #: camlibs/ptp2/config.c:2545
- msgid "LiveZone"
--msgstr ""
-+msgstr "Live - strefowy"
- 
- #: camlibs/ptp2/config.c:2546
- msgid "LiveSingleExpandCross"
--msgstr ""
-+msgstr "Live - pojedyczny krzyżowy"
- 
- #: camlibs/ptp2/config.c:2547
- msgid "LiveSingleExpandSurround"
--msgstr ""
-+msgstr "Live - pojedynczy otaczający"
- 
- #: camlibs/ptp2/config.c:2548
- msgid "LiveZoneLargeH"
--msgstr ""
-+msgstr "Live - strefowy poziomy"
- 
- #: camlibs/ptp2/config.c:2549
- msgid "LiveZoneLargeV"
--msgstr ""
-+msgstr "Live - strefowy pionowy"
- 
- #: camlibs/ptp2/config.c:2550
- msgid "LiveCatchAF"
--msgstr ""
-+msgstr "Live - AF wychwytujący"
- 
- #: camlibs/ptp2/config.c:2551
--#, fuzzy
- msgid "LiveSpotAF"
--msgstr "Punkt AF"
-+msgstr "Live - AF punktowy"
- 
- #: camlibs/ptp2/config.c:2557 camlibs/ptp2/config.c:5686
- msgid "SDRAM"
-@@ -5771,84 +5769,68 @@ msgid "sRAW + Tiny JPEG"
- msgstr "sRAW + malutki JPEG"
- 
- #: camlibs/ptp2/config.c:2757
--#, fuzzy
- msgid "Small + RAW"
--msgstr "Mały normalny JPEG+RAW"
-+msgstr "Mały + RAW"
- 
- #: camlibs/ptp2/config.c:2758
--#, fuzzy
- msgid "Medium 1 + RAW"
--msgstr "Średni 1"
-+msgstr "Średni 1 + RAW"
- 
- #: camlibs/ptp2/config.c:2759
--#, fuzzy
- msgid "Medium 2 + RAW"
--msgstr "Średni 2"
-+msgstr "Średni 2 + RAW"
- 
- #: camlibs/ptp2/config.c:2760
--#, fuzzy
- msgid "Large + RAW"
--msgstr "Duży dobry JPEG+RAW"
-+msgstr "Duży + RAW"
- 
- #: camlibs/ptp2/config.c:2761
--#, fuzzy
- msgid "Small + cRAW"
--msgstr "Mały normalny JPEG+RAW"
-+msgstr "Mały + cRAW"
- 
- #: camlibs/ptp2/config.c:2762
--#, fuzzy
- msgid "Medium 1 + cRAW"
--msgstr "Średni 1"
-+msgstr "Średni 1 + cRAW"
- 
- #: camlibs/ptp2/config.c:2763
--#, fuzzy
- msgid "Medium 2 + cRAW"
--msgstr "Średni 2"
-+msgstr "Średni 2 + cRAW"
- 
- #: camlibs/ptp2/config.c:2764
--#, fuzzy
- msgid "Large + cRAW"
--msgstr "Duży dobry JPEG+RAW"
-+msgstr "Duży + cRAW"
- 
- #: camlibs/ptp2/config.c:2767
--#, fuzzy
- msgid "Large + mRAW"
--msgstr "Duży dobry JPEG+RAW"
-+msgstr "Duży + mRAW"
- 
- #: camlibs/ptp2/config.c:2768
--#, fuzzy
- msgid "Medium 1 + mRAW"
--msgstr "Średni 1"
-+msgstr "Średni 1 + mRAW"
- 
- #: camlibs/ptp2/config.c:2769
--#, fuzzy
- msgid "Medium 2 + mRAW"
--msgstr "Średni 2"
-+msgstr "Średni 2 + mRAW"
- 
- #: camlibs/ptp2/config.c:2770
--#, fuzzy
- msgid "Small + mRAW"
--msgstr "Mały normalny JPEG+RAW"
-+msgstr "Mały + mRAW"
- 
- #: camlibs/ptp2/config.c:2771
--#, fuzzy
- msgid "Large + sRAW"
--msgstr "Duży dobry JPEG+RAW"
-+msgstr "Duży + sRAW"
- 
- #: camlibs/ptp2/config.c:2772
--#, fuzzy
- msgid "Medium 1 + sRAW"
--msgstr "Średni 1"
-+msgstr "Średni 1 + sRAW"
- 
- #: camlibs/ptp2/config.c:2773
--#, fuzzy
- msgid "Medium 2 + sRAW"
--msgstr "Średni 2"
-+msgstr "Średni 2 + sRAW"
- 
- #: camlibs/ptp2/config.c:2774
--#, fuzzy
- msgid "Small + sRAW"
--msgstr "Mały normalny JPEG+RAW"
-+msgstr "Mały + sRAW"
- 
- #: camlibs/ptp2/config.c:2797 camlibs/ptp2/ptp.c:8328
- msgid "Continuous"
-@@ -5928,24 +5910,20 @@ msgid "Fuji Capture failed: Perhaps no a
- msgstr "Fuji Capture nie powiodło się: może brak auto-focusu?"
- 
- #: camlibs/ptp2/config.c:2977
--#, fuzzy
- msgid "91 Points (7x13)"
--msgstr "51 punktów (3D)"
-+msgstr "91 punktów (7x13)"
- 
- #: camlibs/ptp2/config.c:2978
--#, fuzzy
- msgid "325 Points (13x25)"
--msgstr "51 punktów (3D)"
-+msgstr "325 punktów (13x25)"
- 
- #: camlibs/ptp2/config.c:2979
--#, fuzzy
- msgid "117 Points (9x13)"
--msgstr "51 punktów (3D)"
-+msgstr "117 punktów (9x13)"
- 
- #: camlibs/ptp2/config.c:2980
--#, fuzzy
- msgid "425 Points (17x25)"
--msgstr "51 punktów (3D)"
-+msgstr "425 punktów (17x25)"
- 
- #: camlibs/ptp2/config.c:3076 camlibs/ptp2/config.c:3109
- #: camlibs/ptp2/config.c:3213
-@@ -6582,14 +6560,12 @@ msgid "Wide-area AF (L)"
- msgstr "AF (L) szerokiego obszaru"
- 
- #: camlibs/ptp2/config.c:4261
--#, fuzzy
- msgid "Wide-area AF (C1)"
--msgstr "AF (S) szerokiego obszaru"
-+msgstr "AF szerokiego obszaru (C1)"
- 
- #: camlibs/ptp2/config.c:4262
--#, fuzzy
- msgid "Wide-area AF (C2)"
--msgstr "AF (S) szerokiego obszaru"
-+msgstr "AF szerokiego obszaru (C2)"
- 
- #: camlibs/ptp2/config.c:4267
- msgid "sRGB (portrait)"
-@@ -6639,58 +6615,55 @@ msgstr "Szeroki"
- 
- #: camlibs/ptp2/config.c:4351
- msgid "Zone"
--msgstr ""
-+msgstr "Strefowy"
- 
- #: camlibs/ptp2/config.c:4352 camlibs/ptp2/config.c:4378
- msgid "Center"
--msgstr "Środek"
-+msgstr "Centralny"
- 
- #: camlibs/ptp2/config.c:4353
--#, fuzzy
- msgid "Flexible Spot: S"
--msgstr "Program elastyczny"
-+msgstr "Elastyczny punktowy: S"
- 
- #: camlibs/ptp2/config.c:4354
--#, fuzzy
- msgid "Flexible Spot: M"
--msgstr "Program elastyczny"
-+msgstr "Elastyczny punktowy: M"
- 
- #: camlibs/ptp2/config.c:4355
--#, fuzzy
- msgid "Flexible Spot: L"
--msgstr "Program elastyczny"
-+msgstr "Elastyczny punktowy: L"
- 
- #: camlibs/ptp2/config.c:4356
- msgid "Expand Flexible Spot"
--msgstr ""
-+msgstr "Rozszerzony elastyczny punktowy"
- 
- #: camlibs/ptp2/config.c:4357
- msgid "Lock-on AF: Wide"
--msgstr ""
-+msgstr "Śledzący AF: szeroki"
- 
- #: camlibs/ptp2/config.c:4358
- msgid "Lock-on AF: Zone"
--msgstr ""
-+msgstr "Śledzący AF: strefowy"
- 
- #: camlibs/ptp2/config.c:4359
- msgid "Lock-on AF: Center"
--msgstr ""
-+msgstr "Śledzący AF: centralny"
- 
- #: camlibs/ptp2/config.c:4360
- msgid "Lock-on AF: Flexible Spot: S"
--msgstr ""
-+msgstr "Śledzący AF: elastyczny punktowy: S"
- 
- #: camlibs/ptp2/config.c:4361
- msgid "Lock-on AF: Flexible Spot: M"
--msgstr ""
-+msgstr "Śledzący AF: elastyczny punktowy: M"
- 
- #: camlibs/ptp2/config.c:4362
- msgid "Lock-on AF: Flexible Spot: L"
--msgstr ""
-+msgstr "Śledzący AF: elastyczny punktowy: L"
- 
- #: camlibs/ptp2/config.c:4363
- msgid "Lock-on AF: Expand Flexible Spot"
--msgstr ""
-+msgstr "Śledzący AF: rozszerzony elastyczny punktowy"
- 
- #: camlibs/ptp2/config.c:4369 camlibs/sierra/olympus-desc.c:783
- msgid "Center Weighted"
-@@ -7358,7 +7331,7 @@ msgstr "Automatyczny makro"
- 
- #: camlibs/ptp2/config.c:5936
- msgid "AF-F"
--msgstr ""
-+msgstr "AF-F"
- 
- #: camlibs/ptp2/config.c:5937
- msgid "Single-Servo AF"
-@@ -7681,9 +7654,8 @@ msgid "Extra Fine"
- msgstr "Bardzo dobra"
- 
- #: camlibs/ptp2/config.c:6872
--#, fuzzy
- msgid "RAW+JPEG (Light)"
--msgstr "RAW+JPEG (standardowy)"
-+msgstr "RAW+JPEG (lekki)"
- 
- #: camlibs/ptp2/config.c:6873
- msgid "RAW+JPEG (Std)"
-@@ -7699,41 +7671,35 @@ msgstr "(RAW+JPEG (b.dobrej jakości)"
- 
- #: camlibs/ptp2/config.c:6877
- msgid "HEIF (Light)"
--msgstr ""
-+msgstr "HEIF (lekki)"
- 
- #: camlibs/ptp2/config.c:6878
- msgid "HEIF (Std)"
--msgstr ""
-+msgstr "HEIF (standardowy)"
- 
- #: camlibs/ptp2/config.c:6879
--#, fuzzy
- msgid "HEIF (Fine)"
--msgstr "NEF+Dobra"
-+msgstr "HEIF (dobrej jakości)"
- 
- #: camlibs/ptp2/config.c:6880
--#, fuzzy
- msgid "HEIF (X.Fine)"
--msgstr "(RAW+JPEG (b.dobrej jakości)"
-+msgstr "HEIF (b.dobrej jakości)"
- 
- #: camlibs/ptp2/config.c:6881
--#, fuzzy
- msgid "RAW+HEIF (Light)"
--msgstr "RAW+JPEG (standardowy)"
-+msgstr "RAW+HEIF (lekki)"
- 
- #: camlibs/ptp2/config.c:6882
--#, fuzzy
- msgid "RAW+HEIF (Std)"
--msgstr "RAW+JPEG (standardowy)"
-+msgstr "RAW+HEIF (standardowy)"
- 
- #: camlibs/ptp2/config.c:6883
--#, fuzzy
- msgid "RAW+HEIF (Fine)"
--msgstr "RAW+JPEG (dobrej jakości)"
-+msgstr "RAW+HEIF (dobrej jakości)"
- 
- #: camlibs/ptp2/config.c:6884
--#, fuzzy
- msgid "RAW+HEIF (X.Fine)"
--msgstr "(RAW+JPEG (b.dobrej jakości)"
-+msgstr "RAW+HEIF (b.dobrej jakości)"
- 
- #: camlibs/ptp2/config.c:6890 camlibs/ptp2/config.c:6909
- msgid "RAW+JPEG"
-@@ -7741,48 +7707,43 @@ msgstr "RAW+JPEG"
- 
- #: camlibs/ptp2/config.c:6896
- msgid "n/a"
--msgstr ""
-+msgstr "n/d"
- 
- #: camlibs/ptp2/config.c:6897
--#, fuzzy
- msgid "X.Fine"
--msgstr "Dobra"
-+msgstr "B.dobra"
- 
- #: camlibs/ptp2/config.c:6899
- msgid "Std"
--msgstr ""
-+msgstr "Standardowa"
- 
- #: camlibs/ptp2/config.c:6914
- msgid "Original"
--msgstr ""
-+msgstr "Oryginalna"
- 
- #: camlibs/ptp2/config.c:6915
--#, fuzzy
- msgid "2M"
--msgstr "M"
-+msgstr "2M"
- 
- #: camlibs/ptp2/config.c:6920
--#, fuzzy
- msgid "RAW & JPEG"
--msgstr "RAW+JPEG"
-+msgstr "RAW i JPEG"
- 
- #: camlibs/ptp2/config.c:6921
--#, fuzzy
- msgid "JPEG Only"
--msgstr "Dobry JPEG"
-+msgstr "Tylko JPEG"
- 
- #: camlibs/ptp2/config.c:6922
--#, fuzzy
- msgid "RAW Only"
--msgstr "RAW 2"
-+msgstr "Tylko RAW"
- 
- #: camlibs/ptp2/config.c:6923
- msgid "RAW & HEIF"
--msgstr ""
-+msgstr "RAW i HEIF"
- 
- #: camlibs/ptp2/config.c:6924
- msgid "HEIF Only"
--msgstr ""
-+msgstr "Tylko HEIF"
- 
- #: camlibs/ptp2/config.c:6974
- msgid "Multi-Shot"
-@@ -7814,12 +7775,11 @@ msgstr "Stratna"
- 
- #: camlibs/ptp2/config.c:7010
- msgid "High Efficiency*"
--msgstr ""
-+msgstr "Wysoka wydajność*"
- 
- #: camlibs/ptp2/config.c:7011
--#, fuzzy
- msgid "High Efficiency"
--msgstr "Klucz wysoki"
-+msgstr "Wysoka wydajność"
- 
- #: camlibs/ptp2/config.c:7016
- msgid "Size Priority"
-@@ -8404,7 +8364,7 @@ msgstr "Automatyczna ciepła"
- #: camlibs/ptp2/config.c:9454
+@@ -1092,7 +1092,7 @@ msgstr "nie udało się ustawić czasu"
  #, c-format
- msgid "%d"
--msgstr ""
-+msgstr "%d"
+ msgid "Unsupported port type %i = 0x%x given. Initialization impossible."
+ msgstr ""
+-"Podano nie obsługiwany rodzaj portu %i = 0x%x. Inicjalizacja niemożliwa."
++"Podano nieobsługiwany rodzaj portu %i = 0x%x. Inicjalizacja niemożliwa."
  
- #: camlibs/ptp2/config.c:9293 camlibs/ptp2/config.c:9368
- #: camlibs/ptp2/config.c:9464 camlibs/ptp2/config.c:9562
-@@ -8414,105 +8374,88 @@ msgid "Unknown 0x%04x"
- msgstr "Nieznany 0x%04x"
+ #: camlibs/canon/serial.c:690 camlibs/canon/serial.c:753
+ msgid "Battery exhausted, camera off."
+@@ -2006,7 +2006,6 @@ msgid "HQ (24bpp)"
+ msgstr "HQ (24bpp)"
  
- #: camlibs/ptp2/config.c:9305
+ #: camlibs/docupen/docupen.c:389
 -#, fuzzy
- msgid "AF macro"
--msgstr "Super makro"
-+msgstr "AF makro"
+ msgid ""
+ "Docupen scanner can't download/erase individual images, only everything\n"
+ "at once. To work-around this, a cache file is created where a copy of the\n"
+@@ -2052,9 +2051,9 @@ msgstr ""
  
- #: camlibs/ptp2/config.c:9306
- msgid "AF macro (D)"
--msgstr ""
-+msgstr "AF makro (D)"
+ #: camlibs/enigma13/enigma13.c:65
+ msgid ""
+-"Download program for Digital Dream Enigma 1.3. by <olivier@aixmarseille."
+-"com>, and adapted from spca50x driver. Thank you, spca50x team, it was easy "
+-"to port your driver on this cam! "
++"Download program for Digital Dream Enigma 1.3. by "
++"<olivier@aixmarseille.com>, and adapted from spca50x driver. Thank you, "
++"spca50x team, it was easy to port your driver on this cam! "
+ msgstr ""
+ "Program do ściągania dla aparatów Digital Dream Enigma 1.3. napisany przez "
+ "<olivier@aixmarseille.com> i zaadoptowany do sterownika spca50x. "
+@@ -2150,8 +2149,8 @@ msgid ""
+ "Based on fujiplay by Thierry Bousch <bousch@topo.math.u-psud.fr>\n"
+ msgstr ""
+ "Matthew G. Martin\n"
+-"Oparty o fujiplay, który napisał Thierry Bousch <bousch@topo.math.u-psud."
+-"fr>\n"
++"Oparty o fujiplay, który napisał Thierry Bousch <bousch@topo.math.u-"
++"psud.fr>\n"
  
- #: camlibs/ptp2/config.c:9307
--#, fuzzy
- msgid "MF"
--msgstr "DMF"
-+msgstr "MF"
+ #: camlibs/fuji/library.c:301
+ #, c-format
+@@ -2208,7 +2207,7 @@ msgstr ""
+ #, c-format
+ msgid "Unsupported port type: %d. This driver only works with USB cameras.\n"
+ msgstr ""
+-"Nie obsługiwany rodzaj portu: %d. Ten sterownik działa tylko z aparatami "
++"Nieobsługiwany rodzaj portu: %d. Ten sterownik działa tylko z aparatami "
+ "USB.\n"
  
- #: camlibs/ptp2/config.c:9308
- msgid "AF_S"
--msgstr ""
-+msgstr "AF_S"
+ #: camlibs/gsmart300/library.c:211 camlibs/spca50x/library.c:618
+@@ -2444,8 +2443,8 @@ msgstr "Karta CompactFlash"
+ msgid ""
+ "The Kodak DC120 camera uses the KDC file format for storing images. If you "
+ "want to view the images you download from your camera, you will need to "
+-"download the \"kdc2tiff\" program. It is available from http://kdc2tiff."
+-"sourceforge.net"
++"download the \"kdc2tiff\" program. It is available from http://"
++"kdc2tiff.sourceforge.net"
+ msgstr ""
+ "Aparat Kodak DC120 używa formatu plików KDC do przechowywania obrazów. Aby "
+ "oglądać obrazy ściągnięte z aparatu, potrzebny jest program \"kdc2tiff\". "
+@@ -2995,14 +2994,14 @@ msgstr "W sumie wykonano zdjęć: %d, fl
+ #: camlibs/kodak/dc240/dc240.c:217
+ msgid ""
+ "Kodak DC240 Camera Library\n"
+-"Scott Fritzinger <scottf@gphoto.net> and Hubert Figuiere <hfiguiere@teaser."
+-"fr>\n"
++"Scott Fritzinger <scottf@gphoto.net> and Hubert Figuiere "
++"<hfiguiere@teaser.fr>\n"
+ "Camera Library for the Kodak DC240, DC280, DC3400 and DC5000 cameras.\n"
+ "Rewritten and updated for gPhoto2."
+ msgstr ""
+ "Biblioteka dla aparatów Kodak DC240\n"
+-"Scott Fritzinger <scottf@gphoto.net> i Hubert Figuiere <hfiguiere@teaser."
+-"fr>\n"
++"Scott Fritzinger <scottf@gphoto.net> i Hubert Figuiere "
++"<hfiguiere@teaser.fr>\n"
+ "Biblioteka dla aparatów Kodak DC240, DC280, DC3400 i DC5000.\n"
+ "Przepisano i uaktualniono dla gPhoto2."
  
- #: camlibs/ptp2/config.c:9309
- msgid "AF_C"
--msgstr ""
-+msgstr "AF_C"
+@@ -3022,7 +3021,7 @@ msgstr "Nieprawidłowy"
+ #: camlibs/kodak/dc240/library.c:585 camlibs/ptp2/config.c:2663
+ #: camlibs/ptp2/ptp.c:8162
+ msgid "Not used"
+-msgstr "Nie używany"
++msgstr "Nieużywany"
  
- #: camlibs/ptp2/config.c:9310
- msgid "AF_F"
--msgstr ""
-+msgstr "AF_F"
+ #: camlibs/kodak/dc240/library.c:588
+ msgid "In use"
+@@ -3034,11 +3033,11 @@ msgstr "Karta otwarta"
  
- #: camlibs/ptp2/config.c:9379
- msgid "Stop"
--msgstr ""
-+msgstr "Stop"
+ #: camlibs/kodak/dc240/library.c:603
+ msgid "Card is not open"
+-msgstr "Karta nie otwarta"
++msgstr "Karta nie jest otwarta"
  
- #: camlibs/ptp2/config.c:9380
--#, fuzzy
- msgid "Far fast"
--msgstr "Daleka 1"
-+msgstr "Daleki szybki"
+ #: camlibs/kodak/dc240/library.c:605
+ msgid "Card is not formatted"
+-msgstr "Karta nie sformatowana"
++msgstr "Karta nie jest sformatowana"
  
- #: camlibs/ptp2/config.c:9381
--#, fuzzy
- msgid "Far slow"
--msgstr "Daleka 1"
-+msgstr "Daleki wolny"
+ #: camlibs/kodak/dc240/library.c:607 camlibs/ptp2/config.c:8950
+ #: camlibs/ptp2/config.c:9064
+@@ -3129,11 +3128,11 @@ msgstr "Błąd wewnętrzny (2)."
  
- #: camlibs/ptp2/config.c:9382
--#, fuzzy
- msgid "Near slow"
--msgstr "Bliska 1"
-+msgstr "Bliski wolny"
+ #: camlibs/konica/konica.c:64
+ msgid "No card present."
+-msgstr "Karta nie włożona."
++msgstr "Brak karty."
  
- #: camlibs/ptp2/config.c:9383
--#, fuzzy
- msgid "Near fast"
--msgstr "Blisko-daleko"
-+msgstr "Bliski szybki"
+ #: camlibs/konica/konica.c:67
+ msgid "Card not supported."
+-msgstr "Karta nie obsługiwana."
++msgstr "Karta nieobsługiwana."
  
- #: camlibs/ptp2/config.c:9424
--#, fuzzy
- msgid "A"
--msgstr "Av"
-+msgstr "A"
+ #: camlibs/konica/konica.c:70
+ msgid "Card removed during access."
+@@ -3189,7 +3188,7 @@ msgstr "Dane lokalizacyjne uszkodzone."
  
- #: camlibs/ptp2/config.c:9425
--#, fuzzy
- msgid "S"
--msgstr "SV"
-+msgstr "S"
+ #: camlibs/konica/konica.c:109
+ msgid "Unsupported command."
+-msgstr "Nie obsługiwane polecenie."
++msgstr "Nieobsługiwane polecenie."
  
- #: camlibs/ptp2/config.c:9494
--#, fuzzy
- msgid "Standby"
--msgstr "Normalna"
-+msgstr "Uśpienie"
+ #: camlibs/konica/konica.c:112
+ msgid "Other command executing."
+@@ -3348,7 +3347,7 @@ msgstr "PAL"
  
- #: camlibs/ptp2/config.c:9495
--#, fuzzy
- msgid "Recording"
- msgstr "Nagrywanie"
- 
- #: camlibs/ptp2/config.c:9496
--#, fuzzy
- msgid "Playing"
- msgstr "Odtwarzanie"
- 
- #: camlibs/ptp2/config.c:9497
- msgid "Other process."
--msgstr ""
-+msgstr "Inny proces"
- 
- #: camlibs/ptp2/config.c:9498
--#, fuzzy
- msgid "Other playing"
--msgstr "Inne ustawienia"
-+msgstr "Inne odtwarzanie"
- 
- #: camlibs/ptp2/config.c:9499
--#, fuzzy
- msgid "Noise reduction"
--msgstr "Redukcja szumów przy dużym ISO"
-+msgstr "Redukcja szumów"
- 
- #: camlibs/ptp2/config.c:9500
--#, fuzzy
- msgid "Displaying menu"
+ #: camlibs/konica/library.c:732 camlibs/konica/library.c:961
+ msgid "Do not display TV menu"
 -msgstr "Nie wyświetlanie menu TV"
-+msgstr "Wyświetlanie menu"
++msgstr "Niewyświetlanie menu TV"
  
- #: camlibs/ptp2/config.c:9501
+ #: camlibs/konica/library.c:736 camlibs/konica/library.c:971
+ #: camlibs/konica/qm150.c:828
+@@ -4038,7 +4037,7 @@ msgstr "Kierunek obiektywu nie zgadza si
+ #: camlibs/minolta/dimagev/dimagev.c:365
+ #, c-format
+ msgid "Lens is not connected\n"
+-msgstr "Obiektyw nie podłączony\n"
++msgstr "Obiektyw nie jest podłączony\n"
+ 
+ #: camlibs/minolta/dimagev/dimagev.c:368
+ #, c-format
+@@ -4108,7 +4107,7 @@ msgstr "Opis aparatu Mustek MDC800:\n"
+ 
+ #: camlibs/mustek/mdc800.c:208
+ msgid "no status reported."
+-msgstr "stan nie zgłoszony."
++msgstr "nie zgłoszono stanu."
+ 
+ #: camlibs/mustek/mdc800.c:214
+ msgid "Compact Flash Card detected\n"
+@@ -4439,8 +4438,8 @@ msgstr ""
+ msgid ""
+ "Download program for several Polaroid cameras. Originally written by Peter "
+ "Desnoyers <pjd@fred.cambridge.ma.us>, and adapted for gphoto2 by Nathan "
+-"Stenzel <nathanstenzel@users.sourceforge.net> and Lutz Mueller <lutz@users."
+-"sf.net>.\n"
++"Stenzel <nathanstenzel@users.sourceforge.net> and Lutz Mueller "
++"<lutz@users.sf.net>.\n"
+ "Polaroid 640SE testing was done by Michael Golden <naugrim@juno.com>."
+ msgstr ""
+ "Program do ściągania zdjęć dla kilku aparatów Polaroid. Oryginalnie napisał "
+@@ -4465,8 +4464,9 @@ msgstr ""
+ "Program do ściągania zdjęć dla aparatów opartych o GrandTek 98x. Oryginalnie "
+ "napisał go Chris Byrne <adapt@ihug.co.nz>, do gphoto2 zaadaptował Lutz "
+ "Mueller <lutz@users.sf.net>. Rozszerzenia protokołu i postprocessing dla "
+-"aparatów Jenoptik JD350e napisał Michael Trawny <trawny99@users.sourceforge."
+-"net>. Poprawek błędów dokonał Marcus Meissner <marcus@jet.franken.de>."
++"aparatów Jenoptik JD350e napisał Michael Trawny "
++"<trawny99@users.sourceforge.net>. Poprawek błędów dokonał Marcus Meissner "
++"<marcus@jet.franken.de>."
+ 
+ #: camlibs/polaroid/pdc700.c:147
+ msgid "Flash Setting"
+@@ -5012,33 +5012,28 @@ msgid "RAW + JPEG Normal"
+ msgstr "RAW + JPEG normalnej jakości"
+ 
+ #: camlibs/ptp2/config.c:1518
 -#, fuzzy
- msgid "Streaming"
--msgstr ""
--"\n"
--"Strumienie:"
-+msgstr "Przesyłanie strumienia"
+ msgid "Weak Small"
+-msgstr "Mały"
++msgstr "Mały słaby"
  
- #: camlibs/ptp2/config.c:9939 camlibs/ptp2/config.c:9958
- msgid "large"
-@@ -8687,18 +8630,16 @@ msgid "Drive Panasonic Manual focus"
+ #: camlibs/ptp2/config.c:1519
+ msgid "Strong Small"
+-msgstr ""
++msgstr "Mały silny"
+ 
+ #: camlibs/ptp2/config.c:1520
+-#, fuzzy
+ msgid "Weak Large"
+-msgstr "Duży"
++msgstr "Duży słaby"
+ 
+ #: camlibs/ptp2/config.c:1521
+-#, fuzzy
+ msgid "Strong Large"
+-msgstr "Punkt duży"
++msgstr "Duży silny"
+ 
+ #: camlibs/ptp2/config.c:1522
+-#, fuzzy
+ msgid "Off Small"
+-msgstr "Mały"
++msgstr "Mały wyłączony"
+ 
+ #: camlibs/ptp2/config.c:1523
+-#, fuzzy
+ msgid "Off Large"
+-msgstr "Duży"
++msgstr "Duży wyłączony"
+ 
+ #: camlibs/ptp2/config.c:1533
+ msgid "Large Fine JPEG+RAW"
+@@ -5082,24 +5077,20 @@ msgid "Single Shot"
+ msgstr "Pojedyncze zdjęcie"
+ 
+ #: camlibs/ptp2/config.c:1551
+-#, fuzzy
+ msgid "Continuous Shooting Hi"
+-msgstr "Ciągłe zdjęcia"
++msgstr "Ciągłe zdjęcia, jakość wysoka"
+ 
+ #: camlibs/ptp2/config.c:1552
+-#, fuzzy
+ msgid "Continuous Shooting Hi+"
+-msgstr "Ciągłe zdjęcia"
++msgstr "Ciągłe zdjęcia, jakość wysoka+"
+ 
+ #: camlibs/ptp2/config.c:1553
+-#, fuzzy
+ msgid "Continuous Shooting Hi-Live"
+-msgstr "Ciągłe zdjęcia"
++msgstr "Ciągłe zdjęcia, jakość wysoka-live"
+ 
+ #: camlibs/ptp2/config.c:1554
+-#, fuzzy
+ msgid "Continuous Shooting Lo"
+-msgstr "Ciągłe zdjęcia"
++msgstr "Ciągłe zdjęcia, jakość niska"
+ 
+ #: camlibs/ptp2/config.c:1555 camlibs/ptp2/config.c:4459
+ #: camlibs/ptp2/ptp.c:8201
+@@ -5107,24 +5098,20 @@ msgid "Continuous Shooting"
+ msgstr "Ciągłe zdjęcia"
+ 
+ #: camlibs/ptp2/config.c:1556
+-#, fuzzy
+ msgid "Continuous Shooting Speed Priority"
+-msgstr "Szybkość wolnego trybu ciągłych zdjęć"
++msgstr "Ciągłe zdjęcia, priorytet szybkości"
+ 
+ #: camlibs/ptp2/config.c:1557
+-#, fuzzy
+ msgid "Continuous Shooting Mid"
+-msgstr "Ciągłe zdjęcia"
++msgstr "Ciągłe zdjęcia, jakość średnia"
+ 
+ #: camlibs/ptp2/config.c:1558
+-#, fuzzy
+ msgid "Continuous Shooting Mid-Live"
+-msgstr "Ciągłe zdjęcia"
++msgstr "Ciągłe zdjęcia, jakość średnia-live"
+ 
+ #: camlibs/ptp2/config.c:1559
+-#, fuzzy
+ msgid "Continuous Shooting Lo-Live"
+-msgstr "Ciągłe zdjęcia"
++msgstr "Ciągłe zdjęcia, jakość niska-live"
+ 
+ #: camlibs/ptp2/config.c:1560 camlibs/ptp2/config.c:4437
+ #: camlibs/ptp2/ptp.c:7813
+@@ -5132,529 +5119,520 @@ msgid "Timelapse"
+ msgstr "Jednostka czasu"
+ 
+ #: camlibs/ptp2/config.c:1561
+-#, fuzzy
+ msgid "Self Timer 5 Sec."
+-msgstr "Czas samowyzwalacza"
++msgstr "Samowyzwalacza 5 s"
+ 
+ #: camlibs/ptp2/config.c:1562
+-#, fuzzy
+ msgid "Self Timer 10 Sec."
+ msgstr "Samowyzwalacz 10 s"
+ 
+ #: camlibs/ptp2/config.c:1563
+-#, fuzzy
+ msgid "Self Timer 2 Sec."
+-msgstr "Czas samowyzwalacza"
++msgstr "Samowyzwalacz 2 s"
+ 
+ #: camlibs/ptp2/config.c:1564
+ msgid "Continuous Bracket 0.3 EV 2 Img. +"
+-msgstr ""
++msgstr "Ciągły bracketing 0.3 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1565
+ msgid "Continuous Bracket 0.3 EV 2 Img. -"
+-msgstr ""
++msgstr "Ciągły bracketing 0.3 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1566
+ msgid "Continuous Bracket 0.3 EV 3 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 0.3 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1567
+ msgid "Continuous Bracket 0.3 EV 5 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 0.3 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1568
+ msgid "Continuous Bracket 0.3 EV 7 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 0.3 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1569
+ msgid "Continuous Bracket 0.3 EV 9 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 0.3 EV 9 zdj."
+ 
+ #: camlibs/ptp2/config.c:1570
+ msgid "Continuous Bracket 0.5 EV 2 Img. +"
+-msgstr ""
++msgstr "Ciągły bracketing 0.5 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1571
+ msgid "Continuous Bracket 0.5 EV 2 Img. -"
+-msgstr ""
++msgstr "Ciągły bracketing 0.5 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1572
+ msgid "Continuous Bracket 0.5 EV 3 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 0.5 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1573
+ msgid "Continuous Bracket 0.5 EV 5 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 0.5 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1574
+ msgid "Continuous Bracket 0.5 EV 7 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 0.5 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1575
+ msgid "Continuous Bracket 0.5 EV 9 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 0.5 EV 9 zdj."
+ 
+ #: camlibs/ptp2/config.c:1576
+ msgid "Continuous Bracket 0.7 EV 2 Img. +"
+-msgstr ""
++msgstr "Ciągły bracketing 0.7 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1577
+ msgid "Continuous Bracket 0.7 EV 2 Img. -"
+-msgstr ""
++msgstr "Ciągły bracketing 0.7 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1578
+ msgid "Continuous Bracket 0.7 EV 3 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 0.7 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1579
+ msgid "Continuous Bracket 0.7 EV 5 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 0.7 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1580
+ msgid "Continuous Bracket 0.7 EV 7 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 0.7 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1581
+ msgid "Continuous Bracket 0.7 EV 9 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 0.7 EV 9 zdj."
+ 
+ #: camlibs/ptp2/config.c:1582
+ msgid "Continuous Bracket 1.0 EV 2 Img. +"
+-msgstr ""
++msgstr "Ciągły bracketing 1.0 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1583
+ msgid "Continuous Bracket 1.0 EV 2 Img. -"
+-msgstr ""
++msgstr "Ciągły bracketing 1.0 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1584
+ msgid "Continuous Bracket 1.0 EV 3 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.0 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1585
+ msgid "Continuous Bracket 1.0 EV 5 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.0 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1586
+ msgid "Continuous Bracket 1.0 EV 7 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.0 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1587
+ msgid "Continuous Bracket 1.0 EV 9 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.0 EV 9 zdj."
+ 
+ #: camlibs/ptp2/config.c:1588
+ msgid "Continuous Bracket 1.3 EV 2 Img. +"
+-msgstr ""
++msgstr "Ciągły bracketing 1.3 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1589
+ msgid "Continuous Bracket 1.3 EV 2 Img. -"
+-msgstr ""
++msgstr "Ciągły bracketing 1.3 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1590
+ msgid "Continuous Bracket 1.3 EV 3 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.3 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1591
+ msgid "Continuous Bracket 1.3 EV 5 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.3 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1592
+ msgid "Continuous Bracket 1.3 EV 7 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.3 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1593
+ msgid "Continuous Bracket 1.5 EV 2 Img. +"
+-msgstr ""
++msgstr "Ciągły bracketing 1.5 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1594
+ msgid "Continuous Bracket 1.5 EV 2 Img. -"
+-msgstr ""
++msgstr "Ciągły bracketing 1.5 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1595
+ msgid "Continuous Bracket 1.5 EV 3 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.5 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1596
+ msgid "Continuous Bracket 1.5 EV 5 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.5 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1597
+ msgid "Continuous Bracket 1.5 EV 7 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.5 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1598
+ msgid "Continuous Bracket 1.7 EV 2 Img. +"
+-msgstr ""
++msgstr "Ciągły bracketing 1.7 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1599
+ msgid "Continuous Bracket 1.7 EV 2 Img. -"
+-msgstr ""
++msgstr "Ciągły bracketing 1.7 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1600
+ msgid "Continuous Bracket 1.7 EV 3 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.7 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1601
+ msgid "Continuous Bracket 1.7 EV 5 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.7 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1602
+ msgid "Continuous Bracket 1.7 EV 7 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 1.7 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1603
+ msgid "Continuous Bracket 2.0 EV 2 Img. +"
+-msgstr ""
++msgstr "Ciągły bracketing 2.0 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1604
+ msgid "Continuous Bracket 2.0 EV 2 Img. -"
+-msgstr ""
++msgstr "Ciągły bracketing 2.0 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1605
+ msgid "Continuous Bracket 2.0 EV 3 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 2.0 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1606
+ msgid "Continuous Bracket 2.0 EV 5 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 2.0 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1607
+ msgid "Continuous Bracket 2.0 EV 7 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 2.0 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1608
+ msgid "Continuous Bracket 2.3 EV 2 Img. +"
+-msgstr ""
++msgstr "Ciągły bracketing 2.3 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1609
+ msgid "Continuous Bracket 2.3 EV 2 Img. -"
+-msgstr ""
++msgstr "Ciągły bracketing 2.3 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1610
+ msgid "Continuous Bracket 2.3 EV 3 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 2.3 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1611
+ msgid "Continuous Bracket 2.3 EV 5 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 2.3 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1612
+ msgid "Continuous Bracket 2.5 EV 2 Img. +"
+-msgstr ""
++msgstr "Ciągły bracketing 2.5 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1613
+ msgid "Continuous Bracket 2.5 EV 2 Img. -"
+-msgstr ""
++msgstr "Ciągły bracketing 2.5 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1614
+ msgid "Continuous Bracket 2.5 EV 3 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 2.5 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1615
+ msgid "Continuous Bracket 2.5 EV 5 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 2.5 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1616
+ msgid "Continuous Bracket 2.7 EV 2 Img. +"
+-msgstr ""
++msgstr "Ciągły bracketing 2.7 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1617
+ msgid "Continuous Bracket 2.7 EV 2 Img. -"
+-msgstr ""
++msgstr "Ciągły bracketing 2.7 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1618
+ msgid "Continuous Bracket 2.7 EV 3 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 2.7 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1619
+ msgid "Continuous Bracket 2.7 EV 5 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 2.7 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1620
+ msgid "Continuous Bracket 3.0 EV 2 Img. +"
+-msgstr ""
++msgstr "Ciągły bracketing 3.0 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1621
+ msgid "Continuous Bracket 3.0 EV 2 Img. -"
+-msgstr ""
++msgstr "Ciągły bracketing 3.0 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1622
+ msgid "Continuous Bracket 3.0 EV 3 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 3.0 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1623
+ msgid "Continuous Bracket 3.0 EV 5 Img."
+-msgstr ""
++msgstr "Ciągły bracketing 3.0 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1624
+ msgid "Single Bracket 0.3 EV 2 Img. +"
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.3 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1625
+ msgid "Single Bracket 0.3 EV 2 Img. -"
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.3 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1626
+ msgid "Single Bracket 0.3 EV 3 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.3 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1627
+ msgid "Single Bracket 0.3 EV 5 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.3 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1628
+ msgid "Single Bracket 0.3 EV 7 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.3 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1629
+ msgid "Single Bracket 0.3 EV 9 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.3 EV 9 zdj."
+ 
+ #: camlibs/ptp2/config.c:1630
+ msgid "Single Bracket 0.5 EV 2 Img. +"
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.5 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1631
+ msgid "Single Bracket 0.5 EV 2 Img. -"
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.5 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1632
+ msgid "Single Bracket 0.5 EV 3 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.5 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1633
+ msgid "Single Bracket 0.5 EV 5 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.5 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1634
+ msgid "Single Bracket 0.5 EV 7 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.5 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1635
+ msgid "Single Bracket 0.5 EV 9 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.5 EV 9 zdj."
+ 
+ #: camlibs/ptp2/config.c:1636
+ msgid "Single Bracket 0.7 EV 2 Img. +"
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.7 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1637
+ msgid "Single Bracket 0.7 EV 2 Img. -"
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.7 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1638
+ msgid "Single Bracket 0.7 EV 3 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.7 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1639
+ msgid "Single Bracket 0.7 EV 5 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.7 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1640
+ msgid "Single Bracket 0.7 EV 7 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.7 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1641
+ msgid "Single Bracket 0.7 EV 9 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 0.7 EV 9 zdj."
+ 
+ #: camlibs/ptp2/config.c:1642
+ msgid "Single Bracket 1.0 EV 2 Img. +"
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.0 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1643
+ msgid "Single Bracket 1.0 EV 2 Img. -"
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.0 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1644
+ msgid "Single Bracket 1.0 EV 3 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.0 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1645
+ msgid "Single Bracket 1.0 EV 5 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.0 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1646
+ msgid "Single Bracket 1.0 EV 7 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.0 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1647
+ msgid "Single Bracket 1.0 EV 9 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.0 EV 9 zdj."
+ 
+ #: camlibs/ptp2/config.c:1648
+ msgid "Single Bracket 1.3 EV 2 Img. +"
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.3 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1649
+ msgid "Single Bracket 1.3 EV 2 Img. -"
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.3 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1650
+ msgid "Single Bracket 1.3 EV 3 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.3 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1651
+ msgid "Single Bracket 1.3 EV 5 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.3 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1652
+ msgid "Single Bracket 1.3 EV 7 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.3 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1653
+ msgid "Single Bracket 1.5 EV 2 Img. +"
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.5 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1654
+ msgid "Single Bracket 1.5 EV 2 Img. -"
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.5 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1655
+ msgid "Single Bracket 1.5 EV 3 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.5 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1656
+ msgid "Single Bracket 1.5 EV 5 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.5 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1657
+ msgid "Single Bracket 1.5 EV 7 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.5 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1658
+ msgid "Single Bracket 1.7 EV 2 Img. +"
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.7 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1659
+ msgid "Single Bracket 1.7 EV 2 Img. -"
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.7 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1660
+ msgid "Single Bracket 1.7 EV 3 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.7 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1661
+ msgid "Single Bracket 1.7 EV 5 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.7 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1662
+ msgid "Single Bracket 1.7 EV 7 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 1.7 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1663
+ msgid "Single Bracket 2.0 EV 2 Img. +"
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.0 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1664
+ msgid "Single Bracket 2.0 EV 2 Img. -"
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.0 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1665
+ msgid "Single Bracket 2.0 EV 3 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.0 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1666
+ msgid "Single Bracket 2.0 EV 5 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.0 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1667
+ msgid "Single Bracket 2.0 EV 7 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.0 EV 7 zdj."
+ 
+ #: camlibs/ptp2/config.c:1668
+ msgid "Single Bracket 2.3 EV 2 Img. +"
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.3 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1669
+ msgid "Single Bracket 2.3 EV 2 Img. -"
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.3 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1670
+ msgid "Single Bracket 2.3 EV 3 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.3 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1671
+ msgid "Single Bracket 2.3 EV 5 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.3 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1672
+ msgid "Single Bracket 2.5 EV 2 Img. +"
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.5 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1673
+ msgid "Single Bracket 2.5 EV 2 Img. -"
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.5 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1674
+ msgid "Single Bracket 2.5 EV 3 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.5 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1675
+ msgid "Single Bracket 2.5 EV 5 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.5 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1676
+ msgid "Single Bracket 2.7 EV 2 Img. +"
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.7 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1677
+ msgid "Single Bracket 2.7 EV 2 Img. -"
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.7 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1678
+ msgid "Single Bracket 2.7 EV 3 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.7 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1679
+ msgid "Single Bracket 2.7 EV 5 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 2.7 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1680
+ msgid "Single Bracket 3.0 EV 2 Img. +"
+-msgstr ""
++msgstr "Pojedynczy bracketing 3.0 EV 2 zdj. +"
+ 
+ #: camlibs/ptp2/config.c:1681
+ msgid "Single Bracket 3.0 EV 2 Img. -"
+-msgstr ""
++msgstr "Pojedynczy bracketing 3.0 EV 2 zdj. -"
+ 
+ #: camlibs/ptp2/config.c:1682
+ msgid "Single Bracket 3.0 EV 3 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 3.0 EV 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1683
+ msgid "Single Bracket 3.0 EV 5 Img."
+-msgstr ""
++msgstr "Pojedynczy bracketing 3.0 EV 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1684
+-#, fuzzy
+ msgid "White Balance Bracket Lo"
+-msgstr "Krok bracketingu balansu bieli"
++msgstr "Bracketing balansu bieli niski"
+ 
+ #: camlibs/ptp2/config.c:1685
+-#, fuzzy
+ msgid "White Balance Bracket Hi"
+-msgstr "Krok bracketingu balansu bieli"
++msgstr "Bracketing balansu bieli wysoki"
+ 
+ #: camlibs/ptp2/config.c:1686
+-#, fuzzy
+ msgid "DRO Bracket Lo"
+-msgstr "Bracketing wyłączony"
++msgstr "Bracketing DRO niski"
+ 
+ #: camlibs/ptp2/config.c:1687
+-#, fuzzy
+ msgid "DRO Bracket Hi"
+-msgstr "Bracketing WB Hi"
++msgstr "Bracketing DRO wysoki"
+ 
+ #: camlibs/ptp2/config.c:1688
+-#, fuzzy
+ msgid "LPF Bracket"
+-msgstr "Bracketing FE"
++msgstr "Bracketing LPF"
+ 
+ #: camlibs/ptp2/config.c:1689
+-#, fuzzy
+ msgid "Remote Commander"
+-msgstr "Tryb zdalnego sterowania"
++msgstr "Zdalne sterowanie"
+ 
+ #: camlibs/ptp2/config.c:1690 camlibs/ptp2/config.c:4440
+ #: camlibs/ptp2/ptp.c:7817
+@@ -5662,60 +5640,52 @@ msgid "Mirror Up"
+ msgstr "Lustro podniesione"
+ 
+ #: camlibs/ptp2/config.c:1691
+-#, fuzzy
+ msgid "Self Portrait 1 Person"
+-msgstr "Autoportret"
++msgstr "Autoportret - 1 osoba"
+ 
+ #: camlibs/ptp2/config.c:1692
+-#, fuzzy
+ msgid "Self Portrait 2 People"
+-msgstr "Autoportret"
++msgstr "Autoportret - 2 osoby"
+ 
+ #: camlibs/ptp2/config.c:1693
+-#, fuzzy
+ msgid "Continuous Self Timer 3 Img."
+-msgstr "Samowyzwalacz ciągły"
++msgstr "Samowyzwalacz ciągły 3 zdj."
+ 
+ #: camlibs/ptp2/config.c:1694
+-#, fuzzy
+ msgid "Continuous Self Timer 5 Img."
+-msgstr "Samowyzwalacz ciągły"
++msgstr "Samowyzwalacz ciągły 5 zdj."
+ 
+ #: camlibs/ptp2/config.c:1695
+ msgid "Continuous Self Timer 3 Img. 5 Sec."
+-msgstr ""
++msgstr "Samowyzwalacz ciągły 3 zdj. 5 s"
+ 
+ #: camlibs/ptp2/config.c:1696
+ msgid "Continuous Self Timer 5 Img. 5 Sec."
+-msgstr ""
++msgstr "Samowyzwalacz ciągły 5 zdj. 5 s"
+ 
+ #: camlibs/ptp2/config.c:1697
+ msgid "Continuous Self Timer 3 Img. 2 Sec."
+-msgstr ""
++msgstr "Samowyzwalacz ciągły 3 zdj. 2 s"
+ 
+ #: camlibs/ptp2/config.c:1698
+ msgid "Continuous Self Timer 5 Img. 2 Sec."
+-msgstr ""
++msgstr "Samowyzwalacz ciągły 5 zdj. 2 s"
+ 
+ #: camlibs/ptp2/config.c:1699
+-#, fuzzy
+ msgid "Spot Burst Shooting Lo"
+-msgstr "Tryb zdjęć z przyciskiem centrowania"
++msgstr "Punktowe zdjęcia seryjne - niska"
+ 
+ #: camlibs/ptp2/config.c:1700
+-#, fuzzy
+ msgid "Spot Burst Shooting Mid"
+-msgstr "Tryb zdjęć z przyciskiem centrowania"
++msgstr "Punktowe zdjęcia seryjne - średnia"
+ 
+ #: camlibs/ptp2/config.c:1701
+-#, fuzzy
+ msgid "Spot Burst Shooting Hi"
+-msgstr "Ciągłe zdjęcia"
++msgstr "Punktowe zdjęcia seryjne - wysoka"
+ 
+ #: camlibs/ptp2/config.c:1702
+-#, fuzzy
+ msgid "Focus Bracket"
+-msgstr "Bracketing FE"
++msgstr "Bracketing ogniskowania"
+ 
+ #: camlibs/ptp2/config.c:1707
+ msgid "PROVIA/Standard"
+@@ -6286,19 +6256,19 @@ msgstr "Live - AF punktowy"
+ 
+ #: camlibs/ptp2/config.c:2698
+ msgid "FlexibleZoneAF1"
+-msgstr ""
++msgstr "AF elastycznej strefy 1"
+ 
+ #: camlibs/ptp2/config.c:2699
+ msgid "FlexibleZoneAF2"
+-msgstr ""
++msgstr "AF elastycznej strefy 2"
+ 
+ #: camlibs/ptp2/config.c:2700
+ msgid "FlexibleZoneAF3"
+-msgstr ""
++msgstr "AF elastycznej strefy 3"
+ 
+ #: camlibs/ptp2/config.c:2701
+ msgid "WholeAreaAF"
+-msgstr ""
++msgstr "AF pełnego obszaru"
+ 
+ #: camlibs/ptp2/config.c:2707 camlibs/ptp2/config.c:6039
+ msgid "SDRAM"
+@@ -6347,7 +6317,7 @@ msgstr "cRAW"
+ #: camlibs/ptp2/config.c:2853 camlibs/ptp2/config.c:2872
+ #: camlibs/ptp2/config.c:2877
+ msgid "L"
+-msgstr ""
++msgstr "L"
+ 
+ #: camlibs/ptp2/config.c:2855 camlibs/ptp2/config.c:2875
+ #: camlibs/ptp2/config.c:9959
+@@ -6356,62 +6326,55 @@ msgstr "S"
+ 
+ #: camlibs/ptp2/config.c:2856
+ msgid "cL"
+-msgstr ""
++msgstr "cL"
+ 
+ #: camlibs/ptp2/config.c:2857
+-#, fuzzy
+ msgid "cM"
+-msgstr "M"
++msgstr "cM"
+ 
+ #: camlibs/ptp2/config.c:2858
+-#, fuzzy
+ msgid "cS"
+-msgstr "S"
++msgstr "cS"
+ 
+ #: camlibs/ptp2/config.c:2860 camlibs/ptp2/config.c:2879
+-#, fuzzy
+ msgid "S1"
+-msgstr "1"
++msgstr "S1"
+ 
+ #: camlibs/ptp2/config.c:2861 camlibs/ptp2/config.c:2880
+-#, fuzzy
+ msgid "S2"
+-msgstr "2"
++msgstr "S2"
+ 
+ #: camlibs/ptp2/config.c:2862
+-#, fuzzy
+ msgid "S3"
+-msgstr "S"
++msgstr "S3"
+ 
+ #: camlibs/ptp2/config.c:2863
+ msgid "cS1"
+-msgstr ""
++msgstr "cS1"
+ 
+ #: camlibs/ptp2/config.c:2864
+ msgid "cS2"
+-msgstr ""
++msgstr "cS2"
+ 
+ #: camlibs/ptp2/config.c:2865
+ msgid "cS3"
+-msgstr ""
++msgstr "cS3"
+ 
+ #: camlibs/ptp2/config.c:2867 camlibs/ptp2/config.c:2873
+-#, fuzzy
+ msgid "M1"
+-msgstr "M"
++msgstr "M1"
+ 
+ #: camlibs/ptp2/config.c:2868 camlibs/ptp2/config.c:2874
+-#, fuzzy
+ msgid "M2"
+-msgstr "M"
++msgstr "M2"
+ 
+ #: camlibs/ptp2/config.c:2869
+ msgid "cM1"
+-msgstr ""
++msgstr "cM1"
+ 
+ #: camlibs/ptp2/config.c:2870
+ msgid "cM2"
+-msgstr ""
++msgstr "cM2"
+ 
+ #: camlibs/ptp2/config.c:2992 camlibs/ptp2/ptp.c:8261
+ msgid "Continuous"
+@@ -6611,14 +6574,12 @@ msgid "Tele-zoom Cont. Priority AE"
+ msgstr "Tele-zoom stały priorytet AE"
+ 
+ #: camlibs/ptp2/config.c:4125
+-#, fuzzy
+ msgid "Tele-Zoom Cont. Priority AE 10"
+-msgstr "Tele-zoom stały priorytet AE"
++msgstr "Tele-zoom stały priorytet AE 10"
+ 
+ #: camlibs/ptp2/config.c:4126
+-#, fuzzy
+ msgid "3D Sweep Panorama Shooting"
+-msgstr "Przesuwana panorama"
++msgstr "Zdjęcie przesuwanej panoramy 3D"
+ 
+ #: camlibs/ptp2/config.c:4127
+ msgid "Sweep Panorama"
+@@ -6654,39 +6615,35 @@ msgstr "Efekt obrazu"
+ 
+ #: camlibs/ptp2/config.c:4138
+ msgid "High Frame Rate (P)"
+-msgstr ""
++msgstr "Duża częstotliwość ramek (P)"
+ 
+ #: camlibs/ptp2/config.c:4139
+ msgid "High Frame Rate (A)"
+-msgstr ""
++msgstr "Duża częstotliwość ramek (A)"
+ 
+ #: camlibs/ptp2/config.c:4140
+ msgid "High Frame Rate (S)"
+-msgstr ""
++msgstr "Duża częstotliwość ramek (S)"
+ 
+ #: camlibs/ptp2/config.c:4141
+ msgid "High Frame Rate (M)"
+-msgstr ""
++msgstr "Duża częstotliwość ramek (M)"
+ 
+ #: camlibs/ptp2/config.c:4142
+-#, fuzzy
+ msgid "S&Q Motion (P)"
+-msgstr "Film (P)"
++msgstr "Ruch S&Q (P)"
+ 
+ #: camlibs/ptp2/config.c:4143
+-#, fuzzy
+ msgid "S&Q Motion (A)"
+-msgstr "Film (A)"
++msgstr "Ruch S&Q (A)"
+ 
+ #: camlibs/ptp2/config.c:4144
+-#, fuzzy
+ msgid "S&Q Motion (S)"
+-msgstr "Film (S)"
++msgstr "Ruch S&Q (S)"
+ 
+ #: camlibs/ptp2/config.c:4145
+-#, fuzzy
+ msgid "S&Q Motion (M)"
+-msgstr "Film (M)"
++msgstr "Ruch S&Q (M)"
+ 
+ #: camlibs/ptp2/config.c:4150
+ msgid "Night landscape"
+@@ -6924,21 +6881,19 @@ msgstr "Samowyzwalacz 2s, 5 zdjęć"
+ 
+ #: camlibs/ptp2/config.c:4457
+ msgid "Continuous Hi+ Speed"
+-msgstr "Ciągła prędność wysoka+"
++msgstr "Ciągły szybkość wysoka+"
+ 
+ #: camlibs/ptp2/config.c:4458
+-#, fuzzy
+ msgid "Continuous Lo Speed"
+-msgstr "Ciągła mała prędność"
++msgstr "Ciągły szybkość mała"
+ 
+ #: camlibs/ptp2/config.c:4460
+-#, fuzzy
+ msgid "Continuous Speed Priority"
+-msgstr "Ciągła duża prędność"
++msgstr "Ciągła priorytet szybkości"
+ 
+ #: camlibs/ptp2/config.c:4461
+ msgid "Continuous Med Speed"
+-msgstr "Ciągła prędność średnia"
++msgstr "Ciągła szybkość średnia"
+ 
+ #: camlibs/ptp2/config.c:4463
+ msgid "Bracketing C 0.3 Steps 3 Pictures"
+@@ -7403,35 +7358,32 @@ msgid "Wireless Sync"
+ msgstr "Synchronizacja bezprzewodowa"
+ 
+ #: camlibs/ptp2/config.c:4697
+-#, fuzzy
+ msgid "HSS auto"
+-msgstr "auto"
++msgstr "auto HSS"
+ 
+ #: camlibs/ptp2/config.c:4698
+ msgid "HSS fill"
+-msgstr ""
++msgstr "wypełnienie HSS"
+ 
+ #: camlibs/ptp2/config.c:4699
+ msgid "HSS WL"
+-msgstr ""
++msgstr "HSS WL"
+ 
+ #: camlibs/ptp2/config.c:4700
+ msgid "Slow Slow Sync Red Eye On"
+-msgstr ""
++msgstr "Wolna synchr., czerw. oczy wł."
+ 
+ #: camlibs/ptp2/config.c:4701
+-#, fuzzy
+ msgid "Slow Sync Red Eye Off"
+-msgstr "Wolna synchronizacja"
++msgstr "Wolna synchr., czerw. oczy wył."
+ 
+ #: camlibs/ptp2/config.c:4702
+-#, fuzzy
+ msgid "Slow Sync Wireless"
+-msgstr "Wolna synchronizacja"
++msgstr "Wolna synchr., bezprzewodowy"
+ 
+ #: camlibs/ptp2/config.c:4703
+ msgid "Rear Sync Wireless"
+-msgstr ""
++msgstr "Synchr. tyln., bezprzewodowy"
+ 
+ #: camlibs/ptp2/config.c:4715
+ msgid "Night Vision"
+@@ -7995,9 +7947,8 @@ msgid "Continuous-Servo AF"
+ msgstr "Ciągły AF"
+ 
+ #: camlibs/ptp2/config.c:6293
+-#, fuzzy
+ msgid "Preset MF"
+-msgstr "Predefiniowany 1"
++msgstr "Predefiniowany MF"
+ 
+ #: camlibs/ptp2/config.c:6294
+ msgid "C-AF"
+@@ -8012,18 +7963,16 @@ msgid "DMF"
+ msgstr "DMF"
+ 
+ #: camlibs/ptp2/config.c:6300
+-#, fuzzy
+ msgid "Manual Reverse"
+-msgstr "Ręczny 2"
++msgstr "Ręczny wstecz"
+ 
+ #: camlibs/ptp2/config.c:6301
+ msgid "AF-D"
+-msgstr ""
++msgstr "AF-D"
+ 
+ #: camlibs/ptp2/config.c:6302
+-#, fuzzy
+ msgid "Preset Focus"
+-msgstr "Predefiniowany 1"
++msgstr "Predefiniowana ogniskowa"
+ 
+ #: camlibs/ptp2/config.c:6336
+ msgid "One Shot"
+@@ -8399,7 +8348,7 @@ msgstr "2M"
+ 
+ #: camlibs/ptp2/config.c:7276 camlibs/quicktake1x0/quicktake1x0.c:437
+ msgid "Disabled"
+-msgstr ""
++msgstr "Wyłączony"
+ 
+ #: camlibs/ptp2/config.c:7277
+ msgid "RAW & JPEG"
+@@ -8458,17 +8407,14 @@ msgid "High Efficiency"
+ msgstr "Wysoka wydajność"
+ 
+ #: camlibs/ptp2/config.c:7379
+-#, fuzzy
+ msgid "Uncompressed"
+-msgstr "Kompresja"
++msgstr "Brak kompresji"
+ 
+ #: camlibs/ptp2/config.c:7380
+-#, fuzzy
+ msgid "Lossless compressed"
+-msgstr "Kompresja pliku"
++msgstr "Kompresja bezstratna"
+ 
+ #: camlibs/ptp2/config.c:7381
+-#, fuzzy
+ msgid "Compressed"
+ msgstr "Kompresja"
+ 
+@@ -8847,7 +8793,7 @@ msgstr "Nie można uruchomić Liveview:
+ 
+ #: camlibs/ptp2/config.c:8699
+ msgid "Liveview cannot start: Card unformatted"
+-msgstr "Nie można uruchomić Liveview: karta nie sformatowana"
++msgstr "Nie można uruchomić Liveview: karta niesformatowana"
+ 
+ #: camlibs/ptp2/config.c:8700
+ msgid "Liveview cannot start: Card error"
+@@ -8913,7 +8859,7 @@ msgstr "Już trwa nagrywanie filmu"
+ 
+ #: camlibs/ptp2/config.c:8946 camlibs/ptp2/config.c:9060
+ msgid "Images / movies not yet record in buffer"
+-msgstr "Zdjęcia/filmy jeszcze nie zapisane w buforze."
++msgstr "Zdjęcia/filmy jeszcze niezapisane w buforze."
+ 
+ #: camlibs/ptp2/config.c:8947 camlibs/ptp2/config.c:9061
+ msgid "Card full"
+@@ -8921,7 +8867,7 @@ msgstr "Karta pełna"
+ 
+ #: camlibs/ptp2/config.c:8948 camlibs/ptp2/config.c:9062
+ msgid "Card not formatted"
+-msgstr "Karta nie sformatowana"
++msgstr "Karta niesformatowana"
+ 
+ #: camlibs/ptp2/config.c:8949 camlibs/ptp2/config.c:8989
+ #: camlibs/ptp2/config.c:9063 camlibs/ptp2/library.c:3750
+@@ -9016,9 +8962,8 @@ msgid "Movie recording cannot start: cod
+ msgstr "Nie można uruchomić nagrywania filmu: kod 0x%08x."
+ 
+ #: camlibs/ptp2/config.c:9184
+-#, fuzzy
+ msgid "failed to initiate opencapture"
+-msgstr "Zainicjowanie otwartego robienia zdjęć"
++msgstr "nie udało się zainicjować otwartego robienia zdjęć"
+ 
+ #: camlibs/ptp2/config.c:9683
+ msgid "Flourescent"
+@@ -9288,9 +9233,8 @@ msgid "Drive Fuji Autofocus"
+ msgstr "Prowadzenie autofocusu Fuji"
+ 
+ #: camlibs/ptp2/config.c:11243
+-#, fuzzy
+ msgid "Drive Fuji Autofocus in manual"
+-msgstr "Prowadzenie autofocusu Fuji"
++msgstr "Ręczne prowadzenie autofocusu Fuji"
+ 
+ #: camlibs/ptp2/config.c:11244
+ msgid "Drive Nikon DSLR Manual focus"
+@@ -9321,9 +9265,8 @@ msgid "Drive Panasonic Manual focus"
  msgstr "Prowadzenie ręczne ostrości Parasonic"
  
- #: camlibs/ptp2/config.c:10696
+ #: camlibs/ptp2/config.c:11251
 -#, fuzzy
- msgid "Get Fuji focuspoint"
+ msgid "Drive Fuji Manual focus"
 -msgstr "Prowadzenie autofocusu Fuji"
-+msgstr "Pobranie punktu ogniskowania Fuji"
++msgstr "Prowadzenie ręczne ostrości Fuji"
  
- #: camlibs/ptp2/config.c:10697
- msgid "Fuji FocusPoint Grid dimensions"
--msgstr ""
-+msgstr "Wymiary siatki Fuji FocusPoint"
+ #: camlibs/ptp2/config.c:11252
+ msgid "Get Fuji focuspoint"
+@@ -9377,44 +9320,36 @@ msgstr "Tryb filmowania"
  
- #: camlibs/ptp2/config.c:10698
+ #: camlibs/ptp2/config.c:11268 camlibs/ptp2/config.c:11274
+ #: camlibs/ptp2/ptp.c:7479
 -#, fuzzy
- msgid "Fuji Zoom Position"
--msgstr "Pozycja początkowa EZoom"
-+msgstr "Pozycja powiększenia Fuji"
+ msgid "Focus Magnifier"
+ msgstr "Powiększenie ogniskowania"
  
- #: camlibs/ptp2/config.c:10700
- msgid "Canon EOS Zoom"
-@@ -8739,32 +8680,28 @@ msgid "Movie Mode"
- msgstr "Tryb filmowania"
- 
- #: camlibs/ptp2/config.c:10713
+ #: camlibs/ptp2/config.c:11269 camlibs/ptp2/ptp.c:7480
 -#, fuzzy
- msgid "Focus Magnify"
--msgstr "Informacje o ogniskowaniu"
-+msgstr "Powiększenie ogniskowania"
+ msgid "Focus Magnifier Cancel"
+-msgstr "Powiększone ogniskowanie w dół"
++msgstr "Anulowanie powiększenia ogniskowania"
  
- #: camlibs/ptp2/config.c:10714
- msgid "Focus Magnify Exit"
--msgstr ""
-+msgstr "Zakończenie powiększenia ogniskowania"
- 
- #: camlibs/ptp2/config.c:10715
+ #: camlibs/ptp2/config.c:11270 camlibs/ptp2/ptp.c:7483
 -#, fuzzy
- msgid "Focus Magnify Up"
--msgstr "Informacje o ogniskowaniu"
-+msgstr "Powiększone ogniskowanie w górę"
+ msgid "Remote Key Up"
+-msgstr "Lustro podniesione zdalnie"
++msgstr "Zdalny klawisz góra"
  
- #: camlibs/ptp2/config.c:10716
+ #: camlibs/ptp2/config.c:11271 camlibs/ptp2/ptp.c:7484
 -#, fuzzy
- msgid "Focus Magnify Down"
--msgstr "Informacje o ogniskowaniu"
-+msgstr "Powiększone ogniskowanie w dół"
+ msgid "Remote Key Down"
+-msgstr "Zdalny limit czasu"
++msgstr "Zdalny klawisz dół"
  
- #: camlibs/ptp2/config.c:10717
- msgid "Focus Magnify Left"
--msgstr ""
-+msgstr "Powiększone ogniskowanie w lewo"
- 
- #: camlibs/ptp2/config.c:10718
+ #: camlibs/ptp2/config.c:11272 camlibs/ptp2/ptp.c:7482
 -#, fuzzy
- msgid "Focus Magnify Right"
--msgstr "Jasność punktu ogniskowania"
-+msgstr "Powiększone ogniskowanie w prawo"
+ msgid "Remote Key Left"
+-msgstr "Zdalny limit czasu"
++msgstr "Zdalny klawisz lewo"
  
- #: camlibs/ptp2/config.c:10719
+ #: camlibs/ptp2/config.c:11273 camlibs/ptp2/ptp.c:7481
+-#, fuzzy
+ msgid "Remote Key Right"
+-msgstr "Zdalny limit czasu"
++msgstr "Zdalny klawisz prawo"
+ 
+ #: camlibs/ptp2/config.c:11275
+-#, fuzzy
+ msgid "Spot Focus Area"
+-msgstr "Obszar autofocusu"
++msgstr "Obszar punktu ogniskowania"
+ 
+ #: camlibs/ptp2/config.c:11276
+-#, fuzzy
+ msgid "Canon Disable Mode Dial"
+-msgstr "Wywołanie trybu automatyczej ekspozycji Canona"
++msgstr "Wywołanie trybu wyłączenia Canona"
+ 
+ #: camlibs/ptp2/config.c:11277
  msgid "PTP Opcode"
-@@ -8812,19 +8749,16 @@ msgid "Mirror Up Status"
- msgstr "Stan podniesienia lustra"
+@@ -9786,9 +9721,8 @@ msgid "Color Space"
+ msgstr "Przestrzeń kolorów"
  
- #: camlibs/ptp2/config.c:10741
+ #: camlibs/ptp2/config.c:11449
 -#, fuzzy
- msgid "Mirror Lock"
--msgstr "Lustro podniesione"
-+msgstr "Blokada lustra"
+ msgid "Grain Effect"
+-msgstr "Efekty"
++msgstr "Efekty ziarna"
  
- #: camlibs/ptp2/config.c:10742
+ #: camlibs/ptp2/config.c:11450 camlibs/ptp2/ptp.c:6087
+ msgid "Video Format"
+@@ -9990,9 +9924,8 @@ msgid "PC Save Image Size"
+ msgstr "Rozmiar zapisu obrazu PC"
+ 
+ #: camlibs/ptp2/config.c:11526
 -#, fuzzy
- msgid "Mirror Lock Status"
--msgstr "Stan podniesienia lustra"
-+msgstr "Stan blokady lustra"
+ msgid "RAW+J PC Save Image"
+-msgstr "Rozmiar zapisu obrazu PC"
++msgstr "Zapis obrazu PC RAW+J"
  
- #: camlibs/ptp2/config.c:10743
--#, fuzzy
- msgid "Mirror Down Status"
--msgstr "Stan podniesienia lustra"
-+msgstr "Stan opuszczenia lustra"
- 
- #: camlibs/ptp2/config.c:10744
- msgid "Mirror Up Shooting Count"
-@@ -9071,7 +9005,7 @@ msgstr "Tryb zdarzenia"
- 
- #: camlibs/ptp2/config.c:10834
- msgid "Test OLC"
--msgstr ""
-+msgstr "Test OLC"
- 
- #: camlibs/ptp2/config.c:10844
- msgid "Image Format SD"
-@@ -9217,29 +9151,27 @@ msgstr "Temperatura koloru"
- 
- #: camlibs/ptp2/config.c:10923
- msgid "Adjust A/B"
--msgstr ""
-+msgstr "Strojenie A/B"
- 
- #: camlibs/ptp2/config.c:10924
- msgid "Adjust G/M"
--msgstr ""
-+msgstr "Strojenie G/M"
- 
- #: camlibs/ptp2/config.c:10925 camlibs/ptp2/ptp.c:6292
- msgid "AF Mode"
- msgstr "Tryb AF"
- 
- #: camlibs/ptp2/config.c:10926
--#, fuzzy
- msgid "MF Adjust"
--msgstr "Asysta MF"
-+msgstr "Strojenie MF"
- 
- #: camlibs/ptp2/config.c:10927
- msgid "Exp mode"
--msgstr ""
-+msgstr "Tryb ekspozycji"
- 
- #: camlibs/ptp2/config.c:10928
--#, fuzzy
- msgid "Start/Stop recording"
--msgstr "Rozpoczęcie nagrywania filmu"
-+msgstr "Rozpoczęcie/zakończenie nagrywania"
- 
- #: camlibs/ptp2/config.c:10931 camlibs/ptp2/ptp.c:6303
- msgid "Flash Compensation"
-@@ -9330,19 +9262,16 @@ msgid "Flexible Program"
- msgstr "Program elastyczny"
- 
- #: camlibs/ptp2/config.c:10960
--#, fuzzy
- msgid "JPEG Quality"
--msgstr "Jakość"
-+msgstr "Jakość JPEG"
- 
- #: camlibs/ptp2/config.c:10961
--#, fuzzy
- msgid "PC Save Image Size"
--msgstr "Rozmiar surowych zdjęć"
-+msgstr "Rozmiar zapisu obrazu PC"
- 
- #: camlibs/ptp2/config.c:10962
--#, fuzzy
- msgid "PC Save Image Format"
--msgstr "Format zdjęć"
-+msgstr "Format zapisu obrazu PC"
- 
- #: camlibs/ptp2/config.c:10963 camlibs/ptp2/ptp.c:6214
+ #: camlibs/ptp2/config.c:11527 camlibs/ptp2/ptp.c:6060
  msgid "Focus Distance"
-@@ -9384,9 +9313,8 @@ msgid "Aspect Ratio"
- msgstr "Proporcje obrazu"
+@@ -10003,7 +9936,6 @@ msgid "Focal Length"
+ msgstr "Ogniskowa"
  
- #: camlibs/ptp2/config.c:10981
+ #: camlibs/ptp2/config.c:11529 camlibs/ptp2/ptp.c:7431
 -#, fuzzy
- msgid "AF Method"
--msgstr "Tryb AF"
-+msgstr "Metoda AF"
+ msgid "Focal Position"
+ msgstr "Położenie ogniska"
  
- #: camlibs/ptp2/config.c:10982
- msgid "Storage Device"
-@@ -9519,9 +9447,8 @@ msgid "Live View White Balance"
- msgstr "Balans bieli Live View"
+@@ -10742,7 +10674,7 @@ msgstr "Canon EOS Half-Press nie powiod�
  
- #: camlibs/ptp2/config.c:11042 camlibs/ptp2/ptp.c:7556
+ #: camlibs/ptp2/library.c:6074
+ msgid "Canon EOS Auto-Focus failed, could not capture."
+-msgstr ""
++msgstr "Canon EOS Auto-Focus nie powiódł się, nie można zrobić zdjęcia."
+ 
+ #: camlibs/ptp2/library.c:6101 camlibs/ptp2/library.c:6110
+ #: camlibs/ptp2/library.c:6122
+@@ -11067,17 +10999,15 @@ msgstr ""
+ "Wykaz własności urządzenia:\n"
+ 
+ #: camlibs/ptp2/library.c:7940
 -#, fuzzy
- msgid "Live View Setting Effect"
--msgstr "Rozmiar Live View"
-+msgstr "Efekt ustawień Live View"
+ msgid "[Unknown Property]"
+-msgstr "Nieznany błąd"
++msgstr "[Nieznana własność]"
  
- #: camlibs/ptp2/config.c:11043 camlibs/ptp2/ptp.c:6747
- msgid "File Number Sequencing"
-@@ -9877,7 +9804,7 @@ msgstr "Obszar dynamicznego AF"
+ #: camlibs/ptp2/library.c:7947
+-#, fuzzy
+ msgid "not read out\n"
+-msgstr " nie odczytano.\n"
++msgstr "nie odczytano\n"
  
- #: camlibs/ptp2/config.c:11252 camlibs/ptp2/ptp.c:6695
- msgid "AF Lock On"
--msgstr "Blokada AF"
-+msgstr "Śledzący AF"
+ #: camlibs/ptp2/library.c:7996
+-#, fuzzy, c-format
++#, c-format
+ msgid "PTP error %04x on query"
+ msgstr " Błąd PTP %04x przy zapytaniu"
  
- #: camlibs/ptp2/config.c:11253 camlibs/ptp2/ptp.c:6806
- msgid "AF Area Point"
+@@ -11135,7 +11065,7 @@ msgstr "PGP: Ogólny błąd"
+ 
+ #: camlibs/ptp2/ptp.c:5895
+ msgid "PTP Session Not Open"
+-msgstr "PTP: Sesja nie otwarta"
++msgstr "PTP: Sesja nieotwarta"
+ 
+ #: camlibs/ptp2/ptp.c:5896
+ msgid "PTP Invalid Transaction ID"
+@@ -11143,11 +11073,11 @@ msgstr "PTP: Nieprawidłowy identyfikato
+ 
+ #: camlibs/ptp2/ptp.c:5897
+ msgid "PTP Operation Not Supported"
+-msgstr "PTP: Nie obsługiwana operacja"
++msgstr "PTP: Nieobsługiwana operacja"
+ 
+ #: camlibs/ptp2/ptp.c:5898
+ msgid "PTP Parameter Not Supported"
+-msgstr "PTP: Nie obsługiwany parametr"
++msgstr "PTP: Nieobsługiwany parametr"
+ 
+ #: camlibs/ptp2/ptp.c:5899
+ msgid "PTP Incomplete Transfer"
+@@ -11163,7 +11093,7 @@ msgstr "PTP: Nieprawidłowy uchwyt obiek
+ 
+ #: camlibs/ptp2/ptp.c:5902
+ msgid "PTP Device Prop Not Supported"
+-msgstr "PTP: Nie obsługiwane ustawienie urządzenia"
++msgstr "PTP: Nieobsługiwane ustawienie urządzenia"
+ 
+ #: camlibs/ptp2/ptp.c:5903
+ msgid "PTP Invalid Object Format Code"
+@@ -11203,7 +11133,7 @@ msgstr "PTP: Dane niedostępne"
+ 
+ #: camlibs/ptp2/ptp.c:5912
+ msgid "PTP Specification By Format Unsupported"
+-msgstr "PTP: Nie obsługiwana specyfikacja przez format"
++msgstr "PTP: Nieobsługiwana specyfikacja przez format"
+ 
+ #: camlibs/ptp2/ptp.c:5913
+ msgid "PTP No Valid Object Info"
+@@ -11251,7 +11181,7 @@ msgstr "PTP: Transakcja anulowana"
+ 
+ #: camlibs/ptp2/ptp.c:5924
+ msgid "PTP Specification Of Destination Unsupported"
+-msgstr "PTP: Nie obsługiwana specyfikacja celu"
++msgstr "PTP: Nieobsługiwana specyfikacja celu"
+ 
+ #: camlibs/ptp2/ptp.c:5925
+ msgid "Invalid Enum Handle"
+@@ -11295,7 +11225,7 @@ msgstr "Nieprawidłowy status"
+ 
+ #: camlibs/ptp2/ptp.c:5937
+ msgid "Set Property Not Supported"
+-msgstr "Ustawianie właściwości nie obsługiwane"
++msgstr "Ustawianie właściwości nieobsługiwane"
+ 
+ #: camlibs/ptp2/ptp.c:5938
+ msgid "Whitebalance Reset Error"
+@@ -11343,7 +11273,7 @@ msgstr "Błąd nośnika"
+ 
+ #: camlibs/ptp2/ptp.c:5949
+ msgid "Store Unformatted"
+-msgstr "Nośnik nie sformatowany"
++msgstr "Nośnik niesformatowany"
+ 
+ #: camlibs/ptp2/ptp.c:5950
+ msgid "Bulb Release Busy"
+@@ -11435,11 +11365,11 @@ msgstr "Błędny zbiór danych"
+ 
+ #: camlibs/ptp2/ptp.c:5977
+ msgid "Specification By Group Unsupported"
+-msgstr "Nie obsługiwana specyfikacja przez grupę"
++msgstr "Nieobsługiwana specyfikacja przez grupę"
+ 
+ #: camlibs/ptp2/ptp.c:5978
+ msgid "Specification By Depth Unsupported"
+-msgstr "Nie obsługiwana specyfikacja przez głębię"
++msgstr "Nieobsługiwana specyfikacja przez głębię"
+ 
+ #: camlibs/ptp2/ptp.c:5979
+ msgid "Object Too Large"
+@@ -11447,7 +11377,7 @@ msgstr "Obiekt zbyt duży"
+ 
+ #: camlibs/ptp2/ptp.c:5980
+ msgid "ObjectProp Not Supported"
+-msgstr "Nie obsługiwany ObjectProp"
++msgstr "Nieobsługiwany ObjectProp"
+ 
+ #: camlibs/ptp2/ptp.c:5981
+ msgid "Invalid Media Session ID"
+@@ -11467,7 +11397,7 @@ msgstr "Błędna składnia WFC"
+ 
+ #: camlibs/ptp2/ptp.c:5985
+ msgid "WFC Version Not Supported"
+-msgstr "Nie obsługiwana wersja WFC"
++msgstr "Nieobsługiwana wersja WFC"
+ 
+ #: camlibs/ptp2/ptp.c:5987
+ msgid "PTP No Device"
+@@ -12455,13 +12385,12 @@ msgid "Focus Point"
+ msgstr "Punkt ogniskowania"
+ 
+ #: camlibs/ptp2/ptp.c:7387
+-#, fuzzy
+ msgid "DOC Compensation"
+-msgstr "Kompensacja tonów"
++msgstr "Kompensacja DOC"
+ 
+ #: camlibs/ptp2/ptp.c:7388
+ msgid "DRangeOptimize"
+-msgstr ""
++msgstr "Optymalizacja DRange"
+ 
+ #: camlibs/ptp2/ptp.c:7389
+ msgid "Image size"
+@@ -12472,9 +12401,8 @@ msgid "Shutter speed"
+ msgstr "Prędkość migawki"
+ 
+ #: camlibs/ptp2/ptp.c:7394
+-#, fuzzy
+ msgid "Focus Indication"
+-msgstr "Położenie ogniska"
++msgstr "Wskazanie ogniska"
+ 
+ #: camlibs/ptp2/ptp.c:7396
+ msgid "Objects in memory"
+@@ -12485,412 +12413,348 @@ msgid "Expose Index"
+ msgstr "Indeks ekspozycji"
+ 
+ #: camlibs/ptp2/ptp.c:7398
+-#, fuzzy
+ msgid "AELock Indication"
+-msgstr "Lokalizacja"
++msgstr "Wskazanie AELock"
+ 
+ #: camlibs/ptp2/ptp.c:7401
+ msgid "AB Filter"
+ msgstr "Filtr AB"
+ 
+ #: camlibs/ptp2/ptp.c:7402
+-#, fuzzy
+ msgid "Battery Level Indicator"
+-msgstr "Poziom baterii"
++msgstr "Wskazanie poziomu baterii"
+ 
+ #: camlibs/ptp2/ptp.c:7403
+-#, fuzzy
+ msgid "Movie Recording State"
+-msgstr "Nie można uruchomić nagrywania filmu: %s."
++msgstr "Stan nagrywania filmu"
+ 
+ #: camlibs/ptp2/ptp.c:7405
+-#, fuzzy
+ msgid "FELock Indication"
+-msgstr "Lokalizacja"
++msgstr "Wskazanie FELock"
+ 
+ #: camlibs/ptp2/ptp.c:7408
+-#, fuzzy
+ msgid "Date/Time Set"
+-msgstr "Data i czas"
++msgstr "Ustawienie daty i czasu"
+ 
+ #: camlibs/ptp2/ptp.c:7411
+-#, fuzzy
+ msgid "Format Media Status"
+-msgstr "Stan wskaźnika ekspozycji"
++msgstr "Stan formatowania nośnika"
+ 
+ #: camlibs/ptp2/ptp.c:7414
+-#, fuzzy
+ msgid "Focus Magnifier Position"
+-msgstr "Zakończenie powiększenia ogniskowania"
++msgstr "Pozycja powiększenia ogniskowania"
+ 
+ #: camlibs/ptp2/ptp.c:7416
+-#, fuzzy
+ msgid "Focus Magnifier Status"
+-msgstr "Zakończenie powiększenia ogniskowania"
++msgstr "Stan powiększenia ogniskowania"
+ 
+ #: camlibs/ptp2/ptp.c:7417
+-#, fuzzy
+ msgid "Current Focus Magnifier Ratio"
+-msgstr "Powiększone ogniskowanie w prawo"
++msgstr "Bieżący współczynnik powiększenia ogniskowania"
+ 
+ #: camlibs/ptp2/ptp.c:7418
+-#, fuzzy
+ msgid "Manual Focus Adjust Enabled"
+-msgstr "Ręczna ogniskowa (ustalona)"
++msgstr "Ręczne dostrojenie ogniskowej włączone"
+ 
+ #: camlibs/ptp2/ptp.c:7419
+-#, fuzzy
+ msgid "Pixel Shift Shooting Mode"
+-msgstr "Tryb robienia zdjęcia"
++msgstr "Tryb zdjęć z przesuniętym pikselem"
+ 
+ #: camlibs/ptp2/ptp.c:7420
+-#, fuzzy
+ msgid "Pixel Shift Shooting Number"
+-msgstr "Liczba zdjęć dla samowyzwalacza"
++msgstr "Liczba zdjęć z przesuniętym pikselem"
+ 
+ #: camlibs/ptp2/ptp.c:7421
+-#, fuzzy
+ msgid "Pixel Shift Shooting Interval"
+-msgstr "Odstęp między pokazywanymi slajdami"
++msgstr "Odstęp zdjęć z przesuniętym pikselem"
+ 
+ #: camlibs/ptp2/ptp.c:7422
+ msgid "Pixel Shift Shooting Status"
+-msgstr ""
++msgstr "Stan zdjęć z przesuniętym pikselem"
+ 
+ #: camlibs/ptp2/ptp.c:7423
+ msgid "Pixel Shift Shooting Progress"
+-msgstr ""
++msgstr "Postęp zdjęć z przesuniętym pikselem"
+ 
+ #: camlibs/ptp2/ptp.c:7424
+-#, fuzzy
+ msgid "Picture Profile"
+-msgstr "Styl zdjęcia"
++msgstr "Profil zdjęcia"
+ 
+ #: camlibs/ptp2/ptp.c:7425
+-#, fuzzy
+ msgid "Creative Style"
+-msgstr "Twórczy automatyczny"
++msgstr "Styl twórczy"
+ 
+ #: camlibs/ptp2/ptp.c:7426
+-#, fuzzy
+ msgid "File Format Movie"
+-msgstr "Format filmu"
++msgstr "Format pliku filmu"
+ 
+ #: camlibs/ptp2/ptp.c:7427
+-#, fuzzy
+ msgid "Recording Setting Movie"
+-msgstr "Miejsce zapisu nagrywania"
++msgstr "Ustawienie nagrywania filmu"
+ 
+ #: camlibs/ptp2/ptp.c:7428
+-#, fuzzy
+ msgid "Media SLOT1 Status"
+-msgstr "Stan blokady lustra"
++msgstr "Stan nośnika SLOT1"
+ 
+ #: camlibs/ptp2/ptp.c:7429
+ msgid "Media SLOT1 Remaining Shots"
+-msgstr ""
++msgstr "Pozostałe zdjęcia nośnika SLOT1"
+ 
+ #: camlibs/ptp2/ptp.c:7430
+ msgid "Media SLOT1 Shooting Time"
+-msgstr ""
++msgstr "Czas zdjęć nośnika SLOT1"
+ 
+ #: camlibs/ptp2/ptp.c:7432
+ msgid "AWB Lock Indication"
+-msgstr ""
++msgstr "Wskazanie blokady AWB"
+ 
+ #: camlibs/ptp2/ptp.c:7433
+-#, fuzzy
+ msgid "Interval REC Model"
+-msgstr "Wewnętrzny RAM"
++msgstr "Model rejestracji w odstępach"
+ 
+ #: camlibs/ptp2/ptp.c:7434
+-#, fuzzy
+ msgid "Interval REC Status"
+-msgstr "Nieprawidłowy status"
++msgstr "Stan rejestracji w odstępach"
+ 
+ #: camlibs/ptp2/ptp.c:7435
+-#, fuzzy
+ msgid "Device Overheat Status"
+-msgstr "Certyfikat urządzenia"
++msgstr "Stan przegrzania urządzenia"
+ 
+ #: camlibs/ptp2/ptp.c:7436
+-#, fuzzy
+ msgid "Jpeg Quality"
+ msgstr "Jakość JPEG"
+ 
+ #: camlibs/ptp2/ptp.c:7437
+-#, fuzzy
+ msgid "File Format Still"
+-msgstr "Format zdjęć SD"
++msgstr "Format plików nieruchomych"
+ 
+ #: camlibs/ptp2/ptp.c:7438
+-#, fuzzy
+ msgid "Focus Magnifier Setting"
+-msgstr "Powiększone ogniskowanie w lewo"
++msgstr "Ustawienie powiększenia ogniskowania"
+ 
+ #: camlibs/ptp2/ptp.c:7439
+ msgid "AF Tracking Sens. Still"
+-msgstr ""
++msgstr "Czujnik śledzenia AF zdjęć nieruchomych"
+ 
+ #: camlibs/ptp2/ptp.c:7440
+-#, fuzzy
+ msgid "Media SLOT2 Status"
+-msgstr "Stan blokady lustra"
++msgstr "Stan nośnika SLOT2"
+ 
+ #: camlibs/ptp2/ptp.c:7441
+ msgid "Media SLOT2 Remaining Shots"
+-msgstr ""
++msgstr "Pozostałe zdjęcia nośnika SLOT2"
+ 
+ #: camlibs/ptp2/ptp.c:7442
+ msgid "Media SLOT2 Shooting Time"
+-msgstr ""
++msgstr "Czas zdjęć nośnika SLOT2"
+ 
+ #: camlibs/ptp2/ptp.c:7444
+-#, fuzzy
+ msgid "Zoom Enable Status"
+-msgstr "Strumienie włączone"
++msgstr "Stan włączenia powiększenia"
+ 
+ #: camlibs/ptp2/ptp.c:7445
+-#, fuzzy
+ msgid "Zoom Scale"
+-msgstr "Prędkość przybliżania"
++msgstr "Skala powiększenia"
+ 
+ #: camlibs/ptp2/ptp.c:7446
+-#, fuzzy
+ msgid "Zoom Bar Info"
+-msgstr "Powiększenie: makro\n"
++msgstr "Informacja o pasku powiększenia"
+ 
+ #: camlibs/ptp2/ptp.c:7447
+-#, fuzzy
+ msgid "Zoom Speed Range"
+-msgstr "Prędkość przybliżania"
++msgstr "Zakres szybkości przyspieszenia"
+ 
+ #: camlibs/ptp2/ptp.c:7448
+-#, fuzzy
+ msgid "Zoom Setting"
+-msgstr "Ustawienia kolorów"
++msgstr "Ustawienie powiększenia"
+ 
+ #: camlibs/ptp2/ptp.c:7449
+-#, fuzzy
+ msgid "Zoom Type Status"
+-msgstr "Stan podniesienia lustra"
++msgstr "Stan rodzaju powiększenia"
+ 
+ #: camlibs/ptp2/ptp.c:7450
+-#, fuzzy
+ msgid "Wireless Flash"
+-msgstr "Synchronizacja bezprzewodowa"
++msgstr "Flesz bezprzewodowy"
+ 
+ #: camlibs/ptp2/ptp.c:7451
+-#, fuzzy
+ msgid "Red Eye Reduction"
+ msgstr "Redukcja czerwonych oczu"
+ 
+ #: camlibs/ptp2/ptp.c:7452
+ msgid "Remote Control Restrict"
+-msgstr ""
++msgstr "Ograniczenie zdalnego sterowania"
+ 
+ #: camlibs/ptp2/ptp.c:7453
+-#, fuzzy
+ msgid "Live View Area"
+-msgstr "Obszar AF dla Live View"
++msgstr "Obszar Live View"
+ 
+ #: camlibs/ptp2/ptp.c:7455
+ msgid "PC Save Image Format"
+ msgstr "Format zapisu obrazu PC"
+ 
+ #: camlibs/ptp2/ptp.c:7456
+-#, fuzzy
+ msgid "Live View Image Quality"
+-msgstr "Współczynnik powiększenia Live View"
++msgstr "Jakość obrazu Live View"
+ 
+ #: camlibs/ptp2/ptp.c:7457
+-#, fuzzy
+ msgid "CustomWB Capture Area"
+-msgstr "Zdjęcia w trybie Canon, "
++msgstr "Obszar zdjęć CustomWB"
+ 
+ #: camlibs/ptp2/ptp.c:7458
+ msgid "CustomWB Capture Frame Size"
+-msgstr ""
++msgstr "Rozmiar ramki zdjęć CustomWB"
+ 
+ #: camlibs/ptp2/ptp.c:7459
+ msgid "CustomWB Capture Standby Enable"
+-msgstr ""
++msgstr "Włączenie uśpienia zdjęć CustomWB"
+ 
+ #: camlibs/ptp2/ptp.c:7460
+ msgid "CustomWB Capture Standby Cancel Enable"
+-msgstr ""
++msgstr "Włączenie anulowania uśpienia zdjęć CustomWB"
+ 
+ #: camlibs/ptp2/ptp.c:7461
+-#, fuzzy
+ msgid "CustomWB Capture Enable"
+-msgstr "Canon Capture nie powiodło się"
++msgstr "Włączenie zdjęć CustomWB"
+ 
+ #: camlibs/ptp2/ptp.c:7462
+-#, fuzzy
+ msgid "CustomWB Execution State"
+-msgstr "Funkcje Własne Ex"
++msgstr "Stan wywołania CustomWB"
+ 
+ #: camlibs/ptp2/ptp.c:7463
+-#, fuzzy
+ msgid "Settings Save Enable"
+-msgstr "Włączenie bracketingu"
++msgstr "Włączenie zapisu ustawień"
+ 
+ #: camlibs/ptp2/ptp.c:7464
+-#, fuzzy
+ msgid "Settings Read Enable"
+-msgstr "Włączenie bracketingu"
++msgstr "Włączenie odczytu ustawień"
+ 
+ #: camlibs/ptp2/ptp.c:7465
+ msgid "Settings Save/Read State"
+-msgstr ""
++msgstr "Stan zapisu/odczytu ustawień"
+ 
+ #: camlibs/ptp2/ptp.c:7466
+-#, fuzzy
+ msgid "FTP Setting Save Enable"
+-msgstr "Włączenie bracketingu"
++msgstr "Włączenie zapisu ustawień FTP"
+ 
+ #: camlibs/ptp2/ptp.c:7467
+-#, fuzzy
+ msgid "FTP Setting Read Enable"
+-msgstr "PTP: Dane tylko do odczytu"
++msgstr "Włączenie odczytu ustawień FTP"
+ 
+ #: camlibs/ptp2/ptp.c:7468
+ msgid "FTP Setting Save Read State"
+-msgstr ""
++msgstr "Stan zapisu/odczytu ustawień FTP"
+ 
+ #: camlibs/ptp2/ptp.c:7469
+-#, fuzzy
+ msgid "MovieRecButtonHold"
+-msgstr "Rozdzielczość filmu"
++msgstr "Utrzymanie przycisku nagrywania filmu"
+ 
+ #: camlibs/ptp2/ptp.c:7470
+ msgid "RequestOneShooting"
+-msgstr ""
++msgstr "Żądanie jednego zdjęcia"
+ 
+ #: camlibs/ptp2/ptp.c:7472
+-#, fuzzy
+ msgid "ShutterHalfRelease"
+-msgstr "Prędkość migawki"
++msgstr "Połowiczne zwolnienie migawki"
+ 
+ #: camlibs/ptp2/ptp.c:7473
+-#, fuzzy
+ msgid "ShutterRelease"
+-msgstr "Prędkość migawki"
++msgstr "Zwolnienie migawki"
+ 
+ #: camlibs/ptp2/ptp.c:7474
+-#, fuzzy
+ msgid "AELButton"
+-msgstr "Przycisk AF On"
++msgstr "Przycisk AEL"
+ 
+ #: camlibs/ptp2/ptp.c:7475
+-#, fuzzy
+ msgid "AFLButton"
+-msgstr "Przycisk AF On"
++msgstr "Przycisk AFL"
+ 
+ #: camlibs/ptp2/ptp.c:7476
+-#, fuzzy
+ msgid "ReleaseLock"
+-msgstr "Zwolnienie"
++msgstr "Blokada zwolnienia"
+ 
+ #: camlibs/ptp2/ptp.c:7477
+-#, fuzzy
+ msgid "FELButton"
+-msgstr "Przycisk AF On"
++msgstr "Przycisk FEL"
+ 
+ #: camlibs/ptp2/ptp.c:7478
+ msgid "FormatMedia"
+-msgstr ""
++msgstr "Formatowanie nośnika"
+ 
+ #: camlibs/ptp2/ptp.c:7485
+-#, fuzzy
+ msgid "Manual Focus Adjust"
+-msgstr "Ręczna ogniskowa"
++msgstr "Ręczne dostrojenie ostrości"
+ 
+ #: camlibs/ptp2/ptp.c:7486
+-#, fuzzy
+ msgid "AF/MF Hold"
+-msgstr "Utrzymanie blokady AF"
++msgstr "Utrzymanie AF/MF"
+ 
+ #: camlibs/ptp2/ptp.c:7487
+ msgid "CancelPixelShiftShooting"
+-msgstr ""
++msgstr "Anulowanie zdjęć z przesuniętym pikselem"
+ 
+ #: camlibs/ptp2/ptp.c:7488
+-#, fuzzy
+ msgid "PixelShiftShootingMode"
+-msgstr "Tryb robienia zdjęcia"
++msgstr "Tryb zdjęć z przesuniętym pikselem"
+ 
+ #: camlibs/ptp2/ptp.c:7489
+-#, fuzzy
+ msgid "HFRStandby"
+-msgstr "Uśpienie"
++msgstr "Uśpienie HFR"
+ 
+ #: camlibs/ptp2/ptp.c:7490
+-#, fuzzy
+ msgid "HFRRecordingCancel"
+-msgstr "Nagrywanie"
++msgstr "Anulowanie nagrywanie HFR"
+ 
+ #: camlibs/ptp2/ptp.c:7491
+-#, fuzzy
+ msgid "FocusStepNear"
+-msgstr "Obszar ogniskowania"
++msgstr "Krok ogniskowania bliży"
+ 
+ #: camlibs/ptp2/ptp.c:7492
+-#, fuzzy
+ msgid "FocusStepFar"
+-msgstr "Obszar ogniskowania"
++msgstr "Krok ogniskowania dali"
+ 
+ #: camlibs/ptp2/ptp.c:7493
+-#, fuzzy
+ msgid "AWBLButton"
+-msgstr "Przycisk AF On"
++msgstr "Przycisk AWBL"
+ 
+ #: camlibs/ptp2/ptp.c:7494
+ msgid "AF Area Position"
+ msgstr "Pozycja obszaru AF"
+ 
+ #: camlibs/ptp2/ptp.c:7495
+-#, fuzzy
+ msgid "Zoom Operation"
+-msgstr "Kompensacja tonów"
++msgstr "Operacja powiększenia"
+ 
+ #: camlibs/ptp2/ptp.c:7496
+ msgid "CustomWB Capture Standby"
+-msgstr ""
++msgstr "Uśpienie zdjęć CustomWB"
+ 
+ #: camlibs/ptp2/ptp.c:7497
+ msgid "CustomWB Capture Standby Cancel"
+-msgstr ""
++msgstr "Anulowanie uśpienia zdjęć CustomWB"
+ 
+ #: camlibs/ptp2/ptp.c:7498
+-#, fuzzy
+ msgid "CustomWB Capture"
+-msgstr "Zdjęcia w trybie Canon, "
++msgstr "Zdjęcia CustomWB"
+ 
+ #: camlibs/ptp2/ptp.c:7499
+-#, fuzzy
+ msgid "Format Media Card"
+-msgstr "Media Card"
++msgstr "Formatowanie karty nośnika"
+ 
+ #: camlibs/ptp2/ptp.c:7500
+-#, fuzzy
+ msgid "Remote Touch"
+-msgstr "Zdalny limit czasu"
++msgstr "Funkcja Remote Touch"
+ 
+ #: camlibs/ptp2/ptp.c:7501
+-#, fuzzy
+ msgid "Remote Touch Cancel"
+-msgstr "Zdalny limit czasu"
++msgstr "Anulowanie Remote Touch"
+ 
+ #: camlibs/ptp2/ptp.c:7502
+-#, fuzzy
+ msgid "Save Zoom and Focus Position"
+-msgstr "Pozycja początkowa EZoom"
++msgstr "Zapis pozycji powiększenia i ostrości"
+ 
+ #: camlibs/ptp2/ptp.c:7503
+-#, fuzzy
+ msgid "Load Zoom and Focus Position"
+-msgstr "Pozycja początkowa EZoom"
++msgstr "Odczyt pozycji powiększenia i ostrości"
+ 
+ #: camlibs/ptp2/ptp.c:7509
+ msgid "Date Time"
+@@ -13751,26 +13615,27 @@ msgid ""
+ "It can fetch information, thumbnails, raw and ppm data, and command the "
+ "camera to take pictures."
+ msgstr ""
++"Sterownik Apple QuickTake 1x0 napisał Colin Leroy-Mira <colin@colino.net>.\n"
++"Obsługuje modele QuickTake 100, 100 plus oraz 150.\n"
++"\n"
++"Potrafi pobierać informacje, miniaturki, dane surowe i ppm oraz sterować "
++"aparatem, aby robić zdjęcia."
+ 
+ #: camlibs/quicktake1x0/quicktake1x0.c:439
+-#, fuzzy
+ msgid "Forced"
+-msgstr "Wymuszenie"
++msgstr "Wymuszony"
+ 
+ #: camlibs/quicktake1x0/quicktake1x0.c:796
+-#, fuzzy
+ msgid "Camera name"
+-msgstr "Właściciel aparatu"
++msgstr "Nazwa aparatu"
+ 
+ #: camlibs/quicktake1x0/quicktake1x0.c:801
+-#, fuzzy
+ msgid "Image quality"
+-msgstr "Jakość obrazu"
++msgstr "Jakość zdjęć"
+ 
+ #: camlibs/quicktake1x0/quicktake1x0.c:816
+-#, fuzzy
+ msgid "Camera date"
+-msgstr "Tryb aparatu"
++msgstr "Data aparatu"
+ 
+ #: camlibs/ricoh/g3.c:360
+ msgid "Downloading movie..."
+@@ -14071,14 +13936,14 @@ msgstr ""
+ #: camlibs/samsung/samsung.c:233
+ msgid ""
+ "The Samsung digimax 800k driver has been written by James McKenzie "
+-"<james@fishsoup.dhs.org> for gphoto. Lutz Mueller <lutz@users.sourceforge."
+-"net> ported it to gphoto2. Marcus Meissner <marcus@jet.franken.de> fixed and "
+-"enhanced the port."
+-msgstr ""
+-"Sterownik Samsung digimax 800k napisał James McKenzie <james@fishsoup.dhs."
+-"org> dla gphoto. Lutz Mueller <lutz@users.sourceforge.net> sportował go do "
+-"gphoto2. Marcus Meissner <marcus@jet.franken.de> poprawił i rozszerzył ten "
+-"port."
++"<james@fishsoup.dhs.org> for gphoto. Lutz Mueller "
++"<lutz@users.sourceforge.net> ported it to gphoto2. Marcus Meissner "
++"<marcus@jet.franken.de> fixed and enhanced the port."
++msgstr ""
++"Sterownik Samsung digimax 800k napisał James McKenzie "
++"<james@fishsoup.dhs.org> dla gphoto. Lutz Mueller "
++"<lutz@users.sourceforge.net> sportował go do gphoto2. Marcus Meissner "
++"<marcus@jet.franken.de> poprawił i rozszerzył ten port."
+ 
+ #: camlibs/sierra/epson-desc.c:71 camlibs/sierra/nikon-desc.c:79
+ #: camlibs/sierra/nikon-desc.c:113 camlibs/sierra/olympus-desc.c:94
+@@ -15596,167 +15461,3 @@ msgstr "Nieznany błąd biblioteki apara
+ #: libgphoto2/gphoto2-result.c:78
+ msgid "Unknown error"
+ msgstr "Nieznany błąd"
+-
+-#~ msgid "Smaller JPEG"
+-#~ msgstr "Mniejszy JPEG"
+-
+-#~ msgid "Tiny JPEG"
+-#~ msgstr "Malutki JPEG"
+-
+-#~ msgid "mRAW + Large Fine JPEG"
+-#~ msgstr "mRAW + duży dobry JPEG"
+-
+-#~ msgid "sRAW + Large Fine JPEG"
+-#~ msgstr "sRAW + duży dobry JPEG"
+-
+-#~ msgid "cRAW + Large Fine JPEG"
+-#~ msgstr "cRAW + duży dobry JPEG"
+-
+-#~ msgid "mRAW + Medium Fine JPEG"
+-#~ msgstr "mRAW + średni dobry JPEG"
+-
+-#~ msgid "sRAW + Medium Fine JPEG"
+-#~ msgstr "sRAW + średni dobry JPEG"
+-
+-#~ msgid "cRAW + Medium Fine JPEG"
+-#~ msgstr "cRAW + średni dobry JPEG"
+-
+-#~ msgid "mRAW + Small Fine JPEG"
+-#~ msgstr "mRAW + mały dobry JPEG"
+-
+-#~ msgid "sRAW + Small Fine JPEG"
+-#~ msgstr "sRAW + mały dobry JPEG"
+-
+-#~ msgid "cRAW + Small Fine JPEG"
+-#~ msgstr "cRAW + mały dobry JPEG"
+-
+-#~ msgid "mRAW + Large Normal JPEG"
+-#~ msgstr "mRAW + duży normalny JPEG"
+-
+-#~ msgid "sRAW + Large Normal JPEG"
+-#~ msgstr "sRAW + duży normalny JPEG"
+-
+-#~ msgid "cRAW + Large Normal JPEG"
+-#~ msgstr "cRAW + duży normalny JPEG"
+-
+-#~ msgid "mRAW + Medium Normal JPEG"
+-#~ msgstr "mRAW + średni normalny JPEG"
+-
+-#~ msgid "sRAW + Medium Normal JPEG"
+-#~ msgstr "sRAW + średni normalny JPEG"
+-
+-#~ msgid "cRAW + Medium Normal JPEG"
+-#~ msgstr "cRAW + średni normalny JPEG"
+-
+-#~ msgid "mRAW + Small Normal JPEG"
+-#~ msgstr "mRAW + mały normalny JPEG"
+-
+-#~ msgid "sRAW + Small Normal JPEG"
+-#~ msgstr "sRAW + mały normalny JPEG"
+-
+-#~ msgid "cRAW + Small Normal JPEG"
+-#~ msgstr "cRAW + mały normalny JPEG"
+-
+-#~ msgid "RAW + Smaller JPEG"
+-#~ msgstr "RAW + mniejszy JPEG"
+-
+-#~ msgid "mRAW + Smaller JPEG"
+-#~ msgstr "mRAW + mniejszy JPEG"
+-
+-#~ msgid "sRAW + Smaller JPEG"
+-#~ msgstr "sRAW + mniejszy JPEG"
+-
+-#~ msgid "cRAW + Smaller JPEG"
+-#~ msgstr "cRAW + mniejszy JPEG"
+-
+-#~ msgid "RAW + Tiny JPEG"
+-#~ msgstr "RAW + malutki JPEG"
+-
+-#~ msgid "mRAW + Tiny JPEG"
+-#~ msgstr "mRAW + malutki JPEG"
+-
+-#~ msgid "sRAW + Tiny JPEG"
+-#~ msgstr "sRAW + malutki JPEG"
+-
+-#~ msgid "Small + RAW"
+-#~ msgstr "Mały + RAW"
+-
+-#~ msgid "Medium 1 + RAW"
+-#~ msgstr "Średni 1 + RAW"
+-
+-#~ msgid "Medium 2 + RAW"
+-#~ msgstr "Średni 2 + RAW"
+-
+-#~ msgid "Large + RAW"
+-#~ msgstr "Duży + RAW"
+-
+-#~ msgid "Small + cRAW"
+-#~ msgstr "Mały + cRAW"
+-
+-#~ msgid "Medium 1 + cRAW"
+-#~ msgstr "Średni 1 + cRAW"
+-
+-#~ msgid "Medium 2 + cRAW"
+-#~ msgstr "Średni 2 + cRAW"
+-
+-#~ msgid "Large + cRAW"
+-#~ msgstr "Duży + cRAW"
+-
+-#~ msgid "Large + mRAW"
+-#~ msgstr "Duży + mRAW"
+-
+-#~ msgid "Medium 1 + mRAW"
+-#~ msgstr "Średni 1 + mRAW"
+-
+-#~ msgid "Medium 2 + mRAW"
+-#~ msgstr "Średni 2 + mRAW"
+-
+-#~ msgid "Small + mRAW"
+-#~ msgstr "Mały + mRAW"
+-
+-#~ msgid "Large + sRAW"
+-#~ msgstr "Duży + sRAW"
+-
+-#~ msgid "Medium 1 + sRAW"
+-#~ msgstr "Średni 1 + sRAW"
+-
+-#~ msgid "Medium 2 + sRAW"
+-#~ msgstr "Średni 2 + sRAW"
+-
+-#~ msgid "Small + sRAW"
+-#~ msgstr "Mały + sRAW"
+-
+-#~ msgid "S&Q"
+-#~ msgstr "Zwolnienie/Przyspieszenie"
+-
+-#, c-format
+-#~ msgid "%d"
+-#~ msgstr "%d"
+-
+-#~ msgid "Focus Magnify Up"
+-#~ msgstr "Powiększone ogniskowanie w górę"
+-
+-#~ msgid "cannot be queried.\n"
+-#~ msgstr "nie można odpytać.\n"
+-
+-#~ msgid "read only"
+-#~ msgstr "tylko odczyt"
+-
+-#~ msgid "readwrite"
+-#~ msgstr "odczyt i zapis"
+-
+-#, c-format
+-#~ msgid " error %x on query."
+-#~ msgstr " błąd %x przy zapytaniu"
+-
+-#~ msgid "EOS Fixed Movie Switch"
+-#~ msgstr "Przełącznik ustalonego filmowania EOS"
+-
+-#~ msgid "Focus status"
+-#~ msgstr "Stan ogniskowania"
+-
+-#~ msgid "Still Image"
+-#~ msgstr "Obraz nieruchomy"
+-
+-#~ msgid "Near Far"
+-#~ msgstr "Blisko-daleko"
