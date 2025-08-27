@@ -49,8 +49,8 @@ BuildRequires:	rpmbuild(macros) >= 1.691
 BuildRequires:	sed >= 4.0
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-Requires:	curl-libs >= 7.1
-Requires:	libexif >= 1:0.6.13
+Requires:	curl-libs%{?_isa} >= 7.1
+Requires:	libexif%{?_isa} >= 1:0.6.13
 Provides:	gphoto2-lib = %{version}-%{release}
 Obsoletes:	gphoto2-lib < 2.1.1
 Conflicts:	gphoto2 < 2.1.1
@@ -80,12 +80,12 @@ Summary(es.UTF-8):	Archivos de deserrolo de libgphoto2
 Summary(pl.UTF-8):	Pliki nagłówkowe dla libgphoto2
 Summary(pt_BR.UTF-8):	Arquivos de desenvolvimento do libgphoto2
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name}%{?_isa} = %{version}-%{release}
 %{?with_apidocs:Requires:	gtk-doc-common}
-Requires:	libexif-devel >= 1:0.6.13
-Requires:	libltdl-devel
-Requires:	libusb-devel >= 1.0.0
-%{!?with_baudboy:Requires:	lockdev-devel}
+Requires:	libexif-devel%{?_isa} >= 1:0.6.13
+Requires:	libltdl-devel%{?_isa}
+Requires:	libusb-devel%{?_isa} >= 1.0.0
+%{!?with_baudboy:Requires:	lockdev-devel%{?_isa}}
 Obsoletes:	gphoto2-devel < 2.1.1
 Obsoletes:	gphoto2-lib-devel < 2.1.0-6
 
@@ -107,7 +107,7 @@ Summary(es.UTF-8):	Archivos de deserrolo de libgphoto2
 Summary(pl.UTF-8):	Statyczna wersja libgphoto2
 Summary(pt_BR.UTF-8):	Arquivos de desenvolvimento do libgphoto2
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-devel%{?_isa} = %{version}-%{release}
 Obsoletes:	gphoto2-lib-static < 2.1.0-6
 Obsoletes:	gphoto2-static < 2.1.1
 
@@ -127,7 +127,7 @@ Arquivos de desenvolvimento do libgphoto2.
 Summary:	Serial port plugin for libgphoto2
 Summary(pl.UTF-8):	Wtyczka obsługi portu szeregowego dla libgphoto2
 Group:		Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name}%{?_isa} = %{version}-%{release}
 %{?with_baudboy:Requires:	lockdev-baudboy}
 
 %description port-serial
